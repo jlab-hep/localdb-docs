@@ -1,4 +1,0 @@
-site_name: Local DB Docs
-pages:
-    - Local DB: localdb.md
-theme: readthedocs
