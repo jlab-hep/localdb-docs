@@ -1,5 +1,6 @@
 site_name: Local DB Docs
 pages:
-    - Requirements: requirements.md
+    - Home: index.md
+    - Pre Requirements: requirements.md
     - Local DB: localdb.md
 theme: readthedocs

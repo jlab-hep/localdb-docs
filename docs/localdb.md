@@ -1,24 +1,11 @@
-## About
+# Local DB: Local Database
 
-**Local Database (Local DB) is mainly data managing system for YARR based on MongoDB.**
+**Local Database (Local DB) is mainly data management/storage system based on MongoDB for YARR.** <br>
+Please look at [Local DB Docs](https://localdb-docs.readthedocs.io/en/master/) to install Local DB System and setup.
 
-### Base system
-- [MongoDB](https://docs.mongodb.com/v4.0/) v4.0.11
-- Python3 
-- PyROOT (executable by Python3)
+## Quick Tutorial for Upload
 
-The setting scripts and instructions supports the following OS:
-
-- centOS7
-
-## Quick Tutorial
-
-You can store result data by YARR immediately following the tutorial.
-
-### 0. Installation
-
-This step should be done by the administrator of the machine.<br>
-The detail can be checked [Quick Installtion](#quick-installation).
+You can upload the test data taken by YARR following the tutorial.
 
 ### 1. Setup YARR command with Local DB
 

@@ -1,14 +1,18 @@
-# Requirements for Local DB System
+# Pre Requirements for Local DB System
 
 ## Base System
-* Storage System
-    * MongoDB v4.X ([Installation](https://docs.mongodb.com/manual/installation/))
-* Read-out System
-    * YARR ([Installation](https://yarr.readthedocs.io/en/latest/install/))
-* DB Handle System
-    * Local DB Tools ([Installation]())
+* Storage System: Mongo DB v4.X
+    * [Installation](#mongodb-installation)
+    * [Confirmation](#mongodb-confirmation)
+* Read-out System: YARR
+    * [Installation](#yarr-installation)
+    * [Confirmation](#yarr-confirmation)
 
-## MongoDB Quick Confirmation
+## MongoDB Installation
+
+Please look at [MongoDB Documentation](https://docs.mongodb.com/manual/installation/) to install MongoDB 4.X Community Edition and start mongod service.
+
+## MongoDB Confirmation
 
 * Check the connection to Mongo DB in mongo shell
 
@@ -25,7 +29,11 @@ bye
 
 If you catch the message "exception: connect failed", you should check that MongoDB is running.
 
-## YARR System Quick Confirmation
+## YARR Installation
+
+Please look at [YARR Docs](https://yarr.readthedocs.io/en/latest/install/) to install YARR System and setup.
+
+## YARR Confirmation
 
 * Check the ScanConsole
 
@@ -38,25 +46,3 @@ $ bin/scanConsole -r configs/controller/emuCfg.json -c configs/connectivity/exam
 ```
 
 This runs a digitalscan with the FE-I4B emulator. This does not use or require any hardware and will run purely in software.
-
-## Local DB Tools Quick Confirmation
-
-* Check Uploader
-
-a
-
-* Check Retriever
-
-a
-
-* Check Viewer Application
-
-a
-
-* Check Synchronization
-
-a
-
-* Check Archive 
-
-a
