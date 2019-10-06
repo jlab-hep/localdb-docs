@@ -3,4 +3,5 @@ pages:
     - Home: index.md
     - Pre Requirements: requirements.md
     - Local DB: localdb.md
+    - YARR: yarr.md
 theme: readthedocs
