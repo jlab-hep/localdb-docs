@@ -29,6 +29,26 @@ Using the tools for Local DB, you can:
 * [Quick Tutorial](tutorial.md)
 * [Software Installation](install.md)
 
+## Folder Structure
+```bash
+YARR : Cloned from https://gitlab.cern.ch/YARR/YARR.git
+|-- localdb
+|   |-- setting : setup scripts and default config files dir
+|   |-- bin : binary commands dir
+|   |   |-- localdb-upload : uploader
+|   |   `-- localdb-retrieve : retriever
+|   `-- lib : libaries dir
+`-- bin : YARR read-out commands dir
+
+localdb-tools : Cloned from https://gitlab.cern.ch/YARR/localdb-tools.git
+|-- setting : setup scripts dir
+|-- viewer : Viewer Application command & libraries
+|-- sync-tool : Synchronization Tool command & libraries
+|-- archive-tool : Archive Tool command & libraries
+|-- scripts : Some scripts and default config files dir
+`-- dev : development dir
+```
+
 ## Contact
 
 |Role|Name|Institution|E-mail|
