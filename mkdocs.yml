@@ -4,4 +4,5 @@ pages:
     - Pre Requirements: requirements.md
     - Local DB: localdb.md
     - YARR: yarr.md
+    - Config Samples: config.md
 theme: readthedocs
