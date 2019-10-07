@@ -52,6 +52,7 @@ $ ./localdb/setup_db.sh
 [LDB]   Access 'https://localdb-docs.readthedocs.io/en/master/'
 ```
 
+<span style="font-size: 60%">
 Additional options:
 
 - **-i ``<IP address>``** : Set Local DB server IP address (default: 127.0.0.1) 
@@ -60,6 +61,7 @@ Additional options:
 - **-a ``<CA file>``** : Path to CA certificate of Local DB server (option)
 - **-e ``<Certification>``** : Path to Client certificate of Local DB server (option)
 - **-r** : Clean the settings (reset)
+</span>
 
 ### 2. Confirmation
 
@@ -114,11 +116,13 @@ $ ./setup_viewer.sh
 [LDB] More information: https://localdb-docs.readthedocs.io/en/master/
 ```
 
+<span style="font-size: 60%">
 Additional options:
 
 - **-i ``<IP address>``** : Set Local DB server IP address (default: 127.0.0.1) 
 - **-p ``<port>``** : Set Local DB server port (default: 27017)
 - **-c ``<cfg>``** : Set config file Name (default: conf.yml)
+</span>
 
 ### 1.2 Set-up Synchronization Tool
 

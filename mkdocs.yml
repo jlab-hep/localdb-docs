@@ -3,6 +3,11 @@ pages:
     - Home: index.md
     - Pre Requirements: requirements.md
     - Installation: install.md
+    - Upload: upload.md
+    - Download: download.md
+    - Viewer Application: viewer.md
+    - Synchronize: synchroniza.md
+    - Archive: archive.md
     - Local DB: localdb.md
     - YARR: yarr.md
     - Config Samples: config.md

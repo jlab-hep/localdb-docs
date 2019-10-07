@@ -341,11 +341,12 @@ num null 0 0 0 0
 ## Viewer Application
 
 **Contents**
+
 - mongoDB.host: IP address of the Local DB server (default. "127.0.0.1" or "localhost")
 - mongoDB.port: The port number of the Local DB server (default. "27017")
 - mongoDB.db: The name of the Local DB (default. "localdb")
-- mongoDB.username: username of user account in MongoDB if authentication is required
-- mongoDB.password: password of user account in MongoDB if authentication is required
+- mongoDB.username: username of user account in MongoDB if the user authentication is required
+- mongoDB.password: password of user account in MongoDB if the user authentication is required
 - mongoDB.KeyFile: username & password info file created by [localdb-tools/setting/create_admin.sh]()
 - mongoDB.ssl/tls: ssl/tls CA & certification file if ssl/tls is enabled
 - userDB.db: The name of the DB for Viewer Application (default. "localdbtool")
