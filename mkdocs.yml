@@ -6,7 +6,7 @@ pages:
     - Upload Tool: upload.md
     - Retrieve Tool: retrieve.md
     - Viewer Application: viewer.md
-    - Synchronization Tool: synchroniza.md
+    - Synchronization Tool: sync.md
     - Archive Tool: archive.md
     - Structure: structure.md
     - Local DB: localdb.md

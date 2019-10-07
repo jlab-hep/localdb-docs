@@ -1,5 +1,3 @@
-# Local DB Tools Installation
-
 There are several tools for handling Local DB.
 
 * Uploader ---> [YARR](#yarr)<br>

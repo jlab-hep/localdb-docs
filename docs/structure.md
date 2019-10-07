@@ -1,18 +1,18 @@
-# Database name list
+## Database name list
 * **localdb** <br>
 Main database for YARR DB
 
 * **localdbtools** <br>
 Database for using in localDB tools e.g.) _synchronization DB_ function
 
-# Data Structure
-
-## **localdb**
+## Data Structure
 
 ![localdb_structure](images/db_structure.png)
 
-# Collections (= tables in SQL) name list
-## in **localdb**
+## Collections (= tables in SQL) name list
+
+### **localdb**
+
 * [**chip**](db-chip.md) <br>
 Tested chip information
 

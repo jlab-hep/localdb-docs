@@ -1,5 +1,3 @@
-# Upload Tool
-
 This page describes how to upload data into Local DB.<br>
 Please look at [Installation](install.md) to set-up Upload Tool.
 

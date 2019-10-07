@@ -1,8 +1,6 @@
 # Pre Requirements for Local DB System
 
-## Base System
-
-### Storage System: Mongo DB v4.X
+## Storage System: Mongo DB v4.X
 
 Ensure that [MongoDB 4.X Community Edition](https://docs.mongodb.com/manual/installation/) is installed and mongod service is started. <br>
 Check the connection to Mongo DB in mongo shell by:
@@ -20,7 +18,7 @@ bye
 
 If you catch the message "exception: connect failed", you should check that MongoDB is running.
 
-### Read-out System: YARR
+## Read-out System: YARR
 
 Ensure that [YARR SW](https://yarr.readthedocs.io/en/latest/install/) is installed and set-up. <br>
 Check the ScanConsole, which is the main read-out program, working by:

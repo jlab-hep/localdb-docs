@@ -1,5 +1,3 @@
-# Retrieve Tool
-
 This page describes how to retrieve data into Local DB.<br>
 Please look at [Installation](install.md) to set-up Retrieve Tool.
 

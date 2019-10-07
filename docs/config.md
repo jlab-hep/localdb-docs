@@ -2,11 +2,9 @@
 
 ## Database cfg
 
-**Contents**
-
-- hostIp: IP address of the Local DB server (default. "127.0.0.1" or "localhost")
-- hostPort: The port number of the Local DB server (default. "27017")
-- dbName: The name of the Local DB (default. "localdb")
+- hostIp => IP address of the Local DB server (default. "127.0.0.1" or "localhost")
+- hostPort => The port number of the Local DB server (default. "27017")
+- dbName => The name of the Local DB (default. "localdb")
 
 ```json
 {
@@ -61,8 +59,6 @@
 
 ## User cfg
 
-**Contents**
-
 - userName: Your name (e.g. "John Doe")
 - institution: The institution name you belong (e.g. "ABC Laboratory")
 - description: The description for user account (e.g. "account for testbeam")
@@ -77,8 +73,6 @@
 
 ## Site cfg
 
-**Contents**
-
 - site: The name of the production site (institution)
 
 ```json
@@ -88,8 +82,6 @@
 ```
 
 ## Component cfg
-
-**Contents**
 
 - module.serialNumber: The serial number of the module (option)
 - module.componentType: "Module" (option)
@@ -148,8 +140,6 @@
 ```
 
 ## Connectivity cfg
-
-**Contents**
 
 - stage: The test stage, which should be selected from the stage list written in [database.json](#database-cfg)
 - module.serialNumber: The serial number of the module
@@ -220,8 +210,6 @@
 
 You can replicated it from `YARR/configs/defaults/<FE>.json`.
 
-**Contents**
-
 - name/Name: The serial number of the chip 
 - chipId/ChipId: The geometrical ID of the chip (chipId)
 
@@ -252,8 +240,6 @@ You can replicated it from `YARR/configs/defaults/<FE>.json`.
 ```
 
 ## DCS cfg
-
-**Contents**
 
 - 'status': enabled/disabled to upload data
 - 'key': DCS keyword (key list is written in the database config file `${HOME}/.yarr/localdb/database.json`)
@@ -321,8 +307,6 @@ You can replicated it from `YARR/configs/defaults/<FE>.json`.
 
 ## DCS Data File
 
-**Contents**
-
 - the 1st line: DCS keyword `key unixtime <key1> <key2> <key3> ...` 
 - the 2nd line: DCS number `num null <num1> <num2> <num3> ...`
 - After the 3rd line: datetime and DCS data `datetime unixtime <data1> <data2> <data3> ...` (data value must be the number or "null")
@@ -339,8 +323,6 @@ num null 0 0 0 0
 ```
 
 ## Viewer Application
-
-**Contents**
 
 - mongoDB.host: IP address of the Local DB server (default. "127.0.0.1" or "localhost")
 - mongoDB.port: The port number of the Local DB server (default. "27017")
