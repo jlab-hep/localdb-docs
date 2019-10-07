@@ -3,11 +3,11 @@ pages:
     - Home: index.md
     - Pre Requirements: requirements.md
     - Installation: install.md
-    - Upload: upload.md
-    - Retrieve: retrieve.md
+    - Upload Tool: upload.md
+    - Retrieve Tool: retrieve.md
     - Viewer Application: viewer.md
-    - Synchronize: synchroniza.md
-    - Archive: archive.md
+    - Synchronization Tool: synchroniza.md
+    - Archive Tool: archive.md
     - Local DB: localdb.md
     - YARR: yarr.md
     - Config Samples: config.md

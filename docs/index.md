@@ -1,5 +1,3 @@
-![docs](http://readthedocs.org/projects/yarr/badge/?version=latest)
-
 # Local DB: Local Database
 
 ## What is Local DB?
