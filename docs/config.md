@@ -338,3 +338,46 @@ num null 0 0 0 0
 2019-06-24_20:50:03 1561377003 15 25 0 0
 ```
 
+## Viewer Application
+
+**Contents**
+- mongoDB.host: IP address of the Local DB server (default. "127.0.0.1" or "localhost")
+- mongoDB.port: The port number of the Local DB server (default. "27017")
+- mongoDB.db: The name of the Local DB (default. "localdb")
+- mongoDB.username: username of user account in MongoDB if authentication is required
+- mongoDB.password: password of user account in MongoDB if authentication is required
+- mongoDB.KeyFile: username & password info file created by [localdb-tools/setting/create_admin.sh]()
+- mongoDB.ssl/tls: ssl/tls CA & certification file if ssl/tls is enabled
+- userDB.db: The name of the DB for Viewer Application (default. "localdbtool")
+- flask.host: IP address running app.py (default. "127.0.0.1" or "localhost")
+- flask.port: The port number running app.py (default. "5000")
+
+```yml
+# Configs for web viewer
+
+mongoDB:
+    host: 127.0.0.1 # IP address running mongoDB
+    port: 27017     # port number running mongoDB
+    db: localdb     # local database name
+    username: # username of user account in MongoDB
+    password: # password of user account in MongoDB
+    KeyFile: #localdbkeypass # path/to/user/key/file
+    ssl:
+        enabled: False
+        CAFile: # path/to/CA/file
+        PEMKeyFile: # path/to/certificate/file 
+    tls:
+        enabled: False
+        CAFile: # path/to/CA/file 
+        CertificateFile: # path/to/certificate/file
+
+userDB:
+    db: localdbtools
+
+flask:
+    host: 127.0.0.1 # IP address running app.py
+    port: 5000      # port number running app.py
+
+# For development
+#is_development: True
+```

@@ -2,6 +2,7 @@ site_name: Local DB Docs
 pages:
     - Home: index.md
     - Pre Requirements: requirements.md
+    - Installation: install.md
     - Local DB: localdb.md
     - YARR: yarr.md
     - Config Samples: config.md
