@@ -1,20 +1,12 @@
 # Pre Requirements for Local DB System
 
 ## Base System
-* Storage System: Mongo DB v4.X
-    * [Installation](#mongodb-installation)
-    * [Confirmation](#mongodb-confirmation)
-* Read-out System: YARR
-    * [Installation](#yarr-installation)
-    * [Confirmation](#yarr-confirmation)
 
-## MongoDB Installation
+### Storage System: Mongo DB v4.X
 
-Please look at [MongoDB Documentation](https://docs.mongodb.com/manual/installation/) to install MongoDB 4.X Community Edition and start mongod service.
-
-## MongoDB Confirmation
-
-* Check the connection to Mongo DB in mongo shell
+Ensure that MongoDB 4.X Community Edition is installed and mongod service is started. <br>
+([Mongo DB Installation](https://docs.mongodb.com/manual/installation/) <br>
+Check the connection to Mongo DB in mongo shell by:
 
 ```bash
 $ export PATH=$PATH:<mongodb installation dir>/bin
@@ -29,16 +21,11 @@ bye
 
 If you catch the message "exception: connect failed", you should check that MongoDB is running.
 
-## YARR Installation
+### Read-out System: YARR
 
-Please look at [YARR Docs](https://yarr.readthedocs.io/en/latest/install/) to install YARR System and setup.
-
-## YARR Confirmation
-
-* Check the ScanConsole
-
-The ScanConsole is the main read-out program. <br>
-Ensure that YARR SW is installed before running the ScanConsole. ([YARR SW Installation](https://yarr.readthedocs.io/en/latest/install/))
+Ensure that YARR SW is installed and set-up. <br>
+([YARR SW Installation](https://yarr.readthedocs.io/en/latest/install/))<br>
+Check the ScanConsole, which is the main read-out program, working by:
 
 ```bash
 $ cd <YARR SW installation dir>
