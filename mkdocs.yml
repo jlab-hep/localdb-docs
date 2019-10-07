@@ -4,7 +4,7 @@ pages:
     - Pre Requirements: requirements.md
     - Installation: install.md
     - Upload: upload.md
-    - Download: download.md
+    - Retrieve: retrieve.md
     - Viewer Application: viewer.md
     - Synchronize: synchroniza.md
     - Archive: archive.md
