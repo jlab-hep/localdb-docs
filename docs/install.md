@@ -2,25 +2,20 @@
 
 There are several tools for handling Local DB.
 
-* Uploader ---> [YARR](#yarr)
+* Uploader ---> [YARR](#yarr)<br>
+    To upload data (test data, chip data, user data, site data ...) into Local DB.
 
-    To upload data (test data, chip data, user data, site data ...) into Local DB.<br>
+* Retriever ---> [YARR](#yarr)<br>
+    To retrieve data (data log, data files) from Local DB.
 
-* Retriever ---> [YARR](#yarr)
+* Viewer Application ---> [Local DB Tools](#local-db-tools)<br>
+    To check/edit data in Local DB on browser.
 
-    To retrieve data (data log, data files) from Local DB.<br>
+* Synchronization Tool ---> [Local DB Tools](#local-db-tools)<br>
+    To push/pull/share data with the other Local DB or Master Server (Centralize Local DB).
 
-* Viewer Application ---> [Local DB Tools](#local-db-tools)
-
-    To check/edit data in Local DB on browser.<br>
-
-* Synchronization Tool ---> [Local DB Tools](#local-db-tools)
-
-    To push/pull/share data with the other Local DB or Master Server (Centralize Local DB).<br>
-
-* Archive Tool ---> [Local DB Tools](#local-db-tools)
-
-    To create archive tar.gz file for Local DB back-up.<br>
+* Archive Tool ---> [Local DB Tools](#local-db-tools)<br>
+    To create archive tar.gz file for Local DB back-up.
 
 ## YARR
 
@@ -128,6 +123,4 @@ Additional options:
 ### 1.2 Set-up Synchronization Tool
 
 ### 1.3 Set-up Archive Tool
-
-### 2. Confirmation
 
