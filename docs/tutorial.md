@@ -68,7 +68,7 @@ $ ./bin/scanConsole \
 #DB INFO# Uploading in the back ground. (log: ~/.yarr/localdb/log/)
 ```
 
-##### Additional options:
+**Additional options**
 
 - **-d ``<database config>``** : Set database config file (default: `${HOME}/.yarr/localdb/${HOSTNAME}_database.json`)
 - **-u ``<user config>``** : Set user config file ([sample](#user-config-file))

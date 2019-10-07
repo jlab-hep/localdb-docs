@@ -15,7 +15,7 @@ $ ./localdb/bin/localdbtool-retrieve init
 #DB INFO# -----------------------
 ```
 
-###### Additional options
+**Additional options**
 
 - **--database ``<database cfg>``** : Set database config file (default: `${HOME}/.yarr/localdb/${HOSTNAME}_database.json`)
 
@@ -44,7 +44,7 @@ Run Number: 251
 # Ctrl+C can terminate the output
 ```
 
-###### Additional options
+**Additional options**
 
 - **--database ``<database cfg>``** : Set database config file (default: `${HOME}/.yarr/localdb/${HOSTNAME}_database.json`)
 - **--username ``<username>``** : Set username of the Local DB Server if the user authentication is required 
@@ -84,7 +84,7 @@ $ ./localdb/bin/localdbtool-retrieve pull
 #DB INFO# -----------------------
 ```
 
-###### Additional options
+**Additional options**
 
 - **--database ``<database cfg>``** : Set database config file (default: `${HOME}/.yarr/localdb/${HOSTNAME}_database.json`)
 - **--username ``<username>``** : Set username of the Local DB Server if the user authentication is required 

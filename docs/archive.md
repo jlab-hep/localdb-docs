@@ -13,7 +13,7 @@ source setup_archive_tool.sh
 ## b) configure servers
 edit `my_archive_configure.yml` to config your local mongoDB database directory and where to put archives.
 
-![archive_yml](https://github.com/jlab-hep/localDB-tools/blob/devel/docs/images/archive_yml.png)
+![archive_yml](images/archive_yml.png)
 
 * `data_path: /var/lib/mongo`: path where the local data is. Default path is `/var/lib/mongo`.
 * `archive_path: /root/archive-mongo-data`: path where the archives will be put. We recommend to use external HDD/SSD.
@@ -23,7 +23,7 @@ edit `my_archive_configure.yml` to config your local mongoDB database directory 
 `make install` with root privileges. Then edit the configure file `/etc/localdbtools/archive.yml`.
 The archive-tool `/usr/bin/localdbtool-archive.sh` will be run automatically as schedule task by `cron`. The `cron` configure is `/etc/cron.d/localdbtool-archive`. By default, the task will be executed every Sunday 3:00 am.
 
-![archive_cron](https://github.com/jlab-hep/localDB-tools/blob/devel/docs/images/archive_cron_configure.png)
+![archive_cron](images/archive_cron_configure.png)
 
 
 # 3. Usage

@@ -8,6 +8,7 @@ pages:
     - Viewer Application: viewer.md
     - Synchronization Tool: synchroniza.md
     - Archive Tool: archive.md
+    - Structure: structure.md
     - Local DB: localdb.md
     - YARR: yarr.md
     - Config Samples: config.md
