@@ -33,7 +33,7 @@ $ ./localdb/setup_db.sh
 [LDB] More detail:
 [LDB]   Access 'https://localdb-docs.readthedocs.io/en/master/'
 ```
-> [Advanced tutorial for setup_db.sh]()
+> [Advanced tutorial for setup_db.sh](https://localdb-docs.readthedocs.io/en/master/install/)
 
 * List of Local DB command
     * localdb/bin/localdbtool-upload

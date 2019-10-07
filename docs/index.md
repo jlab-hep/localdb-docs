@@ -17,12 +17,12 @@ Using the tools for Local DB, you can:
 
 |Function      |Tool Name           |System        |Command                                                           |
 |:------------:|:------------------:|:------------:|:----------------------------------------------------------------:|
-|Storage System|Local DB            |MongoDB       |"<mongodb installation dir>"/bin/mongoi                           |
-|Store Data    |Upload Tool         |YARR          |"<YARR installation dir>"/localdb/bin/localdbtool-upload          |
-|Restore Data  |Retrieve Tool       |YARR          |"<YARR installation dir>"/localdb/bin/localdbtool-retrieve        |
-|Share Data    |Synchronization Tool|Local DB Tools|"<Tools installation dir>"/sync-tool/bin/localdbtool-sync         |
-|Check Data    |Viewer Application  |Local DB Tools|"<Tools installation dir>"/viewer/app.py                          |
-|Archive DB    |Archive Tool        |Local DB Tools|"<Tools installation dir>"/archive-tool/bin/localdbtool-archive.sh|
+|Storage System|Local DB            |MongoDB       |"mongodb installation dir"/bin/mongoi                           |
+|Store Data    |Upload Tool         |YARR          |"YARR installation dir"/localdb/bin/localdbtool-upload          |
+|Restore Data  |Retrieve Tool       |YARR          |"YARR installation dir"/localdb/bin/localdbtool-retrieve        |
+|Share Data    |Synchronization Tool|Local DB Tools|"Tools installation dir"/sync-tool/bin/localdbtool-sync         |
+|Check Data    |Viewer Application  |Local DB Tools|"Tools installation dir"/viewer/app.py                          |
+|Archive DB    |Archive Tool        |Local DB Tools|"Tools installation dir"/archive-tool/bin/localdbtool-archive.sh|
 
 ## Contents
 * [Requirements](requirements.md)
@@ -35,8 +35,8 @@ YARR : Cloned from https://gitlab.cern.ch/YARR/YARR.git
 |-- localdb
 |   |-- setting : setup scripts and default config files dir
 |   |-- bin : binary commands dir
-|   |   |-- localdb-upload : uploader
-|   |   `-- localdb-retrieve : retriever
+|   |   |-- localdbtool-upload : uploader
+|   |   `-- localdbtool-retrieve : retriever
 |   `-- lib : libaries dir
 `-- bin : YARR read-out commands dir
 

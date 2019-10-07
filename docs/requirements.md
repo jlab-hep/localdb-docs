@@ -4,8 +4,7 @@
 
 ### Storage System: Mongo DB v4.X
 
-Ensure that MongoDB 4.X Community Edition is installed and mongod service is started. <br>
-([Mongo DB Installation](https://docs.mongodb.com/manual/installation/) <br>
+Ensure that [MongoDB 4.X Community Edition](https://docs.mongodb.com/manual/installation/) is installed and mongod service is started. <br>
 Check the connection to Mongo DB in mongo shell by:
 
 ```bash
@@ -23,8 +22,7 @@ If you catch the message "exception: connect failed", you should check that Mong
 
 ### Read-out System: YARR
 
-Ensure that YARR SW is installed and set-up. <br>
-([YARR SW Installation](https://yarr.readthedocs.io/en/latest/install/))<br>
+Ensure that [YARR SW](https://yarr.readthedocs.io/en/latest/install/) is installed and set-up. <br>
 Check the ScanConsole, which is the main read-out program, working by:
 
 ```bash
