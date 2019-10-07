@@ -11,5 +11,6 @@ pages:
     - Structure: structure.md
     - Local DB: localdb.md
     - YARR: yarr.md
+    - Advanced: advanced.md
     - Config Samples: config.md
 theme: readthedocs

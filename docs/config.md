@@ -2,9 +2,9 @@
 
 ## Database cfg
 
-- hostIp => IP address of the Local DB server (default. "127.0.0.1" or "localhost")
-- hostPort => The port number of the Local DB server (default. "27017")
-- dbName => The name of the Local DB (default. "localdb")
+- hostIp : IP address of the Local DB server (default. "127.0.0.1" or "localhost")
+- hostPort : The port number of the Local DB server (default. "27017")
+- dbName : The name of the Local DB (default. "localdb")
 
 ```json
 {
@@ -59,9 +59,9 @@
 
 ## User cfg
 
-- userName: Your name (e.g. "John Doe")
-- institution: The institution name you belong (e.g. "ABC Laboratory")
-- description: The description for user account (e.g. "account for testbeam")
+- userName : Your name (e.g. "John Doe")
+- institution : The institution name you belong (e.g. "ABC Laboratory")
+- description : The description for user account (e.g. "account for testbeam")
 
 ```json
 {
@@ -73,7 +73,7 @@
 
 ## Site cfg
 
-- site: The name of the production site (institution)
+- site : The name of the production site (institution)
 
 ```json
 {
@@ -83,12 +83,12 @@
 
 ## Component cfg
 
-- module.serialNumber: The serial number of the module (option)
-- module.componentType: "Module" (option)
-- chipType: "FEI4B" or "RD53A"
-- chips.i.serialNumber: The serial number of the chip
-- chips.i.componentType: "Front-end Chip"
-- chips.i.chipId: The number of the chipId, which must be "int" 
+- module.serialNumber : The serial number of the module (option)
+- module.componentType : "Module" (option)
+- chipType : "FEI4B" or "RD53A"
+- chips.i.serialNumber : The serial number of the chip
+- chips.i.componentType : "Front-end Chip"
+- chips.i.chipId : The number of the chipId, which must be "int" 
 
 ### For RD53A SCC
 
@@ -141,13 +141,13 @@
 
 ## Connectivity cfg
 
-- stage: The test stage, which should be selected from the stage list written in [database.json](#database-cfg)
-- module.serialNumber: The serial number of the module
-- chipType: "FEI4B" or "RD53A"
-- chips.i.serialNumber: The serial number of the chip
-- chips.i.config: The path to chip config file
-- chips.i.tx: The TX channel, which must be "int"
-- chips.i.rx: The RX channel, which must be "int"
+- stage : The test stage, which should be selected from the stage list written in [database.json](#database-cfg)
+- module.serialNumber : The serial number of the module
+- chipType : "FEI4B" or "RD53A"
+- chips.i.serialNumber : The serial number of the chip
+- chips.i.config : The path to chip config file
+- chips.i.tx : The TX channel, which must be "int"
+- chips.i.rx : The RX channel, which must be "int"
 
 ### For RD53A
    
@@ -210,8 +210,8 @@
 
 You can replicated it from `YARR/configs/defaults/<FE>.json`.
 
-- name/Name: The serial number of the chip 
-- chipId/ChipId: The geometrical ID of the chip (chipId)
+- name/Name : The serial number of the chip 
+- chipId/ChipId : The geometrical ID of the chip (chipId)
 
 ### For RD53A
 
@@ -241,14 +241,14 @@ You can replicated it from `YARR/configs/defaults/<FE>.json`.
 
 ## DCS cfg
 
-- 'status': enabled/disabled to upload data
-- 'key': DCS keyword (key list is written in the database config file `${HOME}/.yarr/localdb/database.json`)
-- 'num': DCS data number (the combination of DCS keyword and this number specify the DCS data in data file)
-- 'description': The description of the DCS data 
-- 'path': The path to DCS data file
-- 'mode': The mode of DCS setting (e.g. CV) (option)
-- 'setting': DCS setting parameter (option)
-- 'chip': The chip name related with DCS data (option: if not specified this field, DCS data is stored associated with all chips tested in the specific scan)
+- 'status' : enabled/disabled to upload data
+- 'key' : DCS keyword (key list is written in the database config file `${HOME}/.yarr/localdb/database.json`)
+- 'num' : DCS data number (the combination of DCS keyword and this number specify the DCS data in data file)
+- 'description' : The description of the DCS data 
+- 'path' : The path to DCS data file
+- 'mode' : The mode of DCS setting (e.g. CV) (option)
+- 'setting' : DCS setting parameter (option)
+- 'chip' : The chip name related with DCS data (option: if not specified this field, DCS data is stored associated with all chips tested in the specific scan)
  
 ```json
 {
@@ -307,9 +307,9 @@ You can replicated it from `YARR/configs/defaults/<FE>.json`.
 
 ## DCS Data File
 
-- the 1st line: DCS keyword `key unixtime <key1> <key2> <key3> ...` 
-- the 2nd line: DCS number `num null <num1> <num2> <num3> ...`
-- After the 3rd line: datetime and DCS data `datetime unixtime <data1> <data2> <data3> ...` (data value must be the number or "null")
+- the 1st line : DCS keyword `key unixtime <key1> <key2> <key3> ...` 
+- the 2nd line : DCS number `num null <num1> <num2> <num3> ...`
+- After the 3rd line : datetime and DCS data `datetime unixtime <data1> <data2> <data3> ...` (data value must be the number or "null")
 
 ```dat
 key unixtime vddd_voltage vddd_current vdda_voltage vdda_current
@@ -324,16 +324,16 @@ num null 0 0 0 0
 
 ## Viewer Application
 
-- mongoDB.host: IP address of the Local DB server (default. "127.0.0.1" or "localhost")
-- mongoDB.port: The port number of the Local DB server (default. "27017")
-- mongoDB.db: The name of the Local DB (default. "localdb")
-- mongoDB.username: username of user account in MongoDB if the user authentication is required
-- mongoDB.password: password of user account in MongoDB if the user authentication is required
-- mongoDB.KeyFile: username & password info file created by [localdb-tools/setting/create_admin.sh]()
-- mongoDB.ssl/tls: ssl/tls CA & certification file if ssl/tls is enabled
-- userDB.db: The name of the DB for Viewer Application (default. "localdbtool")
-- flask.host: IP address running app.py (default. "127.0.0.1" or "localhost")
-- flask.port: The port number running app.py (default. "5000")
+- mongoDB.host : IP address of the Local DB server (default. "127.0.0.1" or "localhost")
+- mongoDB.port : The port number of the Local DB server (default. "27017")
+- mongoDB.db : The name of the Local DB (default. "localdb")
+- mongoDB.username : username of user account in MongoDB if the user authentication is required
+- mongoDB.password : password of user account in MongoDB if the user authentication is required
+- mongoDB.KeyFile : username & password info file created by [localdb-tools/setting/create_admin.sh]()
+- mongoDB.ssl/tls : ssl/tls CA & certification file if ssl/tls is enabled
+- userDB.db : The name of the DB for Viewer Application (default. "localdbtool")
+- flask.host : IP address running app.py (default. "127.0.0.1" or "localhost")
+- flask.port : The port number running app.py (default. "5000")
 
 ```yml
 # Configs for web viewer
