@@ -63,7 +63,7 @@ switched to db localdb
 Type "it" for more
 ```
 
-### Query Focument
+### Query Document
 
 ```bash
 > db.component.find({ "_id": ObjectId("5d66e6c54bb3d07690067816") }).pretty()

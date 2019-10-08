@@ -1,5 +1,3 @@
-# Pre Requirements for Local DB System
-
 ## Storage System: Mongo DB v4.X
 
 Ensure that [MongoDB 4.X Community Edition](https://docs.mongodb.com/manual/installation/) is installed and mongod service is started. <br>

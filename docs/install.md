@@ -1,26 +1,30 @@
 There are several tools for handling Local DB.
 
-* Uploader ---> [YARR](#yarr)<br>
+* Uploader ([YARR/localdbtool-upload](#yarr))<br>
     To upload data (test data, chip data, user data, site data ...) into Local DB.
 
-* Retriever ---> [YARR](#yarr)<br>
+* Retriever ([YARR/localdbtool-retrieve](#yarr))<br>
     To retrieve data (data log, data files) from Local DB.
 
-* Viewer Application ---> [Local DB Tools](#local-db-tools)<br>
+* Handler ([YARR/bin/dbAccessor](#yarr)) <br>
+    To handle (upload/register/retrieve) data in Local DB.
+
+* Viewer Application ([localdb-tools/viewer](#local-db-tools))<br>
     To check/edit data in Local DB on browser.
 
-* Synchronization Tool ---> [Local DB Tools](#local-db-tools)<br>
+* Synchronization Tool ([localdb-tools/sync-tool](#local-db-tools))<br>
     To push/pull/share data with the other Local DB or Master Server (Centralize Local DB).
 
-* Archive Tool ---> [Local DB Tools](#local-db-tools)<br>
+* Archive Tool ([localdb-tools/archive-tool](#local-db-tools))<br>
     To create archive tar.gz file for Local DB back-up.
 
 ## YARR
 
 There are two Local DB tools included in YARR SW.
 
-* Uploader
-* Retriever 
+* Uploader (localdbtool-upload)
+* Retriever (localdbtool-retrieve)
+* Handler (dbAccessor)
 
 ### 0. YARR SW Installation
 
@@ -67,15 +71,22 @@ Please run the command with the option 'init' to check if the command is working
 $./localdb/bin/localdbtool-upload init
 #DB INFO# -----------------------
 #DB INFO# Function: Initialize
-#DB INFO# Local DB Server: mongodb://127.0.0.1:27017/localdb
-#DB INFO# ---> connection is good.
+#DB INFO# [Connection Test] DB Server: mongodb://127.0.0.1:27017/localdb
+#DB INFO# ---> Connection is GOOD.
 #DB INFO# -----------------------
 $
 $./localdb/bin/localdbtool-retrieve init
 #DB INFO# -----------------------
 #DB INFO# Function: Initialize
-#DB INFO# [Connection Test] DB Server: mongodb://127.0.0.1:27017
-#DB INFO#    The connection is GOOD.
+#DB INFO# [Connection Test] DB Server: mongodb://127.0.0.1:27017/localdb
+#DB INFO# ---> Connection is GOOD.
+#DB INFO# -----------------------
+$
+$./bin/dbAccessor -I
+#DB INFO# -----------------------
+#DB INFO# Function: Initialize
+#DB INFO# Local DB Server: mongodb://127.0.0.1:27017/localdb
+#DB INFO# ---> connection is good.
 #DB INFO# -----------------------
 ```
 
@@ -120,5 +131,33 @@ $ ./setup_viewer.sh
 
 ### 1.2 Set-up Synchronization Tool
 
+`localdb-tools/sync-tool/setup_sync_tool.sh` can set-up Synchronization Tool setting in user local environments by following steps:
+
+* Create the sync config file ---> [localdb-tools/sync-tool/my_configure.yml](config.md)
+* Edit config file automatically
+* Check if required python modules are installed
+
+```bash
+$ cd localdb-tools/sync-tool
+$ ./setup_sync_tool.sh
+<some texts>
+[LDB] Set editor command ... > vim
+<some texts>
+[LDB] More information: https://localdb-docs.readthedocs.io/en/master/
+```
+
 ### 1.3 Set-up Archive Tool
 
+`localdb-tools/sync-tool/setup_archive_tool.sh` can set-up Archiving Tool setting in user local environments by following steps:
+
+* Create the archive config file ---> [localdb-tools/archive-tool/my_configure.yml](config.md)
+* Edit config file automatically
+
+```bash
+$ cd localdb-tools/archive-tool
+$ ./setup_archive_tool.sh 
+<some texts>
+[LDB] Set editor command ... > vim
+<some texts>
+[LDB] More information: https://localdb-docs.readthedocs.io/en/master/
+```

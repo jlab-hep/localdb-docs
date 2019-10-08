@@ -8,8 +8,8 @@ $ cd <YARR SW installation dir>
 $ ./localdb/bin/localdbtool-upload init
 #DB INFO# -----------------------
 #DB INFO# Function: Initialize
-#DB INFO# Local DB Server: mongodb://127.0.0.1:27017/localdb
-#DB INFO# ---> connection is good.
+#DB INFO# [Connection Test] DB Server: mongodb://127.0.0.1:27017/localdb
+#DB INFO# ---> Connection is GOOD.
 #DB INFO# -----------------------
 ```
 
@@ -37,8 +37,8 @@ $ ./bin/scanConsole \
 <lots of text>
 #DB INFO# -----------------------
 #DB INFO# Function: Initialize
-#DB INFO# Local DB Server: mongodb://127.0.0.1:27017
-#DB INFO# ---> connection is good.
+#DB INFO# [Connection Test] DB Server: mongodb://127.0.0.1:27017/localdb
+#DB INFO# ---> Connection is GOOD.
 #DB INFO# -----------------------
 #DB INFO# Uploading in the back ground. (log: ~/.yarr/localdb/log/)
 ```
@@ -79,8 +79,8 @@ DBHandler: Register Environment:
 	environmental config file : dcs_info.json
 #DB INFO# -----------------------
 #DB INFO# Function: Initialize
-#DB INFO# Local DB Server: mongodb://127.0.0.1:27017
-#DB INFO# ---> connection is good.
+#DB INFO# [Connection Test] DB Server: mongodb://127.0.0.1:27017/localdb
+#DB INFO# ---> Connection is GOOD.
 #DB INFO# -----------------------
 #DB INFO# Uploading in the back ground. (log: ~/.yarr/localdb/log/)
 ```

@@ -8,8 +8,8 @@ $ cd <YARR SW installation dir>
 $ ./localdb/bin/localdbtool-retrieve init
 #DB INFO# -----------------------
 #DB INFO# Function: Initialize
-#DB INFO# Local DB Server: mongodb://127.0.0.1:27017/localdb
-#DB INFO# ---> connection is good.
+#DB INFO# [Connection Test] DB Server: mongodb://127.0.0.1:27017/localdb
+#DB INFO# ---> Connection is GOOD.
 #DB INFO# -----------------------
 ```
 
