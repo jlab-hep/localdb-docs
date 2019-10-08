@@ -1,5 +1,7 @@
 # Config Files Sample
 
+**key with \* is a required content**
+
 ## Database cfg
 
 - hostIp : IP address of the Local DB server (default. "127.0.0.1" or "localhost")
@@ -322,6 +324,17 @@ num null 0 0 0 0
 2019-06-24_20:50:03 1561377003 15 25 0 0
 ```
 
+## scanLog File
+
+- startTime\* or timestamp\*: timestamp of the test (unixtime (startTime) or string (timestamp))
+
+```json
+{
+    "startTime": 1569924977,
+    "timestamp": "2019-10-01_19:16:17"
+}
+```
+
 ## Viewer Application
 
 - mongoDB.host : IP address of the Local DB server (default. "127.0.0.1" or "localhost")
@@ -336,8 +349,6 @@ num null 0 0 0 0
 - flask.port : The port number running app.py (default. "5000")
 
 ```yml
-# Configs for web viewer
-
 mongoDB:
     host: 127.0.0.1 # IP address running mongoDB
     port: 27017     # port number running mongoDB
@@ -363,4 +374,44 @@ flask:
 
 # For development
 #is_development: True
+```
+
+## Synchronization Tool
+
+- local.host: IP address of the Local DB server (default. "127.0.0.1" or "localhost")
+- local.port: The port number of the Local DB server (default. "27017")
+- local.username: username of user account in Local DB if the user authentication is required
+- local.password: password of user account in Local DB if the user authentication is required
+- master.host: IP address of the Master Server (default. "127.0.0.1" or "localhost")
+- master.port: The port number of the Master Server (default. "27017")
+- master.username: username of user account in Master Server if the user authentication is required
+- master.password: password of user account in Master Server if the user authentication is required
+- logfile: path to log output file
+
+```yml
+local:
+    host: 127.0.0.1
+    port: 27017
+    #username: tokyotech
+    #password: ihatepassword
+
+master:
+    host: master-host
+    port: 27017
+    #username: tokyotech
+    #password: ihatepassword
+
+#logfile: logs/production.log
+```
+
+## Archive Tool
+
+- data_path: path to MongoDB database (defaul. "/var/lib/mongo")
+- archive_path: path to put archives
+- n_archive: The number of archives want to keep
+
+```yml
+data_path: /var/lib/mongo
+archive_path: /root/archive-mongo-data
+n_archives: 2
 ```

@@ -15,7 +15,7 @@ $ ./localdb/bin/localdbtool-retrieve init
 
 **Additional options**
 
-- **--database ``<database cfg>``** : Set database config file (default: `${HOME}/.yarr/localdb/${HOSTNAME}_database.json`)
+- **--database ``<database cfg>``**<br> : Set [database config file](config.md) (default: `${HOME}/.yarr/localdb/${HOSTNAME}_database.json`)
 
 ## Retrieve test log
 
@@ -44,13 +44,13 @@ Run Number: 251
 
 **Additional options**
 
-- **--database ``<database cfg>``** : Set database config file (default: `${HOME}/.yarr/localdb/${HOSTNAME}_database.json`)
-- **--username ``<username>``** : Set username of the Local DB Server if the user authentication is required 
-- **--password ``<password>``** : Set password of the Local DB Server if the user authentication is required 
-- **--config ``<config file>``** : Set config file which username and password are written in if the user authentication is required
-- **--user ``<user name>``** : Set the user name for refine search
-- **--site ``<site name>``** : Set the site name for refine search
-- **--chip ``<chip name>``** : Set the chip name for refine search
+- **--database ``<database cfg>``**<br> : Set [database config file](config.md) (default: `${HOME}/.yarr/localdb/${HOSTNAME}_database.json`)
+- **--username ``<username>``**<br> : Set username of the Local DB Server if the user authentication is required 
+- **--password ``<password>``**<br> : Set password of the Local DB Server if the user authentication is required 
+- **--config ``<config file>``**<br> : Set config file which username and password are written in if the user authentication is required
+- **--user ``<user name>``**<br> : Set the user name for refine search
+- **--site ``<site name>``**<br> : Set the site name for refine search
+- **--chip ``<chip name>``**<br> : Set the chip name for refine search
 
 ## Retrieve data files
 
@@ -84,13 +84,13 @@ $ ./localdb/bin/localdbtool-retrieve pull
 
 **Additional options**
 
-- **--database ``<database cfg>``** : Set database config file (default: `${HOME}/.yarr/localdb/${HOSTNAME}_database.json`)
-- **--username ``<username>``** : Set username of the Local DB Server if the user authentication is required 
-- **--password ``<password>``** : Set password of the Local DB Server if the user authentication is required 
-- **--config ``<config file>``** : Set config file which username and password are written in if the user authentication is required
-- **--chip ``<chip name>``** : Set the chip name for specifying test data
-- **--test ``<test ID>``** : Set the test ID for specifying test data
-- **--directory ``<path>``** : Set the path to directory saving retrieved data
+- **--database ``<database cfg>``**<br> : Set [database config file](config.md) (default: `${HOME}/.yarr/localdb/${HOSTNAME}_database.json`)
+- **--username ``<username>``**<br> : Set username of the Local DB Server if the user authentication is required 
+- **--password ``<password>``**<br> : Set password of the Local DB Server if the user authentication is required 
+- **--config ``<config file>``**<br> : Set config file which username and password are written in if the user authentication is required
+- **--chip ``<chip name>``**<br> : Set the chip name for specifying test data
+- **--test ``<test ID>``**<br> : Set the test ID for specifying test data
+- **--directory ``<path>``**<br> : Set the path to directory saving retrieved data
 
 You can specify test data by setting the chip name with `--chip` or the test ID with `--test`.
 If you set the chip name, you can retrieve the latest test data for the chip.
