@@ -18,6 +18,11 @@ There are several tools for handling Local DB.
 * Archive Tool ([localdb-tools/archive-tool](#local-db-tools))<br>
     To create archive tar.gz file for Local DB back-up.
 
+## OS supported by the Docs
+
+* centOS7
+
+
 ## YARR
 
 There are two Local DB tools included in YARR SW.
@@ -26,11 +31,11 @@ There are two Local DB tools included in YARR SW.
 * Retriever (localdbtool-retrieve)
 * Handler (dbAccessor)
 
-### 0. YARR SW Installation
+#### 0. YARR SW Installation
 
 Please check [YARR SW Installation](https://yarr.readthedocs.io/en/latest/install/) to install and set-up. <br>
 
-### 1. Set-up Local DB
+#### 1. Set-up Local DB
 
 `YARR/localdb/setup_db.sh` can set-up Local DB setting in user local environments by following steps:
 
@@ -63,7 +68,7 @@ $ ./localdb/setup_db.sh
 - **-e ``<Certification>``** : Path to Client certificate of Local DB server (option)
 - **-r** : Clean the settings (reset)
 
-### 2. Confirmation
+#### 2. Confirmation
 
 Please run the command with the option 'init' to check if the command is working or the connection to Local DB is good.
 
@@ -100,13 +105,13 @@ There are three Local DB tools included in YARR SW.
 * Synchronization Tool
 * Archive Tool
 
-### 0. SW Installation
+#### 0. SW Installation
 
 ```bash
 $ git clone https://gitlab.cern.ch/YARR/localdb-tools.git
 ```
 
-### 1.1 Set-up Viewer Application
+#### 1.1 Set-up Viewer Application
 
 `localdb-tools/viewer/setup_viewer.sh` can set-up Viewer Application setting in user local environments by following steps:
 
@@ -129,7 +134,7 @@ $ ./setup_viewer.sh
 - **-p ``<port>``** : Set Local DB server port (default: 27017)
 - **-c ``<cfg>``** : Set config file Name (default: conf.yml)
 
-### 1.2 Set-up Synchronization Tool
+#### 1.2 Set-up Synchronization Tool
 
 `localdb-tools/sync-tool/setup_sync_tool.sh` can set-up Synchronization Tool setting in user local environments by following steps:
 
@@ -146,7 +151,7 @@ $ ./setup_sync_tool.sh
 [LDB] More information: https://localdb-docs.readthedocs.io/en/master/
 ```
 
-### 1.3 Set-up Archive Tool
+#### 1.3 Set-up Archive Tool
 
 `localdb-tools/sync-tool/setup_archive_tool.sh` can set-up Archiving Tool setting in user local environments by following steps:
 

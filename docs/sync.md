@@ -1,10 +1,11 @@
 # 1. Introduce
+
 The _sync-tool_ is to synchronize multiple localDB servers for ITk. Before using sync-tool, we need a stable, network-accessible _master server_ which handle whole ITK data.
 
 ![Sync overall](images/sync_overall.png)
 
-
 # 2. Getting start
+
 ## a) download
 ```
 git clone https://github.com/jlab-hep/localDB-tools.git

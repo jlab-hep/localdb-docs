@@ -1,3 +1,16 @@
+# 1. Introduce
+
+The **Upload Tool** is to upload data into Local DB. <br>
+Upload Tool performs following functions:
+
+* Upload the test data after scanConsole
+* Upload the test data from the specific result directory
+* Upload DCS data associated with the test data
+* Upload data from cache in the stable connection
+* Register chip/module data
+
+# 2. Getting start
+
 This page describes how to upload data into Local DB.<br>
 Please look at [Installation](install.md) to set-up Upload Tool.
 
@@ -24,9 +37,9 @@ There are two ways to upload test data into Local DB:
 * `scanConsole -W` to upload test data after scanConsole immediately
 * `localdbtool-upload scan` to upload test data from the specific result directory
 
-### scanConsole -W
+#### scanConsole -W
 
-You can scan and upload test data by `scanConsole -W`
+You can scan and upload test data by `scanConsole -W`:
 
 ```bash
 $ ./bin/scanConsole \
@@ -49,7 +62,9 @@ $ ./bin/scanConsole \
 - **-u ``<user cfg>``**<br> : Set [user config file](config.md) 
 - **-i ``<site cfg>``**<br> : Set [site config file](config.md)
 
-### localdbtool-upload scan
+**You have to prepare [the connectivity config file and the chip config file](#config.md) to upload upload the test data associated with the registered chip/module after the [registration](#register-chip/module-data).** 
+
+#### localdbtool-upload scan
 
 You can upload test data from the specific result directory by `localdbtool-upload scan`.
 
