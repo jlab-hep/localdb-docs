@@ -1,17 +1,10 @@
 # 1. Introduction
 
-The **Upload Tool** is to upload data into Local DB. <br>
-Upload Tool performs following functions:
-
-* Upload the test data after scanConsole
-* Upload the test data from the specific result directory
-* Upload DCS data associated with the test data
-* Upload data from cache in the stable connection
-* Register chip/module data
+The **Upload Tool** is to upload data into Local DB.
 
 # 2. Getting start
 
-Please look at [Installation](install.md) to set-up Upload Tool.
+Please look at [Installation/Set-up Local DB Tools in YARR](install.md) to set-up Upload Tool.
 
 ## Check Command & Connection
 
@@ -28,6 +21,16 @@ $ ./localdb/bin/localdbtool-upload init
 **Additional options**
 
 - **--database ``<database cfg>``**<br> : Set [database config file](config.md) (default: `${HOME}/.yarr/localdb/${HOSTNAME}_database.json`)
+
+# 3. Usage
+
+Upload Tool performs following functions:
+
+* [Upload the test data after scanConsole](#upload-test-data)
+* [Upload the test data from the specific result directory](#upload-test-data)
+* [Upload DCS data associated with the test data](#upload-dcs-data)
+* [Upload data from cache in the stable connection](#upload-cache-data)
+* [Register chip/module data](#register-chipmodule-data)
 
 ## Upload test data
 
@@ -185,4 +188,3 @@ $ ./localdb/bin/localdbtool-upload check comp
 #DB INFO# Done.
 #DB INFO# -----------------------
 ```
-

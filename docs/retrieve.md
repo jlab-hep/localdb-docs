@@ -1,5 +1,10 @@
-This page describes how to retrieve data into Local DB.<br>
-Please look at [Installation](install.md) to set-up Retrieve Tool.
+# 1. Introduction
+
+The **Retrieve Tool** is to retrieve data from Local DB.
+
+# 2. Getting start
+
+Please look at [Installation/Set-up Local DB Tools in YARR](install.md) to set-up Retrieve Tool.
 
 ## Check Command & Connection
 
@@ -16,6 +21,14 @@ $ ./localdb/bin/localdbtool-retrieve init
 **Additional options**
 
 - **--database ``<database cfg>``**<br> : Set [database config file](config.md) (default: `${HOME}/.yarr/localdb/${HOSTNAME}_database.json`)
+
+# 3. Usage
+
+Retrieve Tool performs following functions:
+
+* [Retrieve uploaded test data log](#retrieve-test-log)
+* [Retrieve the uploaded data into local directory](#retrieve-data-fiiles)
+* [Retrieve the uploaded data list](#retrieve-data-list)
 
 ## Retrieve test log
 
