@@ -124,7 +124,7 @@ If you set the test ID (which is document ID in Local DB you can check by `local
 
 You can retrieve the uploaded data (component, user, site) by `localdbtool-retrieve list <opt>`: 
  
-### Component list (default)
+### a) Component list (default)
 
 ```bash
 $ ./localdb/bin/localdbtool-retrieve list 
@@ -163,7 +163,7 @@ Chips(3)  :
 ```
 
 
-### User list
+### b) User list
 
 ```bash
 $ ./localdb/bin/localdbtool-retrieve list user
@@ -182,7 +182,7 @@ User Name: arisa_kubota
 # Ctrl+C can terminate the output 
 ```
 
-### Site list
+### c) Site list
 
 ```bash
 $ ./localdb/bin/localdbtool-retrieve list site
