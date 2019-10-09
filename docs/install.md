@@ -27,7 +27,7 @@ There are several tools for handling Local DB.
 
 ### YARR/localdb
 
-There are two Local DB tools included in YARR SW.
+There are two Local DB tools included in YARR SW:
 
 * Uploader (localdbtool-upload)
 * Retriever (localdbtool-retrieve)
@@ -101,7 +101,7 @@ If an error occurs, please check [FAQ]().
 
 ### Local DB Tools
 
-There are three Local DB tools included in YARR SW.
+There are more three Local DB tools:
 
 * Viewer Application
 * Synchronization Tool

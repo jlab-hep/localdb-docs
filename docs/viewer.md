@@ -51,7 +51,7 @@ You can access the test result page by clicking 'result page', and it displays t
 |![Viewer Result Page](images/viewer_result.png)|
 |:-:|
 
-# 5. Remote Access
+# 5. Remote Access/Apache
 
 In edit.
 

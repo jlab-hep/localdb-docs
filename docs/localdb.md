@@ -35,21 +35,24 @@ $ ./localdb/setup_db.sh
 ```
 > [Advanced tutorial for setup_db.sh](https://localdb-docs.readthedocs.io/en/master/install/)
 
-* List of Local DB command
-    * localdb/bin/localdbtool-upload
-    * localdb/bin/localdbtool-retrieve
-
 ### 3. Confirmation
 
 ```bash
-$ ./bin/scanConsole 
-#####################################
-# Welcome to the YARR Scan Console! #
-#####################################
--> Parsing command line parameters ...
-Error: no config files given, please specify config file name under -c option, even if file does not exist!
+$./localdb/bin/localdbtool-upload init
+#DB INFO# -----------------------
+#DB INFO# Function: Initialize
+#DB INFO# [Connection Test] DB Server: mongodb://127.0.0.1:27017/localdb
+#DB INFO# ---> Connection is GOOD.
+#DB INFO# -----------------------
 $
-$ ./localdb/bin/localdbtool-upload init
+$./localdb/bin/localdbtool-retrieve init
+#DB INFO# -----------------------
+#DB INFO# Function: Initialize
+#DB INFO# [Connection Test] DB Server: mongodb://127.0.0.1:27017/localdb
+#DB INFO# ---> Connection is GOOD.
+#DB INFO# -----------------------
+$
+$./bin/dbAccessor -I
 #DB INFO# -----------------------
 #DB INFO# Function: Initialize
 #DB INFO# Local DB Server: mongodb://127.0.0.1:27017/localdb
@@ -77,7 +80,7 @@ $ ./bin/scanConsole \
 #DB INFO# -----------------------
 #DB INFO# Uploading in the back ground. (log: ~/.yarr/localdb/log/)
 ```
-> [Advanced tutorial for scanConsole -W]()
+> [Advanced tutorial for scanConsole -W](https://localdb-docs.readthedocs.io/en/master/upload/#upload-test-data)
 
 You can check if the upload is success in log file `${HOME}/.yarr/localdb/log/${day}.log`:
 
@@ -93,7 +96,7 @@ You can check if the upload is success in log file `${HOME}/.yarr/localdb/log/${
 
 ### Retrieve
 
-You can check the uploaded test data log in CUI command `localdbtool-retrieve log`:
+You can check the uploaded test data log by `localdbtool-retrieve log`:
 
 ```bash
 $ ./localdb/bin/localdbtool-retrieve log 
@@ -107,10 +110,9 @@ Chip      : JohnDoe_0
 Run Number: 5635
 Test Type : std_digitalscan
 DCS Data  : NULL
-
 # Ctrl+C can terminate the output test log
 ```
-> [Advanced tutorial for Retrieve Tool]()
+> [Advanced tutorial for Retrieve Tool](https://localdb-docs.readthedocs.io/en/master/retrieve/)
 
 You can retrieve the uploaded data into the local directory by `localdbtool-retrieve pull`:
  
@@ -139,7 +141,7 @@ $ ./localdb/bin/localdbtool-retrieve pull
 #DB INFO# Retrieve ... ./db-data/connectivity.json
 #DB INFO# -----------------------
 ```
-> [Advanced tutorial for Retrieve Tool]()
+> [Advanced tutorial for Retrieve Tool](https://localdb-docs.readthedocs.io/en/master/retrieve/)
 
 * List of restored data (default dir: `YARR/db_data`)
     * Test Information (Data ID, User, Date, Chips, Run #, Test type) 
@@ -156,29 +158,49 @@ $ ./localdb/bin/localdbtool-retrieve pull
 
 You can handle data in Local DB using Local DB Tools:
 
-* Viewer Application ... Check Local DB
-* Synchronization Tool ... Share Local DB
-* Archive Tool ... Archive Local DB
+* [Viewer Application](#viewer-application)
+* [Synchronization Tool](#sync-tool)
+* [Archive Tool](#archive-tool)
 
 ```bash
 $ git clone https://gitlab.cern.ch/YARR/localdb-tools.git
+```
 
-# 1. Viewer Application Setting
+#### Viewer Application
+
+```bash
+# 1. Set Application
 $ cd localdb-tools/viewer
 $ ./setup_viewer.sh 
+
+# 2. Run Application
 $ ./app.py --config conf.yml &
 # ---> Access 'http://127.0.0.1:5000/localdb/' or 
 #      'http://IPaddress/localdb/' on browser to check data in Local DB
+```
+> [Advanced tutorial for Viewer Application](https://localdb-docs.readthedocs.io/en/master/viewer/)
 
-# 2. Synchronization Tool Setting
+#### Synchronization Tool
+
+```bash
+# 1. Set Tool 
 $ cd localdb-tools/sync-tool
-$ source setup_sync_tool.sh
-$ ./bin/localdbtool-sync.py --sync-opt <option> --config my_configure.yml
+$ ./setup_sync_tool.sh
 
-# 3. Archive Tool Setting
+# 2. Run Tool
+$ ./bin/localdbtool-sync.py --sync-opt <option> --config my_configure.yml
+```
+> [Advanced tutorial for Synchronization Tool](https://localdb-docs.readthedocs.io/en/master/sync/)
+
+#### Archive Tool
+
+```bash
+# 1. Set Tool
 $ cd localDB-tools/archive-tool
-$ source setup_archive_tool.sh
+$ ./setup_archive_tool.sh
+
+# 2. Run Tool
 $ ./bin/localdbtool-archive.sh --config my_archive_configure.yml
 ```
-> [Advanced tutorial for Local DB Tools]()
+> [Advanced tutorial for Archive Tools](https://localdb-docs.readthedocs.io/en/master/archive/)
 
