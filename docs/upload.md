@@ -33,6 +33,9 @@ Upload Tool performs following functions:
 
 ## Upload test data
 
+You can upload the test data associated with the relational data.<br>
+Please look at [Structure](structure.md) to get more detail about the structure of Local DB.
+
 ![Upload test](images/upload_test.png)
 
 There are two ways to upload test data into Local DB:

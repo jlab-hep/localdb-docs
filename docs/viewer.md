@@ -1,7 +1,7 @@
 # 1. Introduction
 
 The **viewer** is display the contents in Local DB on web browser. <br>
-You can access the web page in the local machine, or from the other machine using apache service.
+You can access the web page in the local machine, or from the other machine by opneing port or using apache service.
 
 # 2. Getting start
 
@@ -29,4 +29,29 @@ Applying ATLAS style settings...
 
 # 4. Web Page
 
-AAA
+Please access `http://127.0.0.1:5000/localdb/` on web browser in local machine and it displays the following page:
+
+**Top Page**
+
+|![Viewer Top Page](images/viewer_top.png)|
+|:-:|
+
+**Component List Page**
+
+|![Viewer Component Top Page](images/viewer_top_component.png)|
+|:-:|
+
+**Test List Page**
+
+|![Viewer Test Top Page](images/viewer_top_test.png)|
+|:-:|
+
+You can access the test result page by clicking 'result page', and it displays the following page:
+
+|![Viewer Result Page](images/viewer_result.png)|
+|:-:|
+
+# 5. Remote Access
+
+In edit.
+
