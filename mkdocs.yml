@@ -10,7 +10,6 @@ pages:
     - Synchronization Tool: sync.md
     - Archive Tool: archive.md
     - Structure: structure.md
-    - LocalDB: localdb.md
     - Advanced: advanced.md
     - Config Samples: config.md
     - FAQ: faq.md
