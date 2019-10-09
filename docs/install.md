@@ -1,12 +1,12 @@
 There are several tools for handling Local DB.
 
-* Uploader ([YARR/localdbtool-upload](#yarr))<br>
+* Uploader ([YARR/localdbtool-upload](#yarrlocaldb))<br>
     To upload data (test data, chip data, user data, site data ...) into Local DB.
 
-* Retriever ([YARR/localdbtool-retrieve](#yarr))<br>
+* Retriever ([YARR/localdbtool-retrieve](#yarrlocaldb))<br>
     To retrieve data (data log, data files) from Local DB.
 
-* Handler ([YARR/bin/dbAccessor](#yarr)) <br>
+* Handler ([YARR/bin/dbAccessor](#yarrlocaldb)) <br>
     To handle (upload/register/retrieve) data in Local DB.
 
 * Viewer Application ([localdb-tools/viewer](#local-db-tools))<br>
@@ -23,7 +23,9 @@ There are several tools for handling Local DB.
 * centOS7
 
 
-## YARR
+## SW Installation
+
+### YARR/localdb
 
 There are two Local DB tools included in YARR SW.
 
@@ -35,16 +37,16 @@ There are two Local DB tools included in YARR SW.
 
 Please check [YARR SW Installation](https://yarr.readthedocs.io/en/latest/install/) to install and set-up. <br>
 
-#### 1. Set-up Local DB
+#### 1. Set-up Local DB Tools in YARR
 
-`YARR/localdb/setup_db.sh` can set-up Local DB setting in user local environments by following steps:
+`YARR/localdb/setup_db.sh` can set-up Local DB Tools setting in user local environments by following steps:
 
 * Create the user directory for Local DB ---> ${HOME}/.yarr/localdb
 * Create the database config file ---> [${HOME}/.yarr/localdb/${HOSTNAME}_database.json](config.md)
 * Check if required python modules are installed
 
 ```bash
-$ cd YARR
+$ cd <YARR SW installation dir>
 $ ./localdb/setup_db.sh
 [LDB] Confirmation
 <some texts>
@@ -97,7 +99,7 @@ $./bin/dbAccessor -I
 
 If an error occurs, please check [FAQ]().
 
-## Local DB Tools
+### Local DB Tools
 
 There are three Local DB tools included in YARR SW.
 

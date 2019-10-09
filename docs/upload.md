@@ -1,4 +1,4 @@
-# 1. Introduce
+# 1. Introduction
 
 The **Upload Tool** is to upload data into Local DB. <br>
 Upload Tool performs following functions:
@@ -11,13 +11,12 @@ Upload Tool performs following functions:
 
 # 2. Getting start
 
-This page describes how to upload data into Local DB.<br>
 Please look at [Installation](install.md) to set-up Upload Tool.
 
 ## Check Command & Connection
 
 ```bash
-$ cd <YARR SW installation dir>
+$ cd YARR
 $ ./localdb/bin/localdbtool-upload init
 #DB INFO# -----------------------
 #DB INFO# Function: Initialize
@@ -62,7 +61,7 @@ $ ./bin/scanConsole \
 - **-u ``<user cfg>``**<br> : Set [user config file](config.md) 
 - **-i ``<site cfg>``**<br> : Set [site config file](config.md)
 
-**You have to prepare [the connectivity config file and the chip config file](#config.md) to upload upload the test data associated with the registered chip/module after the [registration](#register-chip/module-data).** 
+**You have to prepare [the connectivity config file and the chip config file](config.md) to upload the test data associated with the registered chip/module after the [registration](#register-chipmodule-data).** 
 
 #### localdbtool-upload scan
 

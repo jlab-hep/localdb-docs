@@ -378,15 +378,14 @@ flask:
 
 ## Synchronization Tool
 
-- local.host: IP address of the Local DB server (default. "127.0.0.1" or "localhost")
-- local.port: The port number of the Local DB server (default. "27017")
-- local.username: username of user account in Local DB if the user authentication is required
-- local.password: password of user account in Local DB if the user authentication is required
-- master.host: IP address of the Master Server (default. "127.0.0.1" or "localhost")
-- master.port: The port number of the Master Server (default. "27017")
-- master.username: username of user account in Master Server if the user authentication is required
-- master.password: password of user account in Master Server if the user authentication is required
-- logfile: path to log output file
+- `local` : configures for local MongoDB server
+    - `host` : IP address of MongoDB (default. "127.0.0.1" or "localhost")
+    - `port` : The port number of MongoDB (default. "27017")
+    - `username` : username of user account in MongoDB if the user authentication is required
+    - `password` : password of user account in MongoDB if the user authentication is required
+- `master` : configures for master MongoDB server <br>
+    Please ask to the manager of DB server for `host`, `port`, `username` and `password` of master MongoDB
+- `logfile` : path to log output file
 
 ```yml
 local:
@@ -394,21 +393,19 @@ local:
     port: 27017
     #username: tokyotech
     #password: ihatepassword
-
 master:
     host: master-host
     port: 27017
     #username: tokyotech
     #password: ihatepassword
-
 #logfile: logs/production.log
 ```
 
 ## Archive Tool
 
-- data_path: path to MongoDB database (defaul. "/var/lib/mongo")
-- archive_path: path to put archives
-- n_archive: The number of archives want to keep
+- `data_path` : path to MongoDB database (defaul. "/var/lib/mongo")
+- `archive_path` : path to put archives (Recommendation: use external HDD/SSD)
+- `n_archive` : The number of archives want to keep (It depends on size of your disk storage)
 
 ```yml
 data_path: /var/lib/mongo
