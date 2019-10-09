@@ -1,57 +1,10 @@
 # Quick Tutorial
 
-You can store result data by YARR immediately following the tutorial.
+You can store result data by YARR immediately following the tutorial.<br>
 
-## 0. Installation
+### Upload
 
-This step should be done by the administrator of the machine.<br>
-The detail can be checked [Quick Installtion](#quick-installation).
-
-## 1. Setup YARR command with Local DB
-
-```bash
-$ cd YARR
-$ git checkout devel
-$ mkdir build
-$ cd build
-$ cmake3 ../
-$ make -j4
-$ make install
-$ cd ../
-```
-
-## 2. Setup Local DB Directory
-
-- Set Local DB directory by `setup_db.sh`.
-
-```bash
-$ ./localdb/setup_db.sh
-[LDB] Confirmation
-<some texts>
-[LDB] Continue? [y/n]
-[LDB] > y
-<some text>
-[LDB] This description is saved as ${HOME}/YARR/localdb/README
-```
-
-- Confirme Local DB tools
-
-```bash
-$ ./localdb/bin/localdbtool-upload init
-#DB INFO# -----------------------
-#DB INFO# Function: Initialize
-#DB INFO# [Connection Test] DB Server: mongodb://127.0.0.1:27017/localdb
-#DB INFO# ---> Connection is GOOD.
-#DB INFO# -----------------------
-```
-
-If there are some problems in the step, [FAQ](#faq) should be helpful for solving it.
-
-## 3. scanConsole with Local DB
-
-- scanConsole
-   
-You can scan and upload result data into Local DB by `scanConsole -W`
+You can scan and upload the test data into Local DB by `scanConsole -W`:
 
 ```bash
 $ ./bin/scanConsole \
@@ -62,25 +15,14 @@ $ ./bin/scanConsole \
 <lots of text>
 #DB INFO# -----------------------
 #DB INFO# Function: Initialize
-#DB INFO# [Connection Test] DB Server: mongodb://127.0.0.1:27017/localdb
-#DB INFO# ---> Connection is GOOD.
+#DB INFO# Local DB Server: mongodb://127.0.0.1:27017
+#DB INFO# ---> connection is good.
 #DB INFO# -----------------------
 #DB INFO# Uploading in the back ground. (log: ~/.yarr/localdb/log/)
 ```
+> [Advanced tutorial for scanConsole -W](https://localdb-docs.readthedocs.io/en/master/upload/#upload-test-data)
 
-**Additional options**
-
-- **-d ``<database config>``** : Set database config file (default: `${HOME}/.yarr/localdb/${HOSTNAME}_database.json`)
-- **-u ``<user config>``** : Set user config file ([sample](#user-config-file))
-- **-i ``<site config>``** : Set site config file ([sample](#site-config-file))
-
-- Confirmation
-
-There are three ways to confirm the data uploaded.
-
-1. Log File
-   
-You can check if the upload is success in log file `${HOME}/.yarr/localdb/log/day.log`.
+You can check if the upload is success in log file `${HOME}/.yarr/localdb/log/${day}.log`:
 
 ```log
 2019-08-01 10:55:46,821 - INFO: -----------------------
@@ -92,34 +34,113 @@ You can check if the upload is success in log file `${HOME}/.yarr/localdb/log/da
 2019-08-01 10:55:47,060 - INFO: -----------------------
 ```
 
-2. Retrieve Tool
+### Retrieve
 
-You can check uploaded test log in CUI command `localdb/bin/localdbtool-retrieve`.
+You can check the uploaded test data log by `localdbtool-retrieve log`:
 
 ```bash
 $ ./localdb/bin/localdbtool-retrieve log 
 #DB INFO# -----------------------
 #DB INFO# [Connection Test] DB Server: mongodb://127.0.0.1:27017
 #DB INFO#    The connection is GOOD.
-test data ID: 5d4c94c1fd212a639247b044 
-User      : arisa_kubota at tokyo_institute_of_technology
-Date      : 2019/08/08 14:31:39
-Chip      : RD53A-001, RD53A-001_chip1
-Run Number: 255
-Test Type : std_analogscan
+test data ID: 5d8da5eda45ae057dbd1fbd6 
+User      : user at site
+Date      : 2019/09/27 15:02:17
+Chip      : JohnDoe_0
+Run Number: 5635
+Test Type : std_digitalscan
 DCS Data  : NULL
-
-test data ID: 5d4c89a4e34d9efb40565e65 
-User      : arisa_kubota at tokyo_institute_of_technology
-Date      : 2019/08/08 13:44:14
-Chip      : RD53A-001, RD53A-001_chip1
-Run Number: 251
 # Ctrl+C can terminate the output test log
 ```
+> [Advanced tutorial for Retrieve Tool](https://localdb-docs.readthedocs.io/en/master/retrieve/)
 
-3. Viewer Application
+You can retrieve the uploaded data into the local directory by `localdbtool-retrieve pull`:
+ 
+```bash
+$ ./localdb/bin/localdbtool-retrieve pull
+#DB INFO# -----------------------
+#DB INFO# [Connection Test] DB Server: mongodb://127.0.0.1:27017
+#DB INFO#    The connection is GOOD.
+#DB INFO# test data ID: 5d8da5eda45ae057dbd1fbd6 
+#DB INFO# - User      : user at site
+#DB INFO# - Date      : 2019/09/27 15:02:17
+#DB INFO# - Chips     : JohnDoe_0
+#DB INFO# - Run Number: 5635
+#DB INFO# - Test Type : std_digitalscan
+#DB INFO# Retrieve ... ./db-data/ctrlCfg.json
+#DB INFO# Retrieve ... ./db-data/dbCfg.json
+#DB INFO# Retrieve ... ./db-data/siteCfg.json
+#DB INFO# Retrieve ... ./db-data/userCfg.json
+#DB INFO# Retrieve ... ./db-data/std_digitalscan.json
+#DB INFO# Retrieve ... ./db-data/scanLog.json
+#DB INFO# Retrieve ... ./db-data/JohnDoe_0_EnMask.dat
+#DB INFO# Retrieve ... ./db-data/JohnDoe_0_OccupancyMap.dat
+#DB INFO# Retrieve ... ./db-data/JohnDoe_0_beforeCfg.json
+#DB INFO# Retrieve ... ./db-data/fei4b_test.json
+#DB INFO# Retrieve ... ./db-data/JohnDoe_0_afterCfg.json
+#DB INFO# Retrieve ... ./db-data/connectivity.json
+#DB INFO# -----------------------
+```
+> [Advanced tutorial for Retrieve Tool](https://localdb-docs.readthedocs.io/en/master/retrieve/)
 
-You can check uploaded test data in GUI when Viewer Application is running. ([How to run the Viewer Application](#viewer-application))<br>
-Access `http://127.0.0.1:5000/localdb/` or `http://IPaddress/localdb` in browser.
+* List of restored data (default dir: `YARR/db_data`)
+    * Test Information (Data ID, User, Date, Chips, Run #, Test type) 
+    * connectivity config file
+    * controller config file
+    * scan config file
+    * chip config file (original/before/after)
+    * result data file
+    * database config file
+    * user config file
+    * site config file
 
+### Local DB Tools
+
+You can handle data in Local DB using Local DB Tools:
+
+* [Viewer Application](#viewer-application)
+* [Synchronization Tool](#sync-tool)
+* [Archive Tool](#archive-tool)
+
+```bash
+$ git clone https://gitlab.cern.ch/YARR/localdb-tools.git
+```
+
+#### Viewer Application
+
+```bash
+# 1. Set Application
+$ cd localdb-tools/viewer
+$ ./setup_viewer.sh 
+
+# 2. Run Application
+$ ./app.py --config conf.yml &
+# ---> Access 'http://127.0.0.1:5000/localdb/' or 
+#      'http://IPaddress/localdb/' on browser to check data in Local DB
+```
+> [Advanced tutorial for Viewer Application](https://localdb-docs.readthedocs.io/en/master/viewer/)
+
+#### Synchronization Tool
+
+```bash
+# 1. Set Tool 
+$ cd localdb-tools/sync-tool
+$ ./setup_sync_tool.sh
+
+# 2. Run Tool
+$ ./bin/localdbtool-sync.py --sync-opt <option> --config my_configure.yml
+```
+> [Advanced tutorial for Synchronization Tool](https://localdb-docs.readthedocs.io/en/master/sync/)
+
+#### Archive Tool
+
+```bash
+# 1. Set Tool
+$ cd localDB-tools/archive-tool
+$ ./setup_archive_tool.sh
+
+# 2. Run Tool
+$ ./bin/localdbtool-archive.sh --config my_archive_configure.yml
+```
+> [Advanced tutorial for Archive Tools](https://localdb-docs.readthedocs.io/en/master/archive/)
 

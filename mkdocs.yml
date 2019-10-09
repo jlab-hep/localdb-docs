@@ -3,6 +3,7 @@ pages:
     - Home: index.md
     - Pre Requirements: requirements.md
     - Installation: install.md
+    - Quick tutorial: tutorial.md
     - Upload Tool: upload.md
     - Retrieve Tool: retrieve.md
     - Viewer Application: viewer.md
