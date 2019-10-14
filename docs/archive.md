@@ -9,7 +9,7 @@ Please look at [Installation/Set-up Archive Tool](install.md) to set-up Archive 
 # 3. Usage
 
 ```bash
-$ cd localdb-tools/sync-tool
+$ cd localdb-tools/archive-tool
 $ ./bin/localdbtool-archive.sh -f my_archive_configure.yml
 ```
 
