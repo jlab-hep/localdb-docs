@@ -334,26 +334,36 @@ Modify the DB setting in following part of `make_convert.py` if needed:
 ### Set DBs
 url = 'mongodb://127.0.0.1:27017' 
 client = MongoClient( url )
-new_db = 'localdb'
-copy_db = 'localdb_replica'
-old_db  = 'yarrdb'
+new_db = 'localdb'          # New Local DB (default. localdb)
+copy_db = 'localdb_replica' # Replica of the old Local DB (default. localdb_replica)
+old_db  = 'yarrdb'          # Old YARR DB (default. yarrdb)
 ```
+
+And run it:
 
 ```bash
 $ cd localDB-tools/scripts/tools
 $ python3 make_covert.py
-
-# Do you replicate DB: localdb ---> localdb_replica? (y/n) > y
- 
-# Replicating database to "localdb_replica" for replica ... 
-	2019-10-12T11:55:39 [Start]
-	2019-10-12T11:55:45 [Finish]
-# Succeeded in replicating.
- 
 # Continue to convert DB: yarrdb/localdb(old) ---> localdb(latest)? (y/n) > y
  
-<lot texts> 
+# Update database scheme: localdb
+	2019-10-15T08:11:01 [Start]
+  <some texts>
+	# Succeeded in Update
+ 
+# Convert database scheme: yarrdb -> localdb
+	2019-10-15T08:11:01 [Start]
+  <some texts>
+	# Succeeded in Conversion
+ 
+# Verify database scheme: localdb
+	2019-10-15T08:33:52 [Start]
+  <some texts>
+	# Succeeded in Verification
+ 
+  <some texts>
+	# Succeeded in All Steps
 ```
 
-It takes about 10 minutes for 1GB data size to complete the conversion. <br>
-
+It takes about 30 minutes for 1GB data size to complete the conversion. <br>
+You can run `make_conver.py` again to restore the replica of DB and start over.
