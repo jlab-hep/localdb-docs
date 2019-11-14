@@ -2,22 +2,24 @@ This page lists the pre-requirements for Local DB System:
 
 - [Automatic Installation](#automatic-installation)
 - [Manual Installation](#manual-installation)
-  - [yum packages](#yum-packages)
-  - [Python packages](#python-packages)
-  - [MongoDB](#mongo-db)
+    - [yum packages](#yum-packages)
+    - [Python packages](#python-packages)
+    - [MongoDB](#mongo-db)
 
 
 ## Git Clone
 
-```
+```bash
 # Check & Install git command
 $ which git > /dev/null 2>&1; if [ $? = 1 ]; then sudo yum install git; fi
 
 # For DAQ Machine
 $ git clone https://gitlab.cern.ch/YARR/YARR.git
+$ git checkout devel
 
 # For DB Server
 $ git clone https://gitlab.cern.ch/YARR/localdb-tools.git
+$ git checkout devel
 ```
 
 ## Automatic Installation
@@ -33,7 +35,7 @@ Check [Manual Installation](#manual-installation) to install requirements on oth
 
 ### a) db_yarr_install.sh
 
-```
+```bash
 $ cd YARR/localdb
 $ ./db_yarr_install.sh
 [LDB] Looking for missing packages for Local DB and Tools ...
@@ -71,7 +73,7 @@ Enjoy!!
 
 ### b) db_server_install.sh
 
-```
+```bash
 $ cd localdb-tools/setting
 $ ./db_server_install.sh
 [LDB] Looking for missing packages for Local DB and Tools ...
@@ -109,11 +111,11 @@ Enjoy!!
 
 ## Manual Installation
 
-### packages (yum for centOS7)
+### yum packages
 
 - g++ version 7.0 or higher for YARR SW installation
 
-```
+```bash
 # 0. Check
 $ g++ --version
 -bash: g++: command not found
@@ -121,7 +123,6 @@ $ g++ --version
 # 1. Install
 $ sudo yum install centos-release-scl
 $ sudo yum install devtoolset-7
-
 # 2. Confirm
 $ source /opt/rh/devtoolset-7/enable
 $ g++ --version
@@ -130,7 +131,7 @@ g++ (GCC) 7.3.1 20180303 (Red Hat 7.3.1-5)
 
 - cmake3 for YARR SW installation
 
-```
+```bash
 # 0. Check
 $ cmake3 --version
 -bash: cmake3: command not found
@@ -146,21 +147,21 @@ cmake3 version 3.14.6
 
 - Other dependencies for YARR SW installation
 
-```
+```bash
 $ sudo yum install gnuplot texlive-epstopdf ghostscript
 ```
 
 - Other dependencies for Local DB Tools
 
-```
+```bash
 $ sudo yum install bc.x86_64
 ```
 
-### Python package
+### Python packages
 
 - python3
 
-```
+```bash
 # 0. Check
 $ python3 --version
 -bash: python3: command not found
@@ -176,7 +177,7 @@ Python 3.6.8
 
 - python pip packages
 
-```
+```bash
 # 1. Install
 $ sudo python3 -m pip install \
 arguments \
@@ -197,17 +198,17 @@ matplotlib \
 numpy \
 requests \
 tzlocal \
-itkdb \
+itkdb
 ```
 
 ### Mongo DB
 
 - MongoDB version 4.2 or higher for Local DB
 
-For centOS7, you can install/upgrade MongoDB by 'localdb-tools/scripts/shell/upgrade_mongoDB_centos.sh'. <br>
+For centOS7, you can install/upgrade MongoDB by `localdb-tools/scripts/shell/upgrade_mongoDB_centos.sh`. <br>
 Check [MongoDB 4.X Community Edition](https://docs.mongodb.com/manual/installation/) to install and start mongod service on other platform.
 
-```
+```bash
 # 0. Check
 $ mongo --version
 -bash: mongo: command not found
@@ -241,4 +242,4 @@ test
 bye
 ```
 
-If you catch the message "exception: connect failed", you should check that MongoDB is running.
+If you catch the message **"exception: connect failed"**, you should check that MongoDB is running.
