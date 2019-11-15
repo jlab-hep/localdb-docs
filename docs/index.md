@@ -70,3 +70,11 @@ localdb-tools : Cloned from https://gitlab.cern.ch/YARR/localdb-tools.git
 |old-db-v|0.15|-|Old database version based on latest YARR software|
 |old-sw-old-db-v|0.10|-|Old database version based on old software version (YARR/master 7c4a0727)|
 
+## Working Branch
+|Project|Branch|Describe|Link|
+|:--|:--|:--|:--|
+|YARR|master|Stable DAQ SW|[Git](https://gitlab.cern.ch/YARR/YARR/tree/master)|
+|YARR|devel|Latest DAQ SW|[Git](https://gitlab.cern.ch/YARR/YARR/tree/devel)|
+|YARR|devel-localdb|Latest DB SW based on devel branch|[Git](https://gitlab.cern.ch/YARR/YARR/tree/devel-localdb)|
+|Local DB Tools|master|Stable Local DB Tools SW|[Git](https://gitlab.cern.ch/YARR/localdb-tools/tree/master)|
+|Local DB Tools|devel|Latest Local DB Tools SW|[Git](https://gitlab.cern.ch/YARR/localdb-tools/tree/devel)|

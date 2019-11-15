@@ -70,7 +70,7 @@
   "userName": "FIRSTNAME LASTNAME",
   "institution": "INSTITUTION",
   "description": "default"
-} 
+}
 ```
 
 ## Site cfg
@@ -144,26 +144,23 @@
 ## Connectivity cfg
 
 - `stage` : The test stage, which should be selected from the stage list written in [database.json](#database-cfg)
-- `module` : configures for module (option)<br>Must be set when uploading the test data in association with the module
+- `module` : configures for module (option)<br>**Must be set when uploading the test data in association with the MODULE.**
 - `chipType` : "FEI4B" or "RD53A"
 - `chips.i` : configures for chip
-    - `serialNumber` : The serial number of the module/chip
+    - `serialNumber` : The serial number of the module/chip.<br>**Ensure the same as 'Name' written in chip config file.**
     - `config` : The path to chip config file (only in `chip.i`)
     - `tx` : The TX channel, which must be "int" (only in `chip.i`)
     - `rx` : The RX channel, which must be "int" (only in `chip.i`)
 
 ### For RD53A
-   
+
 ```json
 {
     "stage": "Testing",
-    "module": {
-        "serialNumber": "RD53A-001"
-    },
     "chipType" : "RD53A",
     "chips" : [
         {
-            "serialNumber": "RD53A-001_chip1",
+            "serialNumber": "RD53A-001",
             "config" : "configs/chip1.json",
             "tx" : 0,
             "rx" : 0
@@ -213,7 +210,7 @@
 
 You can replicated it from `YARR/configs/defaults/<FE>.json`.
 
-- `name`/`Name` : The serial number of the chip 
+- `name`/`Name` : The serial number of the chip
 - `chipId`/`ChipId` : The geometrical ID of the chip (chipId)
 
 ### For RD53A
@@ -247,12 +244,12 @@ You can replicated it from `YARR/configs/defaults/<FE>.json`.
 - `status` : enabled/disabled to upload data
 - `key` : DCS keyword (key list is written in the database config file `${HOME}/.yarr/localdb/database.json`)
 - `num` : DCS data number (the combination of DCS keyword and this number specify the DCS data in data file)
-- `description` : The description of the DCS data 
+- `description` : The description of the DCS data
 - `path` : The path to DCS data file
 - `mode` : The mode of DCS setting (e.g. CV) (option)
 - `setting` : DCS setting parameter (option)
 - `chip` : The chip name related with DCS data (option) <br>**If not specified this field, DCS data is stored associated with all chips tested in the specific scan.**
- 
+
 ```json
 {
     "environments": [{
@@ -306,11 +303,11 @@ You can replicated it from `YARR/configs/defaults/<FE>.json`.
         "status": "disabled"
     }]
 }
-``` 
+```
 
 ## DCS Data File
 
-- the 1st line : DCS keyword `key unixtime <key1> <key2> <key3> ...` 
+- the 1st line : DCS keyword `key unixtime <key1> <key2> <key3> ...`
 - the 2nd line : DCS number `num null <num1> <num2> <num3> ...`
 - After the 3rd line : datetime and DCS data `datetime unixtime <data1> <data2> <data3> ...` (data value must be the number or "null")
 
@@ -363,10 +360,10 @@ mongoDB:
     ssl:
         enabled: False
         CAFile: # path/to/CA/file
-        PEMKeyFile: # path/to/certificate/file 
+        PEMKeyFile: # path/to/certificate/file
     tls:
         enabled: False
-        CAFile: # path/to/CA/file 
+        CAFile: # path/to/CA/file
         CertificateFile: # path/to/certificate/file
 userDB:
     db: localdbtools
