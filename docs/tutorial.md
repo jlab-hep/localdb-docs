@@ -1,21 +1,29 @@
 # Quick Tutorial
 
-You can store result data by YARR immediately following the tutorial.<br>
+You can store result data by YARR immediately following the tutorial.
 
 ### Upload
 
 You can scan and upload the test data into Local DB by `scanConsole -W`. <br>
-First please prepare config files following [this sample format](https://localdb-docs.readthedocs.io/en/master/config/#user-cfg) and provide them with option '-u <user config file>' and '-i <site config file>', <br>
-or ${USERNAME} and ${HOSTNAME} will be stored as default infromation.
+First please confirm if the default config files are prepared, the commands are enabled, and the connection is established using `setup_db.sh`, <br>
+and `scanConsole` use `${HOME}/.yarr/localdb/${HOSTNAME}_database.json`, `${HOME}/.yarr/localdb/user.json`, and `${HOME}/.yarr/localdb/${HOSTNAME}_site.json` as default config files.
 
 ```bash
+$ ./localdb/setup_db.sh
+<some texts>
+[LDB] Checking the connection...
+#DB INFO# -----------------------
+#DB INFO# Function: Initialize
+#DB INFO# [Connection Test] DB Server: mongodb://127.0.0.1:27017/localdb
+#DB INFO# ---> Connection is GOOD.
+#DB INFO# -----------------------
+<some texts>
+$
 $ ./bin/scanConsole \
 -r configs/controller/emuCfg.json \
 -c configs/connectivity/example_fei4b_setup.json \
 -s configs/scans/fei4/std_digitalscan.json \
--W \
--u user.json \
--i site.json
+-W
 <lots of text>
 #DB INFO# -----------------------
 #DB INFO# Function: Initialize
@@ -24,7 +32,7 @@ $ ./bin/scanConsole \
 #DB INFO# -----------------------
 #DB INFO# Uploading in the back ground. (log: ~/.yarr/localdb/log/)
 ```
-> [Advanced tutorial for scanConsole -W](https://localdb-docs.readthedocs.io/en/master/upload/#upload-test-data)
+> [Advanced tutorial for scanConsole -W](upload.md)
 
 You can check if the upload is success in log file `${HOME}/.yarr/localdb/log/${day}.log`:
 
@@ -37,7 +45,7 @@ You can check if the upload is success in log file `${HOME}/.yarr/localdb/log/${
 2019-08-01 10:55:47,058 - INFO: Success
 2019-08-01 10:55:47,060 - INFO: -----------------------
 ```
-> [More detail about another upload functions](https://localdb-docs.readthedocs.io/en/master/upload/)
+> [Advanced tutorial for another upload functions](upload.md)
 
 ### Retrieve
 
@@ -86,7 +94,7 @@ $ ./localdb/bin/localdbtool-retrieve pull
 #DB INFO# Retrieve ... ./db-data/connectivity.json
 #DB INFO# -----------------------
 ```
-> [Advanced tutorial for Retrieve Tool](https://localdb-docs.readthedocs.io/en/master/retrieve/)
+> [Advanced tutorial for Retrieve Tool](retrieve.md)
 
 * List of restored data (default dir: `YARR/db_data`)
     * Test Information (Data ID, User, Date, Chips, Run #, Test type)
@@ -102,7 +110,7 @@ $ ./localdb/bin/localdbtool-retrieve pull
 ### Register Component
 
 You can register the component data and upload test data associated with the registered component data.<br>
-First please prepare connectivity file following [this sample format](https://localdb-docs.readthedocs.io/en/master/config/#component-cfg) and register by `dbAccessor -C -c <component connectivity file> -u <user config file> -i <site config file>`:<br>
+First please prepare connectivity file following [this sample format](config.md) and register by `dbAccessor -C -c <component connectivity file> -u <user config file> -i <site config file>`:<br>
 
 ```bash
 $ cd YARR
@@ -114,7 +122,7 @@ y
 #DB INFO# Completed the upload successfuly.
 #DB INFO# -----------------------
 ```
-> [More detail about Component Registration](https://localdb-docs.readthedocs.io/en/master/upload/#register-chipmodule-data)
+> [Advanced tutorial for Component Registration](upload.md)
 
 After registration, you can retrieve/generate the connectivity config file and the chip config files by `localdb-retrieve pull --chip <SERIAL NUMBER>`.<br>
 
@@ -130,7 +138,7 @@ $ ./localdb/bin/localdb-retrieve pull --chip <SERIAL NUMBER>
 #DB INFO# Retrieve ... ./db-data/connectivity.json
 #DB INFO# -----------------------
 ```
-> [More detail about retrieving funtion](https://localdb-docs.readthedocs.io/en/master/retrieve/)
+> [Advanced tutorial for retrieving funtion](retrieve.md)
 
 And you can upload test data associated with component data using these config files by `scanConsole`.
 
