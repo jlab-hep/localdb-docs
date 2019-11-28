@@ -32,7 +32,7 @@ in edit.
 ### c. Upload Test Data
 
 After [the component registration](#a-register-component) (or [the registeration from ITkPD](#b-register-component-from-itkpd)),<br>
-you can generate the connectivity config file and the chip config files by `localdb-retrieve pull --chip <SERIAL NUMBER>`.<br>
+you can create the connectivity config file and the chip config files by `localdb-retrieve pull --chip <SERIAL NUMBER>`.<br>
 If you have already uploaded the component test data, the config files in the latest scan are retrieved.
 
 ```bash

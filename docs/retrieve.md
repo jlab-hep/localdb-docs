@@ -1,15 +1,81 @@
-# 1. Introduction
+# Retrieve Tool
 
 The **Retrieve Tool** is to retrieve data from Local DB.
 
-# 2. Getting start
+Contents:
 
-Please look at [Installation/Set-up Local DB Tools in YARR](install.md) to set-up Retrieve Tool.
+0. [Command](#0-command)
+1. [Getting Start](#1-getting-start)
+2. [Usage](#2-usage)
+    - upload test data
+    - register component data
+    - register DCS data
+    - upload cache data
+3. [FAQ](#3-faq)
 
-## Check Command & Connection
+# 0. Command
+
+**YARR/localdb/bin/localdb-retrieve**
 
 ```bash
-$ cd <YARR SW installation dir>
+./localdb/bin/localdbtool-retrieve <option>
+                                   [--config <CONFIG>]
+                                   [--username <USERNAME>]
+                                   [--password <PASSWORD>]
+                                   [--database <DATABASE>]
+                                   [--user <USER>]
+                                   [--site <SITE>]
+                                   [--chip <CHIP>]
+                                   [--test <TEST>]
+                                   [--directory <DIRECTORY>]
+# positional arguments:
+#   command               option*	funtion
+#                         init	  Function initialization & Connection check
+#                         log	    Display data log
+#                         pull	  Data retrieve
+#                         list	  Display data list
+#                         test	  Testing command
+# optional arguments:
+#   -h, --help            show this help message and exit
+#   --config CONFIG       Set User Config Path of Local DB Server.
+#   --username USERNAME   Set the User Name of Local DB Server.
+#   --password PASSWORD   Set the Password of Local DB Server.
+#   --database DATABASE   Set Database Config Path
+#   --user USER           Set the name of the user.
+#   --site SITE           Set the name of the site.
+#   --chip CHIP           Set the name of the chip.
+#   --test TEST           Set data ID of the test.
+#   --directory DIRECTORY Provide directory name.
+```
+
+## 1. Getting start
+
+#### 0. Install & Setup
+
+Please check [Pre Requirements](requirements.md) to install required packages.<br>
+And please be sure to setup Local DB setting using `YARR/localdb/setup_db.sh`. <br>
+This script confirms
+
+- if the python packages is satisfied
+- if the default config files are prepared
+    - HOME/.yarr/localdb/HOSTNAME_database.json
+    - HOME/.yarr/localdb/user.json
+    - HOME/.yarr/localdb/HOSTNAME_site.json
+- if the command is enabled
+- if the DB connection is established
+
+```bash
+$ cd YARR
+$ ./localdb/setup_db.sh
+< Setting up with some texts >
+```
+> [More detail about setup_db.sh](setup-db.md)
+
+#### 1. Confirmation
+
+Please run the command with the option 'init' to check if the command is working and the connection to Local DB is good.
+
+```bash
 $ ./localdb/bin/localdbtool-retrieve init
 #DB INFO# -----------------------
 #DB INFO# Function: Initialize
@@ -20,61 +86,56 @@ $ ./localdb/bin/localdbtool-retrieve init
 
 **Additional options**
 
-- **--database ``<database cfg>``**<br> : Set [database config file](config.md) (default: `${HOME}/.yarr/localdb/${HOSTNAME}_database.json`)
+- **--database ``<database cfg>``**<br> : Set [database config file](config.md) (default: `HOME/.yarr/localdb/HOSTNAME_database.json`)
 
-# 3. Usage
+## 2. Usage
 
 Retrieve Tool performs following functions:
 
-* [Retrieve uploaded test data log](#retrieve-test-log)
-* [Retrieve the uploaded data into local directory](#retrieve-data-fiiles)
-* [Retrieve the uploaded data list](#retrieve-data-list)
+* a. [Retrieve the uploaded test data log](#a-retrieve-test-log)
+* b. [Retrieve the uploaded data into local directory](#b-retrieve-data-fiiles)
+* c. [Retrieve the uploaded data list](#c-retrieve-data-list)
+* d. [Create the config files for the registered component data](#d-create-config)
 
-## Retrieve test log
+### a. Retrieve test log
 
 You can check uploaded test log in command line by `localdbtool-retrieve log`:
 
 ```bash
-$ ./localdb/bin/localdbtool-retrieve log 
+$ ./localdb/bin/localdbtool-retrieve log
 #DB INFO# -----------------------
 #DB INFO# [Connection Test] DB Server: mongodb://127.0.0.1:27017
 #DB INFO#    The connection is GOOD.
-test data ID: 5d4c94c1fd212a639247b044 
+test data ID: 5d4c94c1fd212a639247b044
 User      : arisa_kubota at tokyo_institute_of_technology
 Date      : 2019/08/08 14:31:39
 Chip      : RD53A-001, RD53A-001_chip1
 Run Number: 255
 Test Type : std_analogscan
 DCS Data  : NULL
-
-test data ID: 5d4c89a4e34d9efb40565e65 
-User      : arisa_kubota at tokyo_institute_of_technology
-Date      : 2019/08/08 13:44:14
-Chip      : RD53A-001, RD53A-001_chip1
-Run Number: 251
 # Ctrl+C can terminate the output
 ```
 
 **Additional options**
 
-- **--database ``<database cfg>``**<br> : Set [database config file](config.md) (default: `${HOME}/.yarr/localdb/${HOSTNAME}_database.json`)
-- **--username ``<username>``**<br> : Set username of the Local DB Server if the user authentication is required 
-- **--password ``<password>``**<br> : Set password of the Local DB Server if the user authentication is required 
+- **--database ``<database cfg>``**<br> : Set [database config file](config.md) (default: `HOME/.yarr/localdb/HOSTNAME_database.json`)
+- **--username ``<username>``**<br> : Set username of the Local DB Server if the user authentication is required
+- **--password ``<password>``**<br> : Set password of the Local DB Server if the user authentication is required
 - **--config ``<config file>``**<br> : Set config file which username and password are written in if the user authentication is required
 - **--user ``<user name>``**<br> : Set the user name for refine search
 - **--site ``<site name>``**<br> : Set the site name for refine search
 - **--chip ``<chip name>``**<br> : Set the chip name for refine search
 
-## Retrieve data files
+### b. Retrieve data files
 
 You can retrieve the uploaded data into the local directory by `localdbtool-retrieve pull`:
- 
+
 ```bash
 $ ./localdb/bin/localdbtool-retrieve pull
 #DB INFO# -----------------------
 #DB INFO# [Connection Test] DB Server: mongodb://127.0.0.1:27017
 #DB INFO#    The connection is GOOD.
-#DB INFO# test data ID: 5d8da5eda45ae057dbd1fbd6 
+#DB INFO# test data ID: 5d8da5eda45ae057dbd1fbd6
 #DB INFO# - User      : user at site
 #DB INFO# - Date      : 2019/09/27 15:02:17
 #DB INFO# - Chips     : JohnDoe_0
@@ -97,20 +158,20 @@ $ ./localdb/bin/localdbtool-retrieve pull
 
 **Additional options**
 
-- **--database ``<database cfg>``**<br> : Set [database config file](config.md) (default: `${HOME}/.yarr/localdb/${HOSTNAME}_database.json`)
-- **--username ``<username>``**<br> : Set username of the Local DB Server if the user authentication is required 
-- **--password ``<password>``**<br> : Set password of the Local DB Server if the user authentication is required 
+- **--database ``<database cfg>``**<br> : Set [database config file](config.md) (default: `HOME/.yarr/localdb/HOSTNAME_database.json`)
+- **--username ``<username>``**<br> : Set username of the Local DB Server if the user authentication is required
+- **--password ``<password>``**<br> : Set password of the Local DB Server if the user authentication is required
 - **--config ``<config file>``**<br> : Set config file which username and password are written in if the user authentication is required
 - **--chip ``<chip name>``**<br> : Set the chip name for specifying test data
 - **--test ``<test ID>``**<br> : Set the test ID for specifying test data
 - **--directory ``<path>``**<br> : Set the path to directory saving retrieved data
 
-You can specify test data by setting the chip name with `--chip` or the test ID with `--test`.
-If you set the chip name, you can retrieve the latest test data for the chip.
-If you set the test ID (which is document ID in Local DB you can check by `localdbtool-retrieve log`), you can retrieve the test data with the ID.
+You can specify test data by setting the chip name with `--chip` or the test ID with `--test`. <br>
+If you set the chip name, you can retrieve the latest test data for the chip.<br>
+If you set the test ID (which is document ID in Local DB you can check by `localdbtool-retrieve log`), you can retrieve the test data with the ID.<br>
 
-* List of restored data (default dir: `YARR/db_data`)
-    * Test Information (Data ID, User, Date, Chips, Run #, Test type) 
+* List of restored data (default output dir: `YARR/db_data`)
+    * Test Information (Data ID, User, Date, Chips, Run #, Test type)
     * connectivity config file
     * controller config file
     * scan config file
@@ -120,50 +181,35 @@ If you set the test ID (which is document ID in Local DB you can check by `local
     * user config file
     * site config file
 
-## Retrieve data list
+### c. Retrieve data list
 
-You can retrieve the uploaded data (component, user, site) by `localdbtool-retrieve list <opt>`: 
- 
-### a) Component list (default)
+You can retrieve the uploaded data (component, user, site) by `localdbtool-retrieve list <opt>`:
+
+#### 1. Component list (default)
 
 ```bash
-$ ./localdb/bin/localdbtool-retrieve list 
+$ ./localdb/bin/localdbtool-retrieve list
 #DB INFO# -----------------------
 #DB INFO# [Connection Test] DB Server: mongodb://127.0.0.1:27017
 #DB INFO#    The connection is GOOD.
 
-hybrid: 1012 
+hybrid: 1012
 User      : arisa_kubota at lawrence_berkeley_national_laboratory
 Chip Type : RD53A
 Chips(3)  :
-    front-end_chip: 0x0438 
+    front-end_chip: 0x0438
     User  : arisa_kubota at lawrence_berkeley_national_laboratory
     ChipId: 1
-    front-end_chip: 0x044B 
+    front-end_chip: 0x044B
     User  : arisa_kubota at lawrence_berkeley_national_laboratory
     ChipId: 2
-    front-end_chip: 0x0446 
-    User  : arisa_kubota at lawrence_berkeley_national_laboratory
-    ChipId: 4
-
-hybrid: 1011 
-User      : arisa_kubota at lawrence_berkeley_national_laboratory
-Chip Type : RD53A
-Chips(3)  :
-    front-end_chip: 0x0439 
-    User  : arisa_kubota at lawrence_berkeley_national_laboratory
-    ChipId: 1
-    front-end_chip: 0x044A 
-    User  : arisa_kubota at lawrence_berkeley_national_laboratory
-    ChipId: 2
-    front-end_chip: 0x0445 
+    front-end_chip: 0x0446
     User  : arisa_kubota at lawrence_berkeley_national_laboratory
     ChipId: 4
 # Ctrl+C can terminate the output
 ```
 
-
-### b) User list
+#### 2. User list
 
 ```bash
 $ ./localdb/bin/localdbtool-retrieve list user
@@ -179,10 +225,10 @@ User Name: akubota
 
 User Name: arisa_kubota
 - tokyo_institute_of_technology
-# Ctrl+C can terminate the output 
+# Ctrl+C can terminate the output
 ```
 
-### c) Site list
+#### 3. Site list
 
 ```bash
 $ ./localdb/bin/localdbtool-retrieve list site
@@ -194,3 +240,28 @@ $ ./localdb/bin/localdbtool-retrieve list site
 - lawrence_berkeley_national_laboratory
 # Ctrl+C can terminate the output
 ```
+
+### d. Create Config
+
+You can create the connectivity config file and the chip config files after the component registration. <br>
+The component data can be registered by [DB Accessor](accessor.md) or can be downloaded from ITkPD by [ITkPD Interface](#itkpd-interface.md). <br>
+You can create the config files by `localdb-retrieve pull --chip <SERIAL NUMBER>`.<br>
+If you have already uploaded the component test data, the config files in the latest scan are retrieved.
+
+```bash
+$ cd YARR
+$ ./localdb/bin/localdb-retrieve pull --chip <SERIAL NUMBER>
+#DB INFO# -----------------------
+#DB INFO# [Connection Test] DB Server: mongodb://127.0.0.1:27017/localdb
+#DB INFO# ---> Connection is GOOD.
+#DB WARNING# Not found test data of the component: <SERIAL NUMBER>
+#DB INFO# component data ID: 5dce77c414dc504d3ad53e80
+#DB INFO# - Name: <SERIAL NUMBER>  Type: RD53A
+#DB INFO# Retrieve ... ./db-data/<SERIAL NUMBER>.json
+#DB INFO# Retrieve ... ./db-data/connectivity.json
+#DB INFO# -----------------------
+```
+
+* List of created config (default output dir: `YARR/db_data`)
+    * connectivity config file
+    * chip config file (copied from `YARR/configs/defaults/default_FE.json` with replacing `Name` and `ChipId`)

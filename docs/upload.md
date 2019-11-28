@@ -94,8 +94,8 @@ Upload Tool performs following functions:
 
 * a. [Upload the test data after scanConsole or from the specific result directory](#a-upload-test-data)
 * b. [Register the chip/module data](#b-register-chipmodule-data)
-* c. [Register DCS data associated with the test data](#c-register-dcs-data)
-* d. [Upload data from cache in the stable connection](#d-upload-cache-data)
+* c. [Register the DCS data associated with the test data](#c-register-dcs-data)
+* d. [Upload the data from cache in the stable connection](#d-upload-cache-data)
 
 ### a. Upload test data
 
