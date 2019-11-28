@@ -1,6 +1,6 @@
 # Synchronization Tool
 
-The **sync-tool** is to synchronize multiple Local DB servers for ITk.<br>
+The **Synchronization Tool** synchronizes multiple Local DB servers for ITk.<br>
 Before using sync-tool, we need a stable, network-accessible **master server** which handle whole ITK data.
 
 ![Sync overall](images/sync_overall.png)

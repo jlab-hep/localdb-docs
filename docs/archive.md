@@ -1,6 +1,6 @@
 # Archive Tool
 
-The **archive-tool** creates a/some archive tar.gz files to back-up Local DB.
+The **Archive Tool** creates a/some archive tar.gz files to back-up Local DB.
 
 Contents:
 

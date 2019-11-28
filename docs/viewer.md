@@ -1,6 +1,6 @@
 # Viewer Application
 
-The **viewer** is display the contents in Local DB on web browser. <br>
+The **Viewer Application** displays the contents in Local DB on web browser. <br>
 You can access the web page in the local machine, or from the other machine by opneing port or using apache service.
 
 Contents:
