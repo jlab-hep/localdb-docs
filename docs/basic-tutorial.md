@@ -18,14 +18,14 @@ $ make -j4
 ```
 > [More detail about YARR SW](https://yarr.readthedocs.io/en/latest/)
 
-And please be sure to setup Local DB using `setup_db.sh`. <br>
+And please be sure to setup Local DB setting using `setup_db.sh`. <br>
 This script confirms if the python packages is satisfied, the default config files are prepared, the commands are enabled, and the DB connection is established. <br>
 
 ```bash
 $ cd YARR
 $ ./localdb/setup_db.sh
 ```
-> [More detail about setup_db.sh](install.md)
+> [More detail about setup_db.sh](setup-db.md)
 
 ### 1. Upload
 
@@ -46,9 +46,9 @@ $ ./bin/scanConsole \
 #DB INFO# -----------------------
 #DB INFO# Uploading in the back ground. (log: ~/.yarr/localdb/log/)
 ```
-> [More detail about scanConsole -W](upload.md)
+> [More detail about scanConsole -W](scanconsole.md)
 
-You can check if the upload is success in log file `${HOME}/.yarr/localdb/log/${day}.log`:
+You can check if the upload is success in log file `HOME/.yarr/localdb/log/day.log`:
 
 ```log
 2019-08-01 10:55:46,821 - INFO: -----------------------
@@ -59,9 +59,10 @@ You can check if the upload is success in log file `${HOME}/.yarr/localdb/log/${
 2019-08-01 10:55:47,058 - INFO: Success
 2019-08-01 10:55:47,060 - INFO: -----------------------
 ```
-> [More detail about another upload functions](upload.md)
 
 ### 2. Retrieve
+
+You can retrieve data from Local DB by `localdbtool-retrieve` after [setup Local DB](#setup).
 
 - data log
 

@@ -1,16 +1,82 @@
-# 1. Introduction
+# Upload Tool
 
 The **Upload Tool** is to upload data into Local DB.
 
-# 2. Getting start
+![Upload test](images/upload_test.png)
 
-Please look at [Installation/Set-up Local DB Tools in YARR](install.md) to set-up Upload Tool.
+Contents:
 
-## Check Command & Connection
+0. [Command](#0-command)
+1. [Getting Start](#1-getting-start)
+2. [Usage](#2-usage)
+    - upload test data
+    - register component data
+    - register DCS data
+    - upload cache data
+3. [FAQ](#3-faq)
+
+## 0. Command
+
+**YARR/localdb/bin/localdb-upload**
+
+```bash
+$ ./localdb/bin/localdbtool-upload <option>
+                                   [--config <CONFIG>]
+                                   [--username <USERNAME>]
+                                   [--password <PASSWORD>]
+                                   [--database <DATABASE>]
+                                   [--user <USER>]
+                                   [--site <SITE>]
+                                   [--log]
+# positional arguments:
+#   command              option*	funtion
+#                        init	    Function initialization & Connection check
+#                        comp	    Component registration
+#                        scan	    Scan data upload
+#                        dcs	    DCS data upload
+#                        cache	  Cache data upload
+#                        check	  Registered component check
+#                        test	    Testing command
+# optional arguments:
+#   -h, --help           show this help message and exit
+#   --config CONFIG      Set User Config Path of Local DB Server
+#   --username USERNAME  Set the User Name of Local DB Server
+#   --password PASSWORD  Set the Password of Local DB Server
+#   --database DATABASE  Set Database Config Path
+#   --user USER          Set User Config Path
+#   --site SITE          Set Site Config Path
+#   --log                Set Log Mode
+```
+
+## 1. Getting start
+
+#### 0. Install & Setup
+
+Please check [Pre Requirements](requirements.md) to install required packages.<br>
+And please be sure to setup Local DB setting using `YARR/localdb/setup_db.sh`. <br>
+This script confirms
+
+- if the python packages is satisfied
+- if the default config files are prepared
+    - HOME/.yarr/localdb/HOSTNAME_database.json
+    - HOME/.yarr/localdb/user.json
+    - HOME/.yarr/localdb/HOSTNAME_site.json
+- if the command is enabled
+- if the DB connection is established
 
 ```bash
 $ cd YARR
-$ ./localdb/bin/localdbtool-upload init
+$ ./localdb/setup_db.sh
+< Setting up with some texts >
+```
+> [More detail about setup_db.sh](setup-db.md)
+
+#### 1. Confirmation
+
+Please run the command with the option 'init' to check if the command is working and the connection to Local DB is good.
+
+```bash
+$./localdb/bin/localdbtool-upload init
 #DB INFO# -----------------------
 #DB INFO# Function: Initialize
 #DB INFO# [Connection Test] DB Server: mongodb://127.0.0.1:27017/localdb
@@ -20,57 +86,32 @@ $ ./localdb/bin/localdbtool-upload init
 
 **Additional options**
 
-- **--database ``<database cfg>``**<br> : Set [database config file](config.md) (default: `${HOME}/.yarr/localdb/${HOSTNAME}_database.json`)
+- **--database ``<database cfg>``**<br> : Set [database config file](config.md) (default: `HOME/.yarr/localdb/HOSTNAME_database.json`)
 
-# 3. Usage
+## 2. Usage
 
 Upload Tool performs following functions:
 
-* [Upload the test data after scanConsole or from the specific result directory](#upload-test-data)
-* [Upload DCS data associated with the test data](#upload-dcs-data)
-* [Upload data from cache in the stable connection](#upload-cache-data)
-* [Register chip/module data](#register-chipmodule-data)
+* a. [Upload the test data after scanConsole or from the specific result directory](#a-upload-test-data)
+* b. [Register the chip/module data](#b-register-chipmodule-data)
+* c. [Register DCS data associated with the test data](#c-register-dcs-data)
+* d. [Upload data from cache in the stable connection](#d-upload-cache-data)
 
-## Upload test data
+### a. Upload test data
 
 You can upload the test data associated with the relational data.<br>
-Please look at [Structure](structure.md) to get more detail about the structure of Local DB.
-
-![Upload test](images/upload_test.png)
-
+Please look at [Structure](structure.md) to get more detail about the structure of Local DB. <br>
 There are two ways to upload test data into Local DB:
 
 * `scanConsole -W` to upload test data after scanConsole immediately
 * `localdbtool-upload scan` to upload test data from the specific result directory
 
-#### a) scanConsole -W
+#### i) scanConsole -W
 
-You can scan and upload test data by `scanConsole -W`:
+You can upload test data after scanConsole immediately by `scanConsole -W`.<br>
+Check [scanConsole -W](scanconsole.md) to get the detail.
 
-```bash
-$ ./bin/scanConsole \
--r configs/controller/emuCfg.json \
--c configs/connectivity/example_fei4b_setup.json \
--s configs/scans/fei4/std_digitalscan.json \
--W
-<lots of text>
-#DB INFO# -----------------------
-#DB INFO# Function: Initialize
-#DB INFO# [Connection Test] DB Server: mongodb://127.0.0.1:27017/localdb
-#DB INFO# ---> Connection is GOOD.
-#DB INFO# -----------------------
-#DB INFO# Uploading in the back ground. (log: ~/.yarr/localdb/log/)
-```
-
-**Additional options**
-
-- **-d ``<database cfg>``**<br> : Set [database config file](config.md) (default: `${HOME}/.yarr/localdb/${HOSTNAME}_database.json`)
-- **-u ``<user cfg>``**<br> : Set [user config file](config.md) 
-- **-i ``<site cfg>``**<br> : Set [site config file](config.md)
-
-**You have to prepare [the connectivity config file and the chip config file](config.md) to upload the test data associated with the registered chip/module after the [registration](#register-chipmodule-data).** 
-
-#### b) localdbtool-upload scan
+#### ii) localdbtool-upload scan
 
 You can upload test data from the specific result directory by `localdbtool-upload scan`.
 
@@ -81,114 +122,37 @@ e.g.) $ ./localdb/bin/localdbtool-upload scan ./data/last_scan
 
 **Additional options**
 
-- **--database ``<database cfg>``**<br> : Set [database config file](config.md) (default: `${HOME}/.yarr/localdb/${HOSTNAME}_database.json`)
-- **--user ``<user cfg>``**<br> : Set [user config file](config.md) 
+- **--database ``<database cfg>``**<br> : Set [database config file](config.md) (default: `HOME/.yarr/localdb/HOSTNAME_database.json`)
+- **--user ``<user cfg>``**<br> : Set [user config file](config.md)
 - **--site ``<site cfg>``**<br> : Set [site config file](config.md)
-- **--log**<br> : Set logging mode 'True' (default 'False'). The output log is written in `${HOME}/.yarr/localdb/log/${day}.log`
-- **--username ``<username>``**<br> : Set username of the Local DB Server if the user authentication is required 
-- **--password ``<password>``**<br> : Set password of the Local DB Server if the user authentication is required 
+- **--log**<br> : Set logging mode 'True' (default 'False'). The output log is written in `HOME/.yarr/localdb/log/day.log`
+- **--username ``<username>``**<br> : Set username of the Local DB Server if the user authentication is required
+- **--password ``<password>``**<br> : Set password of the Local DB Server if the user authentication is required
 - **--config ``<config file>``**<br> : Set config file which username and password are written in if the user authentication is required
 
-## Upload DCS data
+### b. Register Chip/Module Data
 
-You can upload DCS data associated with the test data for each chip data by `dbAccessor -E` 
-```bash
-$ ./bin/dbAccessor \
--E dcs_info.json \
--s data/last_scan/scanLog.json \
-DBHandler: Register Environment:
-	environmental config file : dcs_info.json
-#DB INFO# -----------------------
-#DB INFO# Function: Initialize
-#DB INFO# [Connection Test] DB Server: mongodb://127.0.0.1:27017/localdb
-#DB INFO# ---> Connection is GOOD.
-#DB INFO# -----------------------
-#DB INFO# Uploading in the back ground. (log: ~/.yarr/localdb/log/)
-```
+You can upload test data associated with the registered chip/module after the registration.<br>
+You can register component data by `dbAccessor -C`. <br>
+Check [DB Accessor](accessor.md) to get the detail.
 
-**Command Line Arguments**
+### c. Register DCS Data
 
-- **-E ``<DCS cfg>``**<br> : Set [DCS config file](config.md) (json)
-- **-s ``<scanLog>``**<br> : Set [scan log file](config.md) generated by scanConsole (json)
+You can register DCS data associated with the test data for each chip data by `dbAccessor -E`. <br>
+Check [DB Accessor](accessor.md) to get the detail.
 
-**Additional options**
+### d. Upload Cache Data
 
-- **-d ``<database cfg>``**<br> : Set [database config file](config.md) (default: `${HOME}/.yarr/localdb/${HOSTNAME}_database.json`)
-- **-u ``<user cfg>``**<br> : Set [user config file](config.md) 
-- **-i ``<site cfg>``**<br> : Set [site config file](config.md)
+When you could not upload Scan/DCS data by `scanConsole -W`/`dbAccessor -E` because of the bad connection to Local DB Server, <br>
+the cache data and log file ('scanLog.json'/'dbDcsLog.json') would be stored in the result directory,<br>
+and that record is written to the file: `HOME/.yarr/run.dat`/`HOME/.yarr/dcs.dat`.
 
-## Upload cache data
-
-When you could not upload Scan/DCS data by `scanConsole -W`/`dbAccessor -E` because of the bad connection to Local DB Server,
-the cache data and log file ('scanLog.json'/'dbDcsLog.json') would be stored in the result directory,
-and that record is written to the file: `${HOME}/.yarr/run.dat`/`${HOME}/.yarr/dcs.dat`.
-
-If the good connection to Local DB Server, you can upload all cache data by `localdbtool-upload cache`:
+In the good connection to Local DB Server, you can upload all cache data by `localdbtool-upload cache`:
 
 ```bash
 $ ./localdb/bin/localdbtool-upload cache
 ```
 
-## Register chip/module data
+## 3. FAQ
 
-You can upload test data associated with the registered chip/module after the registration.<br>
-
-```bash
-$ ./bin/dbAccessor -C -c component.json -u user.json -i site.json
-<some texts>
-Do you continue to upload data into Local DB? [y/n]
-y
-
-#DB INFO# Completed the upload successfuly.
-#DB INFO# -----------------------
-```
-
-**Command Line Arguments**
-
-- **-c ``<component cfg>``**<br> : Set [component config file](config.md)
-
-This can register the components data written in component.json.
-
-**Additional options**
-
-- **-u ``<user cfg>``**<br> : Set [user config file](config.md) 
-- **-i ``<site cfg>``**<br> : Set [site config file](config.md)
-
-You can check the registered component data by `localdbtool-upload  check comp`:
-
-```bash
-$ ./localdb/bin/localdbtool-upload check comp
-#DB INFO# -----------------------
-#DB INFO# Function: Check Component Data
-#DB INFO# [Connection Test] DB Server: mongodb://127.0.0.1:27017/localdb
-#DB INFO# ---> Connection is GOOD.
-#DB INFO# Download Component Data of Local DB locally (${HOME}/.yarr/localdb/{HOSTNAME}_modules.csv)...
-#DB INFO# **************************************
-#DB INFO# Component (1)
-#DB INFO#     Chip Type: RD53A
-#DB INFO#     Parent:
-#DB INFO#         serial number: Q1
-#DB INFO#         component type: module
-#DB INFO#         children: 4
-#DB INFO#     Child (1):
-#DB INFO#         serial number: 0x0449
-#DB INFO#         component type: front-end_chip
-#DB INFO#         chip ID: 0
-#DB INFO#     Child (2):
-#DB INFO#         serial number: 0x0444
-#DB INFO#         component type: front-end_chip
-#DB INFO#         chip ID: 1
-#DB INFO#     Child (3):
-#DB INFO#         serial number: 0x0443
-#DB INFO#         component type: front-end_chip
-#DB INFO#         chip ID: 2
-#DB INFO#     Child (4):
-#DB INFO#         serial number: 0x0448
-#DB INFO#         component type: front-end_chip
-#DB INFO#         chip ID: 4
-#DB INFO# **************************************
-<some texts>
-#DB INFO# The number of components: 47
-#DB INFO# Done.
-#DB INFO# -----------------------
-```
+in edit.

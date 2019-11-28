@@ -8,6 +8,9 @@ pages:
     - Viewer Application: viewer.md
     - Synchronization Tool: sync.md
     - Archive Tool: archive.md
+    - ITkPD Interface: itkpd-interface.md
+    - scanConsole -W: scanconsole.md
+    - DB Accessor: accessor.md
     - Structure: structure.md
     - Advanced: advanced.md
     - Config Samples: config.md

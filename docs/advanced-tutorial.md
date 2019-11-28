@@ -11,7 +11,7 @@
 ### a. Register Component
 
 You can register the component data and upload the test data associated with the registered component data.<br>
-First please prepare connectivity file following [this sample format](config.md). <br>
+First please the prepare component config file following [this sample format](config.md). <br>
 And register by `dbAccessor -C -c <component connectivity file> -u <user config file> -i <site config file>`:
 
 ```bash
@@ -69,7 +69,7 @@ $ ./bin/scanConsole \
 #DB INFO# -----------------------
 #DB INFO# Uploading in the back ground. (log: ~/.yarr/localdb/log/)
 ```
-> [More detail about Upload Tool](upload.md)
+> [More detail about scanConsole -W](scanconsole.md)
 
 ### d. Register DCS
 
@@ -106,11 +106,10 @@ And access 'http://127.0.0.1:5000/localdb/' on the local browser to check data i
 ### f. Share Data
 
 You can share data with other Local DB using Synchronization Tool.<br>
-Please check [the detail page](sync.md) to know how to use.
+Please check [the detail page](sync.md) to get how to use.
 
 ### g. Backup
 
 You can keep the back-up of Local DB using Archive Tool. <br>
-Please check [the detail page](archive.md) to know how to use.
-
+Please check [the detail page](archive.md) to get how to use.
 
