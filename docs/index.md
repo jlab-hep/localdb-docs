@@ -1,4 +1,4 @@
-# Local DB: Local Database
+# Local DB: Local Database ![Local DB](images/logo.png)
 
 ## What is Local DB?
 Local DB is the local data management/storage system based on [MongoDB](https://docs.mongodb.com/) for [YARR](https://gitlab.cern.ch/YARR).<br>
