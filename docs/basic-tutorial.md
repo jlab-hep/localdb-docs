@@ -8,13 +8,24 @@ You can store result data by YARR immediately following the tutorial.
 
 ### 0. Setup
 
-First please be sure to setup Local DB using `setup_db.sh`. <br>
+First please be sure to build YARR SW. <br>
+
+```bash
+$ cd YARR
+$ mkdir build && cd build
+$ cmake3 ../
+$ make -j4
+```
+> [More detail about YARR SW](https://yarr.readthedocs.io/en/latest/)
+
+And please be sure to setup Local DB using `setup_db.sh`. <br>
 This script confirms if the python packages is satisfied, the default config files are prepared, the commands are enabled, and the DB connection is established. <br>
 
 ```bash
 $ cd YARR
 $ ./localdb/setup_db.sh
 ```
+> [More detail about setup_db.sh](install.md)
 
 ### 1. Upload
 

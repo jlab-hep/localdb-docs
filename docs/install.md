@@ -1,46 +1,39 @@
-This page describes how to setup Local DB Tools.<br>
+# Setting
 
-- [OS supported by the Docs](#os)
-- [List of Local DB Tools](#tools-list)
-- [Pre Requirements](#pre-requirements)
+This page describes how to setup Local DB Tools.
+
+- List of Local DB Tools
+    - **Uploader** ([YARR/localdbtool-upload](#yarrlocaldb))<br>
+        To upload data (test data, chip data, user data, site data ...) into Local DB.
+    - **Retriever** ([YARR/localdbtool-retrieve](#yarrlocaldb))<br>
+        To retrieve data (data log, data files) from Local DB.
+    - **Handler** ([YARR/bin/dbAccessor](#yarrlocaldb)) <br>
+        To handle (upload/register/retrieve) data in Local DB.
+    - **Viewer Application** ([localdb-tools/viewer](#local-db-tools))<br>
+        To check/edit data in Local DB on browser.
+    - **Synchronization Tool** ([localdb-tools/sync-tool](#local-db-tools))<br>
+        To push/pull/share data with the other Local DB or Master Server (Centralize Local DB).
+    - **Archive Tool** ([localdb-tools/archive-tool](#local-db-tools))<br>
+        To create archive tar.gz file for Local DB back-up.
+- [Requirements](#requirements)
+    - Pre Requirements
+    - YARR System
+    - Local DB Tools
 - [Setup](#set-up)
     - [YARR/localdb](#yarrlocaldb)
     - [Local DB Tools](#local-db-tools)
+- [Confirmation](#confirmation)
+    - DB Connection
 
-## OS
+## Requirements
 
-This page supports:
+#### Pre Requirements
 
-* centOS7
-
-## Tools Lost
-
-There are several tools for handling Local DB.
-
-* **Uploader** ([YARR/localdbtool-upload](#yarrlocaldb))<br>
-    To upload data (test data, chip data, user data, site data ...) into Local DB.
-
-* **Retriever** ([YARR/localdbtool-retrieve](#yarrlocaldb))<br>
-    To retrieve data (data log, data files) from Local DB.
-
-* **Handler** ([YARR/bin/dbAccessor](#yarrlocaldb)) <br>
-    To handle (upload/register/retrieve) data in Local DB.
-
-* **Viewer Application** ([localdb-tools/viewer](#local-db-tools))<br>
-    To check/edit data in Local DB on browser.
-
-* **Synchronization Tool** ([localdb-tools/sync-tool](#local-db-tools))<br>
-    To push/pull/share data with the other Local DB or Master Server (Centralize Local DB).
-
-* **Archive Tool** ([localdb-tools/archive-tool](#local-db-tools))<br>
-    To create archive tar.gz file for Local DB back-up.
-
-## Pre Requirements
+Please check [Pre Requirements](https://localdb-docs.readthedocs.io/en/devel/requirements/) to install required packages.
 
 #### YARR System ( [git](https://gitlab.cern.ch/YARR/YARR) )
 
-Ensure that [YARR SW](https://yarr.readthedocs.io/en/latest/install/) is installed and set-up. <br>
-**Use devel branch for trying the latest functions.**<br>
+Ensure that [YARR SW (devel branch)](https://yarr.readthedocs.io/en/latest/install/) is installed and set-up. <br>
 Check `scanConsole`, which is the main read-out program, working by:
 
 ```bash
@@ -51,29 +44,12 @@ $ bin/scanConsole -r configs/controller/emuCfg.json -c configs/connectivity/exam
 This runs a digitalscan with the FE-I4B emulator.<br>
 This does not use or require any hardware and will run purely in software.
 
-#### Local DB System: MongoDB
-
-Ensure that [MongoDB](https://localdb-docs.readthedocs.io/en/devel/requirements/#mongo-db) is installed and started. <br>
-Check `mongo`, which is the command to access MongoDB, working by:
-
-```bash
-$ mongo [--port <port number>]
-MongoDB shell version v4.2.1
-...
-> db
-test
-> exit
-bye
-```
-
 #### Local DB Tools ( [git](https://gitlab.cern.ch/YARR/localdb-tools) )
 
-Ensure that [Local DB Tools](https://localdb-docs.readthedocs.io/en/devel/requirements/) is installed and set-up. <br>
-**Use devel branch for trying the latest functions.**
-
-#### Required packages (yum, python)
-
-Check [Pre Requirements](https://localdb-docs.readthedocs.io/en/devel/requirements/) to install required packages.
+```bash
+$ git clone https://gitlab.cern.ch/YARR/localdb-tools.git
+$ git checkout devel
+```
 
 ## Settings
 
@@ -238,3 +214,21 @@ in edit.
 ##### Archive Tool
 
 in edit.
+
+
+#### Local DB System: MongoDB
+
+Ensure that [MongoDB](https://localdb-docs.readthedocs.io/en/devel/requirements/#mongo-db) is installed and started. <br>
+Check `mongo`, which is the command to access MongoDB, working by:
+
+```bash
+$ mongo [--port <port number>]
+MongoDB shell version v4.2.1
+...
+> db
+test
+> exit
+bye
+```
+
+

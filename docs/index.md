@@ -24,10 +24,14 @@ Using the tools for Local DB, you can:
 |Archive DB            |Archive Tool        |Local DB Tools|[Archive Tool Page](archive.md)           |
 |Communicate with ITkPD|ITkPD Interface     |Local DB Tools|[ITkPD Interface Page](itkpd-interface.md)|
 
-## Contents
-* [Requirements](requirements.md)
-* [Quick Tutorial](tutorial.md)
-* [Software Installation](install.md)
+## Supported OS
+
+* centOS7
+
+## Docs Version
+
+* master : for master branch of YARR & Local DB Tools
+* devel : for devel branch of YARR & Local DB Tools
 
 ## Folder Structure
 ```bash
