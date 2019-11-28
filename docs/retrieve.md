@@ -93,7 +93,7 @@ $ ./localdb/bin/localdbtool-retrieve init
 Retrieve Tool performs following functions:
 
 * a. [Retrieve the uploaded test data log](#a-retrieve-test-log)
-* b. [Retrieve the uploaded data into local directory](#b-retrieve-data-fiiles)
+* b. [Retrieve the uploaded data into local directory](#b-retrieve-data-files)
 * c. [Retrieve the uploaded data list](#c-retrieve-data-list)
 * d. [Create the config files for the registered component data](#d-create-config)
 
@@ -265,3 +265,7 @@ $ ./localdb/bin/localdb-retrieve pull --chip <SERIAL NUMBER>
 * List of created config (default output dir: `YARR/db_data`)
     * connectivity config file
     * chip config file (copied from `YARR/configs/defaults/default_FE.json` with replacing `Name` and `ChipId`)
+
+## 3. FAQ
+
+in edit.
