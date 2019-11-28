@@ -30,11 +30,6 @@ Using the tools for Local DB, you can:
 
 * centOS7
 
-## Docs Version
-
-* master : for master branch of YARR & Local DB Tools
-* devel : for devel branch of YARR & Local DB Tools
-
 ## Folder Structure
 ```bash
 YARR : Cloned from https://gitlab.cern.ch/YARR/YARR.git
