@@ -4,16 +4,16 @@ The **Retrieve Tool** is to retrieve data from Local DB.
 
 Contents:
 
-0. [Command](#0-command)
-1. [Getting Start](#1-getting-start)
-2. [Usage](#2-usage)
+1. [Command](#1-command)
+2. [Getting Start](#2-getting-start)
+3. [Usage](#3-usage)
     - upload test data
     - register component data
     - register DCS data
     - upload cache data
-3. [FAQ](#3-faq)
+4. [FAQ](#4-faq)
 
-# 0. Command
+# 1. Command
 
 **YARR/localdb/bin/localdb-retrieve**
 
@@ -48,7 +48,7 @@ Contents:
 #   --directory DIRECTORY Provide directory name.
 ```
 
-## 1. Getting start
+## 2. Getting start
 
 #### 0. Install & Setup
 
@@ -88,7 +88,7 @@ $ ./localdb/bin/localdbtool-retrieve init
 
 - **--database ``<database cfg>``**<br> : Set [database config file](config.md) (default: `HOME/.yarr/localdb/HOSTNAME_database.json`)
 
-## 2. Usage
+## 3. Usage
 
 Retrieve Tool performs following functions:
 
@@ -266,6 +266,6 @@ $ ./localdb/bin/localdb-retrieve pull --chip <SERIAL NUMBER>
     * connectivity config file
     * chip config file (copied from `YARR/configs/defaults/default_FE.json` with replacing `Name` and `ChipId`)
 
-## 3. FAQ
+## 4. FAQ
 
 in edit.

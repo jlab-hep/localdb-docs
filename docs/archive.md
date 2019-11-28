@@ -4,12 +4,12 @@ The **archive-tool** creates a/some archive tar.gz files to back-up Local DB.
 
 Contents:
 
-0. [Command](#0-command)
-1. [Getting Start](#1-getting-start)
-2. [Usage](#2-usage)
-3. [FAQ](#3-faq)
+1. [Command](#1-command)
+2. [Getting Start](#2-getting-start)
+3. [Usage](#3-usage)
+4. [FAQ](#4-faq)
 
-## 0. Command
+## 1. Command
 
 **localdb-tools/archive-tool/bin/localdbtool-archive.sh**
 
@@ -26,7 +26,7 @@ $ ./bin/localdbtool-archive.sh
 # -n --n_archives   : # of archives to keep (default. 2)
 ```
 
-## 1. Getting start
+## 2. Getting start
 
 Please check [Pre Requirements](requirements.md) to install required packages.<br>
 And please be sure to setup Archive Tool setting using `localdb-tools/archive-tool/setup_archive_tool.sh`. <br>
@@ -41,7 +41,7 @@ $ ./setup_archive_tool.sh
 < Setting up with some texts >
 ```
 
-## 2. Usage
+## 3. Usage
 
 ### a. Keep backup to .tar.gz file
 
@@ -72,6 +72,6 @@ $ mongorestore --db localdbtools dump_191128_143352/localdbtools
 $ rm -rf dump_191128_143352
 ```
 
-## 3. FAQ
+## 4. FAQ
 
 in edit.

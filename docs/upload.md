@@ -6,16 +6,16 @@ The **Upload Tool** is to upload data into Local DB.
 
 Contents:
 
-0. [Command](#0-command)
-1. [Getting Start](#1-getting-start)
-2. [Usage](#2-usage)
+1. [Command](#1-command)
+2. [Getting Start](#2-getting-start)
+3. [Usage](#3-usage)
     - upload test data
     - register component data
     - register DCS data
     - upload cache data
-3. [FAQ](#3-faq)
+4. [FAQ](#4-faq)
 
-## 0. Command
+## 1. Command
 
 **YARR/localdb/bin/localdb-upload**
 
@@ -48,7 +48,7 @@ $ ./localdb/bin/localdbtool-upload <option>
 #   --log                Set Log Mode
 ```
 
-## 1. Getting start
+## 2. Getting start
 
 #### 0. Install & Setup
 
@@ -88,7 +88,7 @@ $./localdb/bin/localdbtool-upload init
 
 - **--database ``<database cfg>``**<br> : Set [database config file](config.md) (default: `HOME/.yarr/localdb/HOSTNAME_database.json`)
 
-## 2. Usage
+## 3. Usage
 
 Upload Tool performs following functions:
 
@@ -153,6 +153,6 @@ In the good connection to Local DB Server, you can upload all cache data by `loc
 $ ./localdb/bin/localdbtool-upload cache
 ```
 
-## 3. FAQ
+## 4. FAQ
 
 in edit.

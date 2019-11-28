@@ -17,8 +17,10 @@ Using the tools for Local DB, you can:
 |Function              |Tool Name           |System        |How to use                                |
 |:--------------------:|:------------------:|:------------:|:----------------------------------------:|
 |Storage System        |Local DB            |MongoDB       |[MongoDB Docs](https://docs.mongodb.com/) |
+|Scan                  |scanConsole         |YARR          |[scanConsole Page](scanconsole.md)        |
 |Store Data            |Upload Tool         |YARR          |[Upload Tool Page](upload.md)             |
 |Restore Data          |Retrieve Tool       |YARR          |[Retrieve Tool Page](retrieve.md)         |
+|Handle DB             |DB Accessor         |YARR          |[DB Accessor Page](accessor.md)           |
 |Share Data            |Synchronization Tool|Local DB Tools|[Synchronization Tool Page](sync.md)      |
 |Check Data            |Viewer Application  |Local DB Tools|[Viewer Application Page](viewer.md)      |
 |Archive DB            |Archive Tool        |Local DB Tools|[Archive Tool Page](archive.md)           |

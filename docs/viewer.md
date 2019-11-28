@@ -5,13 +5,13 @@ You can access the web page in the local machine, or from the other machine by o
 
 Contents:
 
-0. [Command](#0-command)
-1. [Getting Start](#1-getting-start)
-2. [Usage](#2-usage)
-3. [Web Page](#3-web-page)
-4. [FAQ](#4-faq)
+1. [Command](#1-command)
+2. [Getting Start](#2-getting-start)
+3. [Usage](#3-usage)
+4. [Web Page](#4-web-page)
+5. [FAQ](#5-faq)
 
-## 0. Command
+## 1. Command
 
 **localdb-tools/viewer/app.py**
 
@@ -19,7 +19,7 @@ Contents:
 $ ./app.py --config <path/to/config>
 ```
 
-## 1. Getting start
+## 2. Getting start
 
 Please check [Pre Requirements](requirements.md) to install required packages.<br>
 And please be sure to setup Viewer Application setting using `localdb-tools/viewer/setup_viewer.sh`. <br>
@@ -41,7 +41,7 @@ $ ./setup_viewer.sh
 - **-p ``<port>``**<br> : Set Local DB server port (default: 27017)
 - **-c ``<cfg>``**<br> : Set config file Name (default: conf.yml)
 
-## 2. Usage
+## 3. Usage
 
 Viewer Application can be started by `app.py --config conf.yml`
 
@@ -63,7 +63,7 @@ Applying ATLAS style settings...
 
 - **--config ``<cfg>``**<br> : Set config file path
 
-## 3. Web Page
+## 4. Web Page
 
 Please access `http://127.0.0.1:5000/localdb/` on web browser in local machine and it displays the following page:
 
@@ -87,7 +87,7 @@ You can access the test result page by clicking 'result page', and it displays t
 |![Viewer Result Page](images/viewer_result.png)|
 |:-:|
 
-## 4. FAQ
+## 5. FAQ
 
 - Remote Access/Apache
 

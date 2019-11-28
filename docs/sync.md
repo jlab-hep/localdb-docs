@@ -7,12 +7,12 @@ Before using sync-tool, we need a stable, network-accessible **master server** w
 
 Contents:
 
-0. [Command](#0-command)
-1. [Getting Start](#1-getting-start)
-2. [Usage](#2-usage)
-3. [FAQ](#3-faq)
+1. [Command](#1-command)
+2. [Getting Start](#2-getting-start)
+3. [Usage](#3-usage)
+4. [FAQ](#4-faq)
 
-# 0. Command
+## 1. Command
 
 **localdb-tools/sync-tool/localdbtool-sync.py**
 
@@ -20,7 +20,7 @@ Contents:
 $ ./bin/localdbtool-sync.py --sync-opt <option> --config my_configure.yml
 ```
 
-## 1. Getting start
+## 2. Getting start
 
 Please check [Pre Requirements](requirements.md) to install required packages.<br>
 And please be sure to setup Synchronization Tool setting using `localdb-tools/sync-tool/setup_sync_tool.sh`. <br>
@@ -34,7 +34,8 @@ $ cd localdb-tools/sync-tool
 $ ./setup_sync_tool.sh
 < Setting up with some texts >
 ```
-## 2. Usage
+
+## 3. Usage
 
 ```bash
 $ cd localdb-tools/sync-tool
@@ -62,3 +63,7 @@ $ ./bin/localdbtool-sync.py  --sync-opt commit --config my_configure.yml
 2. fetch
 3. (pull)
 4. push
+
+## 4. FAQ
+
+in edit.
