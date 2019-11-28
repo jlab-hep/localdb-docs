@@ -6,8 +6,9 @@ There are several softwares required for Local DB:
 - python packages
 - Mongo DB
 - git command
+> [Requirements List](requirements-list.md)
 
-You can install them automatically or manually:
+You can install them on **centOS7** automatically or manually:
 
 - [Automatic Installation](automatic-install.md)
 - [Manual Installation](manual-install.md)

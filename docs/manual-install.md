@@ -46,12 +46,6 @@ cmake3 version 3.14.6
 $ sudo yum install gnuplot texlive-epstopdf ghostscript
 ```
 
-- Other dependencies for Local DB Tools
-
-```bash
-$ sudo yum install bc.x86_64
-```
-
 ### Python packages
 
 - python3
