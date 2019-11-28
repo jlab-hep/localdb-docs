@@ -5,16 +5,16 @@ mainly for component registration and DCS registration.
 
 Contents:
 
-0. [Command](#0-command)
-1. [Getting Start](#1-getting-start)
-2. [Usage](#2-usage)
+1. [Command](#1-command)
+2. [Getting Start](#2-getting-start)
+3. [Usage](#3-usage)
     - register component data
     - register DCS data
     - upload cache data
     - retrieve component list
-3. [FAQ](#3-faq)
+4. [FAQ](#4-faq)
 
-## 0. Command
+## 1. Command
 
 **YARR/bin/dbAccessor**
 
@@ -36,12 +36,23 @@ $ ./bin/dbAccessor
 # -u <user.json>          : Provide user configuration. (Default HOME/.yarr/localdb/user.json)
 ```
 
-## 1. Getting start
+## 2. Getting start
 
 #### 0. Install & Setup
 
 Please check [Pre Requirements](requirements.md) to install required packages.<br>
-And please be sure to setup Local DB setting using `YARR/localdb/setup_db.sh`. <br>
+
+First, please be sure to build YARR SW:
+
+```bash
+$ cd YARR
+$ mkdir build && cd build
+$ cmake3 ../
+$ make -j4
+```
+> [More detail about YARR SW](https://yarr.readthedocs.io/en/latest/)
+
+Next, please be sure to setup Local DB setting using `YARR/localdb/setup_db.sh`. <br>
 This script confirms
 
 - if the python packages is satisfied
@@ -78,7 +89,7 @@ $ ./bin/dbAccessor -I
 
 - **-d ``<database.json>``**<br> : Set [database config file](config.md) (default: `HOME/.yarr/localdb/HOSTNAME_database.json`)
 
-## 2. Usage
+## 3. Usage
 
 DB Accessor performs following functions:
 
@@ -192,6 +203,6 @@ $ ./bin/dbAccessor -M
 #DB INFO# -----------------------
 ```
 
-## 3. FAQ
+## 4. FAQ
 
 in edit.
