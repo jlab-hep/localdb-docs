@@ -6,9 +6,9 @@ You can handle Local DB (e.g. store result data by YARR) following the tutorial.
 
 Contents:
 
-- 0. Setup Local DB
-- 1. Scan and Upload data into Local DB
-- 2. Retrieve data from Local DB
+0. Setup Local DB
+1. Scan and Upload data into Local DB
+2. Retrieve data from Local DB
 
 ## [Advanced Tutorial](advanced-tutorial.md)
 
