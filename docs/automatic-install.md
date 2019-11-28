@@ -11,8 +11,8 @@ Check [Manual Installation](manual-install.md) to install requirements on other 
 
 ## scripts
 
-- [db_yarr_install.sh](#a-db-yarr-install.sh) (For DAQ machine)
-- [db_server_install.sh](#b-db-server-install.sh) (For DB server)
+- [db_yarr_install.sh](#a-db_yarr_installsh) (For DAQ machine)
+- [db_server_install.sh](#b-db_server_installsh) (For DB server)
 
 ### a) db_yarr_install.sh
 
