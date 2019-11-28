@@ -17,9 +17,6 @@ Check [Manual Installation](manual-install.md) to install requirements on other 
 ### a) db_yarr_install.sh
 
 ```bash
-$ git clone https://gitlab.cern.ch/YARR/YARR.git
-$ git checkout devel
-$
 $ cd YARR/localdb
 $ ./db_yarr_install.sh
 [LDB] Looking for missing packages for Local DB and Tools ...
@@ -58,9 +55,6 @@ Enjoy!!
 ### b) db_server_install.sh
 
 ```bash
-$ git clone https://gitlab.cern.ch/YARR/localdb-tools.git
-$ git checkout devel
-$
 $ cd localdb-tools/setting
 $ ./db_server_install.sh
 [LDB] Looking for missing packages for Local DB and Tools ...
@@ -95,5 +89,3 @@ y
 ----------------------------------------
 Enjoy!!
 ```
-
-

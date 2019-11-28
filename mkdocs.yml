@@ -2,7 +2,6 @@ site_name: Local DB Docs
 pages:
     - Home: index.md
     - Pre Requirements: requirements.md
-    - Settings: install.md
     - Quick tutorial: tutorial.md
     - Upload Tool: upload.md
     - Retrieve Tool: retrieve.md
