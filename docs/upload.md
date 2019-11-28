@@ -76,7 +76,7 @@ $ ./localdb/setup_db.sh
 Please run the command with the option 'init' to check if the command is working and the connection to Local DB is good.
 
 ```bash
-$./localdb/bin/localdbtool-upload init
+$ ./localdb/bin/localdbtool-upload init
 #DB INFO# -----------------------
 #DB INFO# Function: Initialize
 #DB INFO# [Connection Test] DB Server: mongodb://127.0.0.1:27017/localdb
@@ -116,8 +116,8 @@ Check [scanConsole -W](scanconsole.md) to get the detail.
 You can upload test data from the specific result directory by `localdbtool-upload scan`.
 
 ```bash
-$ ./localdb/bin/localdbtool-upload scan <path/to/result/dir>
-e.g.) $ ./localdb/bin/localdbtool-upload scan ./data/last_scan
+$ ./localdb/bin/localdbtool-upload scan <path/to/result/dir> --database <path/to/database/config>
+e.g.) $ ./localdb/bin/localdbtool-upload scan ./data/last_scan --database HOME/.yarr/localdb/HOSTNAME_database.json
 ```
 
 **Additional options**

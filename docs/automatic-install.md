@@ -16,6 +16,9 @@ Check [Manual Installation](manual-install.md) to install requirements on other 
 
 ### a) db_yarr_install.sh
 
+**This scripts are not available in YARR v1.1.0.**<br>
+**Please change to the devel branch if want to use.**<br>
+
 ```bash
 $ cd YARR/localdb
 $ ./db_yarr_install.sh

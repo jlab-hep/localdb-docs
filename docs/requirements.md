@@ -16,12 +16,10 @@ $ which git > /dev/null 2>&1; if [ $? = 1 ]; then sudo yum install git; fi
 # 1-1. YARR SW
 $ git clone https://gitlab.cern.ch/YARR/YARR.git
 $ cd YARR
-$ git checkout devel
 
 # 1-2. Local DB Tools
 $ git clone https://gitlab.cern.ch/YARR/localdb-tools.git
 $ cd localdb-tools
-$ git checkout devel
 ```
 
 You can install them on **centOS7** automatically or manually:

@@ -89,6 +89,9 @@ DCS Data  : NULL
 
 You can retrieve the uploaded data into the local directory by `localdbtool-retrieve pull`:
 
+**This function is not available in YARR v1.1.0.**<br>
+**Please change to the devel branch if want to use.**<br>
+
 ```bash
 $ cd YARR
 $ ./localdb/bin/localdbtool-retrieve pull

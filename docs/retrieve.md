@@ -130,6 +130,9 @@ DCS Data  : NULL
 
 You can retrieve the uploaded data into the local directory by `localdbtool-retrieve pull`:
 
+**This function is not available in YARR v1.1.0.**<br>
+**Please change to the devel branch if want to use.**<br>
+
 ```bash
 $ ./localdb/bin/localdbtool-retrieve pull
 #DB INFO# -----------------------
@@ -184,6 +187,9 @@ If you set the test ID (which is document ID in Local DB you can check by `local
 ### c. Retrieve data list
 
 You can retrieve the uploaded data (component, user, site) by `localdbtool-retrieve list <opt>`:
+
+**This function is not available in YARR v1.1.0.**<br>
+**Please change to the devel branch if want to use.**<br>
 
 #### 1. Component list (default)
 
@@ -247,6 +253,9 @@ You can create the connectivity config file and the chip config files after the 
 The component data can be registered by [DB Accessor](accessor.md) or can be downloaded from ITkPD by [ITkPD Interface](#itkpd-interface.md). <br>
 You can create the config files by `localdb-retrieve pull --chip <SERIAL NUMBER>`.<br>
 If you have already uploaded the component test data, the config files in the latest scan are retrieved.
+
+**This function is not available in YARR v1.1.0.**<br>
+**Please change to the devel branch if want to use.**<br>
 
 ```bash
 $ cd YARR

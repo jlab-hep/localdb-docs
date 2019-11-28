@@ -31,3 +31,4 @@ Contents:
 - [Archive Tool](archive.md)
 - [ITk PD Interface](itkpd-interface.md)
 - [DB Accessor](accessor.md)
+- [scanConsole](scanconsole.md)

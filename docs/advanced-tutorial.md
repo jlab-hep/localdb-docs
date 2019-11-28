@@ -35,6 +35,9 @@ After [the component registration](#a-register-component) (or [the registeration
 you can create the connectivity config file and the chip config files by `localdb-retrieve pull --chip <SERIAL NUMBER>`.<br>
 If you have already uploaded the component test data, the config files in the latest scan are retrieved.
 
+**This function is not available in YARR v1.1.0.**<br>
+**Please change to the devel branch if want to use.**<br>
+
 ```bash
 $ cd YARR
 $ ./localdb/bin/localdb-retrieve pull --chip <SERIAL NUMBER>
@@ -77,11 +80,14 @@ You can register DCS data associated with the test data for each chip data.<br>
 First please prepare DCS data (dcs.dat) and DCS config file (dcs_info.json) following [this sample format](config.md). <br>
 And register by `dbAccessor -E`:
 
+**This function is not available in YARR v1.1.0.**<br>
+**Please change to the devel branch if want to use.**<br>
+
 ```bash
 $ cd YARR
 $ ./bin/dbAccessor \
 -E dcs_info.json \
--s data/last_scan/scanLog.json \
+-s data/last_scan/scanLog.json
 ```
 > [More detail about dbAccessor](accessor.md)
 

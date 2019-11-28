@@ -12,6 +12,9 @@
 5. Check the command
 6. Check the DB connection
 
+**Step 3, 4, 5, and 6 are not available in YARR v1.1.0.**<br>
+**Please change to the devel branch if want to use.**<br>
+
 ### Usage (First Time)
 
 ```bash

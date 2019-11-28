@@ -75,6 +75,9 @@ $ ./localdb/setup_db.sh
 
 Please run the command with the option '-I' to check if the command is working and the connection to Local DB is good.
 
+**This function is not available in YARR v1.1.0.**<br>
+**Please change to the devel branch if want to use.**<br>
+
 ```bash
 $ ./bin/dbAccessor -I
 
@@ -135,6 +138,9 @@ Check [Retrieve Component Data](#retrieve-component-data) to get more detail.
 You can register DCS data associated with the test data for each chip data.<br>
 First please prepare DCS data (dcs.dat) and DCS config file (dcs_info.json) following [this sample format](config.md). <br>
 And register by `dbAccessor -E`:
+
+**This function is not available in YARR v1.1.0.**<br>
+**Please change to the devel branch if want to use.**<br>
 
 ```bash
 $ ./bin/dbAccessor \
