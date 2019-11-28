@@ -51,15 +51,13 @@ localdb-tools : Cloned from https://gitlab.cern.ch/YARR/localdb-tools.git
 ```
 
 ## Contact
-<span style=“font-size: 60%;”>
 |Role     |Name           |Institution                                                                        |E-mail                                 |
 |:-------:|:-------------:|:---------------------------------------------------------------------------------:|:-------------------------------------:|
-|Developer|Hiroki Okuyama |[Tokyo Institute of Technology](http://www-hep.phys.titech.ac.jp/jlab/index_e.html)|hiroki.okuyama(at)cern.ch              |
-|Developer|Alisa Kubota   |[Tokyo Institute of Technology](http://www-hep.phys.titech.ac.jp/jlab/index_e.html)|arisa.kubota(at)cern.ch                |
-|Developer|Eunchong Kim   |[Tokyo Institute of Technology](http://www-hep.phys.titech.ac.jp/jlab/index_e.html)|eunchong.kim(at)cern.ch                |
-|Developer|Shohei Yamagaya|[Osaka University](http://osksn2.hep.sci.osaka-u.ac.jp/member.html)                |yamagaya(at)champ.hep.sci.osaka-u.ac.jp|
-|Developer|Hideyuki Oide  |[Tokyo Institute of Technology](http://www-hep.phys.titech.ac.jp/jlab/index_e.html)|hideyuki.oide(at)cern.ch               |
-</span>
+|Developer|Hiroki Okuyama |<span style= font-size: 60%;”>[Tokyo Institute of Technology](http://www-hep.phys.titech.ac.jp/jlab/index_e.html)</span>|hiroki.okuyama(at)cern.ch              |
+|Developer|Alisa Kubota   |<span style= font-size: 60%;”>[Tokyo Institute of Technology](http://www-hep.phys.titech.ac.jp/jlab/index_e.html)</span>|arisa.kubota(at)cern.ch                |
+|Developer|Eunchong Kim   |<span style= font-size: 60%;”>[Tokyo Institute of Technology](http://www-hep.phys.titech.ac.jp/jlab/index_e.html)</span>|eunchong.kim(at)cern.ch                |
+|Developer|Shohei Yamagaya|<span style= font-size: 60%;”>[Osaka University](http://osksn2.hep.sci.osaka-u.ac.jp/member.html)                </span>|yamagaya(at)champ.hep.sci.osaka-u.ac.jp|
+|Developer|Hideyuki Oide  |<span style= font-size: 60%;”>[Tokyo Institute of Technology](http://www-hep.phys.titech.ac.jp/jlab/index_e.html)</span>|hideyuki.oide(at)cern.ch               |
 
 ## Production Tags
 
