@@ -1,7 +1,7 @@
 ![Local DB](images/logo.png)
 
 ## What is Local DB?
-Local DB (Local Database) is the local data management/storage system based on [MongoDB](https://docs.mongodb.com/) for [YARR](https://gitlab.cern.ch/YARR).<br>
+Local DB (Local Database) is the data management/storage system based on [MongoDB](https://docs.mongodb.com/) for [YARR](https://gitlab.cern.ch/YARR).<br>
 Using the tools for Local DB, you can:
 
 - **Store** the test data associated with some information; chip, user, site ...
