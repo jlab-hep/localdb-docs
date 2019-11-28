@@ -8,7 +8,7 @@
     * Ghostscript
 * for Local DB
     * MongoDB
-    * python3 & several modules
+    * python3 version 3.4 or higher & several modules
         * arguments
         * coloredlogs
         * Flask

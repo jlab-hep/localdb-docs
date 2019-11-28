@@ -48,7 +48,7 @@ $ sudo yum install gnuplot texlive-epstopdf ghostscript
 
 ### Python packages
 
-- python3
+- python3 version 3.4 or higher
 
 ```bash
 # 0. Check
