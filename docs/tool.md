@@ -1,18 +1,49 @@
 # Local DB Tools
 
-- **Uploader** ([YARR/localdbtool-upload](upload.md))<br>
-    To upload data (test data, chip data, user data, site data ...) into Local DB.
-- **Retriever** ([YARR/localdbtool-retrieve](retrieve.md))<br>
-    To retrieve data (data log, data files) from Local DB.
-- **Handler** ([YARR/bin/dbAccessor](accessor.md)) <br>
-    To handle (upload/register/retrieve) data in Local DB.
-- **scanConsole** ([YARR/bin/scanConsole](scanconsole.md)) <br>
-    To test the performance for a/some chip(s).
-- **Viewer Application** ([localdb-tools/viewer](viewer.md))<br>
-    To check/edit data in Local DB on browser.
-- **Synchronization Tool** ([localdb-tools/sync-tool](sync.md))<br>
-    To push/pull/share data with the other Local DB or Master Server (Centralize Local DB).
-- **Archive Tool** ([localdb-tools/archive-tool](archive.md))<br>
-    To create archive tar.gz file for Local DB back-up.
-- **ITkPD Interface** ([localdb-tools/itkpd-interface](itkpd-interface.md))<br>
-    To communicate with ITkPD.
+### Uploade
+
+- Description: To upload data (test data, chip data, user data, site data ...) into Local DB.
+- Page: [About Upload Tool](upload.md)
+- Location: `YARR/localdb`
+
+### Retriever
+
+- Description: To retrieve data (data log, data files) from Local DB.
+- Page: [About Retrieve Tool](retrieve.md)
+- Location: `YARR/localdb`
+
+### DB Accessor
+
+- Description: To handle (upload/register/retrieve) data in Local DB.
+- Page: [About DB Accessor](accessor.md)
+- Location: `YARR`
+
+### scanConsole
+
+- Description: To test the performance for a/some chip(s).
+- Page: [About scanConsole](scanconsole.md)
+- Location: `YARR`
+
+### Viewer Application
+
+- Description: To check/edit data in Local DB on browser.
+- Page: [About Viewer Application](viewer.md)
+- Location: `localdb-tools/viewer`
+
+### Synchronization Tool
+
+- Description: To push/pull/share data with the other Local DB or Master Server (Centralize Local DB).
+- Page: [About Synchronization Tool](sync.md)
+- Location: `localdb-tools/sync-tool`
+
+### Archive Tool
+
+- Description: To create archive tar.gz file for Local DB back-up.
+- Page: [About Archive Tool](archive.md)
+- Location: `localdb-tools/archive-tool`
+
+### ITkPD Interface
+
+- Description: To communicate with ITkPD.
+- Page: [About ITkPD Interface](itkpd-interface.md)
+- Location: `localdb-tools/itkpd-interface`
