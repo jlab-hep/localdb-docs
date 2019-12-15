@@ -16,35 +16,34 @@ $ g++ --version
 -bash: g++: command not found
 
 # 1. Install
-$ sudo yum install centos-release-scl
-$ sudo yum install devtoolset-7
+$ brew install gcc
 
 # 2. Confirm
-$ source /opt/rh/devtoolset-7/enable
 $ g++ --version
-g++ (GCC) 7.3.1 20180303 (Red Hat 7.3.1-5)
+g++ (Homebrew GCC 9.2.0_2) 9.2.0
 ```
 
 - cmake3 for YARR SW installation
 
 ```bash
 # 0. Check
-$ cmake3 --version
--bash: cmake3: command not found
+$ cmake --version
+-bash: cmake: command not found
 
 # 1. Install
-$ sudo yum install epel-release
-$ sudo yum install cmake3
+$ brew install cmake
 
 # 2. Confirm
-$ cmake3 --version
-cmake3 version 3.14.6
+$ cmake --version
+cmake version 3.12.4
 ```
 
 - Other dependencies for YARR SW installation
 
 ```bash
-$ sudo yum install gnuplot texlive-epstopdf ghostscript
+$ brew install gnuplot
+$ brew install epstopdf
+$ brew install ghostscript
 ```
 
 ### Python packages
@@ -57,8 +56,7 @@ $ python3 --version
 -bash: python3: command not found
 
 # 1. Install
-$ sudo yum install epel-release
-$ sudo yum install python3.x86_64
+$ brew install python3
 
 # 2. Confirm
 $ python3 --version
@@ -95,32 +93,17 @@ itkdb
 
 - MongoDB version 4.2 or higher for Local DB
 
-For **centOS7**, you can install/upgrade MongoDB by `localdb-tools/scripts/shell/upgrade_mongoDB_centos.sh`. <br>
-Check [MongoDB 4.X Community Edition](https://docs.mongodb.com/manual/installation/) to install and start mongod service on other platform.
+Check [MongoDB 4.X Community Edition](https://docs.mongodb.com/manual/installation/) to get more detail about installation and starting mongod service.
 
 ```bash
 # 0. Check
 $ mongo --version
 -bash: mongo: command not found
 
-# 1. Install/Upgrade
-$ cd localdb-tools/scripts/shell
-$ ./upgrade_mongoDB_centos.sh
-[sudo] password for dbuser: XXXXXXX
-OK!
-
-----------------------------------------------
-[WARNING] MongoDB version 4.2 or greater is required
-----------------------------------------------
-
-Install MongoDB version 4.2? [y/n]
-y
-
-< Installing packages with many texts >
-
-Success! Upgraded MongoDB version to 4.2!
-You can check it by 'mongo --version'
-Enjoy!
+# 1. Install/Upgrade for centOS7
+$ brew tap mongodb/brew
+$ brew install mongodb-community@4.2
+$ brew services start mongodb-community@4.2
 
 # 2. Confirm
 $ mongo [--port <port number>]

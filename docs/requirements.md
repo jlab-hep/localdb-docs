@@ -1,7 +1,10 @@
 ## Pre Requirements
 
-There are several softwares required for Local DB:
+There are several requirements for Local DB:
 
+- Supported OS
+    - centOS7
+    - macOS greater than 10.14
 - [Requirements List](requirements-list.md)
     - yum packages
     - python packages
@@ -24,7 +27,8 @@ $ git clone https://gitlab.cern.ch/YARR/localdb-tools.git
 $ cd localdb-tools
 ```
 
-You can install them on **centOS7** automatically or manually:
+You can install them automatically or manually:
 
-- [Automatic Installation](automatic-install.md)
-- [Manual Installation](manual-install.md)
+- [Automatic Installation (centOS7)](automatic-install.md)
+- [Manual Installation (centOS7)](manual-install.md)
+- [Manual Installation (macOS)](manual-install-macos.md)

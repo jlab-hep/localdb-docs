@@ -13,7 +13,8 @@ First please be sure to build YARR SW. <br>
 ```bash
 $ cd YARR
 $ mkdir build && cd build
-$ cmake3 ../
+$ cmake3 ../                                             # for linux
+$ cmake ../ -DCMAKE_TOOLCHAIN_FILE=../cmake/macos-clang  # for macOS
 $ make -j4
 ```
 > [More detail about YARR SW](https://yarr.readthedocs.io/en/latest/)
