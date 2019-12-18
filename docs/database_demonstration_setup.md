@@ -20,15 +20,7 @@ $
 
 ## influxDB
 
-Just type 'influx' to check if the influxDB service is running.
-
-```bash
-$ influx
-Connected to http://localhost:8086 version 1.7.9
-InfluxDB shell version: 1.7.9
-> exit
-$
-```
+[link](database_demonstration_influxdb.md)
 
 ## grafana
 

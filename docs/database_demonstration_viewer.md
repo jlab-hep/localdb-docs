@@ -3,6 +3,7 @@
 ## Goal
 
 Check the Web Page on your browser.
+
 ![Viewer Application Goal](images/demo_viewer_goal.png)
 
 ## Pre Requirements
@@ -43,6 +44,7 @@ INFO Viewer Application URL: http://127.0.0.1:5000/localdb/
 
 Access to [http://127.0.0.1:5000/localdb/](http://127.0.0.1:5000/localdb/) on the machine's browser where app.py is running,<br>
 and you can see the web page as follows:
+
 ![viewer top](images/demo_viewer_top.png)
 
 Finish!
