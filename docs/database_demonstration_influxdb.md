@@ -51,7 +51,7 @@ $ ./shell.sh
 ### 3. Access to the Web Page
 
 Access to [http://localhost:3000/](http://localhost:3000/) on the machine's browser where grafana was installed.<br>
-Check the following steps [here](database_demonstration_grafana.md)
+Check [here](database_demonstration_grafana.md) to go to the steps for checking grafana service.
 
 Finish!
 
