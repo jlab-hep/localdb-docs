@@ -10,12 +10,24 @@ _We support CentOS, MacOS, Ubuntu, Windows_
 
 Following DB demonstration, we can do as follow things:
 
-1. [Install required packages (pre requirements)](database_demonstration_requirements.md)
-2. [Set-up MongoDB, influxDB, Grafana, Viewer Application, Plotting Tool, and YARR SW for Local DB](database_demonstration_setup.md)
-3. [Register the module data into ITkPD (as test)](database_demonstration_register_itkpd.md)
-4. [Download the module data into Local DB from ITkPD (as test)](database_demonstration_download_itkpd.md)
-5. [Run scanConsole with uploading the test data into Local DB](database_demonstration_scanconsole.md)
-6. [Check the uploaded data in the Viewer Application](database_demonstration_viewer.md)
-7. [Upload the test data into ITkPD (if possible)](database_demonstration_upload_itkpd.md)
+1. [pre requirements](database_demonstration_requirements.md)
+    - Install the requirements for DB demonstration
+2. [Set-up](database_demonstration_setup.md)
+    - MongoDB
+    - influxDB
+    - Grafana
+    - Viewer Application
+    - Plotting Tool
+    - YARR SW for Local DB
+3. [Module Registration](database_demonstration_register_itkpd.md)
+    - Register the module data into ITkPD (as test)
+4. [Module Download](database_demonstration_download_itkpd.md)
+    - Download the module data into Local DB from ITkPD (as test)
+5. [scanConsole & Upload](database_demonstration_scanconsole.md)
+    - Run scanConsole with uploading the test data into Local DB
+6. [Viewer Application](database_demonstration_viewer.md)
+    - Check the uploaded data in the Viewer Application
+7. [Test Upload into ITkPD](database_demonstration_upload_itkpd.md)
+    - Upload the test data into ITkPD (if possible)
 
 ![demo flow](images/demo_flow.png)

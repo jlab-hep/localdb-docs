@@ -136,8 +136,6 @@ If you catch the message **"exception: connect failed"**, you should check that 
 
 ### influxDB
 
-Check [influxDB Installation](https://docs.influxdata.com/influxdb/v1.7/introduction/installation/) for more detail.
-
 ```bash
 # 0. Check
 $ influx --version
@@ -160,3 +158,34 @@ $ influx
 Influx DB shell version X.X.X
 >
 ```
+
+Check [influxDB Installation](https://docs.influxdata.com/influxdb/v1.7/introduction/installation/) for more detail.
+
+### Grafana
+
+```bash
+# 0. Check
+$ grafana-server -v
+-bash: grafana-server: command not found
+
+# 1. Install
+$ cat <<EOF | sudo tee /etc/yum.repos.d/grafana.repo
+[grafana]
+name=grafana
+baseurl=https://packages.grafana.com/oss/rpm
+repo_gpgcheck=1
+enabled=1
+gpgcheck=1
+gpgkey=https://packages.grafana.com/gpg.key
+sslverify=1
+sslcacert=/etc/pki/tls/certs/ca-bundle.crt
+EOF
+$ sudo yum install grafana
+$ sudo systemctl start grafana-server
+
+# 2. Confirm
+$ grafana-server -v
+Version 6.5.2 (commit: 742d165, branch: HEAD)
+```
+
+Check [Grafana Installation](https://grafana.com/docs/grafana/latest/installation/requirements/) for more detail.
