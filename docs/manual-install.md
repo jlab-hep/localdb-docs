@@ -133,3 +133,30 @@ bye
 ```
 
 If you catch the message **"exception: connect failed"**, you should check that MongoDB is running.
+
+### influxDB
+
+Check [influxDB Installation](https://docs.influxdata.com/influxdb/v1.7/introduction/installation/) for more detail.
+
+```bash
+# 0. Check
+$ influx --version
+-bash: influx: command not found
+
+# 1. Install
+$ cat <<EOF | sudo tee /etc/yum.repos.d/influxdb.repo
+[influxdb]
+name = InfluxDB Repository - RHEL \$releasever
+baseurl = https://repos.influxdata.com/rhel/\$releasever/\$basearch/stable
+enabled = 1
+gpgcheck = 1
+gpgkey = https://repos.influxdata.com/influxdb.key
+EOF
+$ sudo yum install influxdb
+$ sudo systemctl start influxdb
+
+# 2. Confirm
+$ influx
+Influx DB shell version X.X.X
+>
+```
