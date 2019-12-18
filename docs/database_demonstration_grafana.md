@@ -4,6 +4,8 @@
 
 Check the graph of DCS data on your browser.
 
+![Grafana Goal](images/demo_grafana_goal.png)
+
 ## Pre Requirements
 
 ### Grafana Server
