@@ -12,42 +12,7 @@ Install the following required packages:
 
 Please follow the procedure below to install them:
 
-- [For centOS](#centos)
-- [For macOS](#macos)
-- [For Ubuntu](#ubuntu)
-- [For Windows](#windows)
-
-### centOS
-
-**version > 7**
-
-```
-git clone -b devel https://gitlab.cern.ch/YARR/localdb-tools.git
-cd localdb-tools/setting
-./db_server_install.sh
-```
-
-### macOS
-
-**version > 10.14**
-
-please follow [this page](database_demonstration_setup_mac.md)
-
-### Ubuntu
-
-**version > 16.04**
-
-```
-wget https://gitlab.cern.ch/YARR/localdb-tools/raw/devel/setting/ubuntu/installer_ubuntu.sh
-bash installer_ubuntu.sh all
-```
-This will take about 1 h.
-
-optional, you can specify install packages. e.g. `bash installer_ubuntu.sh gcc7 yarr`
-
-
-### Windows
-
-Need a **virtual machine** (CentOS or Ubutnu), or enable Windows Subsystem for Linux (WSL) and intall ubuntu
-
-Then, please follow CentOS/Ubuntu instruction.
+- [For centOS](database_demonstration_setup_centos.md)
+- [For macOS](database_demonstration_setup_mac.md)
+- [For Ubuntu](database_demonstration_setup_ubuntu.md)
+- [For Windows](database_demonstration_setup_windows.md)
