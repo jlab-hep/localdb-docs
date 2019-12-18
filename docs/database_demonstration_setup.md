@@ -4,15 +4,7 @@ After [the installation](database_demonstration_requirements.md), you can start 
 
 ## MongoDB
 
-Just type 'mongo' to check if the MongoDB service is running.
-
-```bash
-$ mongo
-MongoDB shell version v3.6.16
-> exit
-bye
-$
-```
+[link](database_demonstration_mongodb.md)
 
 ## Viewer Application
 
@@ -25,3 +17,7 @@ $
 ## grafana
 
 [link](database_demonstration_grafana.md)
+
+## YARR SW
+
+[link](database_demonstration_yarr.md)
