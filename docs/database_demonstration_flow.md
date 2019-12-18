@@ -26,7 +26,7 @@ Register the module data into ITkPD (as test)
 Download the module data into Local DB from ITkPD (as test)
 5. [scanConsole & Upload](database_demonstration_scanconsole.md)<br>
 Run scanConsole with uploading the test data into Local DB
-6. [Viewer Application](database_demonstration_viewer.md)<br>
+6. [Viewer Application](database_demonstration_check_viewer.md)<br>
 Check the uploaded data in the Viewer Application
 7. [Test Upload into ITkPD](database_demonstration_upload_itkpd.md)<br>
 Upload the test data into ITkPD (if possible)
