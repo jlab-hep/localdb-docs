@@ -2,11 +2,11 @@
 
 ## Goal
 
-Register the component data (FE-I4B single module data & FE-I4B FE chip data for example).
+Register the component data (FE-I4B single module data & FE-I4B FE chip data for example) into ITkPD.
 
 ## 1. Access ITkPD Web Page
 
-Access [https://itkpd-test.unicorncollege.cz/](https://itkpd-test.unicorncollege.cz/) and login with your username & password.
+Access [https://itkpd-test.unicorncollege.cz/](https://itkpd-test.unicorncollege.cz/) and login with your ACCESS CODE 1 & ACCESS CODE 2.
 
 ![ITk PD Toppage](images/demo_itkpd_top.png)
 
