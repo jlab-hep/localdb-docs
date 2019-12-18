@@ -14,6 +14,10 @@ bye
 $
 ```
 
+## Viewer Application
+
+[link](database_demonstration_viewer.md)
+
 ## influxDB
 
 Just type 'influx' to check if the influxDB service is running.

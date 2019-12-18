@@ -100,7 +100,7 @@ $ git clone https://gitlab.cern.ch/YARR/localdb-tools.git
 # dummy temperature install
 
 ```bash
-$ git clone https://gitlab.cern.ch/syamagay/influxdb_tools
+$ git clone https://gitlab.cern.ch/syamagay/influxdb_tools.git
 $ cd influxdb_tools
 $ git checkout devel
 ```
