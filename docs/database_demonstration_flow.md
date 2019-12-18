@@ -1,4 +1,24 @@
-# Database demonstration flow
+# Database Demonstration
+
+## memo
+
+- ITkPD URL
+
+[https://itkpd-test.unicorncollege.cz](https://itkpd-test.unicorncollege.cz)
+
+- YARR Docs
+
+[https://yarr.readthedocs.io/en/latest/](https://yarr.readthedocs.io/en/latest/)
+
+- YARR Repository
+
+[https://gitlab.cern.ch/YARR/YARR/](https://gitlab.cern.ch/YARR/YARR/)
+
+- Local DB Tools Repository
+
+[https://gitlab.cern.ch/YARR/localdb-tools](https://gitlab.cern.ch/YARR/localdb-tools)
+
+## Flow
 
 In DB demonstration, we can do as follow things:
 
