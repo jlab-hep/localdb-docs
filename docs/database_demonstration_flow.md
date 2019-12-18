@@ -24,12 +24,12 @@ In DB demonstration, we can do as follow things:
 
 1. [pre requirements](database_demonstration_requirements.md)
     - Install the requirements for DB demonstration <br>( _We support CentOS, MacOS, Ubuntu, Windows_ )
-2. [Set-up](database_demonstration_setup.md)
-    - MongoDB
-    - influxDB
-    - Grafana
-    - Viewer Application
-    - YARR SW for Local DB
+2. Set-up
+    - [MongoDB](database_demonstration_mongodb.md)
+    - [influxDB](database_demonstration_influxdb.md)
+    - [Grafana](database_demonstration_grafana.md)
+    - [Viewer Application](database_demonstration_viewer.md)
+    - [YARR SW for Local DB](database_demonstration_yarr.md)
 3. [Module Registration](database_demonstration_register_itkpd.md)
     - Register the module data into ITkPD (as test)
 4. [Module Download](database_demonstration_download_itkpd.md)
