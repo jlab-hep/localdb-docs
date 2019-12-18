@@ -1,17 +1,9 @@
 # Database demonstration flow
 
-## Pre Requirements
-
-Check [the requirements for DB demonstration](database_demonstration_requirements.md) to install the required packages.
-
-_We support CentOS, MacOS, Ubuntu, Windows_
-
-## Flow
-
-Following DB demonstration, we can do as follow things:
+In DB demonstration, we can do as follow things:
 
 1. [pre requirements](database_demonstration_requirements.md)
-    - Install the requirements for DB demonstration
+    - Install the requirements for DB demonstration ( _We support CentOS, MacOS, Ubuntu, Windows_ )
 2. [Set-up](database_demonstration_setup.md)
     - MongoDB
     - influxDB
