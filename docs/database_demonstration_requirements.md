@@ -31,7 +31,7 @@ cd localdb-tools/setting
 
 **version > 10.14**
 
-please follow [this page](https://gitlab.cern.ch/YARR/localdb-tools/blob/devel/SETUP.md)
+please follow [this page](database_demonstration_setup_mac.md)
 
 ### Ubuntu
 
