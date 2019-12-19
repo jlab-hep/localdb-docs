@@ -11,9 +11,13 @@
 
 In DB demonstration, we can do as follow things:
 
-1. [pre requirements](database_demonstration_requirements.md)<br>
+1. pre requirements<br>
 Install the requirements for DB demonstration<br>
-( _We support CentOS, MacOS, Ubuntu, Windows_ )
+(Python3 and packages, MongoDB, influxDB, Viewer, YARR SW, DB Tools...)
+    - [For centOS](database_demonstration_setup_centos.md)
+    - [For macOS](database_demonstration_setup_mac.md)
+    - [For Ubuntu](database_demonstration_setup_ubuntu.md)
+    - [For Windows](database_demonstration_setup_windows.md)
 2. Set-up
     - [MongoDB](database_demonstration_mongodb.md)
     - [influxDB](database_demonstration_influxdb.md)
