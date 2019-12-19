@@ -36,13 +36,11 @@ $ git checkout devel
 
 ### 2. Run Script
 
-- For linux
-
 ```bash
 $ ./dummydata.py
 ```
 
-- For macOS
+- Advanced (required 'istats' command)
 
 ```bash
 $ ./shell.sh
