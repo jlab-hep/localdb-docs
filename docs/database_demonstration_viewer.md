@@ -17,13 +17,13 @@ $ git clone -b devel https://gitlab.cern.ch/YARR/localdb-tools.git
 
 ## Getting start
 
-### 1. Setup Viewer Application by the script 'set_viewer.sh'
+### 1. Setup Viewer Application by the script 'setup_viewer.sh'
 
 In this step, you have to set the editor command (e.g. vim, emacs) if the environmental variable 'EDITOR' has not registered.
 
 ```bash
 $ cd localdb-tools/viewer
-$ ./set_viewer.sh
+$ ./setup_viewer.sh
 [LDB] Set editor command ... > vim
 [LDB]
 [LDB] Welcome to Local Database Tools!
