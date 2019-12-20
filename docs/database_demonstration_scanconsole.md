@@ -12,7 +12,7 @@ Please be sure to register module and chip data in Local DB using [Viewer Applic
 
 ```bash
 $ cd YARR
-$ ./localdb/bin/localdb-retrieve pull --chip <ATLAS SERIAL NUMBER>
+$ ./localdb/bin/localdb-retrieve pull --chip <ATLAS SERIAL NUMBER (Module)>
 <some of text>
 ```
 
@@ -26,7 +26,7 @@ Please be sure if there are any mistakes in the config files in './db-data'.
 $ cd YARR
 $ ./bin/scanConsole \
 -r configs/controller/emuCfg.json \
--c db-data/<ATLAS SERIAL NUMBER>.json \
+-c db-data/connectivity.json \
 -s configs/scans/fei4/std_digitalscan.json \
 -W
 <lots of text>
@@ -64,7 +64,7 @@ Next run dbAccessor:
 ```bash
 $ ./bin/dbAccessor \
 -F influxdb-connectivity.json \
--n <ATLAS SERIAL NUMBER> \
+-n <ATLAS SERIAL NUMBER(chip)> \
 -s ./data/last_scan/scanLog.json
 ```
 
