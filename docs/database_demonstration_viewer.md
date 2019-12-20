@@ -49,6 +49,15 @@ and you can see the web page as follows:
 
 Finish!
 
+### 4. Use user functions
+ # for spescific users
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USERNAME'] = 'itk.localdb@gmail.com'
+app.config['MAIL_PASSWORD'] = 'ATLAS-ITk'
+app.config['MAIL_USE_TLS'] = False
+app.config['MAIL_USE_SSL'] = True
+
 ## More Detail
 
 Check [Viewer Application Page](viewer.md) for more detail.
