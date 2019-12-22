@@ -107,6 +107,8 @@ It is better to put "localdb-tools" directry in the same level as Yarr directry.
 
 ```bash
 $ git clone https://gitlab.cern.ch/YARR/localdb-tools.git
+$ cd localdb-tools
+$ git checkout devel 
 ```
 
 ## dummy temperature install

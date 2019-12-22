@@ -3,6 +3,7 @@
 ## Goal
 
 Register the component data (FE-I4B single module data & FE-I4B FE chip data for example) into ITkPD.
+You can skip this process and go to the step 4 if you do not have an ITkPD account.
 
 ## 1. Access ITkPD Web Page
 

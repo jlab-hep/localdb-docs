@@ -25,7 +25,7 @@ Install the requirements for DB demonstration<br>
     - [Viewer Application](database_demonstration_viewer.md)
     - [YARR SW for Local DB](database_demonstration_yarr.md)
 3. [Module Registration](database_demonstration_register_itkpd.md)<br>
-Register the module data into ITkPD (as test)
+Register the module data into ITkPD (as test). You can skip this process and go to the step 4 if you do not have ITkPD account.
 4. [Module Download](database_demonstration_download_itkpd.md)<br>
 Download the module data into Local DB from ITkPD (as test)
 5. [scanConsole & Upload](database_demonstration_scanconsole.md)<br>

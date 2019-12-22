@@ -12,7 +12,7 @@ Please be sure to register module and chip data in Local DB using [Viewer Applic
 
 ```bash
 $ cd YARR
-$ ./localdb/bin/localdb-retrieve pull --chip <ATLAS SERIAL NUMBER (Module)>
+$ ./localdb/bin/localdbtools-retrieve pull --chip ATLAS SERIAL NUMBER 
 <some of text>
 ```
 
@@ -64,7 +64,7 @@ Next run dbAccessor:
 ```bash
 $ ./bin/dbAccessor \
 -F influxdb-connectivity.json \
--n <ATLAS SERIAL NUMBER(chip)> \
+-n ATLAS SERIAL NUMBER \
 -s ./data/last_scan/scanLog.json
 ```
 

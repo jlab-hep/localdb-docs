@@ -5,7 +5,7 @@
 Download the component data (FE-I4B single module data & FE-I4B FE chip data for example) from ITkPD.
 
 ## 1. Check ATLAS Serial Number in ITkPD Web Page
-
+You can skip this process if you do not have ITkPD account.
 Access [https://itkpd-test.unicorncollege.cz/](https://itkpd-test.unicorncollege.cz/) and login with your ACCESS CODE 1 & ACCESS CODE 2.<br>
 
 1. Click "My Components" in the side bar.
@@ -49,6 +49,6 @@ $ ./bin/downloader.py --config my_conf.yml --option Module
 
 You can check the downloaded component data using Viewer Application.<br>
 Check [http://127.0.0.1:5000/localdb/component](http://127.0.0.1:5000/localdb/component) on the machine's browser where app.py is running,<br>
-and there are the module data whose serial number is ATLAS serial number you registered.
+and there are the module data whose serial number is ATLAS serial number.
 
 Finish!
