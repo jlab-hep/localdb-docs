@@ -12,6 +12,7 @@ There are several requirements for Local DB:
 - git repository
 
 ```bash
+# for centos
 # 0. Check git command
 # Check & Install git command
 $ which git > /dev/null 2>&1; if [ $? = 1 ]; then sudo yum install git; fi
@@ -26,7 +27,7 @@ $ git clone https://gitlab.cern.ch/YARR/YARR.git
 ```
 
 - Local DB Tools
-It is better to put this SW on the same level as YARR-SW.
+<br>It is better to put this SW on the same level as YARR-SW.
 ```bash
 $ cd <YOUR_WORK DIRECTRY>
 $ git clone https://gitlab.cern.ch/YARR/localdb-tools.git

@@ -14,11 +14,11 @@ Contents:
 
 Contents:
 
-- a. Register component data into Local DB
-- b. Retrieve component data from ITkPD into Local DB (ITkPD Interface)
-- c. Scan and Upload data associated with the component data into Local DB
-- d. Register DCS data associated with the test data
-- e. Check data in Local DB on browser (Viewer Application)
+- a. Setup Web application of Local DB (Viewer Application)
+- b. Register component data into Local DB
+- c. Retrieve component data from ITkPD into Local DB (ITkPD Interface)
+- d. Scan and Upload data associated with the component data into Local DB
+- e. Register DCS data associated with the test data
 - f. Share data with the other Local DB (Synchronization Tool)
 - g. Back-up Local DB (Archive Tool)
 

@@ -1,14 +1,32 @@
 # Advanced Tutorial
 
-- a. [Register component data into Local DB](#a-register-component)
-- b. [Register component data into Local DB from ITk PD (ITkPD Interface)](#b-register-component-from-itkpd)
-- c. [Scan and Upload data associated with the component data into Local DB](#c-upload-test-data)
-- d. [Register DCS data associated with the test data](#d-register-dcs)
-- e. [Check data in Local DB on browser (Viewer Application)](#e-check-data-on-browser)
+- a. [Setup Web application of Local DB (Viewer Application)](#setup-viewer-application)
+- b. [Register component data into Local DB](#b-register-component)
+- c. [Register component data into Local DB from ITk PD (ITkPD Interface)](#c-register-component-from-itkpd)
+- d. [Scan and Upload data associated with the component data into Local DB](#d-upload-test-data)
+- e. [Register DCS data associated with the test data](#e-register-dcs)
 - f. [Share data with the other Local DB (Synchronization Tool)](#f-share-data)
 - g. [Back-up Local DB (Archive Tool)](#g-backup)
 
-### a. Register Component
+### a. Setup Web application of Local DB
+
+You can check informations in Local DB on browser using web-interface.<br>
+Firstly please run Viewer Application:
+
+```bash
+# 1. Set Application
+$ cd localdb-tools
+cd viewer
+$ ./setup_viewer.sh
+
+# 2. Run Application
+$ ./app.py --config conf.yml &
+```
+> [More detail about Viewer Application](viewer.md)
+
+And access 'http://127.0.0.1:5000/localdb/' or corresponded url on the local browser in Local DB.
+
+### b. Register Component
 
 You can register the component data and upload the test data associated with the registered component data.<br>
 First please the prepare component config file following [this sample format](config.md). <br>
@@ -25,7 +43,9 @@ y
 ```
 > [More detail about Upload Tool](upload.md)
 
-### b. Register Component from ITkPD
+You can check the registered component on the url:'http://127.0.0.1:5000/localdb/component' or corresponded url on the local browser in Local DB.
+
+### c. Register Component from ITkPD
 
 You can download component information from ITk production database and register the info to Local DB.<br>
 
@@ -49,9 +69,10 @@ $ ./bin/downloader.py --config my_conf.yml --option Module
 2019-12-27 16:08:51 <hostname> <username>[2856] INFO [LDB] Finished!!
 ```
 
+You can check the downloaded components on the url:'http://127.0.0.1:5000/localdb/component' or corresponded url on the local browser in Local DB.
 
 
-### c. scanConsole and Upload Test Data
+### d. scanConsole and Upload Test Data
 
 After [the component registration](#a-register-component) (or [the registeration from ITkPD](#b-register-component-from-itkpd)),<br>
 you can create the connectivity config file and the chip config files by `localdb-retrieve pull --chip <SERIAL NUMBER>`.<br>
@@ -96,7 +117,9 @@ $ ./bin/scanConsole \
 ```
 > [More detail about scanConsole -W](scanconsole.md)
 
-### d. Register DCS
+You can check summary of the results on the url:'http://127.0.0.1:5000/localdb/scan' or corresponded url on the local browser in Local DB.
+
+### e. Register DCS
 
 <!--You can register DCS data associated with the test data for each chip data.<br>
 First please prepare DCS data (dcs.dat) and DCS config file (dcs_info.json) following [this sample format](config.md). <br>
@@ -114,23 +137,6 @@ $ ./bin/dbAccessor \
 > [More detail about dbAccessor](accessor.md) -->
 in edit.
 
-### e. Check Data on Browser
-
-You can check data in Local DB on browser using web-interface.<br>
-First please run Viewer Application:
-
-```bash
-# 1. Set Application
-$ cd localdb-tools
-cd viewer
-$ ./setup_viewer.sh
-
-# 2. Run Application
-$ ./app.py --config conf.yml &
-```
-> [More detail about Viewer Application](viewer.md)
-
-And access 'http://127.0.0.1:5000/localdb/' on the local browser to check data in Local DB.
 
 ### f. Share Data
 
