@@ -27,9 +27,31 @@ y
 
 ### b. Register Component from ITkPD
 
-in edit.
+You can download component information from ITk production database and register the info to Local DB.<br>
 
-### c. Upload Test Data
+```bash
+# 1. Set
+$ cd localdb-tools
+$ cd itkpd-interface
+$ ./setup_interface_tool.sh
+
+# 2. Login ITk production database
+$ source authenticate.sh
+Input Access Code 1 for ITkPD:
+Input Access Code 2 for ITkPD:
+[2019-12-27 16:05:33,138][WARNING           ]  Saved user session is expired in .auth. Creating a new one. (core.py:55)
+You have signed in as <username>. Your token expires in 7197s.
+
+# 3. Download compontnent info
+$ ./bin/downloader.py --config my_conf.yml --option Module
+2019-12-27 16:08:51 <hostname> <username>[2856] INFO [LDB] Found <# of component> module(s)! Start downloading...
+...
+2019-12-27 16:08:51 <hostname> <username>[2856] INFO [LDB] Finished!!
+```
+
+
+
+### c. scanConsole and Upload Test Data
 
 After [the component registration](#a-register-component) (or [the registeration from ITkPD](#b-register-component-from-itkpd)),<br>
 you can create the connectivity config file and the chip config files by `localdb-retrieve pull --chip <SERIAL NUMBER>`.<br>
@@ -76,7 +98,7 @@ $ ./bin/scanConsole \
 
 ### d. Register DCS
 
-You can register DCS data associated with the test data for each chip data.<br>
+<!--You can register DCS data associated with the test data for each chip data.<br>
 First please prepare DCS data (dcs.dat) and DCS config file (dcs_info.json) following [this sample format](config.md). <br>
 And register by `dbAccessor -E`:
 
@@ -89,7 +111,8 @@ $ ./bin/dbAccessor \
 -E dcs_info.json \
 -s data/last_scan/scanLog.json
 ```
-> [More detail about dbAccessor](accessor.md)
+> [More detail about dbAccessor](accessor.md) -->
+in edit.
 
 ### e. Check Data on Browser
 
