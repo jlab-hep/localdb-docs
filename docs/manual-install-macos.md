@@ -41,6 +41,7 @@ cmake version 3.12.4
 - Other dependencies for YARR SW installation
 
 ```bash
+$ brew install gawk
 $ brew install gnuplot
 $ brew install epstopdf
 $ brew install ghostscript
@@ -86,7 +87,9 @@ matplotlib \
 numpy \
 requests \
 tzlocal \
-itkdb
+itkdb \
+influxdb \
+pandas \
 ```
 
 ### Mongo DB
@@ -100,7 +103,7 @@ Check [MongoDB 4.X Community Edition](https://docs.mongodb.com/manual/installati
 $ mongo --version
 -bash: mongo: command not found
 
-# 1. Install/Upgrade for centOS7
+# 1. Install/Upgrade
 $ brew tap mongodb/brew
 $ brew install mongodb-community@4.2
 $ brew services start mongodb-community@4.2
@@ -116,3 +119,40 @@ bye
 ```
 
 If you catch the message **"exception: connect failed"**, you should check that MongoDB is running.
+
+## Influx DB
+
+```bash
+# 0. Check
+$ influx --version
+-bash: mongo: command not found
+
+# 1. Install/Upgrade
+$ brew install influxdb
+$ ln -sfv /usr/local/opt/influxdb/*.plist ~/Library/LaunchAgents
+$ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.influxdb.plist
+
+# 2. Confirm
+$ influx [--port <port number>]
+Connected to http://localhost:8086 version 1.7.9
+InfluxDB shell version: 1.7.9
+...
+> exit
+```
+## grafana
+
+```bash
+# 0. Check
+$ grafana-server -v
+-bash: grafana-server: command not found
+
+# 1. Install
+$ brew install grafana
+$ brew tap homebrew/services
+$ brew services start grafana
+
+# 2. Confirm
+$ grafana-server -v
+Version 6.5.2 (commit: 742d165, branch: HEAD)
+
+```

@@ -1,7 +1,7 @@
 site_name: Local DB Docs
 pages:
     - Home: index.md
-    - Pre Requirements: requirements.md
+    - Pre Requirements and Installation: requirements.md
     - Quick tutorial: tutorial.md
     - Tools: tool.md
     - Structure: structure.md
