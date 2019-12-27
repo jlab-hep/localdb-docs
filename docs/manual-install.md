@@ -88,7 +88,9 @@ matplotlib \
 numpy \
 requests \
 tzlocal \
-itkdb
+itkdb \
+influxdb \
+pandas
 ```
 
 ### Mongo DB
