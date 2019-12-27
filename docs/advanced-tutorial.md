@@ -46,7 +46,7 @@ y
 ```
 > [More detail about Upload Tool](upload.md)
 
-You can check the registered component on the url:'[http://127.0.0.1:5000/localdb/component]' or corresponded url on the local browser in Local DB.
+You can check the registered component on the url:'http://127.0.0.1:5000/localdb/component' or corresponded url on the local browser in Local DB.
 
 ### c. Register Component from ITkPD
 
@@ -62,7 +62,7 @@ $ ./setup_interface_tool.sh
 # 2. Login ITk production database
 $ source authenticate.sh
 Input Access Code 1 for ITkPD:<input your access code 1 for ITkPD>
-Input Access Code 2 for ITkPD:<input your access code 1 for ITkPD>
+Input Access Code 2 for ITkPD:<input your access code 2 for ITkPD>
 [2019-12-27 16:05:33,138][WARNING           ]  Saved user session is expired in .auth. Creating a new one. (core.py:55)
 You have signed in as <username>. Your token expires in 7197s.
 
@@ -73,7 +73,7 @@ $ ./bin/downloader.py --config my_conf.yml --option Module
 2019-12-27 16:08:51 <hostname> <username>[2856] INFO [LDB] Finished!!
 ```
 
-You can check the downloaded components on the url:'[http://127.0.0.1:5000/localdb/component]' or corresponded url on the local browser in Local DB.
+You can check the downloaded components on the url:'http://127.0.0.1:5000/localdb/component' or corresponded url on the local browser in Local DB.
 
 ### d. scanConsole and Upload Test Data
 
