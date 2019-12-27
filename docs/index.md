@@ -65,8 +65,8 @@ localdb-tools : Cloned from https://gitlab.cern.ch/YARR/localdb-tools.git
 |Tag            |Version|Date             |Describe                                                                 |
 |:-------------:|:-----:|:---------------:|:-----------------------------------------------------------------------:|
 |-              |-      |-                |=                                                                        |
-|ldbtoolv1.2    |1.2    |2019-12---       |Second relase (Latest stable version                                     |
-|ldbtoolv1.1    |1.1    |2018-10---       |First relase                                                             |
+|ldbtoolv1.2    |1.2    |2019-12---       |Second relase (Latest stable version)                                    |
+|ldbtoolv1.1    |1.1    |2018-10---2019-12|First relase                                                             |
 |ldbtoolv1.0    |1.01   |2018-08---2018-10|Merged into YARR/devel                                                   |
 |-              |1.00   |2018-06---2018-08|Updating version (Very Unstable)                                         |
 |db-v0.8        |0.80   |2018-03---2018-06|Unstable database version                                                |
