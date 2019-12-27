@@ -6,6 +6,22 @@
 
 Check [Automatic Installation](automatic-install.md) to install requirements automatically on **centOS7**.
 
+## brew install
+If you have not installed "brew", please install with the bellow command:
+```bash
+# 0. Check
+$ brew --version
+-bash: brew: command not found
+
+# 1. Install
+$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# 2. Confirm
+$ brew --version
+Homebrew 2.2.1
+...
+```
+
 ### yum packages
 
 - g++ version 7.0 or higher for YARR SW installation
@@ -43,9 +59,10 @@ cmake version 3.12.4
 ```bash
 $ brew install gawk
 $ brew install gnuplot
-$ brew install epstopdf
 $ brew install ghostscript
 ```
+
+- Need to install MacTeX
 
 ### Python packages
 
@@ -89,7 +106,7 @@ requests \
 tzlocal \
 itkdb \
 influxdb \
-pandas \
+pandas 
 ```
 
 ### Mongo DB
@@ -109,7 +126,7 @@ $ brew install mongodb-community@4.2
 $ brew services start mongodb-community@4.2
 
 # 2. Confirm
-$ mongo [--port <port number>]
+$ mongo # If port is different from 27017, need to put option as "--port <port number>"
 MongoDB shell version v4.2.1
 ...
 > db
@@ -133,7 +150,7 @@ $ ln -sfv /usr/local/opt/influxdb/*.plist ~/Library/LaunchAgents
 $ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.influxdb.plist
 
 # 2. Confirm
-$ influx [--port <port number>]
+$ influx # If port is different from 27017, need to put option as "--port <port number>"
 Connected to http://localhost:8086 version 1.7.9
 InfluxDB shell version: 1.7.9
 ...

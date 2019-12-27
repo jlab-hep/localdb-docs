@@ -2,11 +2,10 @@
 
 You can store result data by YARR immediately following the tutorial.
 
-0. [Setup Local DB](#0-setup)
 1. [Scan and Upload data into Local DB](#1-upload)
 2. [Retrieve data from Local DB](#2-retrieve)
 
-### 0. Setup
+<!--### 0. Setup
 
 First please be sure to build YARR SW. <br>
 
@@ -26,7 +25,7 @@ This script confirms if the python packages is satisfied, the default config fil
 $ cd YARR
 $ ./localdb/setup_db.sh
 ```
-> [More detail about setup_db.sh](setup-db.md)
+> [More detail about setup_db.sh](setup-db.md)-->
 
 ### 1. Upload
 

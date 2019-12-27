@@ -1,6 +1,6 @@
 # Advanced Tutorial
 
-- a. [Setup Web application of Local DB (Viewer Application)](#setup-viewer-application)
+- a. [Setup Web application of Local DB (Viewer Application)](#a-setup-web-application-of-local-db)
 - b. [Register component data into Local DB](#b-register-component)
 - c. [Register component data into Local DB from ITk PD (ITkPD Interface)](#c-register-component-from-itkpd)
 - d. [Scan and Upload data associated with the component data into Local DB](#d-upload-test-data)
