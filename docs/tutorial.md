@@ -2,7 +2,7 @@
 
 You can handle Local DB (e.g. store result data by YARR) following the tutorial.
 
-### 0. Setup
+### Setup
 
 First please be sure to build YARR SW. <br>
 

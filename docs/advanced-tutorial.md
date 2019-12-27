@@ -15,8 +15,10 @@ Firstly please run Viewer Application:
 
 ```bash
 # 1. Set Application
+$ cd <YOUR_WPRK_DIRECTRY>
 $ cd localdb-tools
-cd viewer
+$ (git checkout devel)
+$ cd viewer
 $ ./setup_viewer.sh
 
 # 2. Run Application
@@ -24,7 +26,7 @@ $ ./app.py --config conf.yml &
 ```
 > [More detail about Viewer Application](viewer.md)
 
-And access 'http://127.0.0.1:5000/localdb/' or corresponded url on the local browser in Local DB.
+And access '[http://127.0.0.1:5000/localdb/]' or corresponded url on the local browser in Local DB.
 
 ### b. Register Component
 
@@ -33,6 +35,7 @@ First please the prepare component config file following [this sample format](co
 And register by `dbAccessor -C -c <component connectivity file> -u <user config file> -i <site config file>`:
 
 ```bash
+$ cd <YOUR_WORK_DIRECTRY>
 $ cd YARR
 $ ./bin/dbAccessor -C -c component.json -u user.json -i site.json
 <some texts>
@@ -43,7 +46,7 @@ y
 ```
 > [More detail about Upload Tool](upload.md)
 
-You can check the registered component on the url:'http://127.0.0.1:5000/localdb/component' or corresponded url on the local browser in Local DB.
+You can check the registered component on the url:'[http://127.0.0.1:5000/localdb/component]' or corresponded url on the local browser in Local DB.
 
 ### c. Register Component from ITkPD
 
@@ -51,14 +54,15 @@ You can download component information from ITk production database and register
 
 ```bash
 # 1. Set
+$ cd <YOUR_WORK_DIRECTRY>
 $ cd localdb-tools
 $ cd itkpd-interface
 $ ./setup_interface_tool.sh
 
 # 2. Login ITk production database
 $ source authenticate.sh
-Input Access Code 1 for ITkPD:
-Input Access Code 2 for ITkPD:
+Input Access Code 1 for ITkPD:<input your access code 1 for ITkPD>
+Input Access Code 2 for ITkPD:<input your access code 1 for ITkPD>
 [2019-12-27 16:05:33,138][WARNING           ]  Saved user session is expired in .auth. Creating a new one. (core.py:55)
 You have signed in as <username>. Your token expires in 7197s.
 
@@ -69,8 +73,7 @@ $ ./bin/downloader.py --config my_conf.yml --option Module
 2019-12-27 16:08:51 <hostname> <username>[2856] INFO [LDB] Finished!!
 ```
 
-You can check the downloaded components on the url:'http://127.0.0.1:5000/localdb/component' or corresponded url on the local browser in Local DB.
-
+You can check the downloaded components on the url:'[http://127.0.0.1:5000/localdb/component]' or corresponded url on the local browser in Local DB.
 
 ### d. scanConsole and Upload Test Data
 
@@ -82,8 +85,9 @@ If you have already uploaded the component test data, the config files in the la
 **Please change to the devel branch if want to use.**<br>
 
 ```bash
+$ cd <YOUR_WORK_DIRECTRY>
 $ cd YARR
-$ ./localdb/bin/localdb-retrieve pull --chip <SERIAL NUMBER>
+$ ./localdb/bin/localdbtool-retrieve pull --chip <SERIAL NUMBER>
 #DB INFO# -----------------------
 #DB INFO# [Connection Test] DB Server: mongodb://127.0.0.1:27017/localdb
 #DB INFO# ---> Connection is GOOD.
@@ -99,14 +103,11 @@ $ ./localdb/bin/localdb-retrieve pull --chip <SERIAL NUMBER>
 And you can upload test data associated with the registered component data by `scanConsole` with providing the retrieved config files:
 
 ```bash
-$ cd YARR
 $ ./bin/scanConsole \
 -r configs/controller/emuCfg.json \
--c db-data/<SERIAL NUMBER>.json \
+-c db-data/connectivity.json \
 -s configs/scans/fei4/std_digitalscan.json \
--W \
--u user.json \
--i site.json
+-W 
 <lots of text>
 #DB INFO# -----------------------
 #DB INFO# Function: Initialize
