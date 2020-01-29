@@ -4,6 +4,8 @@
 
 Run scanConsole with the component data and upload the results into Local DB.
 
+## 0. Login LocalDB
+
 ## 1. Create connectivity config for the module
 
 Please be sure to register module and chip data in Local DB using [Viewer Application](database_demonstration_check_viewer.md) before creating config.<br>

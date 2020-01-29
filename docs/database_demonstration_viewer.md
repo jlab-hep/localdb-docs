@@ -40,6 +40,12 @@ INFO Viewer Application URL: http://127.0.0.1:5000/localdb/
  * Environment: production
 ```
 
+### If you want to see the screen from DAQ machine
+If you want to see the grafana viewer on your browser of DAQ machine, you should execute the bellow comand on the DAQ machine.
+```bash
+$ ssh -NL 5000:localhost:5000 {REMOTE_SERVER_IP} 
+```
+
 ### 3. Access the Web Page
 
 Access to [http://127.0.0.1:5000/localdb/](http://127.0.0.1:5000/localdb/) on the machine's browser where app.py is running,<br>
@@ -60,7 +66,6 @@ app.config['MAIL_PASSWORD'] = 'ATLAS-ITk'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 ```
-
 ## More Detail
 
 Check [Viewer Application Page](viewer.md) for more detail.

@@ -21,11 +21,17 @@ If the service doesn't seem to be running,<br>
 maybe the package has not been installed or the service has not been started, <br>
 so please check [pre requirement page](requirements.md) to install/start the service.
 
-### DCS data
+<!-- ### DCS data
 
 You should upload some dummy data into influxDB before checking the Grafana.<br>
 Please check [influxDB page](database_demonstration_influxdb.md) to upload data.
+-->
 
+### View from DAQ machine
+If you want to see the grafana viewer on your browser of DAQ machine, you should execute the bellow comand.
+```bash
+$ ssh -NL 3000:localhost:3000 {REMOTE_SERVER_IP} 
+```
 ## Getting start
 
 ### 1. Access to the Web Page

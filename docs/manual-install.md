@@ -102,7 +102,7 @@ $ make install
 ## DB machine
 ### yum packages
 
-- g++ version 7.0 or higher for YARR SW installation
+- g++ version 7.0 or higher
 
 ```bash
 # 0. Check
@@ -119,7 +119,7 @@ $ g++ --version
 g++ (GCC) 7.3.1 20180303 (Red Hat 7.3.1-5)
 ```
 
-- cmake3 for YARR SW installation
+- cmake3
 
 ```bash
 # 0. Check
@@ -178,6 +178,14 @@ tzlocal \
 itkdb \
 influxdb \
 pandas
+```
+
+### LocalDB tools
+Install "localdb-tools" in working directry of your DB machine with bellow commands:
+
+```bash
+$ git clone https://gitlab.cern.ch/YARR/localdb-tools.git
+$ (git checkout devel)
 ```
 
 ### Mongo DB
@@ -279,11 +287,4 @@ Version 6.5.2 (commit: 742d165, branch: HEAD)
 
 Check [Grafana Installation](https://grafana.com/docs/grafana/latest/installation/requirements/) for more detail.
 
-### LocalDB tools
-Install "localdb-tools" in working directry of your DB machine with bellow commands:
-
-```bash
-$ git clone https://gitlab.cern.ch/YARR/localdb-tools.git
-$ (git checkout devel)
-```
 

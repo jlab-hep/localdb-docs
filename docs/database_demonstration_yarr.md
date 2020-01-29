@@ -4,67 +4,11 @@
 
 Run the emulator for FE-I4B and upload the test results into Local DB ([MongoDB](database_demonstration_mongodb.md)).
 
-## Pre Requirements
-
-### Required Packages
-
-There are some requirements for compiling YARR SW, <br>
-so please check [the requirements](database_demonstration_requirements.md) and be sure to install them.
-
-### MongoDB
-
-You need to start MongoDB service, <br>
-so please check [MongoDB](database_demonstration_mongodb.md) to check if the service is running.
-
 ## Getting start
 
-### 1. Clone YARR SW
+### 1. Set up database config
 
-Clone YARR SW repostiroty if you doesn't have YARR SW yet.<br>
-**Recommend: use 'devel-localdb' branch in the demonstration**
-
-```bash
-$ git clone https://gitlab.cern.ch/YARR/YARR.git
-$ cd YARR
-$ git checkout devel-localdb
-```
-
-### 2. Compile YARR SW
-
-Compile YARR SW if you didn't compile yet.<br>
-First please make build directory.
-
-```bash
-$ cd YARR
-$ mkdir build && cd build
-```
-
-Next CMake in the build directory.
-
-- for centOS7
-
-```bash
-$ cmake3 ../
-```
-
-- for ubuntu
-
-```bash
-$ cmake ../ -DCMAKE_CXX_COMPILER=g++-7
-```
-
-- for macOS
-
-```bash
-$ cmake ../ -DCMAKE_TOOLCHAIN_FILE=../cmake/macos-clang
-```
-
-Finaly make & install the binary command to bin directory.
-
-```bash
-$ make -j4
-$ make install
-```
+### 2. Login for the database 
 
 ### 3. Run the Emulator
 

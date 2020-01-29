@@ -18,6 +18,10 @@ so please check [pre requirement page](requirements.md) to install/start the ser
 
 Finish!
 
+## Create accounts in mongoDB
+
+## Lock mongoDB
+
 ## More Detail
 
 Check [influxDB site](https://docs.influxdata.com/influxdb/v1.7/introduction/getting-started/) for more detail.
