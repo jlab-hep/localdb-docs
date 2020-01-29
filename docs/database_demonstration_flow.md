@@ -17,7 +17,9 @@ Install the requirements for DB demonstration<br>
     - [For centOS](database_demonstration_setup_centos.md)
 <!--    - [For macOS](database_demonstration_setup_mac.md)
     - [For Ubuntu](database_demonstration_setup_ubuntu.md)
-    - [For Windows](database_demonstration_setup_windows.md)-->
+    - [For Windows](database_demonstration_setup_windows.md)
+-->
+
 2. Set-up
     - [MongoDB](database_demonstration_mongodb.md)
     - [influxDB](database_demonstration_influxdb.md)
