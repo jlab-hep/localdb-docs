@@ -60,12 +60,10 @@ processManagement:
 # network interfaces
 net:
   port: 27017
-  bindIp: 127.0.0.1,<font color="Red">{IP of DB machine}</font>  # Enter 0.0.0.0,:: to bind to all IPv4 and IPv6 addresses or, alternatively, use the net.bindIpAll setting.
+  bindIp: 127.0.0.1,{IP of DB machine}  # Enter 0.0.0.0,:: to bind to all IPv4 and IPv6 addresses or, alternatively, use the net.bindIpAll setting.
 
-<font color="Red">
 security:
   authorization: "enabled"
-</font>
 ...
 ```
 ```bash

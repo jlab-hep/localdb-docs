@@ -97,8 +97,7 @@ Install and compile "Yarr" in working directry of your DAQ machine with bellow c
 ```bash
 $ git clone https://gitlab.cern.ch/YARR/YARR.git
 $ cd YARR
-$ (git checkout devel-localdb)
-$ cd YARR
+$ git checkout devel-localdb
 $ mkdir build && cd build
 $ cmake3 ../
 $ make -j4
@@ -200,7 +199,8 @@ Install "localdb-tools" in working directry of your DB machine with bellow comma
 
 ```bash
 $ git clone https://gitlab.cern.ch/YARR/localdb-tools.git
-$ (git checkout devel)
+$ cd localdb-tools
+$ git checkout devel
 ```
 
 ### Mongo DB

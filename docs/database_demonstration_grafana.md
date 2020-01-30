@@ -30,7 +30,7 @@ Please check [influxDB page](database_demonstration_influxdb.md) to upload data.
 ### View from DAQ machine
 If you want to see the grafana viewer on your browser of DAQ machine, you should execute the bellow comand.
 ```bash
-$ ssh -NL 3000:localhost:3000 {REMOTE_SERVER_IP} 
+$ ssh -2 -C -Y -L 3000:localhost:3000 {DB server IP} -fN
 ```
 ## Getting start
 
