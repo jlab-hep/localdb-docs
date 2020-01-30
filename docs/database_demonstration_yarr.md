@@ -6,11 +6,7 @@ Run the emulator for FE-I4B and upload the test results into Local DB ([MongoDB]
 
 ## Getting start
 
-### 1. Set up database config
-
-### 2. Login for the database 
-
-### 3. Run the Emulator
+### 1. Run the Emulator
 
 Just type the following command to run the emulator.
 
@@ -31,22 +27,61 @@ Finishing run: 5840
 
 You can check some plots in 'data/last_scan'
 
-### 4. Run the emulator with uploading to Local DB
+### 2. Set up database config
+```bash
+$ cd YARR
+$ ./localdb/setup_db.sh
+...
+```
+```bash
+{
+    "hostIp": "{IP Address of DB machine}",
+    "hostPort": "27017",
+    "dbName": "localdb",
+    "ssl": {
+        "enabled": false,
+        "PEMKeyFile": "null",
+        "CAFile": "null"
+    },
+    "tls": {
+        "enabled": false,
+        "CertificateKeyFile": "null",
+        "CAFile": "null"
+    },
+    "auth": "default",
+    "KeyFile": "null",
+    "verify": false,
+...
 
+```
+
+### 3. Login for the database 
+```bash
+$ cd YARR
+$ ./localdb/login_mongodb.sh
+...
+```
+
+### 4. Run the emulator with uploading to Local DB
+<!--
 First you have to prepare the config file for Local DB by 'setup_db.sh'<br>
 In this step, you have to set the editor command (e.g. vim, emacs) if the environmental variable 'EDITOR' has not registered.
 
 ```bash
 $ cd ../
-### pwd ---> path/to/YARR
 $ cd localdb
 $ ./setup_db.sh
 <some steps>
 [LDB] More detail:
 [LDB]   Access 'https://localdb-docs.readthedocs.io/en/master/'
 ```
+-->
 
-And Run the emulator with option '-W' to upload the test data into Local DB.
+```bash
+$ ./localdb/bin/localdbtool-upload init
+```
+
+Run the emulator with option '-W' to upload the test data into Local DB.
 
 ```bash
 $ ./bin/scanConsole \
@@ -64,7 +99,7 @@ $ ./bin/scanConsole \
 ```
 
 You can the upload status in the log file '~/.yarr/localdb/log/DAY.log'.<br>
-You can also check the data by accessing to [http://127.0.0.1:5000/localdb/](http://127.0.0.1:5000/localdb/) on the machine's browser where Viewer Application is running.<br>
+You can also check the data by accessing to http://{IP Address of DB machine}:5000/localdb/ on the machine's browser.<br>
 Check [here](database_demonstration_viewer.md) to go to the steps for checking the Viewer Application.
 
 Finish!

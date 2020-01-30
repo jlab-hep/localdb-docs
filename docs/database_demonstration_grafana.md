@@ -71,6 +71,7 @@ Login with the username: 'admin' and the password: 'admin'
 ![grafana add db source config](images/demo_grafana_db_source_2.png)
 
 ### 4. Create New Dashboard
+Skip this step and return here after run DCS controller.
 
 1. Click "Dashboard" in the Create in the site bar
 2. Click "Add panel"

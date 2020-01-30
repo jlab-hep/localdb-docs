@@ -303,3 +303,19 @@ Version 6.5.2 (commit: 742d165, branch: HEAD)
 Check [Grafana Installation](https://grafana.com/docs/grafana/latest/installation/requirements/) for more detail.
 
 
+### Root
+
+```bash
+$ yum install git cmake gcc-c++ gcc binutils \
+libX11-devel libXpm-devel libXft-devel libXext-devel
+$ yum install gcc-gfortran openssl-devel pcre-devel \
+mesa-libGL-devel mesa-libGLU-devel glew-devel ftgl-devel mysql-devel \
+fftw-devel cfitsio-devel graphviz-devel \
+avahi-compat-libdns_sd-devel libldap-dev python-devel \
+libxml2-devel gsl-static giflib wget
+$ cd /opt
+$ wget https://root.cern/download/root_v6.18.04.Linux-centos7-x86_64-gcc4.8.tar.gz
+$ tar zxf root_v6.18.04.Linux-centos7-x86_64-gcc4.8.tar.gz
+$ source /opt/root/bin/thisroot.sh
+```
+

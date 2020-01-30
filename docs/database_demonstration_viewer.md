@@ -6,6 +6,7 @@ Check the Web Page on your browser.
 
 ![Viewer Application Goal](images/demo_viewer_goal.png)
 
+<!--
 ## Pre Requirements
 
 Viewer Application is implemented in "Local DB Tools".<br>
@@ -14,7 +15,7 @@ You can install "Local DB Tools" as follows:
 ```bash
 $ git clone -b devel https://gitlab.cern.ch/YARR/localdb-tools.git
 ```
-
+-->
 ## Getting start
 
 ### 1. Setup Viewer Application by the script 'setup_viewer.sh'
