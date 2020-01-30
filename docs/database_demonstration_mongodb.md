@@ -22,8 +22,61 @@ Finish!
 
 ## Create accounts in mongoDB
 
-## Lock mongoDB
+```bash
+$ cd localdb-tools/setting
+$ ./create_admin.sh
+...
+```
 
-## More Detail
+## Lock mongoDB and add bindIp
+Change /etc/mongod.conf as bellow:
+```bash
+$ cat /etc/mongod.conf
+# mongod.conf
 
-Check [influxDB site](https://docs.influxdata.com/influxdb/v1.7/introduction/getting-started/) for more detail.
+# for documentation of all options, see:
+#   http://docs.mongodb.org/manual/reference/configuration-options/
+
+# where to write logging data.
+systemLog:
+  destination: file
+  logAppend: true
+  path: /var/log/mongodb/mongod.log
+
+# Where and how to store data.
+storage:
+  dbPath: /var/lib/mongo
+  journal:
+    enabled: true
+#  engine:
+#  wiredTiger:
+
+# how the process runs
+processManagement:
+  fork: true  # fork and run in background
+  pidFilePath: /var/run/mongodb/mongod.pid  # location of pidfile
+  timeZoneInfo: /usr/share/zoneinfo
+
+# network interfaces
+net:
+  port: 27017
+  bindIp: 127.0.0.1,<span style="color: red; ">{IP of DB machine}</span>  # Enter 0.0.0.0,:: to bind to all IPv4 and IPv6 addresses or, alternatively, use the net.bindIpAll setting.
+
+<span style="color: red; ">
+security:
+  authorization: "enabled"
+</span>
+...
+```
+```bash
+$ systemctl restart mongod.service
+```
+
+
+## Open port
+```bash
+$ firewall-cmd --zone=public --add-port=27017/tcp --permanent
+$ firewall-cmd --reload
+$ firewall-cmd --list-all
+```
+
