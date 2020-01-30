@@ -27,16 +27,26 @@ You should upload some dummy data into influxDB before checking the Grafana.<br>
 Please check [influxDB page](database_demonstration_influxdb.md) to upload data.
 -->
 
+### Open port
+```bash
+$ firewall-cmd --zone=public --add-port=3000/tcp --permanent
+$ firewall-cmd --reload
+$ firewall-cmd --list-all
+```
+
+<!--
 ### View from DAQ machine
 If you want to see the grafana viewer on your browser of DAQ machine, you should execute the bellow comand.
 ```bash
 $ ssh -2 -C -Y -L 3000:localhost:3000 {DB server IP} -fN
 ```
+-->
+
 ## Getting start
 
 ### 1. Access to the Web Page
 
-Access to [http://localhost:3000/](http://localhost:3000/) on the machine's browser where grafana was installed,<br>
+Access to http://{IP Address of DB machine}:3000/ with the machine's browser on the same network as DB machine,<br>
 and you can see the web page as follows:
 
 ![grafana top](images/demo_grafana_top.png)
