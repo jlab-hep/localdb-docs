@@ -18,6 +18,7 @@ InfluxDB shell version: 1.7.9
 $
 ```
 
+<!--
 If the service doesn't seem to be running,<br>
 maybe the package has not been installed or the service has not been started, <br>
 so please check [pre requirement page](requirements.md) to install/start the service.
@@ -52,6 +53,7 @@ Access to [http://localhost:3000/](http://localhost:3000/) on the machine's brow
 Check [here](database_demonstration_grafana.md) to go to the steps for checking grafana service.
 
 Finish!
+-->
 
 ## More Detail
 

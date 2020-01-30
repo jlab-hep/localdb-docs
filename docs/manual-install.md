@@ -45,6 +45,12 @@ cmake3 version 3.14.6
 - Other dependencies for YARR SW installation
 
 ```bash
+$ sudo yum install git
+```
+```bash
+$ sudo yum install screen
+```
+```bash
 $ sudo yum install gnuplot texlive-epstopdf ghostscript
 ```
 
@@ -134,6 +140,15 @@ $ sudo yum install cmake3
 $ cmake3 --version
 cmake3 version 3.14.6
 ```
+
+- Other dependencies
+```bash
+$ sudo yum install git
+```
+```bash
+$ sudo yum install screen
+```
+
 ### Python packages
 
 - python3 version 3.6 or higher

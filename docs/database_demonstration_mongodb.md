@@ -12,9 +12,11 @@ bye
 $
 ```
 
+<!--
 If the service doesn't seem to be running,<br>
 maybe the package has not been installed or the service has not been started, <br>
 so please check [pre requirement page](requirements.md) to install/start the service.
+-->
 
 Finish!
 
