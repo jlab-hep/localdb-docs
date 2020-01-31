@@ -4,8 +4,7 @@
 
 Run the emulator and upload the test results into Local DB ([MongoDB](database_demonstration_mongodb.md)).
 
-## 1. Getting start
-### Create ssh tunnel
+### 1.Create ssh tunnel
 ```bash
 $ ssh -2 -C -Y -L 27017:localhost:27017 root@localdbserverX -fN -p22
 Password:

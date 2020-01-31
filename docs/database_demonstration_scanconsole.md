@@ -4,49 +4,46 @@
 
 Run scanConsole with the component data and upload the results into Local DB.
 
-## 0. Login LocalDB
-
+### 1.Create ssh tunnel
 ```bash
-$ cd YARR
+$ ssh -2 -C -Y -L 27017:localhost:27017 root@localdbserverX -fN -p22
+Password:
+$
+```
+
+
+### 2. Set up database config
+```bash
+$ cd ~/work/YARR
+$ ./localdb/setup_db.sh
+...
+```
+
+### 3. Login for the database 
+```bash
 $ source localdb/login_mongodb.sh
 ...
 ```
 
-## 1. Create connectivity config for the module
-
-Please be sure to register module and chip data in Local DB using [Viewer Application](database_demonstration_check_viewer.md) before creating config.<br>
-**This function is not available in YARR v1.1.0.**<br>
-**Please change to the devel branch if want to use.**<br>
-
 ```bash
-$ cd YARR
 $ ./localdb/bin/localdbtools-retrieve pull --chip 20UPGRS0000009 
 <some of text>
 ```
 
 The config files for the module are generated in './db-data'.<br>
 
-## 2. scanConsole
+### 4. Change stage name 
 
-Please be sure if there are any mistakes in the config files in './db-data'.
+Change the module config file (path is db-data/connectivity.json) as follows:
+
+
+### 5. scanConsole and combine DCS data
 
 ```bash
-$ cd YARR
-$ ./bin/scanConsole \
--r configs/controller/emuCfg.json \
--c db-data/connectivity.json \
--s configs/scans/fei4/std_digitalscan.json \
--W
+$ ./bin/scanConsole -r configs/controller/specCfg.json -c db-data/connectivity.json -s configs/scans/rd53a/std_digitalscan.json -W
 <lots of text>
 ```
-
-## 3. Check
-
-Check if the test data was uploaded following [this page](database_demonstration_check_viewer.md).<br>
-
-## 4. DCS Upload
-
-First prepare the DCS config file (localdb/configs/influxdb_connectivity.json) as follows:
+Firstly change the DCS config file (path is localdb/configs/influxdb_connectivity.json) as follows:
 
 ```json
 {
@@ -94,28 +91,24 @@ First prepare the DCS config file (localdb/configs/influxdb_connectivity.json) a
 Next run dbAccessor:
 
 ```bash
-$ ./bin/dbAccessor \
--F influxdb-connectivity.json \
--n 20UPGRA0000026 \
--s ./data/last_scan/scanLog.json
+$ ./bin/dbAccessor -F localdb/cobfigs/influxdb_connectivity.json -n 20UPGRA0000026 -s data/last_scan/scanLog.json
 ```
-
-## 5. Check
-
 Check if the test data was uploaded following [http://127.0.0.1:5000/localdb/scan](http://127.0.0.1:5000/localdb/scan).<br>
 
-## 6. Tuning
+### 6. scanConsole and combine DCS data
 
+If you want to upload DCS data for each scan, you have to put the command between scans.(./bin/dbAccessor -F localdb/cobfigs/influxdb_connectivity.json -n 20UPGRA0000026 -s data/last_scan/scanLog.json)
 ```bash
-1. std_digitalscan
-2. diff_analogscan
-3. diff_thresholdscan
-4. diff_tune_globalthreshold
-5. diff_tune_pixelthreshold
-6. diff_retune_pixelthreshold
-7. diff_tune_finepixelthreshold
-8. diff_totscan
-9. diff_noisescan
+$ ./bin/scanConsole -r configs/controller/specCfg.json -c db-data/connectivity.json -s configs/scans/rd53a/std_digitalscan.json -W
+$ ./bin/scanConsole -r configs/controller/specCfg.json -c db-data/connectivity.json -s configs/scans/rd53a/diff_analogscan.json -W
+$ ./bin/scanConsole -r configs/controller/specCfg.json -c db-data/connectivity.json -s configs/scans/rd53a/diff_thresholdscan.json -W
+$ ./bin/scanConsole -r configs/controller/specCfg.json -c db-data/connectivity.json -s configs/scans/rd53a/diff_tune_globalthreshold.json -W
+$ ./bin/scanConsole -r configs/controller/specCfg.json -c db-data/connectivity.json -s configs/scans/rd53a/diff_tune_pixelthreshold.json -W
+$ ./bin/scanConsole -r configs/controller/specCfg.json -c db-data/connectivity.json -s configs/scans/rd53a/diff_retune_pixelthreshold.json -W
+$ ./bin/scanConsole -r configs/controller/specCfg.json -c db-data/connectivity.json -s configs/scans/rd53a/diff_tune_finepixelthreshold.json -W
+$ ./bin/scanConsole -r configs/controller/specCfg.json -c db-data/connectivity.json -s configs/scans/rd53a/diff_totscan.json -W
+$ ./bin/scanConsole -r configs/controller/specCfg.json -c db-data/connectivity.json -s configs/scans/rd53a/diff_noise.json -W
 ```
+Check the test results [http://127.0.0.1:5000/localdb/scan](http://127.0.0.1:5000/localdb/scan).<br>
 
 Finish!

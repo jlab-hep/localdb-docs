@@ -21,16 +21,10 @@ $ cmake3 --version
 cmake3 version 3.14.6
 ```
 
-- Other dependencies for YARR SW installation
+- Other dependencies
 
 ```bash
-$ sudo yum install git
-```
-```bash
-$ sudo yum install screen
-```
-```bash
-$ sudo yum install gnuplot texlive-epstopdf ghostscript
+$ sudo yum install git screen emacs gnuplot texlive-epstopdf ghostscript
 ```
 
 ### Python packages
@@ -38,15 +32,6 @@ $ sudo yum install gnuplot texlive-epstopdf ghostscript
 - python3 version 3.6 or higher
 
 ```bash
-# 0. Check
-$ python3 --version
--bash: python3: command not found
-
-# 1. Install
-$ sudo yum install epel-release
-$ sudo yum install python3.x86_64
-
-# 2. Confirm
 $ python3 --version
 Python 3.6.8
 ```
@@ -55,26 +40,13 @@ Python 3.6.8
 
 ```bash
 # 1. Install
-$ sudo python3 -m pip install \
-arguments \
-coloredlogs \
-pdf2image \
-Pillow \
-pymongo \
-python-dateutil \
-PyYAML \
-pytz \
-matplotlib \
-numpy \
-requests \
-tzlocal \
-influxdb \
-pandas
+$ sudo python3 -m pip install arguments coloredlogs pdf2image Pillow pymongo python-dateutil PyYAML pytz matplotlib numpy requests tzlocal influxdb pandas
 ```
 ### Yarr SW
 Install and compile "Yarr" in working directry of your DAQ machine with bellow commands:
 
 ```bash
+$ cd ~/work
 $ git clone https://gitlab.cern.ch/YARR/YARR.git
 $ cd YARR
 $ git checkout devel-localdb

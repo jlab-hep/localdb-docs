@@ -117,7 +117,7 @@ EOF
 $ yum install grafana
 $ systemctl start grafana-server
 $ grafana-server -v
-Version 6.5.2 (commit: 742d165, branch: HEAD)
+Version 6.6.0 (commit: 742d165, branch: HEAD)
 ```
 
 Check [Grafana Installation](https://grafana.com/docs/grafana/latest/installation/requirements/) for more detail.
