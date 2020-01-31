@@ -18,14 +18,6 @@ InfluxDB shell version: 1.7.9
 $
 ```
 
-## Open port
-```bash
-$ firewall-cmd --zone=public --add-port=8086/tcp --permanent
-$ firewall-cmd --reload
-$ firewall-cmd --list-all
-```
-
-
 <!--
 If the service doesn't seem to be running,<br>
 maybe the package has not been installed or the service has not been started, <br>

@@ -27,32 +27,17 @@ Finishing run: 5840
 
 You can check some plots in 'data/last_scan'
 
+### Create ssh tunnel
+```bash
+$ ssh -2 -C -Y -L 27017:localhost:27107 {DB server IP} -fN
+```
+
+
 ### 2. Set up database config
 ```bash
 $ cd YARR
 $ ./localdb/setup_db.sh
 ...
-```
-```bash
-{
-    "hostIp": "{IP Address of DB machine}",
-    "hostPort": "27017",
-    "dbName": "localdb",
-    "ssl": {
-        "enabled": false,
-        "PEMKeyFile": "null",
-        "CAFile": "null"
-    },
-    "tls": {
-        "enabled": false,
-        "CertificateKeyFile": "null",
-        "CAFile": "null"
-    },
-    "auth": "default",
-    "KeyFile": "null",
-    "verify": false,
-...
-
 ```
 
 ### 3. Login for the database 

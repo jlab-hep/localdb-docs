@@ -21,32 +21,17 @@ If the service doesn't seem to be running,<br>
 maybe the package has not been installed or the service has not been started, <br>
 so please check [pre requirement page](requirements.md) to install/start the service.
 
-<!-- ### DCS data
-
-You should upload some dummy data into influxDB before checking the Grafana.<br>
-Please check [influxDB page](database_demonstration_influxdb.md) to upload data.
--->
-
-### Open port
-```bash
-$ firewall-cmd --zone=public --add-port=3000/tcp --permanent
-$ firewall-cmd --reload
-$ firewall-cmd --list-all
-```
-
-<!--
 ### View from DAQ machine
-If you want to see the grafana viewer on your browser of DAQ machine, you should execute the bellow comand.
+If you want to see the grafana viewer on your browse, you should execute the bellow comand.
 ```bash
 $ ssh -2 -C -Y -L 3000:localhost:3000 {DB server IP} -fN
 ```
--->
 
 ## Getting start
 
 ### 1. Access to the Web Page
 
-Access to http://{IP Address of DB machine}:3000/ with the machine's browser on the same network as DB machine,<br>
+Access to [http://127.0.0.1:3000/](http://127.0.0.1:3000/) with the machine's browser on the same network as DB machine,<br>
 and you can see the web page as follows:
 
 ![grafana top](images/demo_grafana_top.png)
@@ -82,8 +67,8 @@ Skip this step and return here after run DCS controller.
 1. Click "Panel Title"
 2. Click "Edit" from the list
 3. Select "dcsDB" for Data Source
-4. Click "Add Query" and Select the measurement channel (e.g. "dummy_thermal")
-5. Select data value from the list (e.g. 3_temperature)
+4. Click "Add Query" and Select the measurement channel (e.g. "Tempareture")
+5. Select data value from the list (e.g. temp1)
 
 ![grafana add dashboard](images/demo_grafana_dashboard_2.png)
 
