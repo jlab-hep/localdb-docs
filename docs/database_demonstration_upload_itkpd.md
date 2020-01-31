@@ -8,4 +8,4 @@ Go to the selection page [http://127.0.0.1:5000/localdb/select_test](http://127.
 Go to the uploading page [http://127.0.0.1:5000/localdb/upload_result](http://127.0.0.1:5000/localdb/upload_result)
 ![upload_result_to_itkpd.png](images/upload_result_to_itkpd.png)
 
-
+Finish this tutorial. Thank you for participating.

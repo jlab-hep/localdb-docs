@@ -5,7 +5,6 @@ If you want to see LocalDB viewer on your browse, you should execute the bellow 
 ```bash
 $ ssh -2 -C -Y -L 5000:localhost:5000 root@localdbserverX -fN
 Password:
-$ 
 ```
 
 Download the component data from ITkPD.<br>
@@ -17,4 +16,4 @@ You can check the downloaded component data using Viewer Application.<br>
 Check [http://127.0.0.1:5000/localdb/component](http://127.0.0.1:5000/localdb/component) on the machine's browser where app.py is running,<br>
 and there are the module data whose serial number is ATLAS serial number.
 
-Finish!
+Finish installation. Back to the previous page and go to next step.

@@ -1,26 +1,5 @@
 # grafana
 
-## Goal
-
-Check the graph of DCS data on your browser.
-
-![Grafana Goal](images/demo_grafana_goal.png)
-
-## Pre Requirements
-
-### Grafana Server
-
-You should check if the grafana service is running on the machine as follows:
-
-```bash
-$ grafana-server -v
-Version 6.5.2 (commit: 742d165, branch: HEAD)
-```
-
-If the service doesn't seem to be running,<br>
-maybe the package has not been installed or the service has not been started, <br>
-so please check [pre requirement page](requirements.md) to install/start the service.
-
 ### View from DAQ machine
 If you want to see the grafana viewer on your browse, you should execute the bellow comand.
 ```bash
@@ -72,8 +51,4 @@ Skip this step and return here after run DCS controller.
 
 ![grafana add dashboard](images/demo_grafana_dashboard_2.png)
 
-Finish!
-
-## More Detail
-
-Check [Grafana site](https://grafana.com/docs/grafana/latest/guides/getting_started/) for more detail.
+Finish installation. Back to the previous page and go to next step.
