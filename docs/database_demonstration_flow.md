@@ -33,8 +33,8 @@ This is not followed in this tutorial.-->
 
 3. [Module Download(on your browser)](database_demonstration_download_itkpd.md)<br>
 Download the module data into Local DB from ITkPD.
-4. [Run DCS controller and checking DCS data in Grafana]()<br>
-
+4. [Run DCS controller and checking DCS data in Grafana](database_demonstration_run_dcs.md)<br>
+Run DCS controller and checking them in Grafana
 5. [scanConsole & Upload](database_demonstration_scanconsole.md)<br>
 Run scanConsole with uploading the test data into Local DB
 6. [Viewer Application](database_demonstration_check_viewer.md)<br>

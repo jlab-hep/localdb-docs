@@ -2,7 +2,7 @@
 
 ## Goal
 
-Download the component data (FE-I4B single module data & FE-I4B FE chip data for example) from ITkPD.<br>
+Download the component data from ITkPD.<br>
 Go to the downloading page [http://127.0.0.1:5000/localdb/download_component](http://127.0.0.1:5000/localdb/download_component)
 
 ![download from itkpd](images/download_component_from_itkpd.png)
