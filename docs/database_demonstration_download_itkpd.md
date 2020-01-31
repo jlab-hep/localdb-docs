@@ -1,6 +1,12 @@
 # Module Download from ITkPD
 
-## Goal
+### View the LocalDB viewer from DAQ machine
+If you want to see LocalDB viewer on your browse, you should execute the bellow comand.
+```bash
+$ ssh -2 -C -Y -L 5000:localhost:5000 root@localdbserverX -fN
+Password:
+$ 
+```
 
 Download the component data from ITkPD.<br>
 Go to the downloading page [http://127.0.0.1:5000/localdb/download_component](http://127.0.0.1:5000/localdb/download_component)

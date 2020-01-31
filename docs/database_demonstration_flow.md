@@ -13,7 +13,6 @@ In DB demonstration, we can do as follow things:
 ### Installation for DAQ machine
 ~~~explanation<br>
 1. [Installation](database_demonstration_install_daq_machine.md)<br>
-2. [Setup YARR SW for LocalDB](database_demonstration_yarr.md)<br>
 
 ### QC Flow
 1. [Module Download](database_demonstration_download_itkpd.md)<br>
