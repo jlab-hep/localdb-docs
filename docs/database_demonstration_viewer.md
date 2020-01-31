@@ -44,12 +44,12 @@ INFO Viewer Application URL: http://{IP Adress of DB machine}:5000/localdb/
 ### If you want to see the screen from your machine
 If you want to see the grafana viewer on your browser of DAQ machine, you should execute the bellow comand on your machine.
 ```bash
-$ ssh -2 -C -Y -L 3000:localhost:3000 {DB server IP} -fN
+$ ssh -2 -C -Y -L 5000:localhost:5000 {DB server IP} -fN
 ```
 
 ### 3. Access the Web Page
 
-Access to [http://127.0.0.1:5000/localdb/](http://127.0.0.1:5000/localdb/) with the machine's browser on teh same network as DB machine,<br>
+Access to [http://127.0.0.1:5000/localdb/](http://127.0.0.1:5000/localdb/) on your browser,<br>
 and you can see the web page as follows:
 
 ![viewer top](images/demo_viewer_top.png)

@@ -2,7 +2,7 @@
 
 ## Goal
 
-Run the emulator for FE-I4B and upload the test results into Local DB ([MongoDB](database_demonstration_mongodb.md)).
+Run the emulator and upload the test results into Local DB ([MongoDB](database_demonstration_mongodb.md)).
 
 ## Getting start
 
@@ -14,9 +14,9 @@ Just type the following command to run the emulator.
 $ cd ../
 ### pwd ---> path/to/YARR
 $ ./bin/scanConsole \
--c configs/connectivity/example_fei4b_setup.json \
--r configs/controller/emuCfg.json \
--s configs/scans/fei4/std_digitalscan.json \
+-c configs/connectivity/example_rd53a_setup.json \
+-r configs/controller/emuCfg_rd53a.json \
+-s configs/scans/rd53a/std_digitalscan.json \
 -p
 <some texts>
 Finishing run: 5840
@@ -48,19 +48,6 @@ $ ./localdb/login_mongodb.sh
 ```
 
 ### 4. Run the emulator with uploading to Local DB
-<!--
-First you have to prepare the config file for Local DB by 'setup_db.sh'<br>
-In this step, you have to set the editor command (e.g. vim, emacs) if the environmental variable 'EDITOR' has not registered.
-
-```bash
-$ cd ../
-$ cd localdb
-$ ./setup_db.sh
-<some steps>
-[LDB] More detail:
-[LDB]   Access 'https://localdb-docs.readthedocs.io/en/master/'
-```
--->
 
 ```bash
 $ ./localdb/bin/localdbtool-upload init
@@ -70,9 +57,9 @@ Run the emulator with option '-W' to upload the test data into Local DB.
 
 ```bash
 $ ./bin/scanConsole \
--c configs/connectivity/example_fei4b_setup.json \
--r configs/controller/emuCfg.json \
--s configs/scans/fei4/std_digitalscan.json \
+-c configs/connectivity/example_rd53a_setup.json \
+-r configs/controller/emuCfg_rd53a.json \
+-s configs/scans/rd53a/std_digitalscan.json \
 -W
 <some texts>
 #DB INFO# -----------------------
@@ -84,7 +71,7 @@ $ ./bin/scanConsole \
 ```
 
 You can the upload status in the log file '~/.yarr/localdb/log/DAY.log'.<br>
-You can also check the data by accessing to http://{IP Address of DB machine}:5000/localdb/ on the machine's browser.<br>
+You can also check the data by accessing to [http://127.0.0.1:5000/localdb/](http://127.0.0.1:5000/localdb/) on the machine's browser.<br>
 Check [here](database_demonstration_viewer.md) to go to the steps for checking the Viewer Application.
 
 Finish!

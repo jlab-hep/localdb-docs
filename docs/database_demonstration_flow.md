@@ -23,15 +23,15 @@ Install the requirements for DB demonstration<br>
 -->
 
 2. Set-up
-    - [MongoDB](database_demonstration_mongodb.md)
-    - [influxDB](database_demonstration_influxdb.md)
-    - [Grafana](database_demonstration_grafana.md)
-    - [Viewer Application](database_demonstration_viewer.md)
-    - [YARR SW for Local DB](database_demonstration_yarr.md)
+    - [MongoDB(on DB mahine)](database_demonstration_mongodb.md)
+    - [influxDB(on DB mahine)](database_demonstration_influxdb.md)
+    - [Grafana(on your browser)](database_demonstration_grafana.md)
+    - [Viewer Application(on DB machine and on your browser)](database_demonstration_viewer.md)
+    - [YARR SW for Local DB(DAQ machine)](database_demonstration_yarr.md)
 <!-- 3. [Module Registration](database_demonstration_register_itkpd.md)<br>
 This is not followed in this tutorial.-->
 
-3. [Module Download](database_demonstration_download_itkpd.md)<br>
+3. [Module Download(on your browser)](database_demonstration_download_itkpd.md)<br>
 Download the module data into Local DB from ITkPD.
 4. [Run DCS controller and checking DCS data in Grafana]()<br>
 

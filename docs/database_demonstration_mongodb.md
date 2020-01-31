@@ -28,7 +28,7 @@ $ ./create_admin.sh
 ...
 ```
 
-## Lock mongoDB and add bindIp
+## Lock mongoDB
 Change /etc/mongod.conf as bellow:
 ```bash
 $ cat /etc/mongod.conf
