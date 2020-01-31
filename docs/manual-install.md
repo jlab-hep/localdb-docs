@@ -85,6 +85,7 @@ pymongo \
 python-dateutil \
 PyYAML \
 pytz \
+matplotlib \
 numpy \
 requests \
 tzlocal \

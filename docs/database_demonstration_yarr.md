@@ -4,46 +4,26 @@
 
 Run the emulator and upload the test results into Local DB ([MongoDB](database_demonstration_mongodb.md)).
 
-## Getting start
-
-### 1. Run the Emulator
-
-Just type the following command to run the emulator.
-
-```bash
-$ cd ../
-### pwd ---> path/to/YARR
-$ ./bin/scanConsole \
--c configs/connectivity/example_rd53a_setup.json \
--r configs/controller/emuCfg_rd53a.json \
--s configs/scans/rd53a/std_digitalscan.json \
--p
-<some texts>
-Finishing run: 5840
-./data/last_scan/JohnDoe_EnMask.png
-./data/last_scan/JohnDoe_L1Dist.pdf
-./data/last_scan/JohnDoe_OccupancyMap.png
-```
-
-You can check some plots in 'data/last_scan'
-
+## 1. Getting start
 ### Create ssh tunnel
 ```bash
-$ ssh -2 -C -Y -L 27017:localhost:27107 {DB server IP} -fN
+$ ssh -2 -C -Y -L 27017:localhost:27017 root@localdbserverX -fN -p22
+Password:
+$
 ```
 
 
 ### 2. Set up database config
 ```bash
-$ cd YARR
+$ cd ~/YARR
 $ ./localdb/setup_db.sh
 ...
 ```
 
 ### 3. Login for the database 
 ```bash
-$ cd YARR
-$ ./localdb/login_mongodb.sh
+$ cd ~/YARR
+$ source localdb/login_mongodb.sh
 ...
 ```
 
@@ -56,7 +36,7 @@ $ ./localdb/bin/localdbtool-upload init
 Run the emulator with option '-W' to upload the test data into Local DB.
 
 ```bash
-$ ./bin/scanConsole \
+./bin/scanConsole \
 -c configs/connectivity/example_rd53a_setup.json \
 -r configs/controller/emuCfg_rd53a.json \
 -s configs/scans/rd53a/std_digitalscan.json \
@@ -79,3 +59,4 @@ Finish!
 ## More Detail
 
 Check [YARR Docs](https://yarr.readthedocs.io/en/latest/) for more detail.
+

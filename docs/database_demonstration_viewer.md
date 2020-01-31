@@ -1,21 +1,5 @@
 # Viewer Application
 
-## Goal
-
-Check the Web Page on your browser.
-
-![Viewer Application Goal](images/demo_viewer_goal.png)
-
-<!--
-## Pre Requirements
-
-Viewer Application is implemented in "Local DB Tools".<br>
-You can install "Local DB Tools" as follows:
-
-```bash
-$ git clone -b devel https://gitlab.cern.ch/YARR/localdb-tools.git
-```
--->
 ## Getting start
 
 ### 1. Setup Viewer Application by the script 'setup_viewer.sh'
@@ -25,7 +9,7 @@ In this step, you have to set the editor command (e.g. vim, emacs) if the enviro
 ```bash
 $ cd localdb-tools/viewer
 $ ./setup_viewer.sh
-[LDB] Set editor command ... > vim
+[LDB] Input editor command you use ... > emacs
 [LDB]
 [LDB] Welcome to Local Database Tools!
 <some texts>
@@ -36,15 +20,17 @@ $ ./setup_viewer.sh
 
 ```bash
 $ ./app.py --config admin_conf.yml
-INFO Viewer Application URL: http://{IP Adress of DB machine}:5000/localdb/
+INFO Viewer Application URL: http://127.0.0.1:5000/localdb/
  * Serving Flask app "app" (lazy loading)
  * Environment: production
 ```
 
 ### If you want to see the screen from your machine
-If you want to see the grafana viewer on your browser of DAQ machine, you should execute the bellow comand on your machine.
+If you want to see LocalDB viewer on your browser, you should execute the bellow comand on your machine.
 ```bash
-$ ssh -2 -C -Y -L 5000:localhost:5000 {DB server IP} -fN
+$ ssh -2 -C -Y -L 5000:localhost:5000 root@localdbserverX -fN
+Password:
+$ 
 ```
 
 ### 3. Access the Web Page
@@ -56,6 +42,3 @@ and you can see the web page as follows:
 
 Finish!
 
-## More Detail
-
-Check [Viewer Application Page](viewer.md) for more detail.

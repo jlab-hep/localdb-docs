@@ -24,7 +24,7 @@ so please check [pre requirement page](requirements.md) to install/start the ser
 ### View from DAQ machine
 If you want to see the grafana viewer on your browse, you should execute the bellow comand.
 ```bash
-$ ssh -2 -C -Y -L 3000:localhost:3000 {DB server IP} -fN
+$ ssh -2 -C -Y -L 3000:localhost:3000 DB_SERVER_IP -fN
 ```
 
 ## Getting start

@@ -1,45 +1,32 @@
 # Database Demonstration
 
-## memo
-
-- [ITkPD URL](https://itkpd-test.unicorncollege.cz)
-- [YARR Docs](https://yarr.readthedocs.io/en/latest/)
-- [YARR Repository](https://gitlab.cern.ch/YARR/YARR/)
-- [Local DB Tools Repository](https://gitlab.cern.ch/YARR/localdb-tools)
-
-## Flow
+## Tutorial Flow
+~~~explanation
 
 In DB demonstration, we can do as follow things:
+### Installation and setup for DB machine
+~~~explanation
+- [Installation](database_demonstration_install_db_machine.md)
+- [Setting for MongoDB](database_demonstration_mongodb.md)
+- [Setting for LocalDB viewer](database_demonstration_viewer.md)
 
-1. pre requirements<br>
-Install the requirements for DB demonstration<br>
-(Python3 and packages, MongoDB, influxDB, Viewer, YARR SW, DB Tools...)
-    - [For centOS](database_demonstration_setup_centos.md)
+### Installation and setup for DAQ machine
+~~~explanation
+- [Installation](database_demonstration_install_daq_machine.md)
+- [Setup YARR SW for LocalDB](database_demonstration_yarr.md)
 
-<!--    
-    - [For macOS](database_demonstration_setup_mac.md)
-    - [For Ubuntu](database_demonstration_setup_ubuntu.md)
-    - [For Windows](database_demonstration_setup_windows.md)
--->
-
-2. Set-up
-    - [MongoDB(on DB mahine)](database_demonstration_mongodb.md)
-    - [influxDB(on DB mahine)](database_demonstration_influxdb.md)
-    - [Grafana(on your browser)](database_demonstration_grafana.md)
-    - [Viewer Application(on DB machine and on your browser)](database_demonstration_viewer.md)
-    - [YARR SW for Local DB(DAQ machine)](database_demonstration_yarr.md)
-<!-- 3. [Module Registration](database_demonstration_register_itkpd.md)<br>
-This is not followed in this tutorial.-->
-
-3. [Module Download(on your browser)](database_demonstration_download_itkpd.md)<br>
+### QC Flow
+3. [Module Download](database_demonstration_download_itkpd.md)<br>
 Download the module data into Local DB from ITkPD.
-4. [Run DCS controller and checking DCS data in Grafana](database_demonstration_run_dcs.md)<br>
-Run DCS controller and checking them in Grafana
-5. [scanConsole & Upload](database_demonstration_scanconsole.md)<br>
-Run scanConsole with uploading the test data into Local DB
-6. [Viewer Application](database_demonstration_check_viewer.md)<br>
+4. [Run DCS controller](database_demonstration_run_dcs.md)<br>
+Run DCS controller and get values(environment temp,current,voltage)
+5. [Grafana](database_demonstration_grafana.md)
+Checking the data in Grafana
+6. [scanConsole](database_demonstration_scanconsole.md)<br>
+Run scanConsole with storing the test data into Local DB
+7. [Viewer Application](database_demonstration_check_viewer.md)<br>
 Check the uploaded data in the Viewer Application
-7. [Select and Upload results into ITkPD](database_demonstration_upload_itkpd.md)<br>
+8. [Select and Upload results into ITkPD](database_demonstration_upload_itkpd.md)<br>
 Upload the test data into ITkPD (if possible)
 
 <!--

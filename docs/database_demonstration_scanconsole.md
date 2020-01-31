@@ -8,7 +8,7 @@ Run scanConsole with the component data and upload the results into Local DB.
 
 ```bash
 $ cd YARR
-$ ./localdb/login_mongodb.sh
+$ source localdb/login_mongodb.sh
 ...
 ```
 
