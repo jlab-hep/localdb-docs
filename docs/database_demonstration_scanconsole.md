@@ -1,4 +1,4 @@
-# Scan the component data
+# Scan and tuning
 
 ### Create ssh tunnel 
 To connect mongoDB of DB machine from your local machine, Do the bellow comand on your command prompt.<br>

@@ -1,10 +1,11 @@
 ## Installation for the DAQ machine
 For centos7<br>
-Setup the DAQ machine environment from here. You should change the screen and check if you are in local DAQ machine.
+Setup the DAQ machine environment from here. <br>
+<span style="color: red; ">**Change the screen and check if you are in local.**</span>
 
 ### yum packages
-Please answer "y" in all when you should input.
-- g++ version 7.0 or higher
+- g++ version 7.0 or higher<br>
+Please answer "y" in all steps.
 ```bash
 $ sudo yum install centos-release-scl
 ...

@@ -2,7 +2,7 @@
 For centos7<br>
 Setup the DB machine environment from here.
 
-### Connect DB machine with ssh
+### Connect DB machine via ssh
 
 Please do the following command on your command prompt to connect DB machine via ssh.<br>
 We prepared a virtual server and tell you the server name.<br>
@@ -16,8 +16,8 @@ Last login: ... 2020 from monkeyisland.dyndns.cern.ch
 ```
 
 ### yum packages
-Please answer "y" in all when you should input.
-- g++ version 7.0 or higher
+- g++ version 7.0 or higher<br>
+Please answer "y" in all steps.
 ```bash
 $ yum install centos-release-scl
 ...
@@ -76,7 +76,7 @@ $ git checkout devel
 
 ### Mongo DB
 
-MongoDB version 4.2 or higher for Local DB
+MongoDB version 4.2 or higher for Local DB<br>
 This is a main database to store QC results<br>
 **There might be some error masages but please don't worry and go ahead.**
 ```bash

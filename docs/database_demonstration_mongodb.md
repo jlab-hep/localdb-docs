@@ -1,9 +1,9 @@
 # MongoDB
 
 ## Create accounts in mongoDB
-Create an account in mongoDB with bellow commands.
-Input username and password as you like.(e.g.:USERNAME=hokuyama,PASSWORD=itkweek)
-**These are used as LocalDB admin's username and password from here.**
+Create an account in mongoDB with bellow commands.<br>
+Input username and password as you like.(e.g.: USERNAME=hokuyama, PASSWORD=itkweek)<br>
+<span style="color: red; ">**These are used as LocalDB admin's username and password from here.**</span>
 
 ```bash
 $ cd ~/work/localdb-tools/setting
@@ -23,7 +23,7 @@ For checking the setting of Local DB: /etc/mongod.conf
 ```
 
 ## Lock mongoDB
-Lock the mongoDB so that only those who know the account name and password can see and write to it.
+Lock the mongoDB so that only those who know the account name and password can see and write to it.<br>
 Change /etc/mongod.conf as bellow:
 ```bash
 $ cat /etc/mongod.conf

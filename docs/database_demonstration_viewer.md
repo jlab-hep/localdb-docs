@@ -2,7 +2,7 @@
 
 ### 1. Setup Viewer Application by the script 'setup_viewer.sh'
 Create config file to setup viewer.<br>
-Input localdb admin's username and password in the middle of the command.(e.g.:USERNAME=hokuyama,PASSWORD=itkweek)
+Input localdb admin's username and password in the middle of the command.(e.g.: USERNAME=hokuyama, PASSWORD=itkweek)
 
 ```bash
 $ cd ~/work/localdb-tools/viewer
@@ -10,7 +10,7 @@ $ ./setup_viewer.sh
 Local DB Server IP address: 127.0.0.1
 Local DB Server port: 27017
  
-[LDB] Are you sure that's correct? [y/n]
+[LDB] Are you sure thats correct? [y/n]
 > y
  
 [LDB] Welcome to Local Database Tools!
@@ -28,8 +28,8 @@ Cloning into '/root/work/localdb-tools/viewer/plotting-tool'...
 ```
 
 ### 2. Start LocalDB viewer with the command 'app.py'
-Start LocalDB viewer with the bellow command.
-**Don't stop this process to see the viewer through this tutorial.You have to chenge the sreen from next step.** 
+Start LocalDB viewer with the bellow command.<br>
+<span style="color: red; ">**Don't stop this process through this tutorial. Chenge the screen from next step.**</span>
 
 ```bash
 $ ./app.py --config admin_conf.yml
