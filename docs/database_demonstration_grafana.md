@@ -11,18 +11,18 @@ Password:
 ```
 ![ssh tunnel grafana](images/sshtunnel_grafana.png)
 
-### (1) Access to the Web Page
+### (a) Access to the Web Page
 
 Access to [http://127.0.0.1:3000/](http://127.0.0.1:3000/) with the machine's browser on the same network as DB machine,<br>
 and you can see the web page as follows:
 
 
-### (2) Login
+### (b) Login
 
 Login with the username: 'admin' and the password: 'admin'
 ![grafana top](images/demo_grafana_top.png)
 
-### (3) Add Database Source
+### (c) Add Database Source
 
 1. Click "Add data source"
 2. Click "InfluxDB"
@@ -36,7 +36,7 @@ Login with the username: 'admin' and the password: 'admin'
 
 ![grafana add db source](images/demo_grafana_db_source_3.png)
 
-### (4) Create New Dashboard
+### (d) Create New Dashboard
 Skip this step and return here after run DCS controller.
 
 1. Click "+"

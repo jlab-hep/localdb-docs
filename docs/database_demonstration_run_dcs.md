@@ -14,7 +14,7 @@ Password:
 ```
 ![ssh tunnel influxdb](images/sshtunnel_influxdb.png)
 
-## (1)Run script to get temperature
+## (a) Run script to get temperature
 To get environmental temperature and store the data into influxDB, do the following command.<br>
 <span style="color: red; ">**Don't stop this process through readout. Chenge the screen from next step.**</span>
 
@@ -26,11 +26,11 @@ Temp1:??.??C     Temp2:??.??C
 ...
 ```
 
-## (2)Run LV IV
+## (b) Run LV IV
 in edit
 
 
-## (3)Run LV PS controller
+## (c) Run LV PS controller
 To turn on the LV PS and get the current and voltage, do the following command.<br>
 <span style="color: red; ">**Don't stop this process through readout. Chenge the screen from next step.**</span>
 ```bash

@@ -11,7 +11,7 @@ Password:
 ```
 ![ssh tunnel mongodb](images/sshtunnel_mongodb.png)
 
-### (1). Set username and password for mongodb 
+### (a). Set username and password for mongodb 
 Set username and password with the bellow command to connect mongoDB with authentification.<br>
 Input LocalDB admin's username and password you have set before.
 ```bash
@@ -22,7 +22,7 @@ Input mongodb accounts password:
 [LDB]Username and password are saved.
 ```
 
-### (2). Set up database config
+### (b). Set up database config
 Set the config files with the bellow command to save the mongoDB's information.<br>
 You don't have to change anything in this tutorial. Please answer "y" in all steps.
 ```bash
@@ -68,7 +68,7 @@ $ ./localdb/setup_db.sh
 [LDB]   Access 'https://localdb-docs.readthedocs.io/en/master/'
 ```
 
-### (3). Create scan config files from mongodb
+### (c). Create scan config files from mongodb
 To create config files for scanConsole of YARR-SW, do the bellow command.<br>
 (We use the downloaded component's peoperty. Device's serial number is "20UPGRS0000009", chip's serial number is "20UPGRA0000026")
 ```bash
@@ -84,7 +84,7 @@ $ ./localdb/bin/localdbtool-retrieve pull --chip 20UPGRS0000009
 ```
 The config files for the module are generated in './db-data'.<br>
 
-### (4). Change stage name in the scan config file
+### (d). Change stage name in the scan config file
 Edit the connectivity file(***db-data/connectivity.json***) and change stage name to "WIREBONDING".
 ```json
 {
@@ -104,7 +104,7 @@ Edit the connectivity file(***db-data/connectivity.json***) and change stage nam
 }
 ```
 
-### (5). scanConsole and combine DCS data
+### (e). scanConsole and combine DCS data
 
 Run scanConsole and do electrical readout with bellow command. 
 
@@ -164,7 +164,7 @@ Check the test result and DCS plot from following link [http://127.0.0.1:5000/lo
 
 ![demo scan](images/demo_scan.png)
 
-### (6). Tuning steps for QC
+### (f). Tuning steps for QC
 Test items for tuning are bellow:<br>
 - diff_analogscan<br>
 - diff_thresholdscan<br>

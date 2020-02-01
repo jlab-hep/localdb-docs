@@ -135,7 +135,7 @@ sslcacert=/etc/pki/tls/certs/ca-bundle.crt
 EOF
 ```
 
-Install and Start influxDB
+Install and Start grafana
 ```bash
 $ yum install -y grafana
 $ systemctl start grafana-server
