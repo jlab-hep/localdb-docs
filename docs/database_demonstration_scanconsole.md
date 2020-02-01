@@ -9,6 +9,8 @@ Password is the DB server account's password.(Default is "password".)
 $ ssh -2 -C -Y -L 27017:localhost:27017 root@localdbserverX -fN -p22
 Password:
 ```
+![ssh tunnel mongodb](images/sshtunnel_mongodb.png)
+
 ### 1. Set username and password for mongodb 
 Set username and password with the bellow command to connect mongoDB with authentification.<br>
 Input LocalDB admin's username and password you have set before.
@@ -161,17 +163,17 @@ $ ./bin/dbAccessor -F localdb/cobfigs/influxdb_connectivity.json -n 20UPGRA00000
 Check the test result and DCS plot from following link [http://127.0.0.1:5000/localdb/scan](http://127.0.0.1:5000/localdb/scan).<br>
 
 ### 6. Tuning steps for QC
-Test items for tuning are bellow:
-- diff_analogscan
-- diff_thresholdscan
-- diff_totscan
-- diff_tune_globalthreshold
-- diff_tune_pixelthreshold
-- diff_tune_globalpreamp
-- diff_retune_pixelthreshold
-- diff_tune_finepixelthreshold 
-- diff_thresholdscan
-- diff_totscan
+Test items for tuning are bellow:<br>
+- diff_analogscan<br>
+- diff_thresholdscan<br>
+- diff_totscan<br>
+- diff_tune_globalthreshold<br>
+- diff_tune_pixelthreshold<br>
+- diff_tune_globalpreamp<br>
+- diff_retune_pixelthreshold<br>
+- diff_tune_finepixelthreshold<br>
+- diff_thresholdscan<br>
+- diff_totscan<br>
 
 Do this tuning steps for the chip by following bellow commands as module QC.<br>
 If you want to conbine DCS data with each scan, you have to put the command between scans.<br>

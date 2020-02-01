@@ -9,6 +9,7 @@ Password is the DB server account's password.(Default is "password".)
 $ ssh -2 -C -Y -L 3000:localhost:3000 root@localdbserverX -fN
 Password:
 ```
+![ssh tunnel grafana](images/sshtunnel_grafana.png)
 
 ## Getting start
 
