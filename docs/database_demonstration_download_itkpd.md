@@ -1,4 +1,4 @@
-# Module Download from ITkPD
+# Module Download from Production DB
 
 ### Create ssh tunnel 
 To see LocalDB viewer on your browser, do the bellow comand on your command prompt.<br>
@@ -6,13 +6,13 @@ To see LocalDB viewer on your browser, do the bellow comand on your command prom
 Password is the DB server account's password.(Default is "password".)
 
 ```bash
-$ ssh -2 -C -Y -L 5000:localhost:5000 root@localdbserverX -fN
+$ ssh -L 5000:localhost:5000 root@localdbserverX -fN
 Password:
 ```
+![ssh tunnel viewer](images/sshtunnel_viewer.png)
 
 ### Download component information from Production DB 
-Download the component data from ITkPD.<br>
-![ssh tunnel viewer](images/sshtunnel_viewer.png)
+Download the component data from Production DB.<br>
 
 Go to the downloading page [http://127.0.0.1:5000/localdb/download_component](http://127.0.0.1:5000/localdb/download_component)<br><br>
 

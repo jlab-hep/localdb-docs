@@ -5,11 +5,10 @@ Setup the DAQ machine environment from here. <br>
 
 ### yum packages
 - g++ version 7.0 or higher<br>
-Please answer "y" in all steps.
 ```bash
-$ sudo yum install centos-release-scl
+$ sudo yum install -y centos-release-scl
 ...
-$ sudo yum install devtoolset-7
+$ sudo yum install -y devtoolset-7
 ...
 $ source /opt/rh/devtoolset-7/enable
 $ g++ --version
@@ -19,9 +18,9 @@ g++ (GCC) 7.3.1 20180303 (Red Hat 7.3.1-5)
 
 - cmake3
 ```bash
-$ sudo yum install epel-release
+$ sudo yum install -y epel-release
 ...
-$ sudo yum install cmake3
+$ sudo yum install -y cmake3
 ...
 $ cmake3 --version
 cmake3 version 3.14.6
@@ -31,7 +30,7 @@ cmake3 version 3.14.6
 - Other dependencies
 
 ```bash
-$ sudo yum install git screen emacs gnuplot texlive-epstopdf ghostscript
+$ sudo yum install -y git screen emacs gnuplot texlive-epstopdf ghostscript
 ...
 ```
 
@@ -55,15 +54,16 @@ Install and compile "Yarr" with bellow commands:
 
 ```bash
 $ cd ~/work
-$ git clone https://gitlab.cern.ch/YARR/YARR.git
+$ git clone https://gitlab.cern.ch/YARR/YARR.git -b devel-localdb
 ...
 $ cd YARR
-$ git checkout devel-localdb
-...
-$ mkdir build && cd build
+$ mkdir -p build && cd build
 $ cmake3 ../
+...
 $ make -j4
+...
 $ make install
+...
 ```
 
 Finish installation. Back to the previous page and go to next step.

@@ -6,25 +6,23 @@ To see grafana on your browser, Do the bellow comand on your command prompt.<br>
 Password is the DB server account's password.(Default is "password".)
 
 ```bash
-$ ssh -2 -C -Y -L 3000:localhost:3000 root@localdbserverX -fN
+$ ssh -L 3000:localhost:3000 root@localdbserverX -fN
 Password:
 ```
 ![ssh tunnel grafana](images/sshtunnel_grafana.png)
 
-## Getting start
-
-### 1. Access to the Web Page
+### (1) Access to the Web Page
 
 Access to [http://127.0.0.1:3000/](http://127.0.0.1:3000/) with the machine's browser on the same network as DB machine,<br>
 and you can see the web page as follows:
 
 
-### 2. Login
+### (2) Login
 
 Login with the username: 'admin' and the password: 'admin'
 ![grafana top](images/demo_grafana_top.png)
 
-### 3. Add Database Source
+### (3) Add Database Source
 
 1. Click "Add data source"
 2. Click "InfluxDB"
@@ -38,7 +36,7 @@ Login with the username: 'admin' and the password: 'admin'
 
 ![grafana add db source](images/demo_grafana_db_source_3.png)
 
-### 4. Create New Dashboard
+### (4) Create New Dashboard
 Skip this step and return here after run DCS controller.
 
 1. Click "+"
@@ -51,5 +49,4 @@ Skip this step and return here after run DCS controller.
 
 ![grafana add dashboard](images/demo_grafana_db_source_5.png)
 
-![watch influxDB via grafana](images/demo_watch_grafana.png)
 Finish. Back to the previous page and go to next step.

@@ -29,15 +29,15 @@ In DB demonstration, we can do as follow things:
 
 ### QC Flow
 1. [Module Download](database_demonstration_download_itkpd.md)<br>
-Download the module data into Local DB from ITkPD.
+Download the module data into Local DB from Production DB.
 2. [Hook up module to devices and Run DCS controller](database_demonstration_run_dcs.md)<br>
 Run DCS controller and get values(environment temp,current,voltage)
 3. [Check DCS data Grafana](database_demonstration_grafana.md)<br>
 Checking the data in Grafana
 4. [scanConsole and tuning](database_demonstration_scanconsole.md)<br>
 Run scanConsole with storing the test data into Local DB
-5. [Select and Upload results into ITkPD](database_demonstration_upload_itkpd.md)<br>
-Upload the results into ITkPD
+5. [Select and Upload results into Production DB](database_demonstration_upload_itkpd.md)<br>
+Upload the results into Production DB
 
 ## Appendix
 

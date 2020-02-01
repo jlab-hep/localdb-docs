@@ -9,12 +9,12 @@ To connect influxDB of DB machine from your local machine, Do the bellow comand 
 Password is the DB server account's password.(Default is "password".)
 
 ```bash
-$ ssh -2 -C -Y -L 8086:localhost:8086 root@localdbserverX -fN 
+$ ssh -L 8086:localhost:8086 root@localdbserverX -fN 
 Password:
 ```
 ![ssh tunnel influxdb](images/sshtunnel_influxdb.png)
 
-## Run script to get temperature
+## (1)Run script to get temperature
 To get environmental temperature and store the data into influxDB, do the following command.<br>
 <span style="color: red; ">**Don't stop this process through readout. Chenge the screen from next step.**</span>
 
@@ -26,11 +26,11 @@ Temp1:??.??C     Temp2:??.??C
 ...
 ```
 
-## Run LV IV
+## (2)Run LV IV
 in edit
 
 
-## Run LV PS controller
+## (3)Run LV PS controller
 To turn on the LV PS and get the current and voltage, do the following command.<br>
 <span style="color: red; ">**Don't stop this process through readout. Chenge the screen from next step.**</span>
 ```bash

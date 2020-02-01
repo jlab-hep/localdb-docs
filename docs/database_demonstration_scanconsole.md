@@ -6,12 +6,12 @@ To connect mongoDB of DB machine from your local machine, Do the bellow comand o
 Password is the DB server account's password.(Default is "password".)
 
 ```bash
-$ ssh -2 -C -Y -L 27017:localhost:27017 root@localdbserverX -fN -p22
+$ ssh -L 27017:localhost:27017 root@localdbserverX -fN -p22
 Password:
 ```
 ![ssh tunnel mongodb](images/sshtunnel_mongodb.png)
 
-### 1. Set username and password for mongodb 
+### (1). Set username and password for mongodb 
 Set username and password with the bellow command to connect mongoDB with authentification.<br>
 Input LocalDB admin's username and password you have set before.
 ```bash
@@ -22,7 +22,7 @@ Input mongodb accounts password:
 [LDB]Username and password are saved.
 ```
 
-### 2. Set up database config
+### (2). Set up database config
 Set the config files with the bellow command to save the mongoDB's information.<br>
 You don't have to change anything in this tutorial. Please answer "y" in all steps.
 ```bash
@@ -68,7 +68,7 @@ $ ./localdb/setup_db.sh
 [LDB]   Access 'https://localdb-docs.readthedocs.io/en/master/'
 ```
 
-### 3. Create scan config files from mongodb
+### (3). Create scan config files from mongodb
 To create config files for scanConsole of YARR-SW, do the bellow command.<br>
 (We use the downloaded component's peoperty. Device's serial number is "20UPGRS0000009", chip's serial number is "20UPGRA0000026")
 ```bash
@@ -84,8 +84,8 @@ $ ./localdb/bin/localdbtool-retrieve pull --chip 20UPGRS0000009
 ```
 The config files for the module are generated in './db-data'.<br>
 
-### 4. Change stage name in the scan config file
-Edit the connectivity file(db-data/connectivity.json) and change stage name to "WIREBONDING".
+### (4). Change stage name in the scan config file
+Edit the connectivity file(***db-data/connectivity.json***) and change stage name to "WIREBONDING".
 ```json
 {
     "stage": "WIREBONDING",
@@ -104,7 +104,7 @@ Edit the connectivity file(db-data/connectivity.json) and change stage name to "
 }
 ```
 
-### 5. scanConsole and combine DCS data
+### (5). scanConsole and combine DCS data
 
 Run scanConsole and do electrical readout with bellow command. 
 
@@ -112,7 +112,7 @@ Run scanConsole and do electrical readout with bellow command.
 $ ./bin/scanConsole -r configs/controller/specCfg.json -c db-data/connectivity.json -s configs/scans/rd53a/std_digitalscan.json -W
 <lots of text>
 ```
-To combine DCS data, edit the DCS uploader config file (localdb/configs/influxdb_connectivity.json) as follows:
+To combine DCS data, edit the DCS uploader config file (***localdb/configs/influxdb_connectivity.json***) as follows:
 ```json
 {
     "environments" : [
@@ -134,7 +134,7 @@ To combine DCS data, edit the DCS uploader config file (localdb/configs/influxdb
                 }
             ]
         },{
-            "measurement" : "LV"
+            "measurement" : "LV",
             "dcsList" : [
                 {
                     "key"        : "vddd_voltage",
@@ -144,7 +144,7 @@ To combine DCS data, edit the DCS uploader config file (localdb/configs/influxdb
                     "setting"    : 1.75
                 },
                 {
-                    "key"        : "vdda_current",
+                    "key"        : "vddd_current",
                     "data_name"  : "LV_Current",
                     "data_unit"  : "LV_Current_unit",
                     "description": "VDDD Current [A]",
@@ -157,14 +157,14 @@ To combine DCS data, edit the DCS uploader config file (localdb/configs/influxdb
 ```
 Next run dbAccessor to upload DCS data from influxDB to LocalDB:
 ```bash
-$ ./bin/dbAccessor -F localdb/cobfigs/influxdb_connectivity.json -n 20UPGRA0000026 -s data/last_scan/scanLog.json
+$ ./bin/dbAccessor -F localdb/configs/influxdb_connectivity.json -n 20UPGRA0000026 -s data/last_scan/scanLog.json
 ...
 ```
 Check the test result and DCS plot from following link [http://127.0.0.1:5000/localdb/scan](http://127.0.0.1:5000/localdb/scan).<br>
 
 ![demo scan](images/demo_scan.png)
 
-### 6. Tuning steps for QC
+### (6). Tuning steps for QC
 Test items for tuning are bellow:<br>
 - diff_analogscan<br>
 - diff_thresholdscan<br>
@@ -179,7 +179,7 @@ Test items for tuning are bellow:<br>
 
 Do this tuning steps for the chip by following bellow commands as module QC.<br>
 If you want to conbine DCS data with each scan, you have to put the command between scans.<br>
-(./bin/dbAccessor -F localdb/cobfigs/influxdb_connectivity.json -n 20UPGRA0000026 -s data/last_scan/scanLog.json)
+(./bin/dbAccessor -F localdb/configs/influxdb_connectivity.json -n 20UPGRA0000026 -s data/last_scan/scanLog.json)
 
 ```bash
 $ ./bin/scanConsole -r configs/controller/specCfg.json -c db-data/connectivity.json -s configs/scans/rd53a/diff_analogscan.json -W
