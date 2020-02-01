@@ -1,7 +1,7 @@
 ## Installation for the DAQ machine
 For centos7<br>
 Setup the DAQ machine environment from here. <br>
-<span style="color: red; ">**Change the screen and check if you are in local.**</span>
+<span style="color: red; ">**Change the screen from DB machine's one and check if you are in local.**</span>
 
 ### yum packages
 - g++ version 7.0 or higher<br>

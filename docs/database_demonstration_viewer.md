@@ -2,7 +2,8 @@
 
 ### 1. Setup Viewer Application by the script 'setup_viewer.sh'
 Create config file to setup viewer.<br>
-Input localdb admin's username and password in the middle of the command.(e.g.: USERNAME=hokuyama, PASSWORD=itkweek)
+Input localdb admin's username and password in the middle of the command.<br>
+(e.g.: USERNAME=hokuyama, PASSWORD=itkweek)
 
 ```bash
 $ cd ~/work/localdb-tools/viewer
