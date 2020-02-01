@@ -1,5 +1,22 @@
 ## Installation for the DB machine
+For centos7<br>
+Setup the DB machine environment from here.
+
+### Connect DB machine with ssh
+
+Please do the following command on your command prompt to connect DB machine via ssh.<br>
+We prepared a virtual server and tell you the server name.<br>
+**Change the server name according to the given name** (e.g.:root@localdbserver1)<br> 
+Default password is "password".
+
+```bash
+$ ssh root@localdbserverX
+Password: 
+Last login: ... 2020 from monkeyisland.dyndns.cern.ch
+```
+
 ### yum packages
+Please answer "y" in all when you should input.
 - g++ version 7.0 or higher
 ```bash
 $ yum install centos-release-scl
@@ -46,7 +63,7 @@ $ python3 -m pip install arguments coloredlogs Flask Flask-PyMongo Flask-HTTPAut
 ```
 
 ### LocalDB tools
-
+Tools to operate LocalDB
 ```bash
 $ cd ~/
 $ mkdir work && cd work
@@ -59,7 +76,9 @@ $ git checkout devel
 
 ### Mongo DB
 
-- MongoDB version 4.2 or higher for Local DB
+MongoDB version 4.2 or higher for Local DB
+This is a main database to store QC results<br>
+**There might be some error masages but please don't worry and go ahead.**
 ```bash
 $ cd ~/work/localdb-tools/scripts/shell
 $ ./upgrade_mongoDB_centos.sh
@@ -90,15 +109,14 @@ bye
 ```
 ### influxDB
 
+This is a database to store DCS data<br>
 ```bash
-$ cat <<EOF | sudo tee /etc/yum.repos.d/influxdb.repo
-[influxdb]
-name = InfluxDB Repository - RHEL \$releasever
-baseurl = https://repos.influxdata.com/rhel/\$releasever/\$basearch/stable
-enabled = 1
-gpgcheck = 1
-gpgkey = https://repos.influxdata.com/influxdb.key
-EOF
+$ echo "[influxdb]" > /etc/yum.repos.d/influxdb.repo
+$ echo "name = InfluxDB Repository - RHEL \$releasever" >> /etc/yum.repos.d/influxdb.repo
+$ echo "baseurl = https://repos.influxdata.com/rhel/\$releasever/\$basearch/stable" >> /etc/yum.repos.d/influxdb.repo
+$ echo "enabled = 1" >> /etc/yum.repos.d/influxdb.repo
+$ echo "gpgcheck = 1" >> /etc/yum.repos.d/influxdb.repo
+$ echo "gpgkey = https://repos.influxdata.com/influxdb.key" >> /etc/yum.repos.d/influxdb.repo
 $ yum install influxdb
 ...
 $ systemctl start influxdb
@@ -107,19 +125,17 @@ Influx DB shell version X.X.X
 > exit
 ```
 ### Grafana
-
+This is a web application to see contents of influxdb.
 ```bash
-$ cat <<EOF | sudo tee /etc/yum.repos.d/grafana.repo
-[grafana]
-name=grafana
-baseurl=https://packages.grafana.com/oss/rpm
-repo_gpgcheck=1
-enabled=1
-gpgcheck=1
-gpgkey=https://packages.grafana.com/gpg.key
-sslverify=1
-sslcacert=/etc/pki/tls/certs/ca-bundle.crt
-EOF
+$ echo "[grafana]" > /etc/yum.repos.d/grafana.repo
+$ echo "name=grafana" >> /etc/yum.repos.d/grafana.repo
+$ echo "baseurl=https://packages.grafana.com/oss/rpm" >> /etc/yum.repos.d/grafana.repo
+$ echo "repo_gpgcheck=1" >> /etc/yum.repos.d/grafana.repo
+$ echo "enabled=1" >> /etc/yum.repos.d/grafana.repo
+$ echo "gpgcheck=1" >> /etc/yum.repos.d/grafana.repo
+$ echo "gpgkey=https://packages.grafana.com/gpg.key" >> /etc/yum.repos.d/grafana.repo
+$ echo "sslverify=1" >> /etc/yum.repos.d/grafana.repo
+$ echo "sslcacert=/etc/pki/tls/certs/ca-bundle.crt" >> /etc/yum.repos.d/grafana.repo
 $ yum install grafana
 ...
 $ systemctl start grafana-server
@@ -128,7 +144,7 @@ Version 6.6.0 (commit: 742d165, branch: HEAD)
 ```
 
 ### Root
-
+Root SW installation
 ```bash
 $ yum install git cmake gcc-c++ gcc binutils libX11-devel libXpm-devel libXft-devel libXext-devel
 ...

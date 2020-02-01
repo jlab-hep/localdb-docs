@@ -1,10 +1,8 @@
 # Viewer Application
 
-## Getting start
-
 ### 1. Setup Viewer Application by the script 'setup_viewer.sh'
-
-In this step, you have to set the editor command (e.g. vim, emacs) if the environmental variable 'EDITOR' has not registered.
+Create config file to setup viewer.<br>
+Input localdb admin's username and password in the middle of the command.(e.g.:USERNAME=hokuyama,PASSWORD=itkweek)
 
 ```bash
 $ cd ~/work/localdb-tools/viewer
@@ -20,8 +18,8 @@ Local DB Server port: 27017
 [LDB] Do you use admin functions for LocalDB viewer? [y/n]
 > y
  
-Input localDB admin's username: USERNAME
-Input localDB admin's password:  
+Input localDB admins username: USERNAME
+Input localDB admins password:  
 
 [LDB] Authentication succeeded![LDB] Check plotting tool...
 Cloning into '/root/work/localdb-tools/viewer/plotting-tool'...
@@ -29,7 +27,9 @@ Cloning into '/root/work/localdb-tools/viewer/plotting-tool'...
 [LDB] More information: https://localdb-docs.readthedocs.io/en/master/
 ```
 
-### 2. Start the application by the command 'app.py'
+### 2. Start LocalDB viewer with the command 'app.py'
+Start LocalDB viewer with the bellow command.
+**Don't stop this process to see the viewer through this tutorial.You have to chenge the sreen from next step.** 
 
 ```bash
 $ ./app.py --config admin_conf.yml
@@ -45,4 +45,4 @@ Authentication succeeded.
 2020-01-31 23:25:24 localdbserver.cern.ch werkzeug[18847] INFO  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 ```
 
-Finish installation. Back to the previous page and go to next step.
+Finish to setup LocalDB viewer. Back to the previous page and go to next step.

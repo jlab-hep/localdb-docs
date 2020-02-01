@@ -1,26 +1,29 @@
 # Scan the component data
 
-## Goal
+### Create ssh tunnel 
+To connect mongoDB of DB machine from your local machine, Do the bellow comand on your command prompt.<br>
+**Change the server name according to the given name** (e.g.:root@localdbserver1)<br> 
+Password is the DB server account's password.(Default is "password".)
 
-Run scanConsole with the component data and upload the results into Local DB.
-
-### 1.Create ssh tunnel
 ```bash
 $ ssh -2 -C -Y -L 27017:localhost:27017 root@localdbserverX -fN -p22
 Password:
 ```
-
-### 2. Set username and password for mongodb 
+### 1. Set username and password for mongodb 
+Set username and password with the bellow command to connect mongoDB with authentification.<br>
+Input LocalDB admin's username and password you have set before.
 ```bash
+$ cd ~/work/YARR
 $ source localdb/login_mongodb.sh
 Input mongodb account's username: 
 Input mongodb account's password: 
 [LDB]Username and password are saved.
 ```
 
-### 3. Set up database config
+### 2. Set up database config
+Set the config files with the bellow command to save the mongoDB's information.<br>
+You don't have to change anything in this tutorial. Please answer "y" in all steps.
 ```bash
-$ cd ~/work/YARR
 $ ./localdb/setup_db.sh
 [LDB] Set editor command ...
 [LDB] > emacs
@@ -28,7 +31,7 @@ $ ./localdb/setup_db.sh
 [LDB] Checking Python Packages ...
 [LDB]     ... OK!
 [LDB]
-[LDB] Checking Database Config: /Users/okuyama/.yarr/localdb/mac_database.json ...
+[LDB] Checking Database Config: ...
 [LDB]
 [LDB] -----------------------
 [LDB] --  Mongo DB Server  --
@@ -63,8 +66,9 @@ $ ./localdb/setup_db.sh
 [LDB]   Access 'https://localdb-docs.readthedocs.io/en/master/'
 ```
 
-
-### 4. Create config files from mongodb
+### 3. Create config files from mongodb
+To create config files for scanConsole of YARR-SW, do the bellow command.<br>
+(We use the downloaded component's peoperty. Device's serial number is "20UPGRS0000009", chip's serial number is "20UPGRA0000026")
 ```bash
 $ ./localdb/bin/localdbtool-retrieve pull --chip 20UPGRS0000009 
 #DB WARNING# Not found test data of the component: 20UPGRS0000009
@@ -76,14 +80,11 @@ $ ./localdb/bin/localdbtool-retrieve pull --chip 20UPGRS0000009
 #DB INFO# Retrieve ... ./db-data/connectivity.json
 #DB INFO# -----------------------
 ```
-
 The config files for the module are generated in './db-data'.<br>
 
-### 4. Change stage name 
-
-Change the module config file (db-data/connectivity.json) as follows:
-
-```bash
+### 4. Change stage name in the config file
+Edit the connectivity file(db-data/connectivity.json) and change stage name to "WIREBONDING".
+```json
 {
     "stage": "WIREBONDING",
     "chips": [
@@ -101,15 +102,15 @@ Change the module config file (db-data/connectivity.json) as follows:
 }
 ```
 
-
 ### 5. scanConsole and combine DCS data
+
+Run scanConsole and do electrical readout with bellow command. 
 
 ```bash
 $ ./bin/scanConsole -r configs/controller/specCfg.json -c db-data/connectivity.json -s configs/scans/rd53a/std_digitalscan.json -W
 <lots of text>
 ```
-Change the DCS config file (localdb/configs/influxdb_connectivity.json) as follows:
-
+To combine DCS data, edit the DCS uploader config file (localdb/configs/influxdb_connectivity.json) as follows:
 ```json
 {
     "environments" : [
@@ -152,17 +153,19 @@ Change the DCS config file (localdb/configs/influxdb_connectivity.json) as follo
     ]
 }
 ```
-
-Next run dbAccessor:
-
+Next run dbAccessor to upload DCS data from influxDB to LocalDB:
 ```bash
 $ ./bin/dbAccessor -F localdb/cobfigs/influxdb_connectivity.json -n 20UPGRA0000026 -s data/last_scan/scanLog.json
+...
 ```
-Check if the test data was uploaded following [http://127.0.0.1:5000/localdb/scan](http://127.0.0.1:5000/localdb/scan).<br>
+Check the test result and DCS plot from following link [http://127.0.0.1:5000/localdb/scan](http://127.0.0.1:5000/localdb/scan).<br>
 
-### 6. scanConsole and combine DCS data
+### 6. Tuning steps for QC
 
-If you want to conbine DCS data with each scan, you have to put the command between scans.(./bin/dbAccessor -F localdb/cobfigs/influxdb_connectivity.json -n 20UPGRA0000026 -s data/last_scan/scanLog.json)
+Do simplified tuning steps for the chip by following bellow commands as module QC.
+If you want to conbine DCS data with each scan, you have to put the command between scans.<br>
+(./bin/dbAccessor -F localdb/cobfigs/influxdb_connectivity.json -n 20UPGRA0000026 -s data/last_scan/scanLog.json)
+
 ```bash
 $ ./bin/scanConsole -r configs/controller/specCfg.json -c db-data/connectivity.json -s configs/scans/rd53a/std_digitalscan.json -W
 $ ./bin/scanConsole -r configs/controller/specCfg.json -c db-data/connectivity.json -s configs/scans/rd53a/diff_analogscan.json -W
@@ -176,4 +179,4 @@ $ ./bin/scanConsole -r configs/controller/specCfg.json -c db-data/connectivity.j
 ```
 Check the test results [http://127.0.0.1:5000/localdb/scan](http://127.0.0.1:5000/localdb/scan).<br>
 
-Finish installation. Back to the previous page and go to next step.
+Finish. Back to the previous page and go to next step.

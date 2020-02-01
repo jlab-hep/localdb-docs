@@ -1,7 +1,10 @@
+## Installation for the DAQ machine
+For centos7<br>
+Setup the DAQ machine environment from here. You should change the screen and check if you are in local DAQ machine.
+
 ### yum packages
-
-- g++ version 7.0 or higher for YARR SW installation
-
+Please answer "y" in all when you should input.
+- g++ version 7.0 or higher
 ```bash
 $ sudo yum install centos-release-scl
 ...
@@ -13,7 +16,7 @@ g++ (GCC) 7.3.1 20180303 (Red Hat 7.3.1-5)
 ...
 ```
 
-- cmake3 for YARR SW installation
+- cmake3
 ```bash
 $ sudo yum install epel-release
 ...

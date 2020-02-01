@@ -1,6 +1,10 @@
 # Run DCS controller and Checking in Grafana
 
-## Create ssh tunnel
+### Create ssh tunnel 
+To connect influxDB of DB machine from your local machine, Do the bellow comand on your command prompt.<br>
+**Change the server name according to the given name** (e.g.:root@localdbserver1)<br> 
+Password is the DB server account's password.(Default is "password".)
+
 ```bash
 $ ssh -2 -C -Y -L 8086:localhost:8086 root@localdbserverX -fN 
 Password:

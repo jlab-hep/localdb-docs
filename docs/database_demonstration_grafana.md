@@ -1,9 +1,13 @@
 # grafana
 
-### View from DAQ machine
-If you want to see the grafana viewer on your browse, you should execute the bellow comand.
+### Create ssh tunnel 
+To see grafana on your browser, Do the bellow comand on your command prompt.<br>
+**Change the server name according to the given name** (e.g.:root@localdbserver1)<br> 
+Password is the DB server account's password.(Default is "password".)
+
 ```bash
 $ ssh -2 -C -Y -L 3000:localhost:3000 root@localdbserverX -fN
+Password:
 ```
 
 ## Getting start
