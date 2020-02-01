@@ -1,6 +1,11 @@
 ### Upload selected results to ITkPD.
 
-Go to the selection page [http://127.0.0.1:5000/localdb/select_test](http://127.0.0.1:5000/localdb/select_test)
+Go to the selection page [http://127.0.0.1:5000/localdb/select_test](http://127.0.0.1:5000/localdb/select_test)<br><br>
+
+**Input module name and stage at first.**<br>
+**Module:"20UPGRS0000009"**<br>
+**Stage:"WIREBONDING"**<br><br>
+
 ![result_selection_for_itkpd.png](images/result_selection_for_itkpd.png)
 ![result_selection_for_itkpd_2.png](images/result_selection_for_itkpd_2.png)
 ![result_selection_for_itkpd_3.png](images/result_selection_for_itkpd_3.png)
