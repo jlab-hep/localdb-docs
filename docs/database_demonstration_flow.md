@@ -1,4 +1,4 @@
-# Database Demonstration
+# QC Demonstration
 ![Local DB](images/logo.png)
 
 ## Structure of SW and DB
