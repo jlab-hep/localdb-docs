@@ -12,7 +12,7 @@ Password is the DB server account's password.(Default is "password".)
 $ ssh -2 -C -Y -L 8086:localhost:8086 root@localdbserverX -fN 
 Password:
 ```
-![ssh tunnel influx](images/sshtunnel_influx.png)
+![ssh tunnel influxdb](images/sshtunnel_influxdb.png)
 
 ## Run script to get temperature
 To get environmental temperature and store the data into influxDB, do the following command.<br>
