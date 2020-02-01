@@ -2,17 +2,19 @@
 ![Local DB](images/logo.png)
 
 ## Structure of SW and DB
-![SW_structure](images/SW_structure.png)
-Production DB: A central DB for ITk,setup in Czech.
+![SW_Structure](images/SW_Structure.png)
+Production DB: A central DB for ITk,setup in Czech.<br>
 MongoDB: A local DB to store module info, scan results and so on.<br>
 InfluxDB: A local DB to store DCS data. <br>
 LocalDB viewer: A web application to see the contents of mongoDB.<br>
 Grafana: A web application to see the contents of influxDB.<br><br>
 
 Assume we have two machines, DAQ machine and DB machine in this tutorial.<br>
-DAQ machine is the local machine you use in the room. Run YARR-SW and DCS controller. Get scan results and DCS sata in this machine and send DB machine the taken data.<br>
-DB machine is the remote machine to store the scan and DCS data. Install mongoDB, InfluxDB and some related functions.<br><br>
-Firstly, we create the environment for QC tutorial to install the DB and SW to each machine. Then we demonstrate QC according to the following flow.<br>
+DAQ machine is the local machine you use in the room. <br>
+Run YARR-SW and DCS controller. Get scan results and DCS sata in this machine and send DB machine the taken data.<br>
+DB machine is the remote machine to store the scan and DCS data.<br>
+There are mongoDB, InfluxDB and some related functions.<br><br>
+Firstly, we create the environment for QC tutorial to install the DB and SW for each machine. Then we demonstrate QC according to the following flow.<br>
 
 ## Tutorial Flow
 In DB demonstration, we can do as follow things:
