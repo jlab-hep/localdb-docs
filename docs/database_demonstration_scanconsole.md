@@ -110,7 +110,6 @@ Run scanConsole and do electrical readout with bellow command.
 
 ```bash
 $ ./bin/scanConsole -r configs/controller/specCfg.json -c db-data/connectivity.json -s configs/scans/rd53a/std_digitalscan.json -W
-<lots of text>
 ```
 To combine DCS data, edit the DCS uploader config file (***localdb/configs/influxdb_connectivity.json***) as follows:
 ```json
@@ -158,7 +157,6 @@ To combine DCS data, edit the DCS uploader config file (***localdb/configs/influ
 Next run dbAccessor to upload DCS data from influxDB to LocalDB:
 ```bash
 $ ./bin/dbAccessor -F localdb/configs/influxdb_connectivity.json -n 20UPGRA0000026 -s data/last_scan/scanLog.json
-...
 ```
 Check the test result and DCS plot from following link [http://127.0.0.1:5000/localdb/scan](http://127.0.0.1:5000/localdb/scan).<br>
 
@@ -178,8 +176,8 @@ Test items for tuning are bellow:<br>
 - diff_totscan<br>
 
 Do this tuning steps for the chip by following bellow commands as module QC.<br>
-If you want to conbine DCS data with each scan, you have to put the command between scans.<br>
-(./bin/dbAccessor -F localdb/configs/influxdb_connectivity.json -n 20UPGRA0000026 -s data/last_scan/scanLog.json)
+If you want to conbine DCS data with each scan, put the following command between scans.<br>
+./bin/dbAccessor -F localdb/configs/influxdb_connectivity.json -n 20UPGRA0000026 -s data/last_scan/scanLog.json
 
 ```bash
 $ ./bin/scanConsole -r configs/controller/specCfg.json -c db-data/connectivity.json -s configs/scans/rd53a/diff_analogscan.json -W
