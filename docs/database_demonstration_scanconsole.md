@@ -162,6 +162,8 @@ $ ./bin/dbAccessor -F localdb/cobfigs/influxdb_connectivity.json -n 20UPGRA00000
 ```
 Check the test result and DCS plot from following link [http://127.0.0.1:5000/localdb/scan](http://127.0.0.1:5000/localdb/scan).<br>
 
+![demo scan](images/demo_scan.png)
+
 ### 6. Tuning steps for QC
 Test items for tuning are bellow:<br>
 - diff_analogscan<br>

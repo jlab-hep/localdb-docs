@@ -14,6 +14,7 @@ $ ssh root@localdbserverX
 Password: 
 Last login: ... 2020 from monkeyisland.dyndns.cern.ch
 ```
+![ssh connection](images/ssh_connection.png)
 
 ### yum packages
 - g++ version 7.0 or higher<br>

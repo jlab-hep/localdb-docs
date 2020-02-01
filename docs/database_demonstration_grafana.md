@@ -51,4 +51,5 @@ Skip this step and return here after run DCS controller.
 
 ![grafana add dashboard](images/demo_grafana_db_source_5.png)
 
+![watch influxDB via grafana](images/demo_watch_grafana.png)
 Finish. Back to the previous page and go to next step.
