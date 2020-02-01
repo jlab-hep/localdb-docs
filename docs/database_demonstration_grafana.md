@@ -28,7 +28,7 @@ Login with the username: 'admin' and the password: 'admin'
 1. Click "Add data source"
 2. Click "InfluxDB"
 
-![grafana add db source](images/demo_grafana_db_source_1.png)
+![grafana add db source](images/demo_grafana_db_source_1.png)<br>
 ![grafana add db source](images/demo_grafana_db_source_2.png)
 
 3. Set URL "http://localhost:8086"
@@ -50,4 +50,4 @@ Skip this step and return here after run DCS controller.
 
 ![grafana add dashboard](images/demo_grafana_db_source_5.png)
 
-Finish installation. Back to the previous page and go to next step.
+Finish. Back to the previous page and go to next step.

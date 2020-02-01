@@ -15,8 +15,8 @@ Input LocalDB admin's username and password you have set before.
 ```bash
 $ cd ~/work/YARR
 $ source localdb/login_mongodb.sh
-Input mongodb account's username: 
-Input mongodb account's password: 
+Input mongodb accounts username: 
+Input mongodb accounts password: 
 [LDB]Username and password are saved.
 ```
 
@@ -66,7 +66,7 @@ $ ./localdb/setup_db.sh
 [LDB]   Access 'https://localdb-docs.readthedocs.io/en/master/'
 ```
 
-### 3. Create config files from mongodb
+### 3. Create scan config files from mongodb
 To create config files for scanConsole of YARR-SW, do the bellow command.<br>
 (We use the downloaded component's peoperty. Device's serial number is "20UPGRS0000009", chip's serial number is "20UPGRA0000026")
 ```bash
@@ -82,7 +82,7 @@ $ ./localdb/bin/localdbtool-retrieve pull --chip 20UPGRS0000009
 ```
 The config files for the module are generated in './db-data'.<br>
 
-### 4. Change stage name in the config file
+### 4. Change stage name in the scan config file
 Edit the connectivity file(db-data/connectivity.json) and change stage name to "WIREBONDING".
 ```json
 {
@@ -162,7 +162,7 @@ Check the test result and DCS plot from following link [http://127.0.0.1:5000/lo
 
 ### 6. Tuning steps for QC
 
-Do simplified tuning steps for the chip by following bellow commands as module QC.
+Do simplified tuning steps for the chip by following bellow commands as module QC.<br>
 If you want to conbine DCS data with each scan, you have to put the command between scans.<br>
 (./bin/dbAccessor -F localdb/cobfigs/influxdb_connectivity.json -n 20UPGRA0000026 -s data/last_scan/scanLog.json)
 
