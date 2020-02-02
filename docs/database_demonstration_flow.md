@@ -46,7 +46,7 @@ Upload the results to the Production DB
 
 ## Contact
 Let me know if you have questions or comments.<br>
-E-mail:hiroki.okuyama@cern.ch<br>
+E-mail:hiroki.okuyama at cern.ch<br>
 Mattermost:[https://mattermost.web.cern.ch/yarr/channels/localdb](https://mattermost.web.cern.ch/yarr/channels/localdb)
 <!--
 ![demo flow](images/demo_flow.png)
