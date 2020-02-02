@@ -1,8 +1,8 @@
 # grafana
 
-### Create ssh tunnel 
-To see grafana on your browser, Do the bellow comand on your command prompt.<br>
-**Change the server name according to the given name** (e.g.:root@localdbserver1)<br> 
+### Create an ssh tunnel 
+In order to see grafana on your browser, Run the following comand on your shell.<br>
+**Change the server name accordingly** (e.g.:root@localdbserver1)<br> 
 Password is the DB server account's password.(Default is "password".)
 
 ```bash
@@ -37,7 +37,6 @@ Login with the username: 'admin' and the password: 'admin'
 ![grafana add db source](images/demo_grafana_db_source_3.png)
 
 ### (d) Create New Dashboard
-Skip this step and return here after run DCS controller.
 
 1. Click "+"
 2. Click "Add Query"
@@ -49,4 +48,5 @@ Skip this step and return here after run DCS controller.
 
 ![grafana add dashboard](images/demo_grafana_db_source_5.png)
 
-Finish. Back to the previous page and go to next step.
+Go to next step.<br>
+[scanConsole and tuning](database_demonstration_scanconsole.md)<br>

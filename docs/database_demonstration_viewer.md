@@ -1,6 +1,6 @@
 # Viewer Application
 
-### 1. Setup Viewer Application by the script 'setup_viewer.sh'
+### 1. Setup the Viewer Application by the script 'setup_viewer.sh'
 Create config file to setup viewer.<br>
 Input localdb admin's username and password in the middle of the command.<br>
 (e.g.: USERNAME=hokuyama, PASSWORD=itkweek)
@@ -29,8 +29,8 @@ Cloning into '/root/work/localdb-tools/viewer/plotting-tool'...
 ```
 
 ### 2. Start LocalDB viewer with the command 'app.py'
-Start LocalDB viewer with the bellow command.<br>
-<span style="color: red; ">**Don't stop this process through this tutorial. Chenge the screen from next step.**</span>
+Start LocalDB viewer using the following command.<br>
+<span style="color: red; ">**Don't kill this process throughout the course of this tutorial. Use another shell from the next step.**</span>
 
 ```bash
 $ ./app.py --config admin_conf.yml
@@ -46,4 +46,5 @@ Authentication succeeded.
 2020-01-31 23:25:24 localdbserver.cern.ch werkzeug[18847] INFO  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 ```
 
-Finish to setup LocalDB viewer. Back to the previous page and go to next step.
+Go to next step.<br>
+[Installation for DAQ machine](database_demonstration_install_daq_machine.md)<br>

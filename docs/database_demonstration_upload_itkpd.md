@@ -1,4 +1,4 @@
-### Upload selected results to ITkPD.
+### Upload selected results to Production DB.
 
 Go to the selection page [http://127.0.0.1:5000/localdb/select_test](http://127.0.0.1:5000/localdb/select_test)<br><br>
 

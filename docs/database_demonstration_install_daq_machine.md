@@ -1,7 +1,7 @@
-## Installation for the DAQ machine
+## Installation of the DAQ machine
 For centos7<br>
-Setup the DAQ machine environment from here. <br>
-<span style="color: red; ">**Change the screen from DB machine's one and check if you are in local.**</span>
+Setup the DAQ machine environment in this page. <br>
+<span style="color: red; ">**Use another shell than the DB machine's one and check if you are in local.**</span>
 
 ### yum packages
 - g++ version 7.0 or higher<br>
@@ -50,4 +50,5 @@ $ make -j4
 $ make install
 ```
 
-Finish installation. Back to the previous page and go to next step.
+Go to next step.<br>
+[Module Download](database_demonstration_download_itkpd.md)<br>

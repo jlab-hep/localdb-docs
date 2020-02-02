@@ -1,13 +1,13 @@
 ## Installation for the DB machine
 For centos7<br>
-Setup the DB machine environment from here.
+Setup the DB machine environment.
 
-### Connect DB machine via ssh
+### Connect to the DB machine via ssh
 
-Please do the following command on your command prompt to connect DB machine via ssh.<br>
-We prepared a virtual server and tell you the server name.<br>
+Please run following command on your shell to connect DB machine via ssh.<br>
+We launched a virtual server and tell you the server name.<br>
 **Change the server name according to the given name** (e.g.:root@localdbserver1)<br> 
-Default password is "password".
+The default password is "password".
 
 ```bash
 $ ssh root@localdbserverX
@@ -67,8 +67,8 @@ $ git clone https://gitlab.cern.ch/YARR/localdb-tools.git -b devel
 ### Mongo DB
 
 MongoDB version 4.2 or higher for Local DB<br>
-This is a main database to store QC results<br>
-**There might be some error masages but please don't worry and go ahead.**
+This is the database to store the QC results<br>
+**There might be some error masages but please ignore them and proceed.**
 ```bash
 $ cd ~/work/localdb-tools/scripts/shell
 $ ./upgrade_mongoDB_centos.sh
@@ -98,8 +98,8 @@ bye
 ```
 ### influxDB
 
-This is a database to store DCS data<br>
-Do the bellow command at once.
+This is the database to store the DCS data<br>
+Run the following the bellow command at once including the last EOF.
 ```bash
 cat <<EOF | sudo tee /etc/yum.repos.d/influxdb.repo
 [influxdb]
@@ -110,7 +110,7 @@ gpgcheck = 1
 gpgkey = https://repos.influxdata.com/influxdb.key
 EOF
 ```
-Install and Start influxDB
+Install and start influxDB
 ```bash
 $ yum install -y influxdb
 $ systemctl start influxdb
@@ -119,8 +119,8 @@ Influx DB shell version X.X.X
 > exit
 ```
 ### Grafana
-This is a web application to see contents of influxdb.<br>
-Do the bellow command at once.
+This is a web application to see the contents of influxdb.<br>
+Run the following command at once.
 ```bash
 cat <<EOF | sudo tee /etc/yum.repos.d/grafana.repo
 [grafana]
@@ -135,7 +135,7 @@ sslcacert=/etc/pki/tls/certs/ca-bundle.crt
 EOF
 ```
 
-Install and Start grafana
+Install and start grafana
 ```bash
 $ yum install -y grafana
 $ systemctl start grafana-server
@@ -152,4 +152,6 @@ $ wget https://root.cern/download/root_v6.18.04.Linux-centos7-x86_64-gcc4.8.tar.
 $ tar zxf root_v6.18.04.Linux-centos7-x86_64-gcc4.8.tar.gz
 $ source /opt/root/bin/thisroot.sh
 ```
-Finish installation. Back to the previous page and go to next step.
+Go to next step.<br>
+[Setting for MongoDB](database_demonstration_mongodb.md)<br>
+
