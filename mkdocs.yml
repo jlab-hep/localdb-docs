@@ -8,5 +8,4 @@ pages:
     - Advanced: advanced.md
     - Config Samples: config.md
     - FAQ: faq.md
-    - Demonstration: database_demonstration_flow.md
 theme: readthedocs
