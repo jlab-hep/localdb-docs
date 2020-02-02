@@ -18,23 +18,24 @@ First, we create the environment for the QC tutorial to install the DB and SW fo
 ## Tutorial
 In this QC demonstration, we can learn the following things:
 
-**[Beggining processes(only one)]**
+**The beggining processes**
 ### 1. Installation for the DB machine
 [Installation for the DB machine](database_demonstration_install_db_machine.md)<br>
 [Setting for MongoDB](database_demonstration_mongodb.md)<br>
 [Setting for LocalDB viewer](database_demonstration_viewer.md)<br>
+
 ### 2. Installation for the DAQ machine
 [Installation for the DAQ machine](database_demonstration_install_daq_machine.md)<br>
+
 ### 3. Download module ID info from the Production DB
-[Download Module ID info](database_demonstration_download_itkpd.md)<br>
+[Download Module ID info](database_demonstration_download_itkpd.md)<br><br><br>
 
-
-**[Processes per module per stage]**
-### 4. Setting up for QC scan 
+**The processes per module per stage.**
+### 4. Setup for the QC scan 
 [Hook-up the module to the devices and Run the DCS controller](database_demonstration_run_dcs.md)<br>
-[Retrieve module info and create config files for the scan](database_demonstration_setup_foe_scan.md)<br>
+[Retrieve module info and create config files for the scan](database_demonstration_setup_for_scan.md)<br>
 
-### 5. What to do to run QC
+### 5. What to do to run the QC
 [What to do for QC scan](database_demonstration_scanconsole.md)<br>
 
 ### 6. Upload scan results to the Production DB 
