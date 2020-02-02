@@ -28,7 +28,7 @@ In this QC demonstration, we can learn the follow things:
 1. [Installation](database_demonstration_install_daq_machine.md)<br>
 
 ### QC Flow
-1. [Module ID info Download](database_demonstration_download_itkpd.md)<br>
+1. [Download Module ID info](database_demonstration_download_itkpd.md)<br>
 Download the module data into Local DB from Production DB.
 2. [Hook up the module to the devices and Run the DCS controller](database_demonstration_run_dcs.md)<br>
 Run the DCS controller and read/monitor values(environment temp,current,voltage)
@@ -43,6 +43,11 @@ Upload the results to the Production DB
 
 
 
+
+## Contact
+Let me know if you have questions or comments.<br>
+E-mail:hiroki.okuyama@cern.ch<br>
+Mattermost:[https://mattermost.web.cern.ch/yarr/channels/localdb](https://mattermost.web.cern.ch/yarr/channels/localdb)
 <!--
 ![demo flow](images/demo_flow.png)
 -->

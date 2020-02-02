@@ -32,4 +32,4 @@ The device's serial number is "20UPGRS0000009", the chip's serial number is "20U
 ![demo_download_module](images/demo_download_module.png)
 
 Go to next step.<br>
-[Hook up module to devices and Run DCS controller](database_demonstration_run_dcs.md)<br>
+[Hook-up the module to the devices and Run the DCS controller](database_demonstration_run_dcs.md)<br>

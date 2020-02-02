@@ -51,4 +51,4 @@ $ make install
 ```
 
 Go to next step.<br>
-[Module Download](database_demonstration_download_itkpd.md)<br>
+[Download module ID infos](database_demonstration_download_itkpd.md)<br>

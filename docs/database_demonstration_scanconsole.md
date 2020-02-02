@@ -106,7 +106,7 @@ Edit the connectivity file(***db-data/connectivity.json***) and change stage nam
 
 ### (e). scanConsole and combine DCS data
 
-Run scanConsole and run the scan using the following command. 
+Run scanConsole and run the scan using the following command.(e.g. digitalscan) 
 
 ```bash
 $ ./bin/scanConsole -r configs/controller/specCfg.json -c db-data/connectivity.json -s configs/scans/rd53a/std_digitalscan.json -W
