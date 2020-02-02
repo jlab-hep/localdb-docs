@@ -24,19 +24,9 @@ For checking the setting of Local DB: /etc/mongod.conf
 
 ## Lock mongoDB
 Lock the mongoDB so that only those who know the account name and password can read and write to it.<br>
-Change /etc/mongod.conf as bellow:
+Run the following command.:
 ```bash
-$ cat /etc/mongod.conf
-# mongod.conf
-...
-<Documents...>
-...
-security:
-  authorization: enabled
-...
-<Documents...>
-...
-#snmp:
+$ echo "security.authorization: enabled" >> /etc/mongod.conf
 ```
 Reload the config file and restart the mongoDB service with the bellow command.
 ```bash
