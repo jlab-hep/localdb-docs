@@ -10,7 +10,7 @@ We launched a virtual server and tell you the server name.<br>
 The default password is "password".
 
 ```bash
-$ ssh root@localdbserverX
+$ ssh parrot@localdbserverXX
 Password: 
 Last login: ... 2020 from monkeyisland.dyndns.cern.ch
 ```
@@ -19,27 +19,21 @@ Last login: ... 2020 from monkeyisland.dyndns.cern.ch
 ### yum packages
 - g++ version 7.0 or higher<br>
 ```bash
-$ yum install -y centos-release-scl
-$ yum install -y devtoolset-7
+$ sudo yum install -y centos-release-scl
+$ sudo yum install -y devtoolset-7
 $ source /opt/rh/devtoolset-7/enable
-$ g++ --version
-g++ (GCC) 7.3.1 20180303 (Red Hat 7.3.1-5)
-...
 ```
 
 - cmake3
 
 ```bash
-$ yum install -y epel-release
-$ yum install -y cmake3
-$ cmake3 --version
-cmake3 version 3.14.6
-...
+$ sudo yum install -y epel-release
+$ sudo yum install -y cmake3
 ```
 
 - Other dependencies
 ```bash
-$ yum install -y git emacs
+$ sudo yum install -y git emacs
 ```
 
 ### Python packages
@@ -53,7 +47,7 @@ Python 3.6.8
 
 - python pip packages
 ```bash
-$ python3 -m pip install arguments coloredlogs Flask Flask-PyMongo Flask-HTTPAuth Flask-Mail pdf2image Pillow prettytable pymongo python-dateutil PyYAML pytz plotly matplotlib numpy requests tzlocal itkdb influxdb pandas
+$ sudo python3 -m pip install arguments coloredlogs Flask Flask-PyMongo Flask-HTTPAuth Flask-Mail pdf2image Pillow prettytable pymongo python-dateutil PyYAML pytz plotly matplotlib numpy requests tzlocal itkdb influxdb pandas
 ```
 
 ### LocalDB tools
@@ -61,7 +55,7 @@ Tools to operate LocalDB
 ```bash
 $ cd ~/
 $ mkdir work && cd work
-$ git clone https://gitlab.cern.ch/YARR/localdb-tools.git -b devel
+$ git clone https://gitlab.cern.ch/YARR/localdb-tools.git
 ```
 
 ### Mongo DB
@@ -86,15 +80,9 @@ y
 ...
 ```
 Start mongodb
+
 ```bash
-$ systemctl start mongod.service
-$ mongo
-MongoDB shell version v4.2.1
-...
-> db
-test
-> exit
-bye
+$ sudo systemctl start mongod.service
 ```
 ### influxDB
 
@@ -112,11 +100,8 @@ EOF
 ```
 Install and start influxDB
 ```bash
-$ yum install -y influxdb
-$ systemctl start influxdb
-$ influx
-Influx DB shell version X.X.X
-> exit
+$ sudo yum install -y influxdb
+$ sudo systemctl start influxdb
 ```
 ### Grafana
 This is a web application to see the contents of influxdb.<br>
@@ -137,16 +122,14 @@ EOF
 
 Install and start grafana
 ```bash
-$ yum install -y grafana
-$ systemctl start grafana-server
-$ grafana-server -v
-Version 6.6.0 (commit: 742d165, branch: HEAD)
+$ sudo yum install -y grafana
+$ sudo systemctl start grafana-server
 ```
 
 ### Root
 Root SW installation
 ```bash
-$ yum install -y git cmake gcc-c++ gcc binutils libX11-devel libXpm-devel libXft-devel libXext-devel gcc-gfortran openssl-devel pcre-devel mesa-libGL-devel mesa-libGLU-devel glew-devel ftgl-devel mysql-devel fftw-devel cfitsio-devel graphviz-devel avahi-compat-libdns_sd-devel python-devel libxml2-devel giflib wget
+$ sudo yum install -y git cmake gcc-c++ gcc binutils libX11-devel libXpm-devel libXft-devel libXext-devel gcc-gfortran openssl-devel pcre-devel mesa-libGL-devel mesa-libGLU-devel glew-devel ftgl-devel mysql-devel fftw-devel cfitsio-devel graphviz-devel avahi-compat-libdns_sd-devel python-devel libxml2-devel giflib wget
 $ cd /opt
 $ wget https://root.cern/download/root_v6.18.04.Linux-centos7-x86_64-gcc4.8.tar.gz
 $ tar zxf root_v6.18.04.Linux-centos7-x86_64-gcc4.8.tar.gz

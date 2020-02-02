@@ -5,11 +5,11 @@ composing
 
 ## Create an ssh tunnel 
 In order to connect to influxDB service in the DB machine from your local machine, Run the following comand on your shell.<br>
-**Change the server name according to the given name** (e.g.:root@localdbserver1)<br> 
+**Change the server name according to the given name** (e.g.:parrot@localdbserver99)<br> 
 Password is the DB server account's password.(Default is "password".)
 
 ```bash
-$ ssh -L 8086:localhost:8086 root@localdbserverX -fN 
+$ ssh -L 8086:localhost:8086 parrot@localdbserverXX -fN 
 Password:
 ```
 ![ssh tunnel influxdb](images/sshtunnel_influxdb.png)
@@ -40,8 +40,12 @@ This measurement runs until ctrl+C is pressed!
 TTI2:
 ...
 ```
-
 ![DCS system](images/demo_dcs_system.png)
+
+## The DCS data monitoring in Grafana
+Check the DCS data in "Grafana" by following the link bellow.<br>
+[Check DCS data in Grafana](database_demonstration_grafana.md)<br>
+
 
 Go to next step.<br>
 [Check DCS data Grafana](database_demonstration_grafana.md)<br>

@@ -1,5 +1,4 @@
 # QC Demonstration
-![Local DB](images/logo.png)
 
 ## Structure of SW and DB
 ![SW_Structure](images/SW_Structure.png)
@@ -19,30 +18,40 @@ First, we create the environment for the QC tutorial to install the DB and SW fo
 ## Tutorial
 In this QC demonstration, we can learn the follow things:
 
-### Installation for DB machine
+###Installation DB and SW
+#### Installation for DB machine
 1. [Installation](database_demonstration_install_db_machine.md)<br>
 2. [Setting for MongoDB](database_demonstration_mongodb.md)<br>
 3. [Setting for LocalDB viewer](database_demonstration_viewer.md)<br>
 
-### Installation for DAQ machine
+#### Installation for DAQ machine
 1. [Installation](database_demonstration_install_daq_machine.md)<br>
 
 ### QC Flow
 1. [Download Module ID info](database_demonstration_download_itkpd.md)<br>
 Download the module data into Local DB from Production DB.
+#### One time setup per module per stage
 2. [Hook up the module to the devices and Run the DCS controller](database_demonstration_run_dcs.md)<br>
 Run the DCS controller and read/monitor values(environment temp,current,voltage)
-3. [Check DCS data in Grafana](database_demonstration_grafana.md)<br>
-Checking the data in Grafana
-4. [scanConsole and tuning](database_demonstration_scanconsole.md)<br>
+3. [Retrieve module info and create config files for the scan](database_demonstration_setup_foe_scan.md)<br>
+Retrieve module info from mongoDB to the DAQ machine and create some config files for QC scan.
+#### What to do to run QC
+4. [QC scan](database_demonstration_scanconsole.md)<br>
+
+#### One time upload per module per stage
 Run scanConsole and store the test data to Local DB
 5. [Select and Upload results to the Production DB](database_demonstration_upload_itkpd.md)<br>
 Upload the results to the Production DB
 
 ## Appendix
-
-
-
+1. Document of "Traveling module"[(https://moduledaqdb.readthedocs.io/en/latest/)](https://moduledaqdb.readthedocs.io/en/latest/)
+2. Yarr docs[(https://yarr.readthedocs.io/en/latest/)](https://yarr.readthedocs.io/en/latest/)
+3. LocalDB docs[(https://localdb-docs.readthedocs.io/en/master/)](https://localdb-docs.readthedocs.io/en/master/)
+4. Tutorial page for ITk production DB[(https://gitlab.cern.ch/jpearkes/itkpd_tutorial/blob/master/README.md)](https://gitlab.cern.ch/jpearkes/itkpd_tutorial/blob/master/README.md)
+5. Module QC documentation[(https://cds.cern.ch/record/2702738/files/ATL-COM-ITK-2019-045.pdf?)](https://cds.cern.ch/record/2702738/files/ATL-COM-ITK-2019-045.pdf?)
+6. MongoDB web[(https://www.mongodb.com)](https://www.mongodb.com)
+7. InfluxDB web[(https://www.influxdata.com)](https://www.influxdata.com)
+8. Gragfana web[(https://grafana.com)](https://grafana.com)
 
 ## Contact
 Let me know if you have questions or comments.<br>

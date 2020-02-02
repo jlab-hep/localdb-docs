@@ -2,11 +2,11 @@
 
 ### Create an ssh tunnel 
 In order to see grafana on your browser, Run the following comand on your shell.<br>
-**Change the server name accordingly** (e.g.:root@localdbserver1)<br> 
+**Change the server name accordingly** (e.g.:root@localdbserver99)<br> 
 Password is the DB server account's password.(Default is "password".)
 
 ```bash
-$ ssh -L 3000:localhost:3000 root@localdbserverX -fN
+$ ssh -L 3000:localhost:3000 root@localdbserverXX -fN
 Password:
 ```
 ![ssh tunnel grafana](images/sshtunnel_grafana.png)
