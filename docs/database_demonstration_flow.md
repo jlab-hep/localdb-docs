@@ -8,7 +8,7 @@ InfluxDB: A DB dedicated for time series data to store DCS data. <br>
 LocalDB viewer: A web application to see the contents of mongoDB.<br>
 Grafana: A web application to see the contents of influxDB.<br><br>
 
-In this tutorial, we suppose we have two machines, a DAQ machine and a DB machine in this tutorial.<br>
+In this tutorial, we suppose we have two machines, a DAQ machine and a DB machine.<br>
 The DAQ machine is the local machine you use in the room. <br>
 Run YARR-SW and DCS controller. Get scan results and DCS data in this machine and send the obtained data to the DB machine.<br>
 The DB machine is a virtual remote machine which store the scan and DCS data.<br>
@@ -16,31 +16,33 @@ MongoDB, InfluxDB and some related services are provided.<br><br>
 First, we create the environment for the QC tutorial to install the DB and SW for both machines. Then we demonstrate QC procedure according to the tutorial bellow.<br>
 
 ## Tutorial
-In this QC demonstration, we can learn the follow things:
+In this QC demonstration, we can learn the following things:
 
-###Installation DB and SW
-#### Installation for DB machine
-1. [Installation](database_demonstration_install_db_machine.md)<br>
+### **Beggining process(only one)**
+#### Installation for the DB machine
+1. [Installation for the DB machine](database_demonstration_install_db_machine.md)<br>
 2. [Setting for MongoDB](database_demonstration_mongodb.md)<br>
 3. [Setting for LocalDB viewer](database_demonstration_viewer.md)<br>
-
-#### Installation for DAQ machine
-1. [Installation](database_demonstration_install_daq_machine.md)<br>
-
-### QC Flow
-1. [Download Module ID info](database_demonstration_download_itkpd.md)<br>
+#### Installation for the DAQ machine
+1. [Installation for the DAQ machine](database_demonstration_install_daq_machine.md)<br>
+#### Download module ID info from the Production DB
+[Download Module ID info](database_demonstration_download_itkpd.md)<br>
 Download the module data into Local DB from Production DB.
-#### One time setup per module per stage
-2. [Hook up the module to the devices and Run the DCS controller](database_demonstration_run_dcs.md)<br>
-Run the DCS controller and read/monitor values(environment temp,current,voltage)
-3. [Retrieve module info and create config files for the scan](database_demonstration_setup_foe_scan.md)<br>
-Retrieve module info from mongoDB to the DAQ machine and create some config files for QC scan.
-#### What to do to run QC
-4. [QC scan](database_demonstration_scanconsole.md)<br>
 
-#### One time upload per module per stage
+
+## **Process per module per stage**
+#### Setting up for QC scan 
+[Hook-up the module to the devices and Run the DCS controller](database_demonstration_run_dcs.md)<br>
+Run the DCS controller and read/monitor values(environment temp,current,voltage)
+[Retrieve module info and create config files for the scan](database_demonstration_setup_foe_scan.md)<br>
+Retrieve module info from mongoDB to the DAQ machine and create some config files for QC scan.
+
+#### What to do to run QC
+[QC scan](database_demonstration_scanconsole.md)<br>
 Run scanConsole and store the test data to Local DB
-5. [Select and Upload results to the Production DB](database_demonstration_upload_itkpd.md)<br>
+
+#### Upload scan results to the Production DB 
+[Select and Upload results to the Production DB](database_demonstration_upload_itkpd.md)<br>
 Upload the results to the Production DB
 
 ## Appendix
