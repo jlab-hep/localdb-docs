@@ -18,30 +18,30 @@ First, we create the environment for the QC tutorial to install the DB and SW fo
 ## Tutorial
 In this QC demonstration, we can learn the following things:
 
-### **Beggining process(only one)**
-#### Installation for the DB machine
-1. [Installation for the DB machine](database_demonstration_install_db_machine.md)<br>
-2. [Setting for MongoDB](database_demonstration_mongodb.md)<br>
-3. [Setting for LocalDB viewer](database_demonstration_viewer.md)<br>
-#### Installation for the DAQ machine
-1. [Installation for the DAQ machine](database_demonstration_install_daq_machine.md)<br>
-#### Download module ID info from the Production DB
+**Beggining process(only one)**
+### Installation for the DB machine
+[Installation for the DB machine](database_demonstration_install_db_machine.md)<br>
+[Setting for MongoDB](database_demonstration_mongodb.md)<br>
+[Setting for LocalDB viewer](database_demonstration_viewer.md)<br>
+### Installation for the DAQ machine
+[Installation for the DAQ machine](database_demonstration_install_daq_machine.md)<br>
+### Download module ID info from the Production DB
 [Download Module ID info](database_demonstration_download_itkpd.md)<br>
-Download the module data into Local DB from Production DB.
+Download the module data into Local DB from Production DB.<br><br>
 
 
-## **Process per module per stage**
-#### Setting up for QC scan 
+**Process per module per stage**
+### Setting up for QC scan 
 [Hook-up the module to the devices and Run the DCS controller](database_demonstration_run_dcs.md)<br>
 Run the DCS controller and read/monitor values(environment temp,current,voltage)
 [Retrieve module info and create config files for the scan](database_demonstration_setup_foe_scan.md)<br>
 Retrieve module info from mongoDB to the DAQ machine and create some config files for QC scan.
 
-#### What to do to run QC
+### What to do to run QC
 [QC scan](database_demonstration_scanconsole.md)<br>
 Run scanConsole and store the test data to Local DB
 
-#### Upload scan results to the Production DB 
+### Upload scan results to the Production DB 
 [Select and Upload results to the Production DB](database_demonstration_upload_itkpd.md)<br>
 Upload the results to the Production DB
 

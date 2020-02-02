@@ -9,7 +9,7 @@ Install "Yarr" in "work" directry:
 ```bash
 $ cd ~/work
 ```
-Please follow the link bellow to install Yarr-SW.
+Please follow the link bellow to install Yarr-SW.<br>
 [Yarr installation](https://yarr.readthedocs.io/en/latest/install/)
 
 

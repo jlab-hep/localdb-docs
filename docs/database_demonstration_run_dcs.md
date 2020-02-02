@@ -48,6 +48,6 @@ Check the DCS data in "Grafana" by following the link bellow.<br>
 
 
 Go to next step.<br>
-[Check DCS data Grafana](database_demonstration_grafana.md)<br>
+[Retrieve module info and create config files for the scan](database_demonstration_setup_foe_scan.md)<br>
 
 
