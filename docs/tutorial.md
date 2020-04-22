@@ -1,42 +1,36 @@
 # Quick Tutorial
 
-You can handle Local DB (e.g. store result data by YARR) following the tutorial.
+You can handle Local DB following the tutorial.<br>
+**Current supported OS is centOS7 & macOS (greather than 10.14). Let's try it on VM if your PC is neither.**<br>
 
-### Setup
+Click the title to jump to the instruction page.
 
-First please be sure to build YARR SW. <br>
+# [Trial Tutorial](trial-tutorial.md)
 
-```bash
-$ cd YARR
-$ (git checkout devel-localdb)
-$ mkdir build && cd build
-# for linux
-$ cmake3 ../                                             
-# for macOS
-$ cmake ../ -DCMAKE_TOOLCHAIN_FILE=../cmake/macos-clang 
-$ make -j4
-$ make install
-```
-> [More detail about YARR SW](https://yarr.readthedocs.io/en/latest/)
-
-And please be sure to setup Local DB setting using `setup_db.sh`. <br>
-This script confirms if the python packages is satisfied, the default config files are prepared, the commands are enabled, and the DB connection is established. <br>
-
-```bash
-$ cd ../
-$ ./localdb/setup_db.sh
-```
-> [More detail about setup_db.sh](setup-db.md)
-
-
-## [Basic Tutorial](basic-tutorial.md)
+This is a part of introduction of Local DB and Tools.<br>
+You can download minimum data-set in DB and try to use following functions on your own PC w/o read-out chips and YARR SW.<br>
 
 Contents:
 
-1. Scan and Upload data into Local DB
-2. Retrieve data from Local DB
+1. Setup minimum environments and data-set on your onw PC
+2. Check data in Viewer Application
+3. Upload result data into Local DB
+4. Retrieve data from Local DB
+
+## [Basic Tutorial](basic-tutorial.md)
+
+This is a basic instruction for read-out test and upload result into Local DB based on YARR SW.<br>
+You can follow this using emulator on your PC also.<br>
+
+Contents:
+
+1. Setup
+2. Scan and Upload data into Local DB
+3. Retrieve data from Local DB
 
 ## [Advanced Tutorial](advanced-tutorial.md)
+
+This is an advanced instruction for using Local DB and Tools.<br>
 
 Contents:
 

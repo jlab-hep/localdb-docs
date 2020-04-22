@@ -2,21 +2,28 @@
 
 You can store result data by YARR immediately following the tutorial.
 
-1. [Scan and Upload data into Local DB](#1-upload)
-2. [Retrieve data from Local DB](#2-retrieve)
+1. [Setup](#1-setup)
+2. [Scan and Upload data into Local DB](#2-upload)
+3. [Retrieve data from Local DB](#3-retrieve)
 
-<!--### 0. Setup
+### 1. Setup
 
 First please be sure to build YARR SW. <br>
 
 ```bash
 $ cd YARR
 $ mkdir build && cd build
-$ cmake3 ../                                             # for linux
-$ cmake ../ -DCMAKE_TOOLCHAIN_FILE=../cmake/macos-clang  # for macOS
+
+# for linux
+$ cmake3 ../
+
+# for macOS
+$ cmake ../ -DCMAKE_TOOLCHAIN_FILE=../cmake/macos-clang
+
 $ make -j4
+$ make install
 ```
-> [More detail about YARR SW](https://yarr.readthedocs.io/en/latest/)
+> More detail about YARR SW: [YARR Docs](https://yarr.readthedocs.io/en/latest/)
 
 And please be sure to setup Local DB setting using `setup_db.sh`. <br>
 This script confirms if the python packages is satisfied, the default config files are prepared, the commands are enabled, and the DB connection is established. <br>
@@ -25,9 +32,9 @@ This script confirms if the python packages is satisfied, the default config fil
 $ cd YARR
 $ ./localdb/setup_db.sh
 ```
-> [More detail about setup_db.sh](setup-db.md)-->
+> More detail about setup_db.sh: [setup-db.sh command](setup-db.md)-->
 
-### 1. Upload
+### 2. Upload
 
 You can scan and upload the test data into Local DB by `scanConsole -W` after [setup Local DB](#setup).
 
@@ -60,7 +67,7 @@ You can check if the upload is success in log file `HOME/.yarr/localdb/log/day.l
 2019-08-01 10:55:47,060 - INFO: -----------------------
 ```
 
-### 2. Retrieve
+### 3. Retrieve
 
 You can retrieve data from Local DB by `localdbtool-retrieve` after [setup Local DB](#setup).
 
