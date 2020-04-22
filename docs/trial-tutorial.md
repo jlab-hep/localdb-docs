@@ -40,6 +40,7 @@ You can download minimum data-set prepared for this trial into your own PC.<br>
 
 ```bash
 $ git clone https://gitlab.cern.ch/akubota/localdb-dataset.git  # need your account in gitlab.cern.ch
+$ ./download.sh
 ```
 
 #### iv. Replace data in MongoDB with minimum data-set
