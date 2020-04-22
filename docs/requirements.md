@@ -36,6 +36,6 @@ $ git clone https://gitlab.cern.ch/YARR/localdb-tools.git
 You can install them automatically or manually:
 
 - [Automatic Installation (centOS7)](automatic-install.md)
-- Automatic Installation (macOS) ... to be implemneted
+- [Automatic Installation (macOS)](automatic-install-macos.md)
 - [Manual Installation (centOS7)](manual-install.md)
 - [Manual Installation (macOS)](manual-install-macos.md)

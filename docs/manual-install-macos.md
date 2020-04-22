@@ -1,6 +1,6 @@
 # Manual Installation
 
-- [yum packages](#yum-packages)
+- [brew packages](#brew-packages)
 - [python packages](#python-packages)
 - [Mongo DB](#mongo-db)
 
@@ -22,7 +22,7 @@ Homebrew 2.2.1
 ...
 ```
 
-### yum packages
+### brew packages
 
 - g++ version 7.0 or higher for YARR SW installation
 
@@ -106,7 +106,7 @@ requests \
 tzlocal \
 itkdb \
 influxdb \
-pandas 
+pandas
 ```
 
 ### Mongo DB
