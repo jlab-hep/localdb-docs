@@ -16,9 +16,9 @@ Contents:
 2. Check data in Viewer Application
 3. Upload result data into Local DB
 4. Retrieve data from Local DB
-5. Register component data into ITk Production DB
-6. Retrieve component data from ITk Production DB
-7. Upload result data of registered component data into Local DB
+5. Download component data from ITk Production DB
+6. Scan with downloaded component data
+7. Upload result data of registered component data into Local DB (in progress)
 
 ## [Basic Tutorial](basic-tutorial.md)
 
