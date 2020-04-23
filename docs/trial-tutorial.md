@@ -44,6 +44,7 @@ You can download minimum data-set prepared for this trial into your own PC.<br>
 
 ```bash
 $ git clone https://gitlab.cern.ch/akubota/localdb-dataset.git  # need your account in gitlab.cern.ch
+$ cd localdb-dataset
 $ ./download_minimumdb.sh
 ```
 
@@ -96,7 +97,7 @@ localdb       0.134GB # This is Local DB replaced with minimum data-set
 
 ### 2. Viewer
 
-You can check data stored in minimum data-set on browser using Viewer Application.<br>
+You can check data stored in minimum data-set on browser using Viewer Application (default: http://127.0.0.1:5000/localdb/)<br>
 You can setup, start, and use Viewer Application following this page: [About Viewer Application](https://localdb-docs.readthedocs.io/en/devel/viewer/)
 
 ### 3. Upload
@@ -107,14 +108,14 @@ Or you can just upload data from result directory prepared for this trial as fol
 
 ```bash
 $ cd localdb-dataset
-$ tar xvzf result-fei4b.tar.gz
-$ tar xvzf result-rd53a.tar.gz
+$ tar xvzf fei4b-result.tar.gz
+$ tar xvzf rd53a-result.tar.gz
 $ cd -
 $
 $ cd YARR/localdb
 $ ./setup_db.sh -p 27017 # specify port to Local DB
-$ ./bin/localdbtool-upload scan ../../localdb-dataset/result-fei4b
-$ ./bin/localdbtool-upload scan ../../localdb-dataset/result-rd53a
+$ ./bin/localdbtool-upload scan ../../localdb-dataset/fei4b-result
+$ ./bin/localdbtool-upload scan ../../localdb-dataset/rd53a-result
 ```
 
 ### 4. Retrieve
