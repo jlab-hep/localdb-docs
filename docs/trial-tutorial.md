@@ -6,8 +6,8 @@ You can try to use Local DB and Viewer Application using minimum environments an
 2. [Check data in Viewer Application](#2-viewer)
 3. [Upload result data into Local DB](#3-upload)
 4. [Retrieve data from Local DB](#4-retrieve)
-5. [Register component data into ITk Production DB](#5-register-into-itkpd)
-6. [Retrieve component data from ITk Production DB](#6-retrieve-from-itkpd)
+5. [Download component data from ITk Production DB](#6-download-from-itkpd)
+6. [Scan with downloaded component data](#6-scan)
 7. [Upload result data of registered component data into Local DB](#7-upload-data-of-registered-component)
 
 
@@ -20,6 +20,7 @@ $ git clone https://gitlab.cern.ch/YARR/YARR.git # YARR SW
 $ git clone https://gitlab.cern.ch/YARR/localdb-tools.git # Local DB Tools
 $ cd localdb-tools && git checkout devel
 ```
+> Local DB Tools will be released in master branch as new version soon.
 
 #### ii. Install requirements
 
@@ -123,15 +124,32 @@ $ ./bin/localdbtool-upload scan ../../localdb-dataset/rd53a-result
 You can retrieve data from Local DB.<br>
 You can setup and use Retrieve Tool following this page: [About Retrieve Tool](https://localdb-docs.readthedocs.io/en/devel/retrieve/)<br>
 
-### 5. Register into ITkPD
+### 5. Download data from ITkPD
 
-in edit.
+You can download component list from ITk PD into Local DB.<br>
+You need ITk PD account (c.f. [Tutorial for GUI (by Andreas Heggelund)](https://indico.cern.ch/event/905734/contributions/3824355/attachments/2021113/3379403/ITKDB_GUI_Tutorial.pdf)) and administrator account for Viewer Application (c.f. [create_admin.sh](create_admin.md)).<br>
 
-### 6. Retrieve from ITkPD
+i. Go to downloading page: [http://127.0.0.1:5000/localdb/download_component](http://127.0.0.1:5000/localdb/download_component)
+
+ii. Enter username & password for Viewer Application to enter the page.
+
+iii. Enter 2 Access codes for ITk PD.
+
+iv. Push button 'Download component info'
+
+v. Finish and you can check component lists in the component page on browser.
+
+You can check more detail here: [Demonstration Docs](https://qc-demonstration.readthedocs.io/en/latest/database_demonstration_download_itkpd/).
+
+### 6. Scan
 
 in edit.
 
 ### 7. Upload data of registered component
+
+You can retrieve component data from Local DB, scan it, and push registered results from Local DB into ITk PD in the production.<br>
+Here, just try to retrieve component data, generate a scan-like result, and register them into Local DB.<br>
+You can also emulate with the retrieved component data if you can use emulator on your PC.<br>
 
 in edit.
 
