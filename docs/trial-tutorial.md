@@ -6,6 +6,10 @@ You can try to use Local DB and Viewer Application using minimum environments an
 2. [Check data in Viewer Application](#2-viewer)
 3. [Upload result data into Local DB](#3-upload)
 4. [Retrieve data from Local DB](#4-retrieve)
+5. [Register component data into ITk Production DB](#5-register-into-itkpd)
+6. [Retrieve component data from ITk Production DB](#6-retrieve-from-itkpd)
+7. [Upload result data of registered component data into Local DB](#7-upload-data-of-registered-component)
+
 
 ### 1. Setup
 
@@ -117,4 +121,16 @@ $ ./bin/localdbtool-upload scan ../../localdb-dataset/result-rd53a
 
 You can retrieve data from Local DB.<br>
 You can setup and use Retrieve Tool following this page: [About Retrieve Tool](https://localdb-docs.readthedocs.io/en/devel/retrieve/)<br>
+
+### 5. Register into ITkPD
+
+in edit.
+
+### 6. Retrieve from ITkPD
+
+in edit.
+
+### 7. Upload data of registered component
+
+in edit.
 
