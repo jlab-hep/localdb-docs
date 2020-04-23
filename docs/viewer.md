@@ -26,13 +26,20 @@ And please be sure to setup Viewer Application setting using `localdb-tools/view
 This script performs
 
 - to check if required python modules are installed
-- to confirm the viewer config file ( [localdb-tools/viewer/conf.yml](config.md) )
+- to make/confirm the viewer config file ( [localdb-tools/viewer/conf.yml](config.md) )
+- to make/confirm config for admin functions (e.g. user creation, ITk PD communication) (c.f. [create_admin.sh](create_admin.md))
 - to compile the [plotting tool](https://gitlab.cern.ch/YARR/utilities/plotting-tools) for displaying plots on the browser
 
 ```bash
 $ cd localdb-tools/viewer
 $ ./setup_viewer.sh
 < Setting up with some texts >
+
+[LDB] Do you use admin functions for LocalDB viewer? [y/n]
+>
+# you can set admin functions after running 'create_admin.sh'
+
+< some texts >
 ```
 
 **Additional options**

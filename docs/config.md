@@ -341,7 +341,7 @@ num null 0 0 0 0
     - `db` : The name of DB (default. "localdb")
     - `username` : username of user account in MongoDB if the user authentication is required
     - `password` : password of user account in MongoDB if the user authentication is required
-    - `KeyFile` : username & password info file created by [localdb-tools/setting/create_admin.sh]()
+    - `KeyFile` : username & password info file created by [localdb-tools/setting/create_admin.sh](create_admin.md)
     - `ssl/tls` : ssl/tls CA & certification file if ssl/tls is enabled
 - `userDB` : configures for Local User DB which is DB for localdb-tools
     - `db` : The name of DB (default. "localdbtool")
