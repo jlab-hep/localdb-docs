@@ -8,7 +8,7 @@
 - f. [Share data with the other Local DB (Synchronization Tool)](#f-share-data)
 - g. [Back-up Local DB (Archive Tool)](#g-backup)
 
-### a. Setup Web application of Local DB
+## a. Setup Web application of Local DB
 
 You can check informations in Local DB on browser using web-interface.<br>
 Firstly please run Viewer Application:
@@ -28,7 +28,7 @@ $ ./app.py --config conf.yml &
 
 And access '[http://127.0.0.1:5000/localdb/]' or corresponded url on the local browser in Local DB.
 
-### b. Register Component
+## b. Register Component
 
 You can register the component data and upload the test data associated with the registered component data.<br>
 First please the prepare component config file following [this sample format](config.md). <br>
@@ -48,7 +48,7 @@ y
 
 You can check the registered component on the url:'http://127.0.0.1:5000/localdb/component' or corresponded url on the local browser in Local DB.
 
-### c. Register Component from ITkPD
+## c. Register Component from ITkPD
 
 You can download component information from ITk production database and register the info to Local DB.<br>
 
@@ -75,7 +75,7 @@ $ ./bin/downloader.py --config my_conf.yml --option Module
 
 You can check the downloaded components on the url:'http://127.0.0.1:5000/localdb/component' or corresponded url on the local browser in Local DB.
 
-### d. scanConsole and Upload Test Data
+## d. scanConsole and Upload Test Data
 
 After [the component registration](#a-register-component) (or [the registeration from ITkPD](#b-register-component-from-itkpd)),<br>
 you can create the connectivity config file and the chip config files by `localdb-retrieve pull --chip <SERIAL NUMBER>`.<br>
@@ -107,7 +107,7 @@ $ ./bin/scanConsole \
 -r configs/controller/emuCfg.json \
 -c db-data/connectivity.json \
 -s configs/scans/fei4/std_digitalscan.json \
--W 
+-W
 <lots of text>
 #DB INFO# -----------------------
 #DB INFO# Function: Initialize
@@ -120,7 +120,7 @@ $ ./bin/scanConsole \
 
 You can check summary of the results on the url:'http://127.0.0.1:5000/localdb/scan' or corresponded url on the local browser in Local DB.
 
-### e. Register DCS
+## e. Register DCS
 
 <!--You can register DCS data associated with the test data for each chip data.<br>
 First please prepare DCS data (dcs.dat) and DCS config file (dcs_info.json) following [this sample format](config.md). <br>
@@ -139,12 +139,12 @@ $ ./bin/dbAccessor \
 in edit.
 
 
-### f. Share Data
+## f. Share Data
 
 You can share data with other Local DB using Synchronization Tool.<br>
 Please check [the detail page](sync.md) to get how to use.
 
-### g. Backup
+## g. Backup
 
 You can keep the back-up of Local DB using Archive Tool. <br>
 Please check [the detail page](archive.md) to get how to use.

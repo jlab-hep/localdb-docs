@@ -6,7 +6,7 @@ You can store result data by YARR immediately following the tutorial.
 2. [Scan and Upload data into Local DB](#2-upload)
 3. [Retrieve data from Local DB](#3-retrieve)
 
-### 1. Setup
+## 1. Setup
 
 First please be sure to build YARR SW. <br>
 
@@ -34,7 +34,7 @@ $ ./localdb/setup_db.sh
 ```
 > More detail about setup_db.sh: [setup-db.sh command](setup-db.md)-->
 
-### 2. Upload
+## 2. Upload
 
 You can scan and upload the test data into Local DB by `scanConsole -W` after [setup Local DB](#setup).
 
@@ -67,7 +67,7 @@ You can check if the upload is success in log file `HOME/.yarr/localdb/log/day.l
 2019-08-01 10:55:47,060 - INFO: -----------------------
 ```
 
-### 3. Retrieve
+## 3. Retrieve
 
 You can retrieve data from Local DB by `localdbtool-retrieve` after [setup Local DB](#setup).
 
