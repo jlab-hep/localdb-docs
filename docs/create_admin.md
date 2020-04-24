@@ -1,7 +1,7 @@
 # create_admin.sh
 
 This is a script for setting administrator account in Local DB for management of DB & Viewer Application.<br>
-It's located in here: [localdb-tools/setting/create_admin.sh](https://gitlab.cern.ch/YARR/localdb-tools/-/blob/master/setting/create_admin.sh)
+It's located in localdb-tools/setting: [localdb-tools/setting/create_admin.sh](https://gitlab.cern.ch/YARR/localdb-tools/-/blob/master/setting/create_admin.sh)
 
 ### Flow
 
