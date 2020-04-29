@@ -154,7 +154,7 @@ $ ssh -L <unused port number>:localhost:<port number to MongoDB Server on lxplus
 
 Then you can check viewer on browser on your local PC: http://127.0.0.1:5000/localdb/
 
-#### vi. More information
+#### vi. Additional information
 
 [About Viewer Application](https://localdb-docs.readthedocs.io/en/devel/viewer/)
 
@@ -242,14 +242,44 @@ $ ./localdb/bin/localdbtool-upload scan path/to/localdb-dataset/fei4b-result
 $ ./localdb/bin/localdbtool-upload scan path/to/localdb-dataset/rd53a-result
 ```
 
-#### v. More information
+#### v. Additional information
 
 [About Upload Tool](https://localdb-docs.readthedocs.io/en/devel/upload/)<br>
 
 ## 4. Retrieve
 
 You can retrieve data from Local DB.<br>
-You can setup and use Retrieve Tool following this page: [About Retrieve Tool](https://localdb-docs.readthedocs.io/en/devel/retrieve/)<br>
+
+#### i. Retrieve test log
+
+```bash
+$ pwd
+path/to/YARR
+$ ./localdb/bin/localdbtool-retrieve log
+```
+
+#### ii. Retrieve data files
+
+```bash
+$ pwd
+path/to/YARR
+$ ./localdb/bin/localdbtool-retrieve pull
+```
+
+#### iii. Retrieve/Create config files for registered component
+
+You can register component data by downloading from ITkPD. (See [5. Download data from ITkPD](#5-download-data-from-itkpd)
+
+```bash
+$ pwd
+path/to/YARR
+$ ./localdb/bin/localdbtool-retrieve pull --chip <serial number>
+# e.g. ./localdb/bin/localdbtool-retrieve pull --chip RD53A-001
+```
+
+#### iv. Additional information
+
+[About Retrieve Tool](https://localdb-docs.readthedocs.io/en/devel/retrieve/)<br>
 
 ## 5. Download data from ITkPD
 
@@ -258,7 +288,7 @@ You need ITk PD account (c.f. [Tutorial for GUI (by Andreas Heggelund)](https://
 
 i. Go to downloading page: [http://127.0.0.1:5000/localdb/download_component](http://127.0.0.1:5000/localdb/download_component)
 
-ii. Enter username & password for Viewer Application to enter the page.
+ii. Enter admin username & password for Viewer Application to enter the page. (admin is registered [here](#ii-create-admin-account-for-local-db))
 
 iii. Enter 2 Access codes for ITk PD.
 
