@@ -154,27 +154,97 @@ $ ssh -L <unused port number>:localhost:<port number to MongoDB Server on lxplus
 
 Then you can check viewer on browser on your local PC: http://127.0.0.1:5000/localdb/
 
-Detail: [About Viewer Application](https://localdb-docs.readthedocs.io/en/devel/viewer/)
+#### vi. More information
+
+[About Viewer Application](https://localdb-docs.readthedocs.io/en/devel/viewer/)
 
 ## 3. Upload
 
 You can upload read-out test result into Local DB after scanConsole automatically, or from specific result directory.<br>
+
+#### i. Setup
+
+```bash
+$ git clone https://gitlab.cern.ch/YARR/YARR.git
+$ cd YARR
+
+### step1. compile YARR commands (If you cannot proceed according to your environmental problems, you can skip here and go to next step)
+$ mkdir build && cd build
+$ cmake3 ../
+$ make -j4
+$ make install
+$ cd ../
+
+### step2.
+$ cd localdb
+$ ./setup_db.sh -p 27017 # specify port to MongoDB Server
+$ cd ../
+```
+> [About setup_db.sh](setup-db.md)
+
+#### ii. Confirmation
+
+```bash
+$ pwd
+path/to/YARR
+
+$ ./bin/dbAccessor -I  ### If you can compile YARR commands
+#DB INFO# -----------------------
+#DB INFO# Function: Initialize
+#DB INFO# [Connection Test] DB Server: mongodb://127.0.0.1:27017/localdb
+#DB INFO# ---> Connection is GOOD.
+#DB INFO# -----------------------
+
+$ ./localdb/bin/localdbtool-upload init
+#DB INFO# -----------------------
+#DB INFO# Function: Initialize
+#DB INFO# [Connection Test] DB Server: mongodb://127.0.0.1:27017/localdb
+#DB INFO# ---> Connection is GOOD.
+#DB INFO# -----------------------
+```
+
+#### iii. Upload w/ scanConsole (If you can compile YARR commands)
+
+You can upload results into Local DB after scanConsole just by adding option '-W'.
+
+```bash
+$pwd
+path/to/YARR
+
+### FEI4B emulator
+$ ./bin/scanConsole \
+-c configs/connectivity/example_fei4b_setup.json \
+-r configs/controller/emuCfg.json \
+-s configs/scans/fei4/std_digitalscan.json \
+-W
+
+### RD53A emulator
+$ ./bin/scanConsole \
+-c configs/connectivity/example_rd53a_setup.json \
+-r configs/controller/emuCfg_rd53a.json \
+-s configs/scans/rd53a/std_digitalscan.json \
+-W
+```
+
+Check if your result is uploaded in Viewer Application: http://127.0.0.1:5000/localdb/scan
+
+#### iv. Upload w/o scanConsole
+
 You can just upload data from result directory prepared for this trial as follows.
 
 ```bash
 $ cd localdb-dataset
 $ tar xvzf fei4b-result.tar.gz
 $ tar xvzf rd53a-result.tar.gz
-$ cd -
-$
-$ cd YARR/localdb
-$ ./setup_db.sh -p 27017 # specify port to Local DB
-$ ./bin/localdbtool-upload scan ../../localdb-dataset/fei4b-result
-$ ./bin/localdbtool-upload scan ../../localdb-dataset/rd53a-result
-```
-> [About setup_db.sh](setup-db.md)
 
-You can use more features of Upload Tool (e.g. uploading results with scanConsole) following this page: [About Upload Tool](https://localdb-docs.readthedocs.io/en/devel/upload/)<br>
+$ cd YARR
+$ ./localdb/bin/localdbtool-upload scan path/to/localdb-dataset/fei4b-result
+$ ./localdb/bin/localdbtool-upload scan path/to/localdb-dataset/rd53a-result
+```
+
+#### v. More information
+
+[About Upload Tool](https://localdb-docs.readthedocs.io/en/devel/upload/)<br>
 
 ## 4. Retrieve
 
