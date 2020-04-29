@@ -10,96 +10,151 @@ You can try to use Local DB and Viewer Application using minimum environments an
 6. [Scan with downloaded component data](#6-scan)
 7. [Upload result data of registered component data into Local DB](#7-upload-data-of-registered-component)
 
+## 0. Requirements
+
+- Python3 & pip modules: You can install [pipi modules](requirements-list.md) by `cd localdb-tools && python3 -m pip install -r setting/requirements-pip.txt`
 
 ## 1. Setup
 
-#### i. Clone git repository for Local DB Tools
+#### i. Clone git repository for this tutorial
 
-```bash
-$ git clone https://gitlab.cern.ch/YARR/YARR.git # YARR SW
-$ git clone https://gitlab.cern.ch/YARR/localdb-tools.git # Local DB Tools
-$ cd localdb-tools && git checkout devel
-```
-> Local DB Tools will be released in master branch as new version soon.
+You can download MongoDB Packages and minimum data-set for Local DB by following script.
 
-#### ii. Install requirements
-
-You can install all requirements by running installers (need sudo).
-
-- centOS7: [localdb-tools/setting/db_server_install.sh](https://gitlab.cern.ch/YARR/localdb-tools/-/blob/devel/setting/db_server_install.sh)
-- macOS: [localdb-tools/setting/macos/installer_macos.sh](https://gitlab.cern.ch/YARR/localdb-tools/-/blob/devel/setting/macos/installer_macos.sh)
-
-Or you can install following minimum requirements manually.
-
-- MongoDB ([Install Manual](https://docs.mongodb.com/manual/installation/))
-- Python3 & pip modules: You can install [pipi modules](requirements-list.md) by `cd localdb-tools && python3 -m pip install -r setting/requirements-pip.txt`
-
-You should make sure following points:
-
-- ROOT SW is installed and path to library is added. (You can confirm it by command: `root`)
-- MongoDB is running. (You can confirm it by command: `mongo`)
-
-#### iii. Download minimum data-set for trial
-
-You can download minimum data-set prepared for this trial into your own PC.<br>
+- `setup_all.sh`: download MongoDB Packages and minimum data-set
+  - `install_mongo.sh`: download MongoDB Packages
+  - `download_minimumdb.sh`: download minimum data-set
 
 ```bash
 $ git clone https://gitlab.cern.ch/akubota/localdb-dataset.git  # need your account in gitlab.cern.ch
 $ cd localdb-dataset
-$ ./download_minimumdb.sh
+$ ./seup_all.sh
+[LDB] Select your OS from the list. (Type a-d from the list)
+
+OS supported by tutorial
+  a) RHEL 6.2 Linux x64
+  b) RHEL 7.0 Linux x64
+  c) macOS x64
+OS not supported by tutorial
+  d) Others
+
+[LDB] > a    ### Set a if you are trying on lxplus server
 ```
 
-#### iv. Replace data in MongoDB with minimum data-set
-
-There are basically 3 ways to replace data.
-
-- mongorestore (recommended).
+#### ii. Start MongoDB Server
 
 ```bash
-$ cd localdb-dataset
-$ tar xvzf localdb-dump.tar.gz
-$ mongorestore --port 27017 --db localdb localdb-dump/localdb
-```
-
-- replcae directory
-
-```bash
-$ cd localdb-dataset
-$ tar xvzf localdb.tar.gz
-
-$ for centOS7
-$ mv localdb /var/lib/mongo
-$ sudo systemctl restart mongod
-
-# for macOS
-$ mv localdb /usr/local/var/mongodb
-$ brew services restart mongodb-community@4.2
-```
-
-- build another database (advanced)
-
-```bash
-$ cd localdb-dataset
-$ tar xvzf localdb.tar.gz
-$ mongod --config mongod.conf &    # DB port is set to 30000
-```
-
-You can confirm if the data is replicated as follows:
-
-```bash
-$ mongo --port <Local DB port> # Local DB port is 27017 in default, but 30000 if replaced by the last way
-MongoDB server version: 4.2.5
+$ pwd
+path/to/localdb-dataset
+$ ./mongodb-4.2.6/bin/mongod --config mongod.conf &
+$ cat mongod.conf | grep port
+27017 # This number is port to MongoDB Server
+$ ./mongodb-4.2.6/bin/mongod --port 27017 # Specify port number to MongoDB Server
+MongoDB shell version v4.2.6
 > show dbs
-admin         0.000GB
-config        0.000GB
-local         0.000GB
-localdb       0.134GB # This is Local DB replaced with minimum data-set
+admin    0.000GB
+config   0.000GB
+local    0.000GB
+localdb  0.134GB # Succeeded if you can check this repository
 ```
 
 ## 2. Viewer
 
-You can check data stored in minimum data-set on browser using Viewer Application (default: http://127.0.0.1:5000/localdb/)<br>
-You can setup, start, and use Viewer Application following this page: [About Viewer Application](https://localdb-docs.readthedocs.io/en/devel/viewer/)
+You can check data stored in minimum data-set on browser using Viewer Application.<br>
+
+#### i. Setup
+
+```bash
+$ git clone https://gitlab.cern.ch/YARR/localdb-tools.git # Local DB Tools
+$ cd localdb-tools && git checkout devel
+```
+
+#### ii. Create admin account for Local DB
+
+```bash
+$ pwd
+path/to/localdb-tools
+$ cd setting
+$ ./create_admin.sh -p <port to MongoDB Server>
+# e.g. ./create_admin.sh -p 27017
+Authentication succeeded!
+Local DB Server IP address: 127.0.0.1
+Local DB Server port: 27017
+
+Are you sure thats correct? [y/n] ### Enter y
+> y
+
+Register localDB admins username: USERNAME  ### Input your favorite username
+Register localDB admins password:           ### Input your favorite password
+Successfully added user:
+<some texts>
+
+$ cd -
+```
+
+#### iii. Create config file for Viewer Application
+
+```bash
+$ pwd
+path/to/localdb-tools
+$ cd viewer
+$ ./setup_viewer.sh -p 27017
+Local DB Server IP address: 127.0.0.1
+Local DB Server port: 27017
+
+[LDB] Are you sure thats correct? [y/n] ### Enter y
+> y
+
+[LDB] Welcome to Local Database Tools!
+...
+[LDB] Do you use admin functions for LocalDB viewer? [y/n] ### Enter y
+> y
+
+Input localDB admins username: USERNAME ### Input admin username set in create_admin.sh
+Input localDB admins password:          ### Input admin password set in create_admin.sh
+
+<some texts>
+
+$[LDB] Start Viewer Application by ...
+$[LDB]   python3 app.py --config admin_conf.yml
+```
+
+#### iv. Start Viewer Application
+
+```bash
+$ pwd
+path/to/localdb-tools/viewer
+$ python3 app.py --config admin_conf.yml
+Need user authentication.
+Authentication succeeded.
+2020-01-31 23:25:23 localdbserver.cern.ch matplotlib.font_manager[18847] INFO generated new fontManager
+2020-01-31 23:25:23 localdbserver.cern.ch root[18847] INFO [LDB] Viewer Application URL: http://127.0.0.1:5000/localdb/
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+2020-01-31 23:25:24 localdbserver.cern.ch werkzeug[18847] INFO  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+```
+
+And you can check Viewer on browser: http://127.0.0.1:5000/localdb/
+
+#### v. SSH Tunnel (for trying on lxplus server)
+
+```bash
+# on lxplus server
+$ ip address
+# -> get IP address to lxplus server (eth0.inet)
+```
+
+```bash
+# on your local PC
+$ ssh -L <unused port number>:localhost:<port number to MongoDB Server on lxplus> <username>@<ipaddress to lxplus server> -fN
+# e.g. ssh -L 27017:localhost:27017 user@127.0.0.1 -fN
+```
+
+Then you can check viewer on browser on your local PC: http://127.0.0.1:5000/localdb/
+
+Detail: [About Viewer Application](https://localdb-docs.readthedocs.io/en/devel/viewer/)
 
 ## 3. Upload
 
