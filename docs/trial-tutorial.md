@@ -38,6 +38,14 @@ OS not supported by tutorial
   d) Others
 
 [LDB] > a    ### Set a if you are trying on lxplus server
+<some texts>
+[LDB] Done.
+[LDB] Check README to get how to use commands in ./mongodb-4.2.6/bin
+
+[LDB] To make a path to commands in ./mongodb-4.2.6/bin you have to excute:
+[LDB] export PATH=path/to/mongodb-4.2.6/bin:$PATH"
+
+$ export PATH=path/to/mongodb-4.2.6/bin:$PATH
 ```
 
 #### ii. Start MongoDB Server
@@ -45,10 +53,14 @@ OS not supported by tutorial
 ```bash
 $ pwd
 path/to/localdb-dataset
+
+# To start the MongoDB server if you do the tutorial on lxplus you have to run
 $ ./mongodb-4.2.6/bin/mongod --config mongod.conf &
 $ cat mongod.conf | grep port
-27017 # This number is port to MongoDB Server
-$ ./mongodb-4.2.6/bin/mongod --port 27017 # Specify port number to MongoDB Server
+27017 # This number is port to MongoDB server
+
+# Confirmation of running MongoDB server
+$ ./mongodb-4.2.6/bin/mongo --port 27017 # Specify port number to MongoDB server
 MongoDB shell version v4.2.6
 > show dbs
 admin    0.000GB
@@ -74,7 +86,7 @@ $ cd localdb-tools && git checkout devel
 $ pwd
 path/to/localdb-tools
 $ cd setting
-$ ./create_admin.sh -p <port to MongoDB Server>
+$ ./create_admin.sh -p <port to MongoDB server>
 # e.g. ./create_admin.sh -p 27017
 Authentication succeeded!
 Local DB Server IP address: 127.0.0.1
@@ -168,16 +180,18 @@ You can upload read-out test result into Local DB after scanConsole automaticall
 $ git clone https://gitlab.cern.ch/YARR/YARR.git
 $ cd YARR
 
-### step1. compile YARR commands (If you cannot proceed according to your environmental problems, you can skip here and go to next step)
+### step1. compile YARR commands
 $ mkdir build && cd build
 $ cmake3 ../
 $ make -j4
 $ make install
 $ cd ../
+# If you cannot proceed according to your environmental problems,
+# you can skip here and go to step2.
 
 ### step2.
 $ cd localdb
-$ ./setup_db.sh -p 27017 # specify port to MongoDB Server
+$ ./setup_db.sh -p 27017 # specify port to MongoDB server
 $ cd ../
 ```
 > [About setup_db.sh](setup-db.md)
@@ -188,14 +202,15 @@ $ cd ../
 $ pwd
 path/to/YARR
 
-$ ./bin/dbAccessor -I  ### If you can compile YARR commands
+$ ./localdb/bin/localdbtool-upload init
 #DB INFO# -----------------------
 #DB INFO# Function: Initialize
 #DB INFO# [Connection Test] DB Server: mongodb://127.0.0.1:27017/localdb
 #DB INFO# ---> Connection is GOOD.
 #DB INFO# -----------------------
 
-$ ./localdb/bin/localdbtool-upload init
+### If you can compile YARR commands
+$ ./bin/dbAccessor -I
 #DB INFO# -----------------------
 #DB INFO# Function: Initialize
 #DB INFO# [Connection Test] DB Server: mongodb://127.0.0.1:27017/localdb
@@ -230,7 +245,7 @@ Check if your result is uploaded in Viewer Application: http://127.0.0.1:5000/lo
 
 #### iv. Upload w/o scanConsole
 
-You can just upload data from result directory prepared for this trial as follows.
+You can just upload data from result directory prepared for this trial as follows even if you cannot compile YARR commands.
 
 ```bash
 $ cd localdb-dataset
