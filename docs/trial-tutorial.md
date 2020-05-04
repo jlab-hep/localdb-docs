@@ -148,8 +148,8 @@ $ ip address
 
 ```bash
 # on your local PC
-$ ssh -L <unused port number>:localhost:<port number to MongoDB Server on lxplus> <username>@<ipaddress to lxplus server> -fN
-# e.g. ssh -L 27017:localhost:27017 user@127.0.0.1 -fN
+$ ssh -L <unused port number>:localhost:<port number to Viewer Application on lxplus> <username>@<ipaddress to lxplus server> -fN
+# e.g. ssh -L 5000:localhost:5000 user@127.0.0.1 -fN
 ```
 
 Then you can check viewer on browser on your local PC: http://127.0.0.1:5000/localdb/
