@@ -186,7 +186,7 @@ $ cmake3 ../
 $ make -j4
 $ make install
 $ cd ../
-# If you cannot proceed according to your environmental problems,
+# If you could not proceed according to your environmental problems,
 # you can skip here and go to step2.
 
 ### step2.
@@ -209,7 +209,7 @@ $ ./localdb/bin/localdbtool-upload init
 #DB INFO# ---> Connection is GOOD.
 #DB INFO# -----------------------
 
-### If you can compile YARR commands
+### If you could compile YARR commands
 $ ./bin/dbAccessor -I
 #DB INFO# -----------------------
 #DB INFO# Function: Initialize
@@ -218,7 +218,9 @@ $ ./bin/dbAccessor -I
 #DB INFO# -----------------------
 ```
 
-#### iii. Upload w/ scanConsole (If you can compile YARR commands)
+#### iii. Upload
+
+##### iii-a. Upload w/ scanConsole (If you could compile YARR commands)
 
 You can upload results into Local DB after scanConsole just by adding option '-W'.
 
@@ -243,9 +245,9 @@ $ ./bin/scanConsole \
 
 Check if your result is uploaded in Viewer Application: http://127.0.0.1:5000/localdb/scan
 
-#### iv. Upload w/o scanConsole
+##### iii-b. Upload w/o scanConsole (If you could not compile YARR commands)
 
-You can just upload data from result directory prepared for this trial as follows even if you cannot compile YARR commands.
+You can just upload data from result directory prepared for this trial as follows even if you could not compile YARR commands.
 
 ```bash
 $ cd localdb-dataset
@@ -257,7 +259,7 @@ $ ./localdb/bin/localdbtool-upload scan path/to/localdb-dataset/fei4b-result
 $ ./localdb/bin/localdbtool-upload scan path/to/localdb-dataset/rd53a-result
 ```
 
-#### v. Additional information
+#### iv. Additional information
 
 [About Upload Tool](https://localdb-docs.readthedocs.io/en/devel/upload/)<br>
 
@@ -380,6 +382,8 @@ You have to change stage name in connectivity config file as follows:
 
 #### iv. Scan
 
+##### iv-a. Scan w/ scanConsole (If you could compile YARR commands)
+
 You can run scanConsole with the connectivity using emulator and register the results into Local DB after scan immediately by:
 
 ```bash
@@ -388,6 +392,8 @@ $ ./bin/scanConsole -c ./db-data/connectivity.json -r ./configs/controller/emuCf
 ```
 
 > [About scanConsole](https://localdb-docs.readthedocs.io/en/devel/scanconsole/)
+
+##### iv-b. Scan w/ scanConsole.sh (If you could not compile YARR commands)
 
 If you cannot run emulator on your own PC, you can just generate scan-like results under data/last_scan using a script `scanConsole.sh`. (c.f. [localdb-dataset/scanConsole.sh](https://gitlab.cern.ch/akubota/localdb-dataset/-/blob/master/scanConsole.sh))<br>
 You can run it after moving the script under YARR directory from localdb-dataset as follows:
