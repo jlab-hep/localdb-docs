@@ -10,10 +10,6 @@ You can try to use Local DB and Viewer Application using minimum environments an
 6. [Scan with downloaded component data](#6-scan)
 7. [Upload result data of registered component data into Local DB](#7-upload-data-of-registered-component)
 
-## 0. Requirements
-
-- Python3 & pip modules: You can install [pipi modules](requirements-list.md) by `cd localdb-tools && python3 -m pip install -r setting/requirements-pip.txt`
-
 ## 1. Setup
 
 #### i. Clone git repository for this tutorial
@@ -43,7 +39,7 @@ OS not supported by tutorial
 [LDB] Check README to get how to use commands in ./mongodb-4.2.6/bin
 
 [LDB] To make a path to commands in ./mongodb-4.2.6/bin you have to excute:
-[LDB] export PATH=path/to/mongodb-4.2.6/bin:$PATH"
+[LDB] export PATH=path/to/mongodb-4.2.6/bin:$PATH
 
 $ export PATH=path/to/mongodb-4.2.6/bin:$PATH
 ```
@@ -80,7 +76,12 @@ $ git clone https://gitlab.cern.ch/YARR/localdb-tools.git # Local DB Tools
 $ cd localdb-tools && git checkout devel
 ```
 
-#### ii. Create admin account for Local DB
+#### ii. Install Python3 & pip modules
+
+It requires Python3 version 3.6 or higher & several modules to start Viewer Application.<br>
+You can install required modules by `cd localdb-tools && python3 -m pip install -r setting/requirements-pip.txt`.
+
+#### iii. Create admin account for Local DB
 
 ```bash
 $ pwd
@@ -103,7 +104,7 @@ Successfully added user:
 $ cd -
 ```
 
-#### iii. Create config file for Viewer Application
+#### iv. Create config file for Viewer Application
 
 ```bash
 $ pwd
@@ -130,7 +131,7 @@ $[LDB] Start Viewer Application by ...
 $[LDB]   python3 app.py --config admin_conf.yml
 ```
 
-#### iv. Start Viewer Application
+#### v. Start Viewer Application
 
 ```bash
 $ pwd
@@ -150,7 +151,7 @@ Authentication succeeded.
 
 And you can check Viewer on browser: http://127.0.0.1:5000/localdb/
 
-#### v. SSH Tunnel (for trying on lxplus server)
+#### vi. SSH Tunnel (for trying on lxplus server)
 
 ```bash
 # on lxplus server
@@ -166,7 +167,7 @@ $ ssh -L <unused port number>:localhost:<port number to Viewer Application on lx
 
 Then you can check viewer on browser on your local PC: http://127.0.0.1:5000/localdb/
 
-#### vi. Additional information
+#### vii. Additional information
 
 [About Viewer Application](https://localdb-docs.readthedocs.io/en/devel/viewer/)
 
