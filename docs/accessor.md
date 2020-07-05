@@ -133,7 +133,7 @@ This can register the components data written in component.json.
 You can check the registered component data by `dbAccessor -M`.<br>
 Check [Retrieve Component Data](#retrieve-component-data) to get more detail.
 
-### b. Register DCS Data
+### b. Register DCS Data from a file
 
 You can register DCS data associated with the test data for each chip data.<br>
 First please prepare DCS data (dcs.dat) and DCS config file (dcs_info.json) following [this sample format](config.md). <br>
@@ -168,7 +168,63 @@ DBHandler: Register Environment:
 - **-u ``<user cfg>``**<br> : Set [user config file](config.md) (default: `HOME/.yarr/localdb/user.json`)
 - **-i ``<site cfg>``**<br> : Set [site config file](config.md) (default: `HOME/.yarr/localdb/user.json`)
 
-### c. Upload Cache Data
+### c. Register DCS Data from InfluxDB
+
+**c.1. Register your component** (if you haven't done it yet)
+  
+This means:
+  - having somewhere the Yarr files `component_chip1.json`, `component_connectivity.json` and `component_controller.json`
+  - Running  
+        ```bash
+        /path/to/yarr/bin/dbAccessor -C -c /path/to/component_connectivity.json 
+        ```
+
+*Note: By default, this connectivity file is located under `/path/to/yarr/configs/connectivity/`.*
+
+**c.2. Run a scan from Yarr (with the `-W` option) while monitoring your PS**
+
+**3. Transfer the DCS data using the dbAccessor**
+
+```bash
+/path/to/yarr/bin/dbAccessor -F /path/to/influxdb_connectivity.json -n component -s /path/to/scanLog.json
+```
+
+Where:
+  - You can find `scanLog.json` in Yarr's output folder (the one corresponding to your target scan).
+  - `influxdb_connectivity.json` is a file looking like this:
+
+```json
+{
+    "environments": [
+        {
+            "measurement": "qaqcTest",
+            "dcsList": [
+                {
+                    "key": "vddd_voltage",
+                    "data_name": "vdddVoltage",
+                    "description": "the voltage" 
+                },
+                {
+                    "key": "vddd_current",
+                    "data_name": "vdddCurrent",
+                    "description": "the current"
+                }
+            ]
+        }
+    ]
+}
+```
+where:  
+  -  `"measurement"`: The measurement where the data is stored in InfluxDB  
+  - `"key"`: Target field in LocalDB. You can find a list of the default possible ones in `path/to/yarr/localdb/setting/default/database.json`, under the field `"environment"`.  
+  - `"data_name"`: The title of the InfluxDB column where to take the data from.
+
+*Note:* `dbname='dcsDB'` is written as the default database name on the header of the python file `/path/to/yarr/localdb/bin/influxdbtool-retrieve`. You can change it there, and not need to recompile afterwards.
+
+After running the dbAccessor, check the logs under `~/.yarr/localdb/log/` to see if everything went fine.
+
+
+### d. Upload Cache Data
 
 When you could not upload Scan/DCS data by `scanConsole -W`/`dbAccessor -E` because of the bad connection to Local DB Server, <br>
 the cache data and log file ('scanLog.json'/'dbDcsLog.json') would be stored in the result directory,<br>
@@ -180,7 +236,7 @@ In the good connection to Local DB Server, you can upload all cache data by `dbA
 $ ./bin/dbAccessor -R
 ```
 
-### d. Retrieve Component List
+### e. Retrieve Component List
 
 You can check the registered component data by `dbAccessor -M`:
 
