@@ -136,7 +136,7 @@ $ ./bin/dbAccessor \
 -s data/last_scan/scanLog.json
 ```
 > [More detail about dbAccessor](accessor.md) -->
-in edit.
+Please refer to [dbAccessor's docs](accessor.md) for information on how to register DCS data.
 
 
 ## f. Share Data
