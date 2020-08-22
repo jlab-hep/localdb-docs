@@ -1,48 +1,63 @@
 # DB Accessor
 
-The **DB Accessor** is to easy handle Local DB,<br>
-mainly for component registration and DCS registration.
+The **DB Accessor** is to easy handle Local DB.<br>
+You can upload local data to Local DB or download data locally from Local DB easily by using this command.
 
 Contents:
 
 1. [Command](#1-command)
 2. [Getting Start](#2-getting-start)
 3. [Usage](#3-usage)
-    - register component data
-    - register DCS data
-    - upload cache data
-    - retrieve component list
+    - a. [Check the connection to Local DB](#a-check-connection)
+    - b. [Upload scan data from scan result directory into Local DB](#b-upload-scan-data)
+    - c. [Upload DCS data from data files into Local DB](#c-upload-dcs-data)
+    - d. [Upload DCS data from influxDB into Local DB](#d-upload-dcs-data-from-influxdb)
+    - e. [Upload scan/DCS data recorded in cache into Local DB](#e-upload-cache-data)
+    - f. [Retrieve scan data from Local DB](#f-retrieve-scan-data)
+    - g. [Register non-QC componnet data into Local DB](#g-register-component-data)
 4. [FAQ](#4-faq)
 
 ## 1. Command
 
-**YARR/bin/dbAccessor**
+- Location: ``YARR/bin/dbAccessor``
+- Usage: ``dbAccessor <-command> [-option]``
 
 ```bash
+$ cd YARR
 $ ./bin/dbAccessor
 
-# optional arguments:
-# -h                      : Shows help.
-# -I                      : Check the connection to Local DB.
-# -C                      : Upload component data into Local DB.
-#     -c <component.json> : Provide component connectivity configuration.
-# -R                      : Upload data into Local DB from cache.
-# -E <dcs.json>           : Provide DCS configuration to upload DCS data into Local DB.
-#     -s <scanLog.json>   : Provide scan log file.
-# -M                      : Retrieve Module list from Local DB.
+#These are common DB commands used in verious situations:
 #
-# -d <database.json>      : Provide database configuration. (Default HOME/.yarr/localdb/HOSTNAME_database.json)
-# -i <site.json>          : Provide site configuration. (Default HOME/.yarr/localdb/HOSTNAME_site.json)
-# -u <user.json>          : Provide user configuration. (Default HOME/.yarr/localdb/user.json)
+#    -h                     Shows this.
+#    -N                     Check the connection to Local DB.
+#    -S <result dir>        Upload scan data from the specified scanresult directory into Local DB.
+#    -E <dcs.json>          Upload DCS data according to the specified DCS config file into Local DB.
+#       -s <scanLog.json>   Provide path to log file of scan result data to link the DCS data.
+#    -F <influx.json>       Retrieve DCS data from influxDB and Upload the data according to the specified influxDB config file into Local DB.
+#       -n <component name> Provide component name to link the DCS data.
+#       -s <scanLog.json>   Provide path to log file of scan result data to link the DCS data.
+#    -R                     Upload scan/DCS data recorded in the cache ($HOME/.yarr/localdb/run.dat or dcs.dat) into Local DB.
+#    -D                     Retrieve data from Local DB. (Default. most recently saved data)
+#       [-n <cmp name>]     Provide component (chip/module) name.
+#       [-p <output dir>]   Provide path to directory to put config files. (Default. ./db-data)
+#       [-c <cmp.json>]     Provide path to component connectivity config file to create chip config files.
+#    -C                     Upload non-QC component data into Local DB.
+#       -c <cmp.json>       Provide path to component connectivity config file to upload.
+#
+#optional arguments:
+#    -Q                     Set QC mode (add a step to check if the data to upload is suitable for QC).
+#    -I                     Set interactive mode (add a step to ask the user to check the data to upload interactively).
+#    -d <database.json>     Provide path to database config file.
+#    -u <user.json>         Provide path to user config file.
+#    -i <site.json>         Provide path to site config file.
 ```
 
 ## 2. Getting start
 
 #### 0. Install & Setup
 
-Please check [Pre Requirements](requirements.md) to install required packages.<br>
-
-First, please be sure to build YARR SW:
+The DB Accessor is included as part of [YARR SW](https://yarr.readthedocs.io/en/latest/).<br>
+Follow the [installation tutorial](requirements.md) to install required packages and be sure to build YARR SW:
 
 ```bash
 $ cd YARR
@@ -50,221 +65,284 @@ $ mkdir build && cd build
 $ cmake3 ../
 $ make -j4
 ```
-> [More detail about YARR SW](https://yarr.readthedocs.io/en/latest/)
 
-Next, please be sure to setup Local DB setting using `YARR/localdb/setup_db.sh`. <br>
-This script confirms
-
-- if the python packages is satisfied
-- if the default config files are prepared
-    - HOME/.yarr/localdb/HOSTNAME_database.json
-    - HOME/.yarr/localdb/user.json
-    - HOME/.yarr/localdb/HOSTNAME_site.json
-- if the command is enabled
-- if the DB connection is established
+And be sure to setup Local DB configuration files using [YARR/localdb/setup_db.sh](setup-db.md) shell:
 
 ```bash
 $ cd YARR
 $ ./localdb/setup_db.sh
-
-< Setting up with some texts >
 ```
-> [More detail about setup_db.sh](setup-db.md)
 
 #### 1. Confirmation
 
-Please run the command with the option '-I' to check if the command is working and the connection to Local DB is good.
-
-**This function is not available in YARR v1.1.0.**<br>
-**Please change to the devel branch if want to use.**<br>
+You can run the [DB Accessor](accessor.md) with command-line option **-N** to check if the command is working and the connection to Local DB is good:
 
 ```bash
-$ ./bin/dbAccessor -I
-
-#DB INFO# -----------------------
-#DB INFO# Function: Initialize
-#DB INFO# [Connection Test] DB Server: mongodb://127.0.0.1:27017/localdb
-#DB INFO# ---> Connection is GOOD.
-#DB INFO# -----------------------
+$ ./bin/dbAccessor -N
 ```
-
-**Additional options**
-
-- **-d ``<database.json>``**<br> : Set [database config file](config.md) (default: `HOME/.yarr/localdb/HOSTNAME_database.json`)
 
 ## 3. Usage
 
-DB Accessor performs following functions:
+You can use the DB accessor to do the following operation:
 
-* a. [Register the chip/module data](#a-register-chipmodule-data)
-* b. [Register DCS data associated with the test data](#b-register-dcs-data)
-* c. [Upload data from cache in the stable connection](#c-upload-cache-data)
-* d. [Retrieve registered component list from Local DB](#d-retrieve-component-list)
+* a. [Check the connection to Local DB](#a-check-connection)
+* b. [Upload scan data from scan result directory into Local DB](#b-upload-scan-data)
+* c. [Upload DCS data from data files into Local DB](#c-upload-dcs-data)
+* d. [Upload DCS data from influxDB into Local DB](#d-upload-dcs-data-from-influxdb)
+* e. [Upload scan/DCS data recorded in cache into Local DB](#e-upload-cache-data)
+* f. [Retrieve scan data from Local DB](#f-retrieve-scan-data)
+* g. [Register non-QC componnet data into Local DB](#g-register-component-data)
 
-### a. Register Chip/Module Data
+### a. Check Connection
 
-You can upload test data associated with the registered chip/module after the registration.<br>
-First please the prepare component config file (component.json) following [this sample format](config.md). <br>
-And register by `dbAccessor -C`:
+You can check if the command is working and the connection to Local DB is good by:
 
 ```bash
-$ ./bin/dbAccessor -C \
--c component.json
-
-Do you continue to upload data into Local DB? [y/n]
-y
-
-#DB INFO# Completed the upload successfuly.
-#DB INFO# -----------------------
+$ ./bin/dbAccessor -N
+                   [-d <path/to/database.json>]
 ```
 
 **Command Line Arguments**
 
-- **-c ``<component cfg>``**<br> : Set [component config file](config.md)
-
-This can register the components data written in component.json.
+- **``-N``**<br>
+Sets command to check the connection to Local DB.
 
 **Additional options**
 
-- **-d ``<database.json>``**<br> : Set [database config file](config.md) (default: `HOME/.yarr/localdb/HOSTNAME_database.json`)
-- **-u ``<user cfg>``**<br> : Set [user config file](config.md) (default: `HOME/.yarr/localdb/user.json`)
-- **-i ``<site cfg>``**<br> : Set [site config file](config.md) (default: `HOME/.yarr/localdb/user.json`)
+- **``-d <path>``**<br>
+Specifies the path to [database config file](config.md).<br>
+If -d is not specified, dbAccessor sets `HOME/.yarr/localdb/HOSTNAME_database.json` as [database config file](config.md).
 
-You can check the registered component data by `dbAccessor -M`.<br>
-Check [Retrieve Component Data](#retrieve-component-data) to get more detail.
+### b. Upload Scan Data
 
-### b. Register DCS Data from a file
-
-You can register DCS data associated with the test data for each chip data.<br>
-First please prepare DCS data (dcs.dat) and DCS config file (dcs_info.json) following [this sample format](config.md). <br>
-And register by `dbAccessor -E`:
-
-**This function is not available in YARR v1.1.0.**<br>
-**Please change to the devel branch if want to use.**<br>
+You can upload scan data from the specified scan result directory into Local DB by:
 
 ```bash
-$ ./bin/dbAccessor \
--E dcs_info.json \
--s data/last_scan/scanLog.json
-
-DBHandler: Register Environment:
-	environmental config file : dcs_info.json
-#DB INFO# -----------------------
-#DB INFO# Function: Initialize
-#DB INFO# [Connection Test] DB Server: mongodb://127.0.0.1:27017/localdb
-#DB INFO# ---> Connection is GOOD.
-#DB INFO# -----------------------
-#DB INFO# Uploading in the back ground. (log: ~/.yarr/localdb/log/)
+$ ./bin/dbAccessor -S <path/to/result/dir>
+                   [-d <path/to/database.json>]
+                   [-Q]
+                   [-I]
 ```
 
 **Command Line Arguments**
 
-- **-E ``<DCS cfg>``**<br> : Set [DCS config file](config.md) (json)
-- **-s ``<scanLog>``**<br> : Set [scan log file](config.md) generated by scanConsole (json)
+- **``-S <path>``**<br>
+Sets command to upload scan data and specifies the path to scan result directory to upload.<br>
+Ensure the [scanLog.json](config.md) exists in the specified directory.
 
 **Additional options**
 
-- **-d ``<database.json>``**<br> : Set [database config file](config.md) (default: `HOME/.yarr/localdb/HOSTNAME_database.json`)
-- **-u ``<user cfg>``**<br> : Set [user config file](config.md) (default: `HOME/.yarr/localdb/user.json`)
-- **-i ``<site cfg>``**<br> : Set [site config file](config.md) (default: `HOME/.yarr/localdb/user.json`)
+- **``-d <path>``**<br>
+Specifies the path to [database config file](config.md).<br>
+If -d is not specified, dbAccessor sets the path of "dbCfg" written in [scanLog.json](config.md) located in the specified scan result directory,<br>
+or sets `HOME/.yarr/localdb/HOSTNAME_database.json` as [database config file](config.md) if no "dbCfg" written in [scanLog.json](config.md).
+- **``-Q``**<br>
+Sets QC mode and add a step to check if the data to upload is suitable for QC.
+- **``-I``**<br>
+Sets interactive mode and add a step to ask the user to check the data to upload interactively.
 
-### c. Register DCS Data from InfluxDB
+### c. Upload DCS Data
 
-**c.1. Register your component** (if you haven't done it yet)
-  
-This means:
-  - having somewhere the Yarr files `component_chip1.json`, `component_connectivity.json` and `component_controller.json`
-  - Running  
-        ```bash
-        /path/to/yarr/bin/dbAccessor -C -c /path/to/component_connectivity.json 
-        ```
-
-*Note: By default, this connectivity file is located under `/path/to/yarr/configs/connectivity/`.*
-
-**c.2. Run a scan from Yarr (with the `-W` option) while monitoring your PS**
-
-**3. Transfer the DCS data using the dbAccessor**
+You can upload DCS data according to the specified DCS configuration file into Local DB by:
 
 ```bash
-/path/to/yarr/bin/dbAccessor -F /path/to/influxdb_connectivity.json -n component -s /path/to/scanLog.json
+$ ./bin/dbAccessor -E <path/to/dcs.json>
+                   -s <path/to/scanLog.json>
+                   [-d <path/to/database.json>]
+                   [-u <path/to/user.json>]
+                   [-i <path/to/site.json>]
+                   [-Q]
+                   [-I]
 ```
 
-Where:
-  - You can find `scanLog.json` in Yarr's output folder (the one corresponding to your target scan).
-  - `influxdb_connectivity.json` is a file looking like this:
+**Command Line Arguments**
 
-```json
-{
-    "environments": [
-        {
-            "measurement": "qaqcTest",
-            "dcsList": [
-                {
-                    "key": "vddd_voltage",
-                    "data_name": "vdddVoltage",
-                    "description": "the voltage" 
-                },
-                {
-                    "key": "vddd_current",
-                    "data_name": "vdddCurrent",
-                    "description": "the current"
-                }
-            ]
-        }
-    ]
-}
+- **``-E <path>``**<br>
+Sets command to upload DCS data and specifies the path to [DCS config file](config.md) to upload.
+- **``-s <path>``**<br>
+Specifies the path to [scan log file](config.md) of the scan result data to link the DCS data.
+
+**Additional options**
+
+- **``-d <path>``**<br>
+Specifies the path to [database config file](config.md).<br>
+If -d is not specified, dbAccessor sets the path of "dbCfg" written in [scanLog.json](config.md) located in the specified scan result directory,<br>
+or sets `HOME/.yarr/localdb/HOSTNAME_database.json` as [database config file](config.md) if no "dbCfg" written in [scanLog.json](config.md).<br>
+Ensure the specified configuration is the same as when the scan data was registered.<br>
+(The one written in [scanLog.json](config.md) should be match, so no need to specify anything usually.)
+- **``-u <path>``**<br>
+Specifies the path to [user config file](config.md)<br>
+If -u is not specified, dbAccessor sets the path of "userCfg" written in [scanLog.json](config.md) located in the specified scan result directory,<br>
+or sets `HOME/.yarr/localdb/user.json` as [user config file](config.md) if no "userCfg" written in [scanLog.json](config.md).<br>
+Ensure the specified configuration is the same as when the scan data was registered.<br>
+(The one written in [scanLog.json](config.md) should be match, so no need to specify anything usually.)
+- **``-i <path>``**<br>
+Specifies the path to [site config file](config.md)<br>
+If -i is not specified, dbAccessor sets the path of "siteCfg" written in [scanLog.json](config.md) located in the specified scan result directory,<br>
+or sets `HOME/.yarr/localdb/HOSTNAME_site.json` as [site config file](config.md) if no "siteCfg" written in [scanLog.json](config.md).<br>
+Ensure the specified configuration is the same as when the scan data was registered.<br>
+(The one written in [scanLog.json](config.md) should be match, so no need to specify anything usually.)
+- **``-Q``**<br>
+Sets QC mode and add a step to check if the data to upload is suitable for QC.
+- **``-I``**<br>
+Sets interactive mode and add a step to ask the user to check the data to upload interactively.
+
+### d. Upload DCS Data from InfluxDB
+
+You can retrieve DCS data from influxDB and registered it into Local DB by:
+
+```bash
+$ ./bin/dbAccessor -F <path/to/influx.json>
+                   -n <component name>
+                   -s <path/to/scanLog.json>
+                   [-d <path/to/database.json>]
+                   [-u <path/to/user.json>]
+                   [-i <path/to/site.json>]
+                   [-Q]
+                   [-I]
 ```
-where:  
-  -  `"measurement"`: The measurement where the data is stored in InfluxDB  
-  - `"key"`: Target field in LocalDB. You can find a list of the default possible ones in `path/to/yarr/localdb/setting/default/database.json`, under the field `"environment"`.  
-  - `"data_name"`: The title of the InfluxDB column where to take the data from.
 
-*Note:* `dbname='dcsDB'` is written as the default database name on the header of the python file `/path/to/yarr/localdb/bin/influxdbtool-retrieve`. You can change it there, and not need to recompile afterwards.
+**Command Line Arguments**
 
-After running the dbAccessor, check the logs under `~/.yarr/localdb/log/` to see if everything went fine.
+- **``-F <path>``**<br>
+Sets command to upload DCS data from influxDB and specifies the path to [influxDB config file](config.md) to upload.
+- **``-n <name>``**<br>
+Specifies the component name to link the DCS data.
+- **``-s <path>``**<br>
+Specifies the path to [scan log file](config.md) of the scan result data to link the DCS data.
 
+**Additional options**
 
-### d. Upload Cache Data
+- **``-d <path>``**<br>
+Specifies the path to [database config file](config.md).<br>
+If -d is not specified, dbAccessor sets the path of "dbCfg" written in [scanLog.json](config.md) located in the specified scan result directory,<br>
+or sets `HOME/.yarr/localdb/HOSTNAME_database.json` as [database config file](config.md) if no "dbCfg" written in [scanLog.json](config.md).<br>
+Ensure the specified configuration is the same as when the scan data was registered.<br>
+(The one written in [scanLog.json](config.md) should be match, so no need to specify anything usually.)
+- **``-u <path>``**<br>
+Specifies the path to [user config file](config.md)<br>
+If -u is not specified, dbAccessor sets the path of "userCfg" written in [scanLog.json](config.md) located in the specified scan result directory,<br>
+or sets `HOME/.yarr/localdb/user.json` as [user config file](config.md) if no "userCfg" written in [scanLog.json](config.md).<br>
+Ensure the specified configuration is the same as when the scan data was registered.<br>
+(The one written in [scanLog.json](config.md) should be match, so no need to specify anything usually.)
+- **``-i <path>``**<br>
+Specifies the path to [site config file](config.md)<br>
+If -i is not specified, dbAccessor sets the path of "siteCfg" written in [scanLog.json](config.md) located in the specified scan result directory,<br>
+or sets `HOME/.yarr/localdb/HOSTNAME_site.json` as [site config file](config.md) if no "siteCfg" written in [scanLog.json](config.md).<br>
+Ensure the specified configuration is the same as when the scan data was registered.<br>
+(The one written in [scanLog.json](config.md) should be match, so no need to specify anything usually.)
+- **``-Q``**<br>
+Sets QC mode and add a step to check if the data to upload is suitable for QC.
+- **``-I``**<br>
+Sets interactive mode and add a step to ask the user to check the data to upload interactively.
 
-When you could not upload Scan/DCS data by `scanConsole -W`/`dbAccessor -E` because of the bad connection to Local DB Server, <br>
-the cache data and log file ('scanLog.json'/'dbDcsLog.json') would be stored in the result directory,<br>
-and that record is written to the file: `HOME/.yarr/run.dat`/`HOME/.yarr/dcs.dat`.
+### e. Upload Cache Data
 
-In the good connection to Local DB Server, you can upload all cache data by `dbAccessor -R`:
+When you could not upload scan/DCS data because of the bad connection to Local DB server,<br>
+the cache data and log file ([scanLog.json](config.md)/[dbDcsLog.json](config.md)) would be stored in the result directory, <br>
+and the record is written to the file: `HOME/.yarr/run.dat`/`HOME/.yarr/dcs.dat`.
+
+You can upload all cache data into Local DB when the good connection to Local DB server by:
 
 ```bash
 $ ./bin/dbAccessor -R
+                   [-d <path/to/database.json>]
+                   [-u <path/to/user.json>]
+                   [-i <path/to/site.json>]
+                   [-Q]
+                   [-I]
 ```
 
-### e. Retrieve Component List
+**Command Line Arguments**
 
-You can check the registered component data by `dbAccessor -M`:
+- **``-R``**<br>
+Sets command to upload cache data
+
+**Additional options**
+
+- **``-d <path>``**<br>
+Specifies the path to [database config file](config.md).<br>
+If -d is not specified, dbAccessor sets the path of "dbCfg" written in [scanLog.json](config.md) located in the specified scan result directory,<br>
+or sets `HOME/.yarr/localdb/HOSTNAME_database.json` as [database config file](config.md) if no "dbCfg" written in [scanLog.json](config.md).
+- **``-u <path>``**<br>
+Specifies the path to [user config file](config.md)<br>
+If -u is not specified, dbAccessor sets the path of "userCfg" written in [scanLog.json](config.md) located in the specified scan result directory,<br>
+or sets `HOME/.yarr/localdb/user.json` as [user config file](config.md) if no "userCfg" written in [scanLog.json](config.md).
+- **``-i <path>``**<br>
+Specifies the path to [site config file](config.md)<br>
+If -i is not specified, dbAccessor sets the path of "siteCfg" written in [scanLog.json](config.md) located in the specified scan result directory,<br>
+or sets `HOME/.yarr/localdb/HOSTNAME_site.json` as [site config file](config.md) if no "siteCfg" written in [scanLog.json](config.md).
+- **``-Q``**<br>
+Sets QC mode and add a step to check if the data to upload is suitable for QC.
+- **``-I``**<br>
+Sets interactive mode and add a step to ask the user to check the data to upload interactively.
+
+### f. Retrieve Scan Data
+
+You can retrieve scan data from Local DB by:
 
 ```bash
-$ ./bin/dbAccessor -M
-#DB INFO# -----------------------
-#DB INFO# Function: Check Component Data
-#DB INFO# [Connection Test] DB Server: mongodb://127.0.0.1:27017/localdb
-#DB INFO# ---> Connection is GOOD.
-#DB INFO# Download Component Data of Local DB locally (HOME/.yarr/localdb/HOSTNAME_modules.csv)...
-#DB INFO# **************************************
-#DB INFO# Component (1)
-#DB INFO#     Chip Type: RD53A
-#DB INFO#     Parent:
-#DB INFO#         serial number: 0x0001
-#DB INFO#         component type: module
-#DB INFO#         children: 1
-#DB INFO#     Child (1):
-#DB INFO#         serial number: 0x0002
-#DB INFO#         component type: front-end_chip
-#DB INFO#         chip ID: 0
-#DB INFO# **************************************
-<some texts>
-#DB INFO# The number of components: 47
-#DB INFO# Done.
-#DB INFO# -----------------------
+$ ./bin/dbAccessor -D
+                   [-n <component name>]
+                   [-p <path/to/output/dir>]
+                   [-c <path/to/component.json>]
+                   [-d <path/to/database.json>]
 ```
 
+**Command Line Arguments**
+
+- **``-D``** <br>
+Sets command to download scan data.
+
+**Additional options**
+
+- **``-n <name>``**<br>
+Specifies the component name to link the DCS data.
+- **``-p <path>``**<br>
+Specifies the path to directory to output retrieved data.<br>
+If -p is not specified, dbAccessor sets `./db-data` as directory to output.
+- **``-c <path>``**<br>
+Specifies the path to [component connectivity config file](config.md).<br>
+You can create chip config files with filling chip names and chip IDs <br>
+according the specified connectivity config even if the chips are not registered in Local DB.
+- **``-d <path>``**<br>
+Specifies the path to [database config file](config.md).<br>
+If -d is not specified, dbAccessor sets `HOME/.yarr/localdb/HOSTNAME_database.json` as [database config file](config.md).
+
+### g. Register Component Data
+
+Basically component data is registered on ITk PD, and Local DB downloads and uses it.<br>
+But if you want to manage non-QC component data, You can register component data by:
+
+```bash
+$ ./bin/dbAccessor -C
+                   [-c <path/to/component.json>]
+```
+
+**Command Line Arguments**
+
+- **``-C``** <br>
+Sets command to download scan data.
+- **``-c <path>``**<br>
+Specifies the path to [component config file](config.md) to register.<br>
+The [component config](config.md) is similar as the [connectivity config](config.md) but need to fill "serialNumber" and "chipId" of the component.
+
+**Additional options**
+
+- **``-d <path>``**<br>
+Specifies the path to [database config file](config.md).<br>
+If -d is not specified, dbAccessor sets `HOME/.yarr/localdb/HOSTNAME_database.json` as [database config file](config.md).
+- **``-u <path>``**<br>
+Specifies the path to [user config file](config.md)<br>
+If -u is not specified, dbAccessor sets `HOME/.yarr/localdb/user.json` as [user config file](config.md).
+- **``-i <path>``**<br>
+Specifies the path to [site config file](config.md)<br>
+If -i is not specified, dbAccessor sets `HOME/.yarr/localdb/HOSTNAME_site.json` as [site config file](config.md).
+
 ## 4. FAQ
+
+in edit.
+
+This is a quick summary of the major commands; the previous chapters explain how these work in more detail.
 
 in edit.
