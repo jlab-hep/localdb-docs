@@ -1,8 +1,20 @@
 # setup_db.sh
 
+This is a script for setting the configuration of Local DB and checking functions to handle Local DB.
+
+- Location: **YARR/localdb/setup_db.sh**
+- Syntax:
+
+```bash
+$ cd YARR
+$ ./localdb/setup_db.sh [-i address]
+                        [-p port]
+                        [-n name]
+```
+
 ### Flow
 
-1. Check the required python packages
+1. Check the [required packages](requirements.md)
 2. Check the database config file
     - Create `HOME/.yarr/localdb/HOSTNAME_database.json` if not exist
 3. Check the user config file
@@ -11,9 +23,6 @@
     - Create `HOME/.yarr/localdb/HOSTNAME_site.json` if not exist
 5. Check the command
 6. Check the DB connection
-
-**Step 3, 4, 5, and 6 are not available in YARR v1.1.0.**<br>
-**Please change to the devel branch if want to use.**<br>
 
 ### Usage (First Time)
 
