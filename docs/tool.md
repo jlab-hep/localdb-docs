@@ -1,6 +1,31 @@
 # Local DB Tools
 
-### Uploade
+## Basic Functions
+
+### scanConsole
+
+- Description: To test the performance for a/some chip(s).
+- Page: [About scanConsole](scanconsole.md)
+- Location: `YARR/bin/scanConsole`
+- Git Repository: [YARR](https://gitlab.cern.ch/YARR/YARR)
+
+### DB Accessor
+
+- Description: To handle (upload/retrieve) data in Local DB.
+- Page: [About DB Accessor](accessor.md)
+- Location: `YARR/bin/dbAccessor`
+- Git Repository: [YARR](https://gitlab.cern.ch/YARR/YARR)
+
+### Viewer Application
+
+- Description: To check/edit data in Local DB on browser.
+- Page: [About Viewer Application](viewer.md)
+- Location: `localdb-tools/viewer`
+- Git Repository: [localdb-tools](https://gitlab.cern.ch/YARR/localdb-tools)
+
+## Advanced Functions
+
+### Uploader
 
 - Description: To upload data (test data, chip data, user data, site data ...) into Local DB.
 - Page: [About Upload Tool](upload.md)
@@ -11,24 +36,6 @@
 - Description: To retrieve data (data log, data files) from Local DB.
 - Page: [About Retrieve Tool](retrieve.md)
 - Location: `YARR/localdb`
-
-### DB Accessor
-
-- Description: To handle (upload/register/retrieve) data in Local DB.
-- Page: [About DB Accessor](accessor.md)
-- Location: `YARR`
-
-### scanConsole
-
-- Description: To test the performance for a/some chip(s).
-- Page: [About scanConsole](scanconsole.md)
-- Location: `YARR`
-
-### Viewer Application
-
-- Description: To check/edit data in Local DB on browser.
-- Page: [About Viewer Application](viewer.md)
-- Location: `localdb-tools/viewer`
 
 ### Synchronization Tool
 

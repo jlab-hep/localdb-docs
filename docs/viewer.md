@@ -1,7 +1,8 @@
 # Viewer Application
 
 The **Viewer Application** displays the contents in Local DB on web browser. <br>
-You can access the web page in the local machine, or from the other machine by opneing port or using apache service.
+You can check data in Local DB, and upload/download data to/from [ITk Production Database](https://itkpd-test.unicorncollege.cz/).<br>
+You can access the web page in the local machine, or from the other machine if you use opneing port or apache service.
 
 Contents:
 
@@ -13,40 +14,33 @@ Contents:
 
 ## 1. Command
 
-**localdb-tools/viewer/app.py**
+- Location: **localdb-tools/viewer/app.py**
+- Usage:
 
 ```bash
+$ cd localdb-tools/viewer
 $ ./app.py --config <path/to/config>
 ```
 
 ## 2. Getting start
 
-Please check [Pre Requirements](requirements.md) to install required packages.<br>
-And please be sure to setup Viewer Application setting using `localdb-tools/viewer/setup_viewer.sh`. <br>
-This script performs
+#### 0. Install
 
-- to check if required python modules are installed
-- to make/confirm the viewer config file ( [localdb-tools/viewer/conf.yml](config.md) )
-- to make/confirm config for admin functions (e.g. user creation, ITk PD communication) (c.f. [create_admin.sh](create_admin.md))
-- to compile the [plotting tool](https://gitlab.cern.ch/YARR/utilities/plotting-tools) for displaying plots on the browser
+The viewer application is included as part of [Local DB Tools](https://gitlab.cern.ch/YARR/localdb-tools).<br>
+Follow the [installtaion tutorial](requirements.md) to install required packages.<br>
+
+#### 1. Setup
+
+Make sure to setup the configuration files of the viewer application using [localdb-tools/viewer/setup_viewer.sh](setup-viewer.md) shell:
 
 ```bash
 $ cd localdb-tools/viewer
 $ ./setup_viewer.sh
-< Setting up with some texts >
-
-[LDB] Do you use admin functions for LocalDB viewer? [y/n]
->
-# you can set admin functions after running 'create_admin.sh'
-
-< some texts >
 ```
 
-**Additional options**
+#### 2. Confirmation
 
-- **-i ``<IP address>``**<br> : Set Local DB server IP address (default: 127.0.0.1)
-- **-p ``<port>``**<br> : Set Local DB server port (default: 27017)
-- **-c ``<cfg>``**<br> : Set config file Name (default: conf.yml)
+Once you setup, you can find the configuration file in [localdb-tools/viewer/user_conf.yml](viewer-config.md) or [localdb-tools/viewer/admin_conf.yml](viewer-config.md).
 
 ## 3. Usage
 

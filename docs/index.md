@@ -18,11 +18,11 @@ Using the tools for Local DB, you can:
 |:--------------------:|:------------------:|:------------:|:----------------------------------------:|
 |Storage System        |Local DB            |MongoDB       |[MongoDB Docs](https://docs.mongodb.com/) |
 |Scan                  |scanConsole         |YARR          |[scanConsole Page](scanconsole.md)        |
+|Handle DB             |DB Accessor         |YARR          |[DB Accessor Page](accessor.md)           |
+|Check Data            |Viewer Application  |Local DB Tools|[Viewer Application Page](viewer.md)      |
 |Store Data            |Upload Tool         |YARR          |[Upload Tool Page](upload.md)             |
 |Restore Data          |Retrieve Tool       |YARR          |[Retrieve Tool Page](retrieve.md)         |
-|Handle DB             |DB Accessor         |YARR          |[DB Accessor Page](accessor.md)           |
 |Share Data            |Synchronization Tool|Local DB Tools|[Synchronization Tool Page](sync.md)      |
-|Check Data            |Viewer Application  |Local DB Tools|[Viewer Application Page](viewer.md)      |
 |Archive DB            |Archive Tool        |Local DB Tools|[Archive Tool Page](archive.md)           |
 |Communicate with ITkPD|ITkPD Interface     |Local DB Tools|[ITkPD Interface Page](itkpd-interface.md)|
 
@@ -36,10 +36,12 @@ YARR : Cloned from https://gitlab.cern.ch/YARR/YARR.git
 |-- localdb
 |   |-- setting                  : setup scripts and default config files dir
 |   |-- bin                      : binary commands dir
-|   |   |-- localdbtool-upload   : uploader
-|   |   `-- localdbtool-retrieve : retriever
+|   |   |-- localdbtool-upload   : to upload data
+|   |   `-- localdbtool-retrieve : to retrieve data
 |   `-- lib                      : libaries dir
 `-- bin                          : YARR read-out commands dir
+    |-- scanConsole              : to execute scan
+    `-- dbAccessor               : to handle database
 
 localdb-tools : Cloned from https://gitlab.cern.ch/YARR/localdb-tools.git
 |-- setting         : setup scripts dir
@@ -74,7 +76,7 @@ localdb-tools : Cloned from https://gitlab.cern.ch/YARR/localdb-tools.git
 |old-db-v       |0.15   |-                |Old database version based on latest YARR software                       |
 |old-sw-old-db-v|0.10   |-                |Old database version based on old software version (YARR/master 7c4a0727)|
 
-**Caution: This documentation have not reflected the latest version. Some functions does not work when following this documentation.** 
+**Caution: This documentation have not reflected the latest version. Some functions does not work when following this documentation.**
 
 ## Working Branch
 |Project       |Branch       |Describe                          |Link                                                        |
