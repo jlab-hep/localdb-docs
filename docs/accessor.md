@@ -33,7 +33,7 @@ $ ./bin/dbAccessor <-command> [-option]
 #### 0. Install & Setup
 
 The DB Accessor is included as part of [YARR SW](https://gitlab.cern.ch/YARR/YARR).<br>
-Follow the [installation tutorial](requirements.md) to install required packages and make sure to build YARR SW:
+Follow the [installation tutorial](installation.md) to install required packages and make sure to build YARR SW:
 
 ```bash
 $ cd YARR

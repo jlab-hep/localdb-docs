@@ -12,7 +12,7 @@ Contents:
 
 #### 0. Install & Setup
 
-Please check [Pre Requirements](requirements.md) to install required packages.<br>
+Please check [Pre Requirements](installation.md) to install required packages.<br>
 
 First, please be sure to build YARR SW:
 

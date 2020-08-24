@@ -129,7 +129,7 @@ The contents of the [connectivity config file](connectivity-config.md) loaded du
 
 - `ctrlCfg`<br>
 _Type_ : dictionary<br>
-The contents of the [controller config file](controller-config.md) loaded during the scan.
+The contents of the controller config file loaded during the scan.
 
 - `exec`<br>
 _Type_ : string<br>

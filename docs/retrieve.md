@@ -52,7 +52,7 @@ Contents:
 
 #### 0. Install & Setup
 
-Please check [Pre Requirements](requirements.md) to install required packages.<br>
+Please check [Pre Requirements](installation.md) to install required packages.<br>
 And please be sure to setup Local DB setting using `YARR/localdb/setup_db.sh`. <br>
 This script confirms
 

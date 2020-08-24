@@ -28,7 +28,7 @@ $ ./bin/localdbtool-archive.sh
 
 ## 2. Getting start
 
-Please check [Pre Requirements](requirements.md) to install required packages.<br>
+Please check [Pre Requirements](installation.md) to install required packages.<br>
 And please be sure to setup Archive Tool setting using `localdb-tools/archive-tool/setup_archive_tool.sh`. <br>
 This script performs
 

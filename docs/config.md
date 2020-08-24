@@ -1,89 +1,18 @@
 # Config Files Sample
 
-**key with \* is a required content**
+### [Database cfg](database-config.md)
 
-## Database cfg
+### [User cfg](user-config.md)
 
-- `hostIp` : IP address of the Local DB server (default. "127.0.0.1" or "localhost")
-- `hostPort` : The port number of the Local DB server (default. "27017")
-- `dbName` : The name of the Local DB (default. "localdb")
+### [Site cfg](site-config.md)
 
-```json
-{
-    "hostIp": "127.0.0.1",
-    "hostPort": "27017",
-    "dbName": "localdb",
-    "ssl": {
-        "enabled": false,
-        "PEMKeyFile": null,
-        "CAFile": null
-    },
-    "tls": {
-        "enabled": false,
-        "CertificateKeyFile": null,
-        "CAFile": null
-    },
-    "auth": "default",
-    "KeyFile": null,
-    "verify": false,
-    "stage": [
-        "Bare Module",
-        "Wire Bonded",
-        "Potted",
-        "Final Electrical",
-        "Complete",
-        "Loaded",
-        "Parylene",
-        "Initial Electrical",
-        "Thermal Cycling",
-        "Flex + Bare Module Attachment",
-        "Testing"
-    ],
-    "environment": [
-        "vddd_voltage",
-        "vddd_current",
-        "vdda_voltage",
-        "vdda_current",
-        "hv_voltage",
-        "hv_current",
-        "temperature"
-    ],
-    "component": [
-        "Front-end Chip",
-        "Front-end Chips Wafer",
-        "Hybrid",
-        "Module",
-        "Sensor Tile",
-        "Sensor Wafer"
-    ]
-}
-```
+### [Connectivity cfg](connectivity-config.md)
 
-## User cfg
+### [scanLog File](scan-log.md)
 
-- `userName` : Your name (e.g. "John Doe")
-- `institution` : The institution name you belong (e.g. "ABC Laboratory")
-- `description` : The description for user account (e.g. "account for testbeam")
+### [Viewer Application Cfg](viewer-config.md)
 
-```json
-{
-  "userName": "FIRSTNAME LASTNAME",
-  "institution": "INSTITUTION",
-  "description": "default"
-}
-```
-
-## Site cfg
-
-- `site` : The name of the production site (institution)
-
-```json
-{
-    "institution": "SITE"
-}
-```
-
-## Component cfg
+### Component cfg
 
 - `module` : configures for module (option)
 - `chipType` : "FEI4B" or "RD53A"
@@ -92,7 +21,7 @@
     - `componentType` : The component type (e.g. 'Module', 'Front-end Chip')<br>**Select it from the component list in database config.**
     - `chipId`\* : The number of the chipId, which must be "int"
 
-### For RD53A SCC
+#### For RD53A SCC
 
 ```json
 {
@@ -107,7 +36,7 @@
 }
 ```
 
-### For FEI4B Quad Module
+#### For FEI4B Quad Module
 
 ```json
 {
@@ -141,79 +70,14 @@
 }
 ```
 
-## Connectivity cfg
-
-- `stage` : The test stage, which should be selected from the stage list written in [database.json](#database-cfg)
-- `module` : configures for module (option)<br>**Must be set when uploading the test data in association with the MODULE.**
-- `chipType` : "FEI4B" or "RD53A"
-- `chips.i` : configures for chip
-    - `serialNumber` : The serial number of the module/chip.<br>**Ensure the same as 'Name' written in chip config file.**
-    - `config` : The path to chip config file (only in `chip.i`)
-    - `tx` : The TX channel, which must be "int" (only in `chip.i`)
-    - `rx` : The RX channel, which must be "int" (only in `chip.i`)
-
-### For RD53A
-
-```json
-{
-    "stage": "Testing",
-    "chipType" : "RD53A",
-    "chips" : [
-        {
-            "serialNumber": "RD53A-001",
-            "config" : "configs/chip1.json",
-            "tx" : 0,
-            "rx" : 0
-        }
-    ]
-}
-```
-### For FEI4B
-
-```json
-{
-    "stage": "Testing",
-    "module": {
-        "serialNumber": "FEI4B-001"
-    },
-    "chipType" : "FEI4B",
-    "chips" : [
-        {
-            "serialNumber": "FEI4B-001-chip1",
-            "config" : "configs/chip1.json",
-            "tx" : 0,
-            "rx" : 0
-        },
-        {
-            "serialNumber": "FEI4B-001-chip2",
-            "config" : "configs/chip2.json",
-            "tx" : 0,
-            "rx" : 1
-        },
-        {
-            "serialNumber": "FEI4B-001-chip3",
-            "config" : "configs/chip3.json",
-            "tx" : 0,
-            "rx" : 2
-        },
-        {
-            "serialNumber": "FEI4B-001-chip4",
-            "config" : "configs/chip4.json",
-            "tx" : 0,
-            "rx" : 3
-        }
-    ]
-}
-```
-
-## Chip cfg
+### Chip cfg
 
 You can replicated it from `YARR/configs/defaults/<FE>.json`.
 
 - `name`/`Name` : The serial number of the chip
 - `chipId`/`ChipId` : The geometrical ID of the chip (chipId)
 
-### For RD53A
+#### For RD53A
 
 ```json
 {
@@ -226,7 +90,7 @@ You can replicated it from `YARR/configs/defaults/<FE>.json`.
 }
 ```
 
-### For FEI4B
+#### For FEI4B
 
 ```json
 {
@@ -239,7 +103,7 @@ You can replicated it from `YARR/configs/defaults/<FE>.json`.
 }
 ```
 
-## DCS cfg
+### DCS cfg
 
 - `status` : enabled/disabled to upload data
 - `key` : DCS keyword (key list is written in the database config file `${HOME}/.yarr/localdb/database.json`)
@@ -305,7 +169,7 @@ You can replicated it from `YARR/configs/defaults/<FE>.json`.
 }
 ```
 
-## DCS Data File
+### DCS Data File
 
 - the 1st line : DCS keyword `key unixtime <key1> <key2> <key3> ...`
 - the 2nd line : DCS number `num null <num1> <num2> <num3> ...`
@@ -322,59 +186,7 @@ num null 0 0 0 0
 2019-06-24_20:50:03 1561377003 15 25 0 0
 ```
 
-## scanLog File
-
-- `startTime`\* / `timestamp`\*: timestamp of the test (unixtime (startTime) or string (timestamp))
-
-```json
-{
-    "startTime": 1569924977,
-    "timestamp": "2019-10-01_19:16:17"
-}
-```
-
-## Viewer Application
-
-- `mongoDB` : configures for Local DB (MongoDB) server
-    - `host` : IP address of DB server (default. "127.0.0.1" or "localhost")
-    - `port` : The port number of DB server (default. "27017")
-    - `db` : The name of DB (default. "localdb")
-    - `username` : username of user account in MongoDB if the user authentication is required
-    - `password` : password of user account in MongoDB if the user authentication is required
-    - `KeyFile` : username & password info file created by [localdb-tools/setting/create_admin.sh](create_admin.md)
-    - `ssl/tls` : ssl/tls CA & certification file if ssl/tls is enabled
-- `userDB` : configures for Local User DB which is DB for localdb-tools
-    - `db` : The name of DB (default. "localdbtool")
-- `flask` : configures for flask server
-    - `host` : IP address of flask server (default. "127.0.0.1" or "localhost")<br>**Set host IP address if access remotely.**
-    - `port` : The port number of flask server (default. "5000")<br>**Open firewall port if access remotely.**
-
-```yml
-mongoDB:
-    host: 127.0.0.1 # IP address running mongoDB
-    port: 27017     # port number running mongoDB
-    db: localdb     # local database name
-    username: # username of user account in MongoDB
-    password: # password of user account in MongoDB
-    KeyFile: #localdbkeypass # path/to/user/key/file
-    ssl:
-        enabled: False
-        CAFile: # path/to/CA/file
-        PEMKeyFile: # path/to/certificate/file
-    tls:
-        enabled: False
-        CAFile: # path/to/CA/file
-        CertificateFile: # path/to/certificate/file
-userDB:
-    db: localdbtools
-flask:
-    host: 127.0.0.1 # IP address running app.py
-    port: 5000      # port number running app.py
-# For development
-#is_development: True
-```
-
-## Synchronization Tool
+### Synchronization Tool
 
 - `local` : configures for local MongoDB server
     - `host` : IP address of MongoDB (default. "127.0.0.1" or "localhost")
@@ -399,7 +211,7 @@ master:
 #logfile: logs/production.log
 ```
 
-## Archive Tool
+### Archive Tool
 
 - `data_path` : path to MongoDB database (defaul. "/var/lib/mongo")
 - `archive_path` : path to put archives (Recommendation: use external HDD/SSD)

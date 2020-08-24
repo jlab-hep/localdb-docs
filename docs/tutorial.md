@@ -1,7 +1,8 @@
 # Quick Tutorial
 
 You can handle Local DB following the tutorial.<br>
-**Current supported OS is centOS7 & macOS (greather than 10.14). Let's try it on VM if your PC is neither.**<br>
+**Current supported OS is centOS7 & macOS (greather than 10.14).**<br>
+**Let's try it on VM if your PC is neither.**<br>
 
 Click the title to jump to the instruction page.
 
@@ -44,14 +45,3 @@ Contents:
 - e. Register DCS data associated with the test data
 - f. Share data with the other Local DB (Synchronization Tool)
 - g. Back-up Local DB (Archive Tool)
-
-## Local DB Tools Details
-
-- [Upload Tool](upload.md)
-- [Retrieve Tool](retrieve.md)
-- [Viewer Application](viewer.md)
-- [Sycnhronization Tool](sync.md)
-- [Archive Tool](archive.md)
-- [ITk PD Interface](itkpd-interface.md)
-- [DB Accessor](accessor.md)
-- [scanConsole](scanconsole.md)

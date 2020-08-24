@@ -27,7 +27,7 @@ $ ./app.py --config <path/to/config>
 #### 0. Install
 
 The viewer application is included as part of [Local DB Tools](https://gitlab.cern.ch/YARR/localdb-tools).<br>
-Follow the [installtaion tutorial](requirements.md) to install required packages.<br>
+Follow the [installtaion tutorial](installation.md) to install required packages.<br>
 
 #### 1. Setup
 
@@ -61,7 +61,7 @@ Applying ATLAS style settings...
 ```
 
 If you launch the browser on the host machine where the viewer application is running, you can check the viewer page on: [http://127.0.0.1:5000/localdb/](http://127.0.0.1:5000/localdb)<br>
-If you want to access the viewer from other machine, see [FAQ for viewer](faq-viewer.md) to get more detail.
+If you want to access the viewer from other machine, see [FAQ for viewer](viewer-faq.md) to get more detail.
 
 **Command Line Arguments**
 

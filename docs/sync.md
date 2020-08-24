@@ -22,7 +22,7 @@ $ ./bin/localdbtool-sync.py --sync-opt <option> --config my_configure.yml
 
 ## 2. Getting start
 
-Please check [Pre Requirements](requirements.md) to install required packages.<br>
+Please check [Pre Requirements](installation.md) to install required packages.<br>
 And please be sure to setup Synchronization Tool setting using `localdb-tools/sync-tool/setup_sync_tool.sh`. <br>
 This script performs
 

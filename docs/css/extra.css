@@ -1,0 +1,5 @@
+.wy-side-nav-search {
+  background-color: #b22323;
+}
+.trigger      { cursor:pointer }
+.hide .target { display:none }
