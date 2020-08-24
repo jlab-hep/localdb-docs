@@ -43,10 +43,12 @@ Register localDB admins password: password
 ...
 ```
 
-You can register an administrator account with username and password as follows:
+You can register an administrator account with username and password.<br>
+**The username must contain only lowercase letters.**
 
-```json
-{
+```bash
+...
+Successfully added user:
     user: username
     roles: [
         "localdb": "userAdmin",
@@ -54,12 +56,6 @@ You can register an administrator account with username and password as follows:
         "localdb": "readWrite",
         "localdbtools": "readWrite"
     ]
-}
-```
-
-```bash
-...
-Successfully added user:
 
 Finished the setting of localdb with certification!!
 
