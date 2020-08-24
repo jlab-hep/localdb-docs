@@ -4,6 +4,7 @@ pages:
     - Pre Requirements and Installation: requirements.md
     - Quick tutorial: tutorial.md
     - Tools: tool.md
+    - Scripts: scripts.md
     - Demonstration: demonstration.md
     - Structure: structure.md
     - Advanced: advanced.md
