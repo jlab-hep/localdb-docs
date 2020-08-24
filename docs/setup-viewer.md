@@ -133,5 +133,4 @@ Options:
     - i <IP address>  Local DB server IP address (default: 127.0.0.1)
     - p <port>        Local DB server port (default: 27017)
     - c <config>      Config file name (default: user_conf.yml or admin_conf.yml)
-$
 ```

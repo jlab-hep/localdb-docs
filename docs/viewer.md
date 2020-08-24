@@ -40,11 +40,11 @@ $ ./setup_viewer.sh
 
 #### 2. Confirmation
 
-Once you setup, you can find the configuration file in [localdb-tools/viewer/user_conf.yml](viewer-config.md) or [localdb-tools/viewer/admin_conf.yml](viewer-config.md).
+Once you setup, you can find the configuration file in [localdb-tools/viewer/user_conf.yml](viewer-config.md#basic-file-formad) or [localdb-tools/viewer/admin_conf.yml](viewer-config.md#admin-file-format).
 
 ## 3. Usage
 
-Viewer Application can be started by `app.py --config conf.yml`
+Viewer Application can be started by:
 
 ```bash
 $ cd localdb-tools/viewer
@@ -60,37 +60,14 @@ Applying ATLAS style settings...
 2019-10-09 12:37:46 lazulite werkzeug[1991] INFO  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 ```
 
+If you launch the browser on the host machine where the viewer application is running, you can check the viewer page on: [http://127.0.0.1:5000/localdb/](http://127.0.0.1:5000/localdb)<br>
+If you want to access the viewer from other machine, see [FAQ for viewer](faq-viewer.md) to get more detail.
+
 **Command Line Arguments**
 
-- **--config ``<cfg>``**<br> : Set config file path
+- **``--config <path>``**<br>
+Specifies the path to [viewer config file](viewer-config.md).<br>
 
-## 4. Web Page
+## 4. [Web Page](viewer-page.md)
 
-Please access `http://127.0.0.1:5000/localdb/` on web browser in local machine and it displays the following page:
-
-**Top Page**
-
-|![Viewer Top Page](images/viewer_top.png)|
-|:-:|
-
-**Component List Page**
-
-|![Viewer Component Top Page](images/viewer_top_component.png)|
-|:-:|
-
-**Test List Page**
-
-|![Viewer Test Top Page](images/viewer_top_test.png)|
-|:-:|
-
-You can access the test result page by clicking 'result page', and it displays the following page:
-
-|![Viewer Result Page](images/viewer_result.png)|
-|:-:|
-
-## 5. FAQ
-
-- Remote Access/Apache
-
-In edit.
-
+## 5. [FAQ](viewer-faq.md)
