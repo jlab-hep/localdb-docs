@@ -103,4 +103,3 @@ Specifies the .pem file that contains both the TLS certificate and key to presen
 
 - `tls.CAFile`<br>
 Specifies the .pem file that contaibns the root certificate chain from the Certificate Authority to validate the server certificate.
-

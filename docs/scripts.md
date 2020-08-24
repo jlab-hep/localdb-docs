@@ -1,4 +1,6 @@
-# Local DB Scripts
+# Scripts
+
+## User Scripts
 
 ### setup_db.sh
 
@@ -14,6 +16,8 @@
 - Location: `localdb-tools/viewer/setup_viewer.sh`
 - Git Repository: [localdb-tools](https://gitlab.cern.ch/YARR/localdb-tools)
 
+## Administrator Scripts
+
 ### create_admin.sh
 
 - Description: To create an administrator account in Local DB.
@@ -21,3 +25,9 @@
 - Location: `localdb-tools/setting/create_admin.sh`
 - Git Repository: [localdb-tools](https://gitlab.cern.ch/YARR/localdb-tools)
 
+### upgrade_mongoDB_centos.sh
+
+- Description: _in edit_
+- Page: [About upgrade_mongoDB_centos.sh](upgrade_mongodb_centos.md)
+- Location: `localdb-tools/scripts/shell/create_admin.sh`
+- Git Repository: [localdb-tools](https://gitlab.cern.ch/YARR/localdb-tools)

@@ -1,19 +1,29 @@
-# Automatic Installation
+# Automatic Installation for macOS
 
-**For macOS**, `localdb-tools/setting/macos/installer_macos.sh` can
+You can install the [requirements for the system](requirements-list.md) on macOS automatically by `localdb-tools/setting/macos/installer_macos.sh`.<br>
+The script can
 
 - Check missing packages
 - Install requirements for DAQ/DB Machine
 - Enable MongoDB
 - Confirme the installation status & Show quick tutorial
 
-Check [Manual Installation](manual-install.md) to install requirements on other platform.
+If you want to install on other platform, or install manually, see the [manual installation guide](manual-install.md).
 
-## scripts
+## script
 
-- [installer_macos.sh](#installer_macossh)
+- Location: **localdb-tools/setting/macos/installer_macos.sh**
+- Syntax
 
-### installer_macos.sh
+```bash
+$ cd localdb-tools/setting/macos
+$ ./installer_macos.sh
+```
+
+**This script will run commands which require administorative privilege.**<br>
+**So the person who runs the script must be root or a sudoer.**
+
+## Flow
 
 ```zsh
 $ cd localdb-tools/setting/macos

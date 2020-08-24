@@ -1,14 +1,26 @@
-site_name: Local DB (Version 1.3) Docs
+site_name: Local DB (Version Latest) Docs
+theme: readthedocs
+#theme: rtd-dropdown
 pages:
     - Top: https://localdb-docs.readthedocs.io/en/top/
-    - Home: index.md
-    - Pre Requirements and Installation: requirements.md
-    - Quick tutorial: tutorial.md
-    - Tools: tool.md
-    - Scripts: scripts.md
-    - Demonstration: demonstration.md
-    - Structure: structure.md
-    - Advanced: advanced.md
-    - Config Samples: config.md
-    - FAQ: faq.md
-theme: readthedocs
+    - Introduction:
+        - Home: index.md
+        - Installation: installation.md
+        - Requirements: requirements-list.md
+        - Database Structure: structure.md
+        - Relase Note: release-note.md
+        - Contact: contact.md
+    - Tutorial:
+        - Quick tutorial: tutorial.md
+        - Demonstrations: demonstration.md
+    - Functions:
+        - Tools: tool.md
+        - Scripts: scripts.md
+        - Config samples: config.md
+    - FAQ:
+        - Advanced: advanced.md
+        - dbAccessor related: accessor-faq.md
+        - viewer application related: viewer-faq.md
+        - others: faq.md
+extra_css:
+    - "css/custom.css"

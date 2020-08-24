@@ -15,7 +15,7 @@ $ ./setup_viewer.sh [-i address]
 
 ### Flow
 
-1. Check the [required packages](requirements.md)
+1. Check the [required packages](requirements-list.md)
 2. Check the configuration of Local DB server
     - Display the configuration
     - Prompt for confirmatio (Proceed if y or exit if n)

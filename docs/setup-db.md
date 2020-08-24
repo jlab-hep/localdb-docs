@@ -14,7 +14,7 @@ $ ./localdb/setup_db.sh [-i address]
 
 ### Flow
 
-1. Check the [required packages](requirements.md)
+1. Check the [required packages](requirements-list.md)
 2. Check the database config file
     - Create `HOME/.yarr/localdb/HOSTNAME_database.json` if not exist
 3. Check the user config file
