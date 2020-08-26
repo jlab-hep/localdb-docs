@@ -1,6 +1,6 @@
-## dbAccessor -D
+# dbAccessor -D
 
-Contents:
+### Table of Contents
 
 1. [Synopsis](#1-synopsis)
 2. [Installation](#2-installation)
@@ -8,16 +8,16 @@ Contents:
 4. [Examples](#4-examples)
 5. [FAQ](#5-faq)
 
-### 1. Synopsis
+## 1. Synopsis
 
 You can retrieve scan data from Local DB by [dbAccessor -D](accessor-d.md)
 
-### 2. Installation
+## 2. Installation
 
 The DB Accessor is included as part of [YARR SW](https://yarr.readthedocs.io/en/latest/).<br>
 Follow the [dbAccessor Guide](accessor.md) to setup the command.
 
-### 3. Syntax
+## 3. Syntax
 
 The [dbAccessor -D](accessor-d.md) command has the following form:
 
@@ -49,7 +49,6 @@ according the specified connectivity config even if the chips are not registered
 Specifies the path to [database config file](database-config.md).<br>
 If -d is not specified, dbAccessor sets `HOME/.yarr/localdb/HOSTNAME_database.json` as [database config file](database-config.md).
 
-### 4. Examples
+## 4. Examples
 
-
-### 5. FAQ
+in edit.

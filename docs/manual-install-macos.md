@@ -3,6 +3,8 @@
 You can install the [requirements for the system](requirements-list.md) on macOS manually following this page.<br>
 If you want to install on centOS7, see the [manual installation guide for centOS7](manual-install.md).
 
+### Table of Contents
+
 - [Installation for DAQ machine](#installation-for-daq-machine)
     - [brew packages](#brew-packages-daq)
         - brew command
@@ -27,6 +29,8 @@ If you want to install on centOS7, see the [manual installation guide for centOS
     - [influxDB](#influxdb)
     - [Grafana](#grafana)
     - [ROOT](#root)
+
+---
 
 ## Installation for DAQ machine
 
@@ -188,6 +192,8 @@ $ make install
 ```
 
 Once the compile is successful, the binary commands are placed in **YARR/bin**.
+
+---
 
 ## Installation for DB machine
 

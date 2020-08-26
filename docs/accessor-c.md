@@ -1,24 +1,23 @@
-## dbAccessor -C
+# dbAccessor -C
 
-Contents:
+### Table of Contents
 
 1. [Synopsis](#1-synopsis)
 2. [Installation](#2-installation)
 3. [Syntax](#3-syntax)
 4. [Examples](#4-examples)
-5. [FAQ](#5-faq)
 
-### 1. Synopsis
+## 1. Synopsis
 
 Basically component data is registered on ITk PD, and Local DB downloads and uses it.<br>
 But if you want to manage non-QC component data, You can register component data by [dbAccessor -C](accessor-c.md)
 
-### 2. Installation
+## 2. Installation
 
 The DB Accessor is included as part of [YARR SW](https://yarr.readthedocs.io/en/latest/).<br>
 Follow the [dbAccessor Guide](accessor.md) to setup the command.
 
-### 3. Syntax
+## 3. Syntax
 
 The [dbAccessor -C](accessor-c.md) command has the following form:
 
@@ -47,7 +46,6 @@ If -u is not specified, dbAccessor sets `HOME/.yarr/localdb/user.json` as [user 
 Specifies the path to [site config file](site-config.md)<br>
 If -i is not specified, dbAccessor sets `HOME/.yarr/localdb/HOSTNAME_site.json` as [site config file](site-config.md).
 
-### 4. Examples
+## 4. Examples
 
-
-### 5. FAQ
+in edit.

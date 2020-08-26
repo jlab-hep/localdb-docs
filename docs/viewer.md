@@ -4,7 +4,7 @@ The **Viewer Application** displays the contents in Local DB on web browser. <br
 You can check data in Local DB, and upload/download data to/from [ITk Production Database](https://itkpd-test.unicorncollege.cz/).<br>
 You can access the web page in the local machine, or from the other machine if you use opneing port or apache service.
 
-Contents:
+### Table of Contents
 
 1. [Command](#1-command)
 2. [Getting Start](#2-getting-start)
@@ -63,11 +63,32 @@ Applying ATLAS style settings...
 If you launch the browser on the host machine where the viewer application is running, you can check the viewer page on: [http://127.0.0.1:5000/localdb/](http://127.0.0.1:5000/localdb)<br>
 If you want to access the viewer from other machine, see [FAQ for viewer](viewer-faq.md) to get more detail.
 
-**Command Line Arguments**
+###### Command Line Arguments
 
 - **``--config <path>``**<br>
 Specifies the path to [viewer config file](viewer-config.md).<br>
 
 ## 4. [Web Page](viewer-page.md)
 
-## 5. [FAQ](viewer-faq.md)
+The viewer application displays the following page on the browser:
+
+|![Viewer Top Page](images/viewer_top.png)|
+|:-:|
+
+
+###### Page List
+
+- [Component List Page](viewer-top.md#component-list-page)<br>
+You can switch to the component list page by clicking **Components Page** in the page list or **COMPONENTS** in the navigation bar.
+- [Scan List Page](viewer-top.md#scan-list-page)<br>
+You can switch to the scan list page by clicking **Scan Page** in the page list or **TEST** in the navigation bar.
+- [Component Page](viewer-component.md)<br>
+You can switch to the test result page by clicking **result page** in the component/scan list table.
+- [User Page](viewer-user.md)<br>
+You can **sign-in** and use vaious functions (create tag, edit comment, download ITk PD module) if you have your account in the Local DB.
+- [Admin Page](viewer-admin.md)<br>
+a
+
+## 5. FAQ
+
+See [FAQ for Viewer](viewer-faq.md).

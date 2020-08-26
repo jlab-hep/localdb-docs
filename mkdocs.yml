@@ -1,7 +1,7 @@
 site_name: Local DB Docs
 theme: readthedocs
 #theme: rtd-dropdown
-pages:
+nav:
     - Introduction:
         - Home: index.md
         - Installation: installation.md
@@ -23,3 +23,5 @@ pages:
         - others: faq.md
 extra_css:
     - "css/custom.css"
+markdown_extensions:
+    - admonition

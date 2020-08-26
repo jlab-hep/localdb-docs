@@ -1,8 +1,8 @@
-## Database Config
+# Database Config
 
 You can specify the configuration of Local DB when connecting using a configuration file.
 
-### File Format
+#### File Format
 
 Local DB configuration file uses the JSON format:
 
@@ -28,7 +28,9 @@ Local DB configuration file uses the JSON format:
 }
 ```
 
-### Core Options
+#### Options
+
+##### Core Options
 
 - `hostIp`<br>
 _Type_ : string<br>
@@ -62,7 +64,7 @@ _Type_ : list<br>
 The DCS data with a key listed here can be registered in Local DB.<br>
 If you want to register other DCS data, you need to add key here.
 
-### SSL/TLS Options
+##### SSL/TLS Options
 
 ```json
 {
@@ -83,7 +85,7 @@ Specifies the .pem file that contains both the SSL certificate and key to presen
 - `ssl.CAFile`<br>
 Specifies the .pem file that contaibns the root certificate chain from the Certificate Authority to validate the server certificate.
 
-### TLS Options
+##### TLS Options
 
 ```json
 {

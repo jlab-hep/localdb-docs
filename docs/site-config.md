@@ -1,8 +1,8 @@
-## Site Config
+# Site Config
 
 You can specify the configuration of the production site when uploading data into Local DB.
 
-### File Format
+#### File Format
 
 Site configuration file uses the JSON format:
 
@@ -20,7 +20,7 @@ If the institution is registered in ITk PD, you can specify the institution usin
 }
 ```
 
-### Core Options
+#### Options
 
 - `institution`<br>
 _Type_ : string<br>

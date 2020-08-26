@@ -1,6 +1,6 @@
-## dbAccessor -R
+# dbAccessor -R
 
-Contents:
+### Table of Contents
 
 1. [Synopsis](#1-synopsis)
 2. [Installation](#2-installation)
@@ -8,20 +8,20 @@ Contents:
 4. [Examples](#4-examples)
 5. [FAQ](#5-faq)
 
-### 1. Synopsis
+## 1. Synopsis
 
-When you could not upload scan/DCS data because of the bad connection to Local DB server,<br>
-the cache data and log file ([scanLog.json](scan-log.md)/[dbDcsLog.json](config.md)) would be stored in the result directory, <br>
+When you could not upload scan/DCS data because of the bad connection to Local DB server,
+the cache data and log file ([scanLog.json](scan-log.md)/[dbDcsLog.json](config.md)) would be stored in the result directory,
 and the record is written to the file: `HOME/.yarr/run.dat`/`HOME/.yarr/dcs.dat`.
 
 You can upload all cache data into Local DB when the good connection to Local DB server by [dbAccessor-R](accessor-r.md)
 
-### 2. Installation
+## 2. Installation
 
 The DB Accessor is included as part of [YARR SW](https://yarr.readthedocs.io/en/latest/).<br>
 Follow the [dbAccessor Guide](accessor.md) to setup the command.
 
-### 3. Syntax
+## 3. Syntax
 
 The [dbAccessor -R](accessor-r.md) command has the following form:
 
@@ -58,7 +58,6 @@ Sets QC mode and add a step to check if the data to upload is suitable for QC.
 - **``-I``**<br>
 Sets interactive mode and add a step to ask the user to check the data to upload interactively.
 
-### 4. Examples
+## 4. Examples
 
-
-### 5. FAQ
+in edit.
