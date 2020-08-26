@@ -1,8 +1,8 @@
-## User Config
+# User Config
 
 You can specify the configuration of your user account when uploading data into Local DB.
 
-### File Format
+#### File Format
 
 User configuration file uses the JSON format:
 
@@ -22,7 +22,7 @@ If you have your account in Local DB Viewer, you can specify your user account u
 }
 ```
 
-### Core Options
+#### Options
 
 - `userName`<br>
 _Type_ : string<br>

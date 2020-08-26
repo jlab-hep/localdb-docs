@@ -3,6 +3,8 @@
 You can install the [requirements for the system](requirements-list.md) on centOS7 manually following this page.<br>
 If you want to install on macOS, see the [manual installation guide for macOS](manual-install-macos.md).
 
+### Table of Contents
+
 - [Installation for DAQ machine](#installation-for-daq-machine)
     - [yum packages](#yum-packages-daq)
         - g++
@@ -26,6 +28,7 @@ If you want to install on macOS, see the [manual installation guide for macOS](m
     - [Grafana](#grafana)
     - [ROOT](#root)
 
+---
 
 ## Installation for DAQ machine
 
@@ -157,6 +160,8 @@ $ make install
 ```
 
 Once the compile is successful, the binary commands are placed in **YARR/bin**.
+
+---
 
 ## Installation for DB machine
 

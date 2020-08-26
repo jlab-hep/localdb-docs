@@ -3,7 +3,7 @@
 The **DB Accessor** is to easy handle Local DB.<br>
 You can upload local data to Local DB or download data locally from Local DB easily by using this command.
 
-Contents:
+### Table of Contents
 
 1. [Command](#1-command)
 2. [Getting Start](#2-getting-start)
@@ -27,6 +27,7 @@ $ ./bin/dbAccessor <-command> [-option]
     - [dbAccessor -R](accessor-r.md): Upload scan/DCS data recorded in cache into Local DB
     - [dbAccessor -D](accessor-d.md): Retrieve scan data from Local DB
     - [dbAccessor -C](accessor-c.md): Register non-QC componnet data into Local DB
+    - [dbAccessor -L](accessor-l.md): Display log of the scan data in Local DB
 
 ## 2. Getting start
 
@@ -57,4 +58,6 @@ You can run the [DB Accessor](accessor.md) with command-line option **-N** to ch
 $ ./bin/dbAccessor -N
 ```
 
-## 3. [FAQ](accessor-faq.md)
+## 3. FAQ
+
+See [FAQ for dbAccessor](accessor-faq.md).

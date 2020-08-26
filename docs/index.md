@@ -31,8 +31,6 @@ Using the tools for Local DB, you can:
 |Archive Tool        |Archive DB            |Local DB Tools|[Archive Tool Page](archive.md)           |
 |ITkPD Interface     |Communicate with ITkPD|Local DB Tools|[ITkPD Interface Page](itkpd-interface.md)|
 
-#### Reference
-
 - YARR
     - [Git Repository](https://gitlab.cern.ch/YARR/YARR)
     - Folder Structure
