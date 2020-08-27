@@ -6,7 +6,6 @@ You can handle Local DB following the tutorial.<br>
 
 # [Trial Tutorial](trial-tutorial.md)
 
-This is a part of introduction of Local DB and Tools.<br>
 You can download minimum data-set in DB and try to use following functions on your own PC w/o read-out chips and YARR SW.<br>
 
 #### Table of Contents
@@ -23,7 +22,6 @@ You can download minimum data-set in DB and try to use following functions on yo
 
 ## [Basic Tutorial](basic-tutorial.md)
 
-This is a basic instruction for read-out test and upload result into Local DB based on YARR SW.<br>
 You can follow this using emulator on your PC also.<br>
 
 #### Table of Contents
