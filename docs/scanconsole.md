@@ -2,54 +2,51 @@
 
 The **scanConsole** is the main read-out program in [YARR](https://yarr.readthedocs.io/en/latest/).
 
-Contents:
+### Table of Contents
 
-1. [Getting Start](#1-getting-start)
-2. [Usage](#2-usage)
-3. [FAQ](#3-faq)
+1. [Command](#1-command)
+2. [Getting Start](#2-getting-start)
+3. [Syntax](#3-syntax)
+4. [Examples](#4-examples)
+5. [FAQ](#5-faq)
 
-## 1. Getting Start
+## 1. Command
+
+- Location: **YARR/bin/scanConsole**
+- Syntax:
+
+```bash
+$ cd YARR
+$ ./bin/scanConsole [-option]
+```
+
+## 2. Getting Start
 
 #### 0. Install & Setup
 
-Please check [Pre Requirements](installation.md) to install required packages.<br>
-
-First, please be sure to build YARR SW:
+The DB Accessor is included as part of [YARR SW](https://gitlab.cern.ch/YARR/YARR).<br>
+Follow the [installation tutorial](installation.md) to install required packages and make sure to build YARR SW:
 
 ```bash
 $ cd YARR
 $ mkdir build && cd build
 $ cmake3 ../
 $ make -j4
+cd ../
 ```
-> [More detail about YARR SW](https://yarr.readthedocs.io/en/latest/)
 
-Next, please be sure to setup Local DB setting using `YARR/localdb/setup_db.sh`. <br>
-This script confirms
-
-- if the python packages is satisfied
-- if the default config files are prepared
-    - HOME/.yarr/localdb/HOSTNAME_database.json
-    - HOME/.yarr/localdb/user.json
-    - HOME/.yarr/localdb/HOSTNAME_site.json
-- if the command is enabled
-- if the DB connection is established
+And make sure to setup Local DB configuration files using [YARR/localdb/setup_db.sh](setup-db.md) shell:
 
 ```bash
-$ cd YARR
 $ ./localdb/setup_db.sh
-
-< Setting up with some texts >
 ```
-> [More detail about setup_db.sh](setup-db.md)
 
 #### 1. Confirmation
 
-Please run the command with the emulator to check if the SW is available without uploading.<br>
-This does not use or require any hardware and will run purely in software.<br>
+You can run the [scanConsole](scanconsole.md) with the emulator to check if the command is working.<br>
+This does not use/require any hardware and will run purely in software:
 
 ```bash
-$ cd YARR
 $ bin/scanConsole \
 -r configs/controller/emuCfg_rd53a.json \
 -c configs/connectivity/example_rd53a_setup.json \
@@ -57,25 +54,66 @@ $ bin/scanConsole \
 -p
 ```
 
-Please run the command 'dbAccessor -I' to check if the command is working and the connection to Local DB is good.
+And run the [DB Accessor](accessor.md) with command-line option **-N** to check if the command is working and the connection to Local DB is good:
 
 ```bash
-$ ./bin/dbAccessor -I
-
-#DB INFO# -----------------------
-#DB INFO# Function: Initialize
-#DB INFO# [Connection Test] DB Server: mongodb://127.0.0.1:27017/localdb
-#DB INFO# ---> Connection is GOOD.
-#DB INFO# -----------------------
+$ ./bin/dbAccessor -N
 ```
 
-**Additional options**
+## 3. Syntax
 
-- **-d ``<database.json>``**<br> : Set [database config file](config.md) (default: `HOME/.yarr/localdb/HOSTNAME_database.json`)
+The [scanConsole](scanconsole.md) command to use the Local DB related functions has the following form:
 
-## 2. Usage
+```bash
+$ ./bin/scanConsole -r <path/to/controller.json>
+                    -c <path/to/connectivity.json>
+                    -s <path/to/scan.json>
+                    -W
+                    [-Q]
+                    [-I]
+                    [-d <path/to/database.json>]
+                    [-u <path/to/user.json>]
+                    [-i <path/to/site.json>]
+```
 
-You can scan and upload test data by `scanConsole -W`:
+###### Command Line Arguments
+
+- **``-r <path>``**<br>
+Specifies the path to controller config. (e.g. YARR/configs/controller/specCfg.json)
+
+- **``-c <path>``**<br>
+Specifies the path to [connectivity config](connectivity-config.md). (e.g. YARR/configs/connectivity/example_xxx_setup.json)
+
+- **``-s <path>``**<br>
+Specifies the path to scan config. (e.g. YARR/configs/scans/xxx/std_digitalscan.json)
+
+- **``-W``**<br>
+Sets command to upload results into Local DB after the scan.
+
+###### Additional options
+
+- **``-Q``**<br>
+Enables QC mode which adds a strict verification step before running scan.<br>
+If the files are unsuitable for QC, exit the scan.<br>
+_This option cannot be enabled without -W option._
+
+- **``-I``**<br>
+Enables interactive mode which adds a confirmation step by the user before running scan.<br>
+_This option cannot be enabled without -W option._
+
+- **``-d <path>``**<br>
+Specifies the path to [database config file](database-config.md).<br>
+If -d is not specified, scanConsole sets `HOME/.yarr/localdb/HOSTNAME_database.json` as [database config file](database-config.md).
+
+- **``-u <path>``**<br>
+Specifies the path to [user config file](user-config.md)<br>
+If -u is not specified, scanConsole sets `HOME/.yarr/localdb/user.json` as [user config file](user-config.md).
+
+- **``-i <path>``**<br>
+Specifies the path to [site config file](site-config.md)<br>
+If -i is not specified, scanConsole sets `HOME/.yarr/localdb/HOSTNAME_site.json` as [site config file](site-config.md).
+
+## 4. Examples
 
 ```bash
 $ ./bin/scanConsole \
@@ -84,20 +122,10 @@ $ ./bin/scanConsole \
 -s configs/scans/rd53a/std_digitalscan.json \
 -W
 <lots of text>
-#DB INFO# -----------------------
-#DB INFO# Function: Initialize
-#DB INFO# [Connection Test] DB Server: mongodb://127.0.0.1:27017/localdb
-#DB INFO# ---> Connection is GOOD.
-#DB INFO# -----------------------
-#DB INFO# Uploading in the back ground. (log: ~/.yarr/localdb/log/)
+[  info  ]: Succeeded uploading scan data from /home/work/YARR/data/000004_std_digitalscan
 ```
+The output of "Succeeded uploading" means that data was uploaded into Local DB successfully.
 
-**Additional options**
-
-- **-d ``<database cfg>``**<br> : Set [database config file](config.md) (default: `${HOME}/.yarr/localdb/${HOSTNAME}_database.json`)
-- **-u ``<user cfg>``**<br> : Set [user config file](config.md)
-- **-i ``<site cfg>``**<br> : Set [site config file](config.md)
-
-## 3. FAQ
+## 5. FAQ
 
 in edit.

@@ -41,12 +41,12 @@ $ cd YARR
 $ mkdir build && cd build
 $ cmake3 ../
 $ make -j4
+$ cd ../
 ```
 
 And make sure to setup Local DB configuration files using [YARR/localdb/setup_db.sh](setup-db.md) shell:
 
 ```bash
-$ cd YARR
 $ ./localdb/setup_db.sh
 ```
 
