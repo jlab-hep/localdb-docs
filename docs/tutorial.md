@@ -4,14 +4,12 @@ You can handle Local DB following the tutorial.<br>
 **Current supported OS is centOS7 & macOS (greather than 10.14).**<br>
 **Let's try it on VM if your PC is neither.**<br>
 
-Click the title to jump to the instruction page.
-
 # [Trial Tutorial](trial-tutorial.md)
 
 This is a part of introduction of Local DB and Tools.<br>
 You can download minimum data-set in DB and try to use following functions on your own PC w/o read-out chips and YARR SW.<br>
 
-Contents:
+#### Table of Contents
 
 1. Setup minimum environments and data-set on your onw PC
 2. Check data in Viewer Application
@@ -21,22 +19,28 @@ Contents:
 6. Scan with downloaded component data
 7. Upload result data of registered component data into Local DB (in progress)
 
+[Go to the trial tutorial page](trial-tutorial.md)
+
 ## [Basic Tutorial](basic-tutorial.md)
 
 This is a basic instruction for read-out test and upload result into Local DB based on YARR SW.<br>
 You can follow this using emulator on your PC also.<br>
 
-Contents:
+#### Table of Contents
 
-1. Setup
-2. Scan and Upload data into Local DB
-3. Retrieve data from Local DB
+1. How to Setup YARR
+2. How to Run Scan and Upload Results into Local DB
+3. How to Retrieve Data from Local DB
+4. How to Setup Viewer Application
+5. How to Check Data in Viewer Application
+
+[Go to the basic tutorial page](basic-tutorial.md)
 
 ## [Advanced Tutorial](advanced-tutorial.md)
 
 This is an advanced instruction for using Local DB and Tools.<br>
 
-Contents:
+#### Table of Contents
 
 - a. Setup Web application of Local DB (Viewer Application)
 - b. Register component data into Local DB
@@ -45,3 +49,5 @@ Contents:
 - e. Register DCS data associated with the test data
 - f. Share data with the other Local DB (Synchronization Tool)
 - g. Back-up Local DB (Archive Tool)
+
+[Go to the advanced tutorial page](advanced-tutorial.md)

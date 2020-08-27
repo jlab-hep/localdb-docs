@@ -1,6 +1,6 @@
 # Automatic Installation for centOS7
 
-You can install the [requirements for the system](requirements-list.md) on centOS7 automatically by `localdb-tools/setting/db_server_install.sh`.<br>
+You can install the [requirements for the system](requirements-list.md) on centOS7 automatically by `db_server_install.sh`.<br>
 The script can
 
 - Check missing packages
