@@ -10,8 +10,9 @@ $ git clone https://gitlab.cern.ch/YARR/YARR.git
 $ git clone https://gitlab.cern.ch/YARR/localdb-tools.git
 ```
 
-_Some Local DB functions are not available yet in master buranch._<br>
-_Please change to devel branch if want to use._
+!!! Warning
+    Some Local DB functions are not available yet in master buranch.<br>
+    Please change to devel branch if want to use.
 
 ## Installation for centOS7
 

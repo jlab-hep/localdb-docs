@@ -1,112 +1,78 @@
 # Config Files Sample
 
-### [Database cfg](database-config.md)
+### [Database Config](database-config.md)
 
-### [User cfg](user-config.md)
+- Description: The configuration of Local DB when connecting in YARR.
+- Page: [Database Config Sample](database-config.md)
+- Default Location: `YARR/localdb/setting/default/database.json`
+- Git Repository: [YARR](https://gitlab.cern.ch/YARR/YARR)
 
-### [Site cfg](site-config.md)
+### [User Config](user-config.md)
 
-### [Connectivity cfg](connectivity-config.md)
+- Description: The configuration of your user account when uploading data in YARR.
+- Page: [User Config Sample](user-config.md)
+- Default Location: `YARR/localdb/setting/default/user.json`
+- Git Repository: [YARR](https://gitlab.cern.ch/YARR/YARR)
 
-### [Chip cfg](chip-config.md)
+### [Site Config](site-config.md)
+
+- Description: The configuration of the production site when uploading data in YARR.
+- Page: [Site Config Sample](site-config.md)
+- Default Location: `YARR/localdb/setting/default/site.json`
+- Git Repository: [YARR](https://gitlab.cern.ch/YARR/YARR)
 
 ### [scanLog File](scan-log.md)
 
-### [DCS config](dcs-config.md)
+- Description: The log file of the scan output by scanConsole.
+- Page: [scanLog File Sample](scan-log.md)
+- Default Location: In the result directory.
+- Git Repository: [YARR](https://gitlab.cern.ch/YARR/YARR)
 
-### [Viewer Application Cfg](viewer-config.md)
+### [DCS Config](dcs-config.md)
 
-### Component cfg
+- Description: The configuration of the DCS data.
+- Page: [DCS Config Sample](dcs-config.md)
+- Default Location: `YARR/localdb/setting/default/dcs_info.json`
+- Git Repository: [YARR](https://gitlab.cern.ch/YARR/YARR)
 
-- `module` : configures for module (option)
-- `chipType` : "FEI4B" or "RD53A"
-- `chips.i` : configures for chip
-    - `serialNumber` : The serial number of the module/chip
-    - `componentType` : The component type (e.g. 'Module', 'Front-end Chip')<br>**Select it from the component list in database config.**
-    - `chipId`\* : The number of the chipId, which must be "int"
+### [Connectivity Config](connectivity-config.md)
 
-#### For RD53A SCC
+- Description: The configuration of the component data.
+- Page: [Connectivity Config Sample](connectivity-config.md)
+- Default Location: `YARR/configs/connectivity/example_xxx_setup.json`
+- Git Repository: [YARR](https://gitlab.cern.ch/YARR/YARR)
 
-```json
-{
-    "chipType" : "RD53A",
-    "chips" : [
-        {
-            "serialNumber": "RD53A-001",
-            "componentType": "Front-end Chip",
-            "chipId": 0
-        }
-    ]
-}
-```
+### [Chip Config](chip-config.md)
 
-#### For FEI4B Quad Module
+- Description: The configuration of the chip component.
+- Page: [Chip Config Sample](chip-config.md)
+- Default Location: `YARR/configs/defaults/default_xxx.json`
+- Git Repository: [YARR](https://gitlab.cern.ch/YARR/YARR)
 
-```json
-{
-    "module": {
-        "serialNumber": "FEI4B-001",
-        "componentType": "Module"
-    },
-    "chipType" : "FEI4B",
-    "chips" : [
-        {
-            "serialNumber": "FEI4B-001-001",
-            "componentType": "Front-end Chip",
-            "chipId": 1
-        },
-        {
-            "serialNumber": "FEI4B-001-002",
-            "componentType": "Front-end Chip",
-            "chipId": 2
-        },
-        {
-            "serialNumber": "FEI4B-001-003",
-            "componentType": "Front-end Chip",
-            "chipId": 3
-        },
-        {
-            "serialNumber": "FEI4B-001-004",
-            "componentType": "Front-end Chip",
-            "chipId": 4
-        }
-    ]
-}
-```
+### [Component Config](component-config.md)
 
-### Synchronization Tool
+- Description: The configuration of the component data to register.
+- Page: [Component Config Sample](component-config.md)
+- Default Location: `YARR/localdb/setting/default/register_component_xxx.json`
+- Git Repository: [YARR](https://gitlab.cern.ch/YARR/YARR)
 
-- `local` : configures for local MongoDB server
-    - `host` : IP address of MongoDB (default. "127.0.0.1" or "localhost")
-    - `port` : The port number of MongoDB (default. "27017")
-    - `username` : username of user account in MongoDB if the user authentication is required
-    - `password` : password of user account in MongoDB if the user authentication is required
-- `master` : configures for master MongoDB server <br>
-    Please ask to the manager of DB server for `host`, `port`, `username` and `password` of master MongoDB
-- `logfile` : path to log output file
+### [Viewer Application Config](viewer-config.md)
 
-```yml
-local:
-    host: 127.0.0.1
-    port: 27017
-    #username: tokyotech
-    #password: ihatepassword
-master:
-    host: master-host
-    port: 27017
-    #username: tokyotech
-    #password: ihatepassword
-#logfile: logs/production.log
-```
+- Description: The configuration of Local DB server and web server when starting the viewer application.
+- Page: [Viewer Application Config Sample](viewer-config.md)
+- Default Location: `localdb-tools/scripts/yaml/web-conf.yml`
+- Git Repository: [localdb-tools](https://gitlab.cern.ch/YARR/localdb-tools)
 
-### Archive Tool
+### [Synchronization Tool Config](sync-config.md)
 
-- `data_path` : path to MongoDB database (defaul. "/var/lib/mongo")
-- `archive_path` : path to put archives (Recommendation: use external HDD/SSD)
-- `n_archive` : The number of archives want to keep (It depends on size of your disk storage)
+- Description: The configuration for synchronization tool.
+- Page: [Synchronization Tool Config Sample](sync-config.md)
+- Default Location: `localdb-tools/sync-tool/src/etc/localdbtools/default.yml`
+- Git Repository: [localdb-tools](https://gitlab.cern.ch/YARR/localdb-tools)
 
-```yml
-data_path: /var/lib/mongo
-archive_path: /root/archive-mongo-data
-n_archives: 2
-```
+### [Archive Tool Config](archive-config.md)
+
+- Description: The configuration for archive tool.
+- Page: [Archive Tool Config Sample](archive-config.md)
+- Default Location: `localdb-tools/archive-tool/src/etc/localdbtools/archive.yml`
+- Git Repository: [localdb-tools](https://gitlab.cern.ch/YARR/localdb-tools)
