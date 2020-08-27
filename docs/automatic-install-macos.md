@@ -1,6 +1,6 @@
 # Automatic Installation for macOS
 
-You can install the [requirements for the system](requirements-list.md) on macOS automatically by `localdb-tools/setting/macos/installer_macos.sh`.<br>
+You can install the [requirements for the system](requirements-list.md) on macOS automatically by `installer_macos.sh`.<br>
 The script can
 
 - Check missing packages
