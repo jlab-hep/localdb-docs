@@ -38,23 +38,9 @@ If you want to install on macOS, see the [manual installation guide for macOS](m
 
 It requires g++ version 7.0 or higher for YARR SW compilation.
 
-**1. Check**
-
-```bash
-$ g++ --version
--bash: g++: command not found
-```
-
-**2. Install**
-
 ```bash
 $ sudo yum install centos-release-scl
 $ sudo yum install devtoolset-7
-```
-
-**3. Confirm**
-
-```bash
 $ source /opt/rh/devtoolset-7/enable
 $ g++ --version
 g++ (GCC) 7.3.1 20180303 (Red Hat 7.3.1-5)
@@ -64,23 +50,9 @@ g++ (GCC) 7.3.1 20180303 (Red Hat 7.3.1-5)
 
 It requires cmake version 3 for YARR SW compilation.
 
-**1. Check**
-
-```bash
-$ cmake3 --version
--bash: cmake3: command not found
-```
-
-**2. Install**
-
 ```bash
 $ sudo yum install epel-release
 $ sudo yum install cmake3
-```
-
-**3. Confirm**
-
-```bash
 $ cmake3 --version
 cmake3 version 3.14.6
 ```
@@ -88,8 +60,6 @@ cmake3 version 3.14.6
 #### Other dependencies
 
 It requires several other packages for YARR SW compilation.
-
-**Install**
 
 ```bash
 $ sudo yum install git screen gnuplot texlive-epstopdf ghostscript
@@ -101,23 +71,9 @@ $ sudo yum install git screen gnuplot texlive-epstopdf ghostscript
 
 It requires python version 3.6 or higher for Local DB tools compilation.
 
-**1. Check**
-
-```bash
-$ python3 --version
--bash: python3: command not found
-```
-
-**2. Install**
-
 ```bash
 $ sudo yum install epel-release
 $ sudo yum install python3.x86_64
-```
-
-**3. Confirm**
-
-```bash
 $ python3 --version
 Python 3.6.8
 ```
@@ -125,8 +81,6 @@ Python 3.6.8
 #### pip modules
 
 It requires several pip modules for Local DB tools compilation.
-
-**Install**
 
 ```bash
 $ sudo python3 -m pip install \
@@ -149,7 +103,7 @@ pandas
 ### YARR SW Compilation
 
 It requires to compile [YARR](https://gitlab.cern.ch/YARR/YARR) in working directory of your DAQ machine to scan ASICs.<br>
-If you have not clone the repository of YARR, see the [clone git repository for the pre installation](installation.md) to do it.
+If you do not have the repository of YARR, see the [clone git repository for the pre installation](installation.md).
 
 ```bash
 $ cd path/to/YARR
@@ -171,23 +125,9 @@ Once the compile is successful, the binary commands are placed in **YARR/bin**.
 
 It requires g++ version 7.0 or higher for Local DB tools compilation.
 
-**1. Check**
-
-```bash
-$ g++ --version
--bash: g++: command not found
-```
-
-**2. Install**
-
 ```bash
 $ sudo yum install centos-release-scl
 $ sudo yum install devtoolset-7
-```
-
-**3. Confirm**
-
-```bash
 $ source /opt/rh/devtoolset-7/enable
 $ g++ --version
 g++ (GCC) 7.3.1 20180303 (Red Hat 7.3.1-5)
@@ -197,23 +137,9 @@ g++ (GCC) 7.3.1 20180303 (Red Hat 7.3.1-5)
 
 It requires cmake version 3 for Local DB tools compilation.
 
-**1. Check**
-
-```bash
-$ cmake3 --version
--bash: cmake3: command not found
-```
-
-**2. Install**
-
 ```bash
 $ sudo yum install epel-release
 $ sudo yum install cmake3
-```
-
-**3. Confirm**
-
-```bash
 $ cmake3 --version
 cmake3 version 3.14.6
 ```
@@ -221,8 +147,6 @@ cmake3 version 3.14.6
 #### Other dependencies
 
 It requires several other packages for Local DB tools compilation.
-
-**Install**
 
 ```bash
 $ sudo yum install git screen
@@ -234,23 +158,9 @@ $ sudo yum install git screen
 
 It requires python version 3.6 or higher for Local DB tools compilation.
 
-**1. Check**
-
-```bash
-$ python3 --version
--bash: python3: command not found
-```
-
-**2. Install**
-
 ```bash
 $ sudo yum install epel-release
 $ sudo yum install python3.x86_64
-```
-
-**3. Confirm**
-
-```bash
 $ python3 --version
 Python 3.6.8
 ```
@@ -258,8 +168,6 @@ Python 3.6.8
 #### pip modules
 
 It requires several pip modules for Local DB tools compilation.
-
-**Install**
 
 ```bash
 $ sudo python3 -m pip install \
@@ -289,22 +197,12 @@ pandas
 ### LocalDB tools Compilation
 
 It requires to compile [Local DB tools](https://gitlab.cern.ch/YARR/localdb-tools) in working directory of your DB machine to handle Local DB.<br>
-If you have not clone the repository of Local DB tools, see the [clone git repository for the pre installation](installation.md) to do it.
+If you do not have the repository of Local DB tools, see the [clone git repository for the pre installation](installation.md).
 
 ### MongoDB
 
 It requires MongoDB version 4.2 or higher for Local DB.<br>
-You can run the [upgrade_mongodb_centos.sh](upgrade_mongodb_centos.md) shell to install/upgrade MongoDB on centOS7.<br>
-If you want to install and start mongod service on other platform, or install manually, see [MongoDB 4.X Community Edition](https://docs.mongodb.com/manual/installation/) to get more information.
-
-**1. Check**
-
-```bash
-$ mongo --version
--bash: mongo: command not found
-```
-
-**2. Install/Upgrade**
+You can run the [upgrade_mongodb_centos.sh](upgrade_mongodb_centos.md) shell to install/upgrade MongoDB on centOS7.
 
 ```bash
 $ cd localdb-tools/scripts/shell
@@ -316,11 +214,6 @@ Install MongoDB version 4.2? [y/n]
 y
 
 < Installing packages with many texts >
-```
-
-**3. Confirm**
-
-```bash
 $ mongo [--port <port number>]
 MongoDB shell version v4.2.1
 ...
@@ -330,20 +223,15 @@ test
 bye
 ```
 
-If you catch the message **"exception: connect failed"**, you should check that MongoDB is running.
+!!! Note
+    See [MongoDB 4.X Community Edition](https://docs.mongodb.com/manual/installation/) to get more detail.
+
+!!! Warning
+    If you catch the message **"exception: connect failed"**, you should check that MongoDB is running.
 
 ### influxDB
 
 It requires influxDB to manage DCS data.
-
-**1. Check**
-
-```bash
-$ influx --version
--bash: influx: command not found
-```
-
-**2. Install**
 
 ```bash
 $ cat <<EOF | sudo tee /etc/yum.repos.d/influxdb.repo
@@ -356,30 +244,17 @@ gpgkey = https://repos.influxdata.com/influxdb.key
 EOF
 $ sudo yum install influxdb
 $ sudo systemctl start influxdb
-```
-
-**3. Confirm**
-
-```bash
 $ influx
 Influx DB shell version X.X.X
 >
 ```
 
-See [influxDB Installation](https://docs.influxdata.com/influxdb/v1.7/introduction/installation/) to get more detail.
+!!! Note
+    See [influxDB Installation](https://docs.influxdata.com/influxdb/v1.7/introduction/installation/) to get more detail.
 
 ### Grafana
 
 It requires Grafana to manage data in influxDB.
-
-**1. Check**
-
-```bash
-$ grafana-server -v
--bash: grafana-server: command not found
-```
-
-**2. Install**
 
 ```bash
 $ cat <<EOF | sudo tee /etc/yum.repos.d/grafana.repo
@@ -395,22 +270,16 @@ sslcacert=/etc/pki/tls/certs/ca-bundle.crt
 EOF
 $ sudo yum install grafana
 $ sudo systemctl start grafana-server
-```
-
-**3. Confirm**
-
-```bash
 $ grafana-server -v
 Version 6.5.2 (commit: 742d165, branch: HEAD)
 ```
 
-See [Grafana Installation](https://grafana.com/docs/grafana/latest/installation/requirements/) to get more detail.
+!!! Note
+    See [Grafana Installation](https://grafana.com/docs/grafana/latest/installation/requirements/) to get more detail.
 
 ### Root
 
 It requires ROOT version 6.18 or higher to display plots on the viewer application.
-
-**Install**
 
 ```bash
 $ yum install git cmake gcc-c++ gcc binutils \
@@ -426,4 +295,5 @@ $ tar zxf root_v6.18.04.Linux-centos7-x86_64-gcc4.8.tar.gz
 $ source /opt/root/bin/thisroot.sh
 ```
 
-See [ROOT Installation](https://root.cern/install/) to get more detail.
+!!! Note
+    See [ROOT Installation](https://root.cern/install/) to get more detail.
