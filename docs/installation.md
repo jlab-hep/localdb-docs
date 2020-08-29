@@ -23,3 +23,6 @@ $ git clone https://gitlab.cern.ch/YARR/localdb-tools.git
 
 - [Manual Installation (**RECOMMENDED**)](manual-install-macos.md)
 - [Automatic Installation](automatic-install-macos.md)
+
+Once installed the required packages, you can try it out following the [tutorial page](tutorial.md).<br>
+See the [manual page for each tool](tool.md) to get the individual functions.

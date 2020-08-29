@@ -1,38 +1,52 @@
 # Quick Tutorial
 
-You can handle Local DB following the tutorial.<br>
-**Current supported OS is centOS7 & macOS (greather than 10.14).**<br>
-**Let's try it on VM if your PC is neither.**<br>
+This page introduces tutorials to try out the Local DB and its tools assuming some cases.<br>
+If you want to try a series of operations from scan to data upload, go to the [basic tutorial](#basic-tutorial).<br>
+If you want to try the operation related to the [viewer application](viewer.md), go to the [viewer tutorial](#viewer-tutorial).<br>
+If you could not complete the [installation](installation.md) or cannot build YARR and cannot use read-out binary command, go to the [trial tutorial](#trial-tutorial) to try starting Local DB and using the commands.<br>
+If you want to check other advanced usage, go to the [advanced tutorial](#advanced-tutorial).
 
-# [Trial Tutorial](trial-tutorial.md)
+!!! Warning
+    Current supported OS is centOS7 & macOS (greather than 10.14).<br>
+    Let's try it on VM if your PC is neither.
 
-You can download minimum data-set in DB and try to use following functions on your own PC w/o read-out chips and YARR SW.<br>
+---
 
-#### Table of Contents
+## [Trial Tutorial](trial-tutorial.md)
 
-1. Setup minimum environments and data-set on your onw PC
-2. Check data in Viewer Application
-3. Upload result data into Local DB
-4. Retrieve data from Local DB
-5. Download component data from ITk Production DB
-6. Scan with downloaded component data
-7. Upload result data of registered component data into Local DB (in progress)
+Assuming you do not have root privileges and can not complete the [installation of the requirements](installation.md), this tutorial describes;
 
-[Go to the trial tutorial page](trial-tutorial.md)
+- How to build environment in user directory
+- How to download a sample dataset and setup Local DB
+- How to use read-out command and data upload without actually performing read-out test using a toy script
+
+Once you have started Local DB in this trial tutorial, you can go to the [tutorial for the viewer application](viewer-tutorial.md) and try it out.
+
+##### [Go to the trial tutorial page](trial-tutorial.md)
+
+---
 
 ## [Basic Tutorial](basic-tutorial.md)
 
-You can follow this using emulator on your PC also.<br>
+This tutorial is intended to demonstrate basic operations:
 
-#### Table of Contents
+- How to build YARR read-out command
+- How to use read-out command and data upload using emulator
+- How to retrieve data from Local DB on the console
 
-1. How to Setup YARR
-2. How to Run Scan and Upload Results into Local DB
-3. How to Retrieve Data from Local DB
-4. How to Setup Viewer Application
-5. How to Check Data in Viewer Application
+Once you have started Local DB in this trial tutorial, you can go to the [tutorial for the viewer application](viewer-tutorial.md) and try it out.
 
-[Go to the basic tutorial page](basic-tutorial.md)
+##### [Go to the basic tutorial page](basic-tutorial.md)
+
+---
+
+## [Viewer Tutorial](viewer-tutorial.md)
+
+- How to
+
+##### [Go to the viewer tutorial page](viewer-tutorial.md)
+
+---
 
 ## [Advanced Tutorial](advanced-tutorial.md)
 
@@ -48,4 +62,4 @@ This is an advanced instruction for using Local DB and Tools.<br>
 - f. Share data with the other Local DB (Synchronization Tool)
 - g. Back-up Local DB (Archive Tool)
 
-[Go to the advanced tutorial page](advanced-tutorial.md)
+##### [Go to the advanced tutorial page](advanced-tutorial.md)
