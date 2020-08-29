@@ -3,7 +3,7 @@
 ![Local DB](images/logo.png)
 
 **Welcome to the Local DB Manual!**<br>
-The manual introduces the overview of Local DB system, the installation, and provise samples of the usage and the configuration.
+This manual introduces the overview of Local DB system, the installation, and provise samples of the usage and the configuration.
 
 ## What is Local DB?
 **Local DB** (**Local Database**) is the data management/storage system based on [MongoDB](https://docs.mongodb.com/) for [YARR](https://gitlab.cern.ch/YARR).<br>
