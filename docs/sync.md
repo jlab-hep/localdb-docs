@@ -3,7 +3,7 @@
 The **Synchronization Tool** synchronizes multiple Local DB servers for ITk.<br>
 Before using sync-tool, we need a stable, network-accessible **master server** which handle whole ITK data.
 
-![Sync overall](images/sync_overall.png)
+![Sync overall](images/sync/overall.png)
 
 Contents:
 
@@ -26,7 +26,7 @@ Please check [Pre Requirements](installation.md) to install required packages.<b
 And please be sure to setup Synchronization Tool setting using `localdb-tools/sync-tool/setup_sync_tool.sh`. <br>
 This script performs
 
-- to confirm the config file ( [localdb-tools/sync-tool/my_configure.yml](config.md) )
+- to confirm the config file ( [localdb-tools/sync-tool/my_configure.yml](config/sync.md) )
 - to set the binary command in bin directory
 
 ```bash

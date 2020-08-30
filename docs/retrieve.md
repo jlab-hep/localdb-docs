@@ -69,7 +69,7 @@ $ cd YARR
 $ ./localdb/setup_db.sh
 < Setting up with some texts >
 ```
-> [More detail about setup_db.sh](setup-db.md)
+> [More detail about setup_db.sh](script/setup-db.md)
 
 #### 1. Confirmation
 
@@ -86,7 +86,7 @@ $ ./localdb/bin/localdbtool-retrieve init
 
 **Additional options**
 
-- **--database ``<database cfg>``**<br> : Set [database config file](config.md) (default: `HOME/.yarr/localdb/HOSTNAME_database.json`)
+- **--database ``<database cfg>``**<br> : Set [database config file](config/database.md) (default: `HOME/.yarr/localdb/HOSTNAME_database.json`)
 
 ## 3. Usage
 
@@ -118,7 +118,7 @@ DCS Data  : NULL
 
 **Additional options**
 
-- **--database ``<database cfg>``**<br> : Set [database config file](config.md) (default: `HOME/.yarr/localdb/HOSTNAME_database.json`)
+- **--database ``<database cfg>``**<br> : Set [database config file](config/database.md) (default: `HOME/.yarr/localdb/HOSTNAME_database.json`)
 - **--username ``<username>``**<br> : Set username of the Local DB Server if the user authentication is required
 - **--password ``<password>``**<br> : Set password of the Local DB Server if the user authentication is required
 - **--config ``<config file>``**<br> : Set config file which username and password are written in if the user authentication is required
@@ -161,7 +161,7 @@ $ ./localdb/bin/localdbtool-retrieve pull
 
 **Additional options**
 
-- **--database ``<database cfg>``**<br> : Set [database config file](config.md) (default: `HOME/.yarr/localdb/HOSTNAME_database.json`)
+- **--database ``<database cfg>``**<br> : Set [database config file](config/database.md) (default: `HOME/.yarr/localdb/HOSTNAME_database.json`)
 - **--username ``<username>``**<br> : Set username of the Local DB Server if the user authentication is required
 - **--password ``<password>``**<br> : Set password of the Local DB Server if the user authentication is required
 - **--config ``<config file>``**<br> : Set config file which username and password are written in if the user authentication is required
@@ -250,7 +250,7 @@ $ ./localdb/bin/localdbtool-retrieve list site
 ### d. Create Config
 
 You can create the connectivity config file and the chip config files after the component registration. <br>
-The component data can be registered by [DB Accessor](accessor.md) or can be downloaded from ITkPD by [ITkPD Interface](#itkpd-interface.md). <br>
+The component data can be registered by [DB Accessor](accessor.md) or can be downloaded from ITkPD by [ITkPD Interface](itkpd-interface.md). <br>
 You can create the config files by `localdb-retrieve pull --chip <SERIAL NUMBER>`.<br>
 If you have already uploaded the component test data, the config files in the latest scan are retrieved.
 

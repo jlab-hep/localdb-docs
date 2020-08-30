@@ -32,7 +32,7 @@ Please check [Pre Requirements](installation.md) to install required packages.<b
 And please be sure to setup Archive Tool setting using `localdb-tools/archive-tool/setup_archive_tool.sh`. <br>
 This script performs
 
-- to confirm the config file ( [localdb-tools/archive-tool/my_archive_configure.yml](config.md) )
+- to confirm the config file ( [localdb-tools/archive-tool/my_archive_configure.yml](config/archive.md) )
 - to set the binary command in bin directory
 
 ```bash
@@ -52,7 +52,7 @@ $ ./bin/localdbtool-archive.sh -f my_archive_configure.yml
 
 **Command Line Arguments**
 
-* **-f|--config ``<config file>``**<br> : Set path to [configure file](config.md)
+* **-f|--config ``<config file>``**<br> : Set path to [configure file](config/archive.md)
 - **-p|--db-port ``<port>``**<br> : Set Local DB server port (default: 27017)
 - **-d|--db-name ``<name>``**<br> : Set Local DB name (default: localdb)
 * **-a|--archive-path ``<dir>``**<br> : Set directory path to archives will be put (default: ./archive-mongo-data)
