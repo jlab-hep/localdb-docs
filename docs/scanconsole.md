@@ -1,6 +1,6 @@
 # scanConsole
 
-The **scanConsole** is the main read-out program in [YARR](https://yarr.readthedocs.io/en/latest/).
+The **scanConsole** is the main read-out program in [YARR](http://yarr.web.cern.ch/yarr/).
 
 ### Table of Contents
 
