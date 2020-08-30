@@ -12,6 +12,8 @@ You can access the web page in the local machine, or from the other machine if y
 4. [Web Page](#4-web-page)
 5. [FAQ](#5-faq)
 
+---
+
 ## 1. Command
 
 - Location: **localdb-tools/viewer/app.py**

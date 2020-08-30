@@ -12,6 +12,8 @@ Before using sync-tool, we need a stable, network-accessible **master server** w
 3. [Usage](#3-usage)
 4. [FAQ](#4-faq)
 
+---
+
 ## 1. Command
 
 - Location:  **localdb-tools/sync-tool/localdbtool-sync.py**

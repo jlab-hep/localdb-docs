@@ -6,7 +6,6 @@
 2. [Installation](#2-installation)
 3. [Syntax](#3-syntax)
 4. [Examples](#4-examples)
-5. [FAQ](#5-faq)
 
 ## 1. Synopsis
 
@@ -29,12 +28,12 @@ $ ./bin/dbAccessor -L
                    [-d <path/to/database.json>]
 ```
 
-**Command Line Arguments**
+###### Command Line Arguments
 
 - **``-L``**<br>
 Sets command to display test data
 
-**Additional options**
+###### Additional options
 
 - **``-n <name>``**<br>
 Specifies the component name to query.

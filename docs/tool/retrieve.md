@@ -9,6 +9,8 @@ The **Retrieve Tool** is to retrieve data from Local DB.
 3. [Usage](#3-usage)
 4. [FAQ](#4-faq)
 
+---
+
 # 1. Command
 
 - Location: **YARR/localdb/bin/localdb-retrieve**

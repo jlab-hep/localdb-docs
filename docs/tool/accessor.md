@@ -9,6 +9,8 @@ You can upload local data to Local DB or download data locally from Local DB eas
 2. [Getting Start](#2-getting-start)
 3. [FAQ](#3-faq)
 
+---
+
 ## 1. Command
 
 - Location: **YARR/bin/dbAccessor**
