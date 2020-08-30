@@ -34,7 +34,7 @@ $ ./bin/dbAccessor <-command> [-option]
 #### 0. Install & Setup
 
 The DB Accessor is included as part of [YARR SW](https://gitlab.cern.ch/YARR/YARR).<br>
-Follow the [installation tutorial](installation.md) to install required packages and make sure to build YARR SW:
+Follow the [installation tutorial](../installation.md) to install required packages and make sure to build YARR SW:
 
 ```bash
 $ cd YARR
@@ -44,7 +44,7 @@ $ make -j4
 $ cd ../
 ```
 
-And make sure to setup Local DB configuration files using [YARR/localdb/setup_db.sh](script/setup-db.md) shell:
+And make sure to setup Local DB configuration files using [YARR/localdb/setup_db.sh](../script/setup-db.md) shell:
 
 ```bash
 $ ./localdb/setup_db.sh
@@ -60,4 +60,4 @@ $ ./bin/dbAccessor -N
 
 ## 3. FAQ
 
-See [FAQ for dbAccessor](faq/accessor.md).
+See [FAQ for dbAccessor](../faq/accessor.md).

@@ -4,10 +4,10 @@ You can use administrator functions in the admin page if you have an account wit
 
 !!! Note
     The account with administrator privilege here is an administrator account registered in Local DB
-    and can be created by [create_admin.sh](../script/create_admin.md) shell.<br>
+    and can be created by [create_admin.sh](../../script/create_admin.md) shell.<br>
 
 !!! Warning
-    In order to use the administrator function, it is required to enable the administrator function in the [viewer setup script](../script/setup-viewer.md).
+    In order to use the administrator function, it is required to enable the administrator function in the [viewer setup script](../../script/setup-viewer.md).
 
 ### Functions
 
@@ -21,28 +21,28 @@ You can use administrator functions in the admin page if you have an account wit
 
 ##### 1. Click **Sign in** on the top right:
 
-|![Viewer Admin Authenitcation](../images/viewer/admin_authenticate_1.png)|
+|![Viewer Admin Authenitcation](../../images/viewer/admin_authenticate_1.png)|
 |:-:|
 
 <br>
 
 ##### 2. Click **Admin Page**:
 
-|![Viewer Admin Authenitcation](../images/viewer/admin_authenticate_2.png)|
+|![Viewer Admin Authenitcation](../../images/viewer/admin_authenticate_2.png)|
 |:-:|
 
 <br>
 
 ##### 3. Enter username and password of the administrator acciount and click **OK**:
 
-|![Viewer Admin Authenitcation](../images/viewer/admin_authenticate_3.png)|
+|![Viewer Admin Authenitcation](../../images/viewer/admin_authenticate_3.png)|
 |:-:|
 
 <br>
 
 ##### 4. You can get the admin management page if authentication successful:
 
-|![Viewer Admin Authenitcation](../images/viewer/admin_authenticate_4.png)|
+|![Viewer Admin Authenitcation](../../images/viewer/admin_authenticate_4.png)|
 |:-:|
 
 <br>
@@ -51,21 +51,21 @@ You can use administrator functions in the admin page if you have an account wit
 
 ##### 1. First the administrator must confirm if the mail function is available on **Check mail sending function**:
 
-|![Viewer Admin Mail Function](../images/viewer/admin_mail_sending_1.png)|
+|![Viewer Admin Mail Function](../../images/viewer/admin_mail_sending_1.png)|
 |:-:|
 
 <br>
 
 ##### 2. Enter your e-mail address and click **sending a test mail** to send test-mail to your e-mail address:
 
-|![Viewer Admin Mail Function](../images/viewer/admin_mail_sending_2.png)|
+|![Viewer Admin Mail Function](../../images/viewer/admin_mail_sending_2.png)|
 |:-:|
 
 <br>
 
 ##### 3. Confirm that the following page is displayed and an e-mail will be sent to your address:
 
-|![Viewer Admin Mail Function](../images/viewer/admin_mail_sending_3.png)|
+|![Viewer Admin Mail Function](../../images/viewer/admin_mail_sending_3.png)|
 |:-:|
 
 <br>
@@ -80,35 +80,35 @@ Each user needs a user account to use functions to comment, tag, upload QC scans
 
 ##### 1. The administrator can register user account in **Account Creation** page:
 
-|![Viewer Admin Account Creation](../images/viewer/admin_account_creation_1.png)|
+|![Viewer Admin Account Creation](../../images/viewer/admin_account_creation_1.png)|
 |:-:|
 
 <br>
 
 ##### 2. Fill all information correctly:
 
-|![Viewer Admin Account Creation](../images/viewer/admin_account_creation_2.png)|
+|![Viewer Admin Account Creation](../../images/viewer/admin_account_creation_2.png)|
 |:-:|
 
 <br>
 
 ##### 3. Click **Proceed** to go to the confirmation step:
 
-|![Viewer Admin Account Creation](../images/viewer/admin_account_creation_3.png)|
+|![Viewer Admin Account Creation](../../images/viewer/admin_account_creation_3.png)|
 |:-:|
 
 <br>
 
 ##### 4. Click **Register** if there is no mistake, or **Back page** if you want to correct:
 
-|![Viewer Admin Account Creation](../images/viewer/admin_account_creation_4.png)|
+|![Viewer Admin Account Creation](../../images/viewer/admin_account_creation_4.png)|
 |:-:|
 
 <br>
 
 ##### 5. Confirm that the following page is displayed and the user has received the e-mail:
 
-|![Viewer Admin Account Creation](../images/viewer/admin_account_creation_5.png)|
+|![Viewer Admin Account Creation](../../images/viewer/admin_account_creation_5.png)|
 |:-:|
 
 <br>

@@ -25,7 +25,7 @@ $ ./bin/scanConsole [-option]
 #### 0. Install & Setup
 
 The DB Accessor is included as part of [YARR SW](https://gitlab.cern.ch/YARR/YARR).<br>
-Follow the [installation tutorial](installation.md) to install required packages and make sure to build YARR SW:
+Follow the [installation tutorial](../installation.md) to install required packages and make sure to build YARR SW:
 
 ```bash
 $ cd YARR
@@ -35,7 +35,7 @@ $ make -j4
 cd ../
 ```
 
-And make sure to setup Local DB configuration files using [YARR/localdb/setup_db.sh](script/setup-db.md) shell:
+And make sure to setup Local DB configuration files using [YARR/localdb/setup_db.sh](../script/setup-db.md) shell:
 
 ```bash
 $ ./localdb/setup_db.sh
@@ -82,7 +82,7 @@ $ ./bin/scanConsole -r <path/to/controller.json>
 Specifies the path to controller config. (e.g. YARR/configs/controller/specCfg.json)
 
 - **``-c <path>``**<br>
-Specifies the path to [connectivity config](config/connectivity.md). (e.g. YARR/configs/connectivity/example_xxx_setup.json)
+Specifies the path to [connectivity config](../config/connectivity.md). (e.g. YARR/configs/connectivity/example_xxx_setup.json)
 
 - **``-s <path>``**<br>
 Specifies the path to scan config. (e.g. YARR/configs/scans/xxx/std_digitalscan.json)
@@ -102,16 +102,16 @@ Enables interactive mode which adds a confirmation step by the user before runni
 _This option cannot be enabled without -W option._
 
 - **``-d <path>``**<br>
-Specifies the path to [database config file](config/database.md).<br>
-If -d is not specified, scanConsole sets `HOME/.yarr/localdb/HOSTNAME_database.json` as [database config file](config/database.md).
+Specifies the path to [database config file](../config/database.md).<br>
+If -d is not specified, scanConsole sets `HOME/.yarr/localdb/HOSTNAME_database.json` as [database config file](../config/database.md).
 
 - **``-u <path>``**<br>
-Specifies the path to [user config file](config/user.md)<br>
-If -u is not specified, scanConsole sets `HOME/.yarr/localdb/user.json` as [user config file](config/user.md).
+Specifies the path to [user config file](../config/user.md)<br>
+If -u is not specified, scanConsole sets `HOME/.yarr/localdb/user.json` as [user config file](../config/user.md).
 
 - **``-i <path>``**<br>
-Specifies the path to [site config file](config/site.md)<br>
-If -i is not specified, scanConsole sets `HOME/.yarr/localdb/HOSTNAME_site.json` as [site config file](config/site.md).
+Specifies the path to [site config file](../config/site.md)<br>
+If -i is not specified, scanConsole sets `HOME/.yarr/localdb/HOSTNAME_site.json` as [site config file](../config/site.md).
 
 ## 4. Examples
 

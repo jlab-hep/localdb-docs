@@ -22,11 +22,11 @@ $ ./bin/localdbtool-archive.sh
 ## 2. Getting start
 
 The archive tool is included as part of [Local DB Tools](https://gitlab.cern.ch/YARR/localdb-tools).<br>
-Follow the [installtaion tutorial](installation.md) to install required packages.
+Follow the [installtaion tutorial](../installation.md) to install required packages.
 
 #### 1. Setup
 
-Setup the configuration files of the archive tool using [localdb-tools/archive-tool/setup_archive_tool.sh](script/setup_archive_tool.md) shell:
+Setup the configuration files of the archive tool using [localdb-tools/archive-tool/setup_archive_tool.sh](../script/setup_archive_tool.md) shell:
 
 ```bash
 $ cd localdb-tools/archivee-tool
@@ -45,7 +45,7 @@ $ ./bin/localdbtool-archive.sh -f my_archive_configure.yml
 ###### Command Line Arguments
 
 * **``-f|--config <config file>``**<br>
-Specifies path to [configure file](config/archive.md)
+Specifies path to [configure file](../config/archive.md)
 
 - **``-p|--db-port <port>``**<br>
 Specifies Local DB server port (default: **27017)

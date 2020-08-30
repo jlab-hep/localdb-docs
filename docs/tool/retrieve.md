@@ -52,7 +52,7 @@ Contents:
 
 #### 0. Install & Setup
 
-Please check [Pre Requirements](installation.md) to install required packages.<br>
+Please check [Pre Requirements](../installation.md) to install required packages.<br>
 And please be sure to setup Local DB setting using `YARR/localdb/setup_db.sh`. <br>
 This script confirms
 
@@ -69,7 +69,7 @@ $ cd YARR
 $ ./localdb/setup_db.sh
 < Setting up with some texts >
 ```
-> [More detail about setup_db.sh](script/setup-db.md)
+> [More detail about setup_db.sh](../script/setup-db.md)
 
 #### 1. Confirmation
 
@@ -86,7 +86,7 @@ $ ./localdb/bin/localdbtool-retrieve init
 
 **Additional options**
 
-- **--database ``<database cfg>``**<br> : Set [database config file](config/database.md) (default: `HOME/.yarr/localdb/HOSTNAME_database.json`)
+- **--database ``<database cfg>``**<br> : Set [database config file](../config/database.md) (default: `HOME/.yarr/localdb/HOSTNAME_database.json`)
 
 ## 3. Usage
 
@@ -118,7 +118,7 @@ DCS Data  : NULL
 
 **Additional options**
 
-- **--database ``<database cfg>``**<br> : Set [database config file](config/database.md) (default: `HOME/.yarr/localdb/HOSTNAME_database.json`)
+- **--database ``<database cfg>``**<br> : Set [database config file](../config/database.md) (default: `HOME/.yarr/localdb/HOSTNAME_database.json`)
 - **--username ``<username>``**<br> : Set username of the Local DB Server if the user authentication is required
 - **--password ``<password>``**<br> : Set password of the Local DB Server if the user authentication is required
 - **--config ``<config file>``**<br> : Set config file which username and password are written in if the user authentication is required
@@ -161,7 +161,7 @@ $ ./localdb/bin/localdbtool-retrieve pull
 
 **Additional options**
 
-- **--database ``<database cfg>``**<br> : Set [database config file](config/database.md) (default: `HOME/.yarr/localdb/HOSTNAME_database.json`)
+- **--database ``<database cfg>``**<br> : Set [database config file](../config/database.md) (default: `HOME/.yarr/localdb/HOSTNAME_database.json`)
 - **--username ``<username>``**<br> : Set username of the Local DB Server if the user authentication is required
 - **--password ``<password>``**<br> : Set password of the Local DB Server if the user authentication is required
 - **--config ``<config file>``**<br> : Set config file which username and password are written in if the user authentication is required

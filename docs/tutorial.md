@@ -2,7 +2,7 @@
 
 This page introduces tutorials to try out the Local DB and its tools assuming some cases.<br>
 If you want to try a series of operations from scan to data upload, go to the [basic tutorial](#basic-tutorial).<br>
-If you want to try the operation related to the [viewer application](viewer.md), go to the [viewer tutorial](#viewer-tutorial).<br>
+If you want to try the operation related to the [viewer application](tool/viewer.md), go to the [viewer tutorial](#viewer-tutorial).<br>
 If you could not complete the [installation](installation.md) or cannot build YARR and cannot use read-out binary command, go to the [trial tutorial](#trial-tutorial) to try starting Local DB and using the commands.<br>
 If you want to check other advanced usage, go to the [advanced tutorial](#advanced-tutorial).
 
@@ -42,7 +42,7 @@ Once you have started Local DB in this trial tutorial, you can go to the [tutori
 
 ## [Viewer Tutorial](tutorial/viewer.md)
 
-This tutorial is intended to demonstrate the operations related to [viewer application](viewer.md):
+This tutorial is intended to demonstrate the operations related to [viewer application](tool/viewer.md):
 
 - How to setup and start viewer application
 - How to check data stored in Local DB on local browser

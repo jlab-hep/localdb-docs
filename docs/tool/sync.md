@@ -3,7 +3,7 @@
 The **Synchronization Tool** synchronizes multiple Local DB servers for ITk.<br>
 Before using sync-tool, we need a stable, network-accessible **master server** which handle whole ITK data.
 
-![Sync overall](images/sync/overall.png)
+![Sync overall](../images/sync/overall.png)
 
 ### Table of Contents
 
@@ -25,11 +25,11 @@ $ ./bin/localdbtool-sync.py --sync-opt <option> --config my_configure.yml
 ## 2. Getting start
 
 The synchronization tool is included as part of [Local DB Tools](https://gitlab.cern.ch/YARR/localdb-tools).<br>
-Follow the [installtaion tutorial](installation.md) to install required packages.
+Follow the [installtaion tutorial](../installation.md) to install required packages.
 
 #### 1. Setup
 
-Setup the configuration files of the synchronization tool using [localdb-tools/sync-tool/setup_sync_tool.sh](script/setup_sync_tool.md) shell:
+Setup the configuration files of the synchronization tool using [localdb-tools/sync-tool/setup_sync_tool.sh](../script/setup_sync_tool.md) shell:
 
 ```bash
 $ cd localdb-tools/sync-tool

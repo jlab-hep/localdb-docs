@@ -2,7 +2,7 @@
 
 This is a script for creating an administrator account in Local DB for management of DB & Viewer Application.<br>
 You can login MongoDB with the admin account and enable admin functions in the viewer application.<br>
-See the [admin functions in the viewer](../viewer.md) to get more about what you can do.
+See the [admin functions in the viewer](../tool/viewer.md) to get more about what you can do.
 
 - Location: `localdb-tools/setting/create_admin.sh`
 - Syntax:

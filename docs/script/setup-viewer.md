@@ -1,6 +1,6 @@
 # setup_viewer.sh
 
-This is a script for setting the configuration of the [viewer application](../viewer.md) and installing some tools to display plots on web browser.<br>
+This is a script for setting the configuration of the [viewer application](../tool/viewer.md) and installing some tools to display plots on web browser.<br>
 This script creates the [viewer config file](../config/viewer.md), and you can start the viewer application with it.
 
 - Location: `localdb-tools/viewer/setup_viewer.sh`
@@ -66,7 +66,7 @@ Input localDB admins password: password
 ```
 
 The script next checks whether to enable administrator functions.<br>
-See the [admin functions in the viewer](../viewer.md) to get more about what you can do.<br>
+See the [admin functions in the viewer](../tool/viewer.md) to get more about what you can do.<br>
 
 If you want to enable the admin functions, you need to [create an admin account in Local DB by create_admin.sh](create_admin.md).<br>
 Once you have created the admin account, you can answer **y** to proceed and enter the username and password of the admin account to authenticate.<br>
@@ -118,7 +118,7 @@ or
 $ ./app.py --config user_conf.yml
 ```
 
-See the [viewer application](../viewer.md) to get more usage.
+See the [viewer application](../tool/viewer.md) to get more usage.
 
 ### Additional options
 

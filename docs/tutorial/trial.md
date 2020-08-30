@@ -122,7 +122,7 @@ $ make install
 $ cd ../
 ```
 
-Even if this build fails due to environmental issues, this tutorial prepares a toy command of the [scanConsole](../scanconsole.md), so you can use the command to try from read-out to data upload.<br>
+Even if this build fails due to environmental issues, this tutorial prepares a toy command of the [scanConsole](../tool/scanconsole.md), so you can use the command to try from read-out to data upload.<br>
 
 #### Setup for Local DB confuguration
 
@@ -200,7 +200,7 @@ The output of "Good connection!" means that the connection to Local DB can be co
 
 ##### i. Upload w/ scanConsole (If you could compile YARR commands)
 
-You can upload results into Local DB after [YARR/bin/scanConsole](../scanconsole.md) just by adding option '-W':
+You can upload results into Local DB after [YARR/bin/scanConsole](../tool/scanconsole.md) just by adding option '-W':
 
 ```bash
 ### FEI4B emulator

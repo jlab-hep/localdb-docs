@@ -114,7 +114,7 @@ The output of "Good connection!" means that the connection to Local DB can be co
 
 #### Run scan command
 
-You can upload results into Local DB after [YARR/bin/scanConsole](../scanconsole.md) just by adding option '-W':
+You can upload results into Local DB after [YARR/bin/scanConsole](../tool/scanconsole.md) just by adding option '-W':
 
 ```bash
 ### FEI4B emulator
@@ -155,7 +155,7 @@ $ cat /home/.yarr/localdb/log/log
 
 #### Data Log
 
-Check the uploaded scan data using [YARR/bin/dbAccessor -L](../accessor.md) binary command:
+Check the uploaded scan data using [YARR/bin/dbAccessor -L](../tool/accessor.md) binary command:
 
 ```bash
 $ ./bin/dbAccessor -L
@@ -173,7 +173,7 @@ DCS Data  : NULL
 
 #### Data Donwload
 
-Retrieve the scan data using [YARR/bin/dbAccessor -D](../accessor.md) binary command:
+Retrieve the scan data using [YARR/bin/dbAccessor -D](../tool/accessor.md) binary command:
 
 ```bash
 $ ./bin/dbAccessor -D
@@ -201,5 +201,5 @@ $ ./bin/dbAccessor -D
 
 ---
 
-Go to the [tutorial for the viewer application](../viewer.md) to check the data stored in the Local DB and the uploaded scan data in the browser.<br>
+Go to the [tutorial for the viewer application](../tool/viewer.md) to check the data stored in the Local DB and the uploaded scan data in the browser.<br>
 Go to the [advanced tutorial](advanced.md) to get a more advanced usage.

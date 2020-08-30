@@ -316,7 +316,7 @@ in edit.
 
 0. Make a back-up of current Local DB
 
-See [Archive Tool](../archive.md) to make an archive of Local DB, or just execute the sudo command:
+See [Archive Tool](../tool/archive.md) to make an archive of Local DB, or just execute the sudo command:
 
 ```bash
 $ sudo systemctl stop mongod.service

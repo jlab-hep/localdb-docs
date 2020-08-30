@@ -17,21 +17,21 @@ You can sign-in and use vaious functions (create tag, edit comment, download ITk
 
 ##### 1. After sign up accroding to the [received mail from the administrator](admin.md#user-creation), click **sign in** on the top right:
 
-|![Viewer Admin Authenitcation](../images/viewer/user_signin_1.png)|
+|![Viewer Admin Authenitcation](../../images/viewer/user_signin_1.png)|
 |:-:|
 
 <br>
 
 ##### 2. Enter username and password of your user account and click **Sign in** to sign in with your account:
 
-|![Viewer Admin Authenitcation](../images/viewer/user_signin_2.png)|
+|![Viewer Admin Authenitcation](../../images/viewer/user_signin_2.png)|
 |:-:|
 
 <br>
 
 ##### 3. You can sign in if authentication successful:
 
-|![Viewer Admin Authenitcation](../images/viewer/user_signin_3.png)|
+|![Viewer Admin Authenitcation](../../images/viewer/user_signin_3.png)|
 |:-:|
 
 <br>

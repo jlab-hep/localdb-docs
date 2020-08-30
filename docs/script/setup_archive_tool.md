@@ -1,7 +1,7 @@
 # setup_archive_tool.sh
 
-This is a script for setting the configuration of the [archive tool](../archive.md).<br>
-This script creates the [archive tool config file](../config/archive.md), and you can run the [archive tool](../archive.md) with it.
+This is a script for setting the configuration of the [archive tool](../tool/archive.md).<br>
+This script creates the [archive tool config file](../config/archive.md), and you can run the [archive tool](../tool/archive.md) with it.
 
 - Location: `localdb-tools/archive-tool/setup_archive_tool.sh`
 - Syntax:

@@ -1,6 +1,6 @@
 # Viewer Tutorial
 
-This tutorial describes the oprations related to [viewer](../viewer.md) setup and some browser functions.
+This tutorial describes the oprations related to [viewer](../tool/viewer.md) setup and some browser functions.
 
 !!! Recommend
     If you have not uploaded any data into Local DB yet, it is recommended to see the [basic tutorial](basic.md) and upload scan data before proceeding with this page.
@@ -18,7 +18,7 @@ This tutorial describes the oprations related to [viewer](../viewer.md) setup an
 
 #### Create administrator account
 
-First create an administrator account in Local DB using [localdb-tools/setting/create_admin.sh](../script/create_admin.md) to enable the administrator functions in the [viewer application](../viewer.md).<br>
+First create an administrator account in Local DB using [localdb-tools/setting/create_admin.sh](../script/create_admin.md) to enable the administrator functions in the [viewer application](../tool/viewer.md).<br>
 If you have the administrator account already, you can skip this step.
 
 ```bash
@@ -43,7 +43,7 @@ Register localDB admins password: xxxxxxxx
 Set username and password for the administrator account and the script creates the account in Local DB.
 
 !!! Note
-    See the [admin functions in the viewer](../viewer.md) to get more about what you can do.
+    See the [admin functions in the viewer](../tool/viewer.md) to get more about what you can do.
 
 !!! Recommend
     You can improve the security of data access by locking the Local DB.<br>
@@ -52,7 +52,7 @@ Set username and password for the administrator account and the script creates t
 
 #### Setup configuration
 
-Next setup the configuration files of the [viewer application](../viewer.md) using [localdb-tools/viewer/setup_viewer.sh](../script/setup-viewer.md) script:
+Next setup the configuration files of the [viewer application](../tool/viewer.md) using [localdb-tools/viewer/setup_viewer.sh](../script/setup-viewer.md) script:
 
 ```bash
 $ cd localdbtools/viewer
@@ -111,7 +111,7 @@ The output of "Finished setting!" means that the script is done.
 
 #### Run application
 
-Run **localdb-tools/viewer/app.py** python script to start the [viewer application](../viewer.md) on the local host machine:
+Run **localdb-tools/viewer/app.py** python script to start the [viewer application](../tool/viewer.md) on the local host machine:
 
 ```bash
 $ python3 app.py --config user_conf.yml
@@ -157,8 +157,8 @@ Click **result page** to switch the scan result page:
 
 ## 3. How to Use Administrator Functions
 
-Go to the [administrator functions in the viewer application](../viewer/admin.md) to get usages.
+Go to the [administrator functions in the viewer application](../tool/viewer/admin.md) to get usages.
 
 ## 4. How to Use User Functions
 
-Go to the [user functions in the viewer application](../viewer/user.md) to get usages.
+Go to the [user functions in the viewer application](../tool/viewer/user.md) to get usages.
