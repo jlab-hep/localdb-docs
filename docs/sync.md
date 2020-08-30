@@ -5,7 +5,7 @@ Before using sync-tool, we need a stable, network-accessible **master server** w
 
 ![Sync overall](images/sync/overall.png)
 
-Contents:
+### Table of Contents
 
 1. [Command](#1-command)
 2. [Getting Start](#2-getting-start)
@@ -14,25 +14,26 @@ Contents:
 
 ## 1. Command
 
-**localdb-tools/sync-tool/localdbtool-sync.py**
+- Location:  **localdb-tools/sync-tool/localdbtool-sync.py**
+- Syntax:
 
 ```bash
+$ cd localdb-tools/sync-tool
 $ ./bin/localdbtool-sync.py --sync-opt <option> --config my_configure.yml
 ```
 
 ## 2. Getting start
 
-Please check [Pre Requirements](installation.md) to install required packages.<br>
-And please be sure to setup Synchronization Tool setting using `localdb-tools/sync-tool/setup_sync_tool.sh`. <br>
-This script performs
+The synchronization tool is included as part of [Local DB Tools](https://gitlab.cern.ch/YARR/localdb-tools).<br>
+Follow the [installtaion tutorial](installation.md) to install required packages.
 
-- to confirm the config file ( [localdb-tools/sync-tool/my_configure.yml](config/sync.md) )
-- to set the binary command in bin directory
+#### 1. Setup
+
+Setup the configuration files of the synchronization tool using [localdb-tools/sync-tool/setup_sync_tool.sh](script/setup_sync_tool.md) shell:
 
 ```bash
 $ cd localdb-tools/sync-tool
 $ ./setup_sync_tool.sh
-< Setting up with some texts >
 ```
 
 ## 3. Usage
@@ -42,22 +43,22 @@ $ cd localdb-tools/sync-tool
 $ ./bin/localdbtool-sync.py  --sync-opt commit --config my_configure.yml
 ```
 
-**Command Line Arguments**
+###### Command Line Arguments
 
-- `--sync-opt` : options for sync-tool
-    - `commit` : commit all new/modified data which taken on the local.
-    - `push` : upload committed data to the master server.
-    - `fetch` : get commits from the master server.
-    - `pull` : get committed data from the master server.
-- `-f|--config` : path to configure file.
+- **``--sync-opt <option>``** : Specifies options for sync-tool
+    - **``commit``** : commit all new/modified data which taken on the local.
+    - **``push``** : upload committed data to the master server.
+    - **``fetch``** : get commits from the master server.
+    - **``pull``** : get committed data from the master server.
+- **``-f|--config``** : Specifies path to configure file.
 
-### a. Pull Data from Master Server
+#### a. Pull Data from Master Server
 
 1. commit
 2. fetch
 3. pull
 
-### b. Push Data to Master Server
+#### b. Push Data to Master Server
 
 1. commit
 2. fetch

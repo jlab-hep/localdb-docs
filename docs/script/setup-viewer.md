@@ -1,6 +1,6 @@
 # setup_viewer.sh
 
-This is a script for setting the configuration of the viewer application and installing some tools to display plots on web browser.<br>
+This is a script for setting the configuration of the [viewer application](../viewer.md) and installing some tools to display plots on web browser.<br>
 This script creates the [viewer config file](../config/viewer.md), and you can start the viewer application with it.
 
 - Location: `localdb-tools/viewer/setup_viewer.sh`
