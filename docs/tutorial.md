@@ -42,7 +42,13 @@ Once you have started Local DB in this trial tutorial, you can go to the [tutori
 
 ## [Viewer Tutorial](viewer-tutorial.md)
 
-- How to
+This tutorial is intended to demonstrate the operations related to [viewer application](viewer.md):
+
+- How to setup and start viewer application
+- How to check data stored in Local DB on local browser
+- How to use administrator functions on viewer application
+
+If you have not tried the function of uploading test data into Local DB and you do not have data in Local DB, go to the [basic tutorial](basic-tutorial.md) and upload scan data before proceeding this tutorial.
 
 ##### [Go to the viewer tutorial page](viewer-tutorial.md)
 

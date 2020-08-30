@@ -55,9 +55,7 @@ OS not supported by tutorial
     Probably the tutorial doesn't work, sorry.
 
 ```bash
-
-```bash
-...
+### script output
 [LDB] Done.
 [LDB] Check README to get how to use commands in ./mongodb-4.2.6/bin
 
@@ -184,6 +182,7 @@ Answer **n** and change the site name to your institution name or where you are.
 The script creates the [site config file](site-config.md).
 
 ```bash
+### script output
 [LDB] Checking the connection...
 [  info  ]: ------------------------------
 [  info  ]: Function: Initialize upload function and check connection to Local DB
