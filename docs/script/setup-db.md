@@ -24,14 +24,47 @@ $ ./localdb/setup_db.sh [-i address]
 5. Check the command
 6. Check the DB connection
 
-### Usage (First Time)
+### Usage
 
 ```bash
-./setup_db.sh
-[LDB]
+$ cd YARR/localdb
+$ ./setup_db.sh
+[LDB] Set editor command ... (e.g. nano, vim, emacs)
+[LDB] > vim
+```
+
+This script first ask you which editor command to use when editing the file interactively.
+
+```bash
+### script output
 [LDB] Checking Python Packages ...
 [LDB]     ... OK!
-[LDB]
+```
+
+Next the script checks that the required python packages is installed.<br>
+The output of **OK** means that the installation is confirmed.<br>
+If some packages are not installed, the script displays error messages:
+
+```bash
+### script output
+[LDB] Checking Python Packages ...
+[LDB ERROR] There are missing pip modules:
+[LDB ERROR] - arguments
+[LDB ERROR]
+[LDB ERROR] Install them by:
+[LDB ERROR] python3 -m pip install --user -r ./setting/requirements-pip.txt
+```
+
+At that time, install the packages written in **YARR/localdb/setting/requirements-pip.txt**:
+
+```bash
+$ python3 -m pip install --user -r ./setting/requirements-pip.txt
+```
+
+Once installed, run **setup_db.sh** again.
+
+```bash
+### script output
 [LDB] Checking Database Config
 [LDB] -----------------------
 [LDB] --  Mongo DB Server  --
@@ -42,8 +75,15 @@ $ ./localdb/setup_db.sh [-i address]
 [LDB] -----------------------
 [LDB] Are you sure that is correct? (Move to edit mode when answer 'n') [y/n/exit]
 [LDB] > y
-[LDB] Created Database Config
-[LDB]
+```
+
+The script next checks the configuration of running MongoDB to set Local DB.<br>
+Answer **y** to proceed if you did not change any settings when you installed MongoDB.<br>
+If you have changed any value, answer **n** and move to edit mode and change the configuration appropriately.<br>
+The script creates the [database config file](../config/database.md) at **HOME/.yarr/localdb/HOSTNAME_database.json**.
+
+```bash
+### script output
 [LDB] Checking User Config
 [LDB] -----------------------
 [LDB] --  User Information --
@@ -53,8 +93,14 @@ $ ./localdb/setup_db.sh [-i address]
 [LDB] -----------------------
 [LDB] Are you sure that is correct? (Move to edit mode when answer 'n') [y/n/exit]
 [LDB] > y
-[LDB] Created User Config
-[LDB]
+```
+
+The script next checks the configuration of user.<br>
+Answer **n** and change the user config file to your name and institution name.<br>
+The script creates the [user config file](../config/user.md) at **HOME/.yarr/localdb/user.json**.
+
+```bash
+### script output
 [LDB] Checking Site Config
 [LDB] -----------------------
 [LDB] --  Site Information --
@@ -63,69 +109,42 @@ $ ./localdb/setup_db.sh [-i address]
 [LDB] -----------------------
 [LDB] Are you sure that is correct? (Move to edit mode when answer 'n') [y/n/exit]
 [LDB] > y
-[LDB] Created Site Config
-[LDB]
-[LDB] Checking the connection...
-#DB INFO# -----------------------
-#DB INFO# Function: Initialize
-#DB INFO# [Connection Test] DB Server: mongodb://127.0.0.1:27017/localdb
-#DB INFO# ---> Connection is GOOD.
-#DB INFO# -----------------------
-[LDB] Done.
 ```
 
-### Usage (Second Time)
+The script next checks the configuration of site.<br>
+Answer **n** and change the site name to your institution name or where you are.<br>
+The script creates the [site config file](../config/site.md) at **HOME/.yarr/localdb/HOSTNAME_site.json**.
+
 
 ```bash
-$./setup_db.sh
-[LDB]
-[LDB] Checking Python Packages ...
-[LDB]     ... OK!
-[LDB]
-[LDB] Checking Database Config
-[LDB WARNING] FOUND DATABASE CONFIG FILE
-[LDB] -----------------------
-[LDB] --  Mongo DB Server  --
-[LDB] -----------------------
-[LDB] IP address       : 127.0.0.1 (current 127.0.0.1)
-[LDB] port             : 27017     (current 27017)
-[LDB] database name    : localdb   (current localdb)
-[LDB] -----------------------
-[LDB] Are you sure that is correct? (Move to edit mode when answer 'n') [y/n/exit]
-[LDB] > y
-[LDB] Created Database Config
-[LDB]
-[LDB] Checking User Config
-[LDB WARNING] FOUND USER CONFIG FILE
-[LDB] -----------------------
-[LDB] --  User Information --
-[LDB] -----------------------
-[LDB] User Name        : Arisa Kubota
-[LDB] User Institution : Tokyo Institute of Technology
-[LDB] -----------------------
-[LDB] Are you sure that is correct? (Move to edit mode when answer 'n') [y/n/exit]
-[LDB] > y
-[LDB] Created User Config
-[LDB]
-[LDB] Checking Site Config
-[LDB WARNING] FOUND SITE CONFIG FILE
-[LDB] -----------------------
-[LDB] --  Site Information --
-[LDB] -----------------------
-[LDB] site name        : Tokyo Institute of Technology
-[LDB] -----------------------
-[LDB] Are you sure that is correct? (Move to edit mode when answer 'n') [y/n/exit]
-[LDB] > y
-[LDB] Created Site Config
-[LDB]
+### script output
 [LDB] Checking the connection...
-#DB INFO# -----------------------
-#DB INFO# Function: Initialize
-#DB INFO# [Connection Test] DB Server: mongodb://127.0.0.1:27017/localdb
-#DB INFO# ---> Connection is GOOD.
-#DB INFO# -----------------------
+[  info  ]: ------------------------------
+[  info  ]: Function: Initialize upload function and check connection to Local DB
+[  info  ]: -> Setting database config: /home/.yarr/localdb/localhost_database.json (default)
+[  info  ]: Checking connection to DB Server: mongodb://127.0.0.1:27000/localdb ...
+[  info  ]: ---> Good connection!
+[  info  ]: ------------------------------
 [LDB] Done.
 ```
+
+Finally the script checks the connection to Local DB.<br>
+The output of "Good connection!" means that the connection can be confirmed.<br>
+If the connection cannot be established, the script displayes error messages:
+
+```bash
+### script output
+[LDB] Checking the connection...
+[  info  ]: ------------------------------
+[  info  ]: Function: Initialize upload function and check connection to Local DB
+[  info  ]: -> Setting database config: /home/.yarr/localdb/localhost_database.json (default)
+[  info  ]: Checking connection to DB Server: mongodb://127.0.0.1:27000/localdb ...
+[ error  ]: ---> Bad connection.
+[ error  ]:      127.0.0.1:27017: [Errno 111] Connection refused
+[  info  ]: ------------------------------
+```
+
+See the [solution in the bad connection](../faq.md) in this case.
 
 ### Additional options
 
