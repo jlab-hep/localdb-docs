@@ -96,6 +96,7 @@ Answer **n** and change the site name to your institution name or where you are.
 The script creates the [site config file](site-config.md).
 
 ```bash
+### script output
 [LDB] Checking the connection...
 [  info  ]: ------------------------------
 [  info  ]: Function: Initialize upload function and check connection to Local DB
