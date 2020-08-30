@@ -16,6 +16,20 @@
 - Location: `localdb-tools/viewer/setup_viewer.sh`
 - Git Repository: [localdb-tools](https://gitlab.cern.ch/YARR/localdb-tools)
 
+### setup_sync_tool.sh
+
+- Description: To set the configuration of the sync tool to run.
+- Page: [About setup_synctool.sh](script/setup_sync_tool.md)
+- Location: `localdb-tools/sync-tool/setup_sync_tool.sh`
+- Git Repository: [localdb-tools](https://gitlab.cern.ch/YARR/localdb-tools)
+
+### setup_archive_tool.sh
+
+- Description: To set the configuration of the archive tool to run.
+- Page: [About setup_archive_tool.sh](script/setup_archive_tool.md)
+- Location: `localdb-tools/archive-tool/setup_archive_tool.sh`
+- Git Repository: [localdb-tools](https://gitlab.cern.ch/YARR/localdb-tools)
+
 ## Administrator Scripts
 
 ### create_admin.sh
