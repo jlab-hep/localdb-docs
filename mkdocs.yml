@@ -23,5 +23,7 @@ nav:
         - others: faq.md
 extra_css:
     - "css/custom.css"
+    - "css/theme_extra.css"
+    - "css/raliscasts.css"
 markdown_extensions:
     - admonition
