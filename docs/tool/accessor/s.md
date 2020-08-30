@@ -31,14 +31,14 @@ $ ./bin/dbAccessor -S <path/to/result/dir>
 
 - **``-S <path>``**<br>
 Sets command to upload scan data and specifies the path to scan result directory to upload.<br>
-Make sure the [scanLog.json](../config/scan-log.md) exists in the specified directory.
+Make sure the [scanLog.json](../../config/scan-log.md) exists in the specified directory.
 
 ###### Additional options
 
 - **``-d <path>``**<br>
-Specifies the path to [database config file](../config/database.md).<br>
-If -d is not specified, dbAccessor sets the path of "dbCfg" written in [scanLog.json](../config/scan-log.md) located in the specified scan result directory,
-or sets `HOME/.yarr/localdb/HOSTNAME_database.json` as [database config file](../config/database.md) if no "dbCfg" written in [scanLog.json](../config/scan-log.md).
+Specifies the path to [database config file](../../config/database.md).<br>
+If -d is not specified, dbAccessor sets the path of "dbCfg" written in [scanLog.json](../../config/scan-log.md) located in the specified scan result directory,
+or sets `HOME/.yarr/localdb/HOSTNAME_database.json` as [database config file](../../config/database.md) if no "dbCfg" written in [scanLog.json](../../config/scan-log.md).
 - **``-Q``**<br>
 Sets QC mode and add a step to check if the data to upload is suitable for QC.
 - **``-I``**<br>
@@ -91,13 +91,13 @@ The dbAccessor loads files in the specified directory while displaying the conte
 The output of "Succeeded uploading" means that data was uploaded into Local DB successfully.<br>
 
 !!! Note
-    Make sure the [log file](../config/scan-log.md) exists in the specified directory.<br>
+    Make sure the [log file](../../config/scan-log.md) exists in the specified directory.<br>
     If the file does not exist or unreadable as a JSON file, dbAccessor returns error.<br>
-    If you get an error, follow [FAQ for dbAccessor](../faq/accessor.md#not-found-xxx) to resolve it.
+    If you get an error, follow [FAQ for dbAccessor](../../faq/accessor.md#not-found-xxx) to resolve it.
 
 !!! Warning
     If the file is unreadable or unsuitable to upload, dbAccessor returns error.<br>
-    If you get an error, follow [FAQ for dbAccessor](../faq/accessor.md#could-not-parse-xxx) to resolve it.<br>
+    If you get an error, follow [FAQ for dbAccessor](../../faq/accessor.md#could-not-parse-xxx) to resolve it.<br>
 
 #### Upload QC Scan Data
 
@@ -133,7 +133,7 @@ but some steps are added to check whether data (component, user, site informatio
 
 !!! Warning
     Data that does not meet the requirements will not be uploaded and an error will occur.<br>
-    If you get an error, follow [FAQ for dbAccessor](../faq/accessor.md#not-found-xxx-data) to resolve it.
+    If you get an error, follow [FAQ for dbAccessor](../../faq/accessor.md#not-found-xxx-data) to resolve it.
 
 #### Interactive Mode
 

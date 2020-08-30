@@ -31,16 +31,16 @@ $ ./bin/dbAccessor -E <path/to/dcs.json>
 ###### Command Line Arguments
 
 - **``-E <path>``**<br>
-Sets command to upload DCS data and specifies the path to [DCS config file](../config/dcs.md) to upload.
+Sets command to upload DCS data and specifies the path to [DCS config file](../../config/dcs.md) to upload.
 - **``-s <path>``**<br>
-Specifies the path to [scan log file](../config/scan-log.md) of the scan result data to link the DCS data.
+Specifies the path to [scan log file](../../config/scan-log.md) of the scan result data to link the DCS data.
 
 ###### Additional options
 
 - **``-d <path>``**<br>
-Specifies the path to [database config file](../config/database.md).<br>
-If -d is not specified, dbAccessor sets the path of "dbCfg" written in [scanLog.json](../config/scan-log.md) located in the specified scan result directory,
-or sets `HOME/.yarr/localdb/HOSTNAME_database.json` as [database config file](../config/database.md) if no "dbCfg" written in [scanLog.json](../config/scan-log.md).<br>
+Specifies the path to [database config file](../../config/database.md).<br>
+If -d is not specified, dbAccessor sets the path of "dbCfg" written in [scanLog.json](../../config/scan-log.md) located in the specified scan result directory,
+or sets `HOME/.yarr/localdb/HOSTNAME_database.json` as [database config file](../../config/database.md) if no "dbCfg" written in [scanLog.json](../../config/scan-log.md).<br>
 Make sure the specified configuration is the same as when the scan data was registered.<br>
 - **``-Q``**<br>
 Sets QC mode and add a step to check if the data to upload is suitable for QC.
@@ -86,7 +86,7 @@ Here, let's upload VDDD voltage data as an example.
 }
 ```
 
-First, prepare a [DCS config file named **dcs.json**](../config/dcs.md#dcs-config-file).<br>
+First, prepare a [DCS config file named **dcs.json**](../../config/dcs.md#dcs-config-file).<br>
 
 ```dat
 key unixtime vddd_voltage vddd_current vdda_voltage vdda_current
@@ -96,9 +96,9 @@ num null 0 0 0 0
 2019-06-24_20:49:33 1561376973 12 22 0 0
 ```
 
-Make sure the [data file named **dcs.dat**](../config/dcs.md#dcs-dat-file) specified by "path" in the [DCS config file](../config/dcs.md#dcs-config-file) exists, its contents follow the notation of [DCS data file](../config/dcs.md#dcs-dat-file), and the DCS data specified by the "key" and "num" in the [DCS config file](../config/dcs.md#dcs-config-file) is written.<br>
+Make sure the [data file named **dcs.dat**](../../config/dcs.md#dcs-dat-file) specified by "path" in the [DCS config file](../../config/dcs.md#dcs-config-file) exists, its contents follow the notation of [DCS data file](../../config/dcs.md#dcs-dat-file), and the DCS data specified by the "key" and "num" in the [DCS config file](../../config/dcs.md#dcs-config-file) is written.<br>
 
-The combination of "key" (**vddd_voltage**) and "num" (**0**) specified in the [DCS config file](../config/dcs.md#dcs-config-file) are used to specify the DCS data in the [data file](../config/dcs.md#dcs-dat-file).<br>
+The combination of "key" (**vddd_voltage**) and "num" (**0**) specified in the [DCS config file](../../config/dcs.md#dcs-config-file) are used to specify the DCS data in the [data file](../../config/dcs.md#dcs-dat-file).<br>
 All data in the column with the specified key in the first row and the specified number in the second row is regarded as DCS data and uploaded into Local DB along with the unixtime, so in this case, <br>
 ```json
 [
@@ -109,7 +109,7 @@ All data in the column with the specified key in the first row and the specified
 ```
 will be uploaded into Local DB.
 
-You can link the DCS data to the scan data and upload it into Local DB by specifying the scan data with the [scanLog.json](../config/scan-log.md):
+You can link the DCS data to the scan data and upload it into Local DB by specifying the scan data with the [scanLog.json](../../config/scan-log.md):
 
 ```bash
 $ ./bin/dbAccessor -E dcs.json -s data/last_scan/scanLog.json
@@ -151,4 +151,4 @@ DCS Data  :
 
 !!! Warning
     If the specified scan data has not been uploaded to the Local DB, an error will occur.<br>
-    If you get an error, follow [FAQ for dbAccessor](../faq/accessor.md#not-found-xxx-data) to resolve it.
+    If you get an error, follow [FAQ for dbAccessor](../../faq/accessor.md#not-found-xxx-data) to resolve it.

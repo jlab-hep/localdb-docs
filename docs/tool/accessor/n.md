@@ -33,8 +33,8 @@ Sets command to check the connection to Local DB.
 ###### Additional options
 
 - **``-d <path>``**<br>
-Specifies the path to [database config file](../config/database.md).<br>
-If -d is not specified, dbAccessor sets `HOME/.yarr/localdb/HOSTNAME_database.json` as [database config file](../config/database.md).
+Specifies the path to [database config file](../../config/database.md).<br>
+If -d is not specified, dbAccessor sets `HOME/.yarr/localdb/HOSTNAME_database.json` as [database config file](../../config/database.md).
 
 ## 4. Examples
 
@@ -67,6 +67,6 @@ $ ./bin/dbAccessor -N -d database.json
 [  info  ]: ------------------------------
 ```
 
-Make sure the [database config file](../config/database.md) exists in the specified path.<br>
+Make sure the [database config file](../../config/database.md) exists in the specified path.<br>
 If the file does not exist or unreadable as a JSON file, dbAccessor returns error.<br>
-If you get an error, follow [FAQ for dbAccessor](../faq/accessor.md#not-found-xxx) to resolve it.
+If you get an error, follow [FAQ for dbAccessor](../../faq/accessor.md#not-found-xxx) to resolve it.

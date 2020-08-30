@@ -27,11 +27,11 @@ $ ./app.py --config <path/to/config>
 #### 0. Install
 
 The viewer application is included as part of [Local DB Tools](https://gitlab.cern.ch/YARR/localdb-tools).<br>
-Follow the [installtaion tutorial](installation.md) to install required packages.<br>
+Follow the [installtaion tutorial](../installation.md) to install required packages.<br>
 
 #### 1. Setup
 
-Setup the configuration files of the viewer application using [localdb-tools/viewer/setup_viewer.sh](script/setup-viewer.md) shell:
+Setup the configuration files of the viewer application using [localdb-tools/viewer/setup_viewer.sh](../script/setup-viewer.md) shell:
 
 ```bash
 $ cd localdb-tools/viewer
@@ -40,7 +40,7 @@ $ ./setup_viewer.sh
 
 #### 2. Confirmation
 
-Once you setup, you can find the configuration file in [localdb-tools/viewer/user_conf.yml](config/viewer.md#basic-file-formad) or [localdb-tools/viewer/admin_conf.yml](config/viewer.md#admin-file-format).
+Once you setup, you can find the configuration file in [localdb-tools/viewer/user_conf.yml](../config/viewer.md#basic-file-formad) or [localdb-tools/viewer/admin_conf.yml](../config/viewer.md#admin-file-format).
 
 ## 3. Usage
 
@@ -61,18 +61,18 @@ Applying ATLAS style settings...
 ```
 
 If you launch the browser on the host machine where the viewer application is running, you can check the viewer page on: [http://127.0.0.1:5000/localdb/](http://127.0.0.1:5000/localdb)<br>
-If you want to access the viewer from other machine, see [FAQ for viewer](faq/viewer.md) to get more detail.
+If you want to access the viewer from other machine, see [FAQ for viewer](../faq/viewer.md) to get more detail.
 
 ###### Command Line Arguments
 
 - **``--config <path>``**<br>
-Specifies the path to [viewer config file](config/viewer.md).<br>
+Specifies the path to [viewer config file](../config/viewer.md).<br>
 
 ## 4. [Web Page](viewer/page.md)
 
 The viewer application displays the following page on the browser:
 
-|![Viewer Top Page](images/viewer/top.png)|
+|![Viewer Top Page](../images/viewer/top.png)|
 |:-:|
 
 
@@ -91,4 +91,4 @@ You can use vaious functions (create user account, issue password for user accou
 
 ## 5. FAQ
 
-See [FAQ for Viewer](faq/viewer.md).
+See [FAQ for Viewer](../faq/viewer.md).

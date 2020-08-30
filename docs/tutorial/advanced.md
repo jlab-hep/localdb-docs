@@ -24,7 +24,7 @@ $ ./setup_viewer.sh
 # 2. Run Application
 $ ./app.py --config conf.yml &
 ```
-> [More detail about Viewer Application](../viewer.md)
+> [More detail about Viewer Application](../tool/viewer.md)
 
 And access '[http://127.0.0.1:5000/localdb/]' or corresponded url on the local browser in Local DB.
 
@@ -44,7 +44,7 @@ y
 #DB INFO# Completed the upload successfuly.
 #DB INFO# -----------------------
 ```
-> [More detail about Upload Tool](../upload.md)
+> [More detail about Upload Tool](../tool/upload.md)
 
 You can check the registered component on the url:'http://127.0.0.1:5000/localdb/component' or corresponded url on the local browser in Local DB.
 
@@ -98,7 +98,7 @@ $ ./localdb/bin/localdbtool-retrieve pull --chip <SERIAL NUMBER>
 #DB INFO# Retrieve ... ./db-data/connectivity.json
 #DB INFO# -----------------------
 ```
-> [More detail about Retrieve Tool](../retrieve.md)
+> [More detail about Retrieve Tool](../tool/retrieve.md)
 
 And you can upload test data associated with the registered component data by `scanConsole` with providing the retrieved config files:
 
@@ -116,7 +116,7 @@ $ ./bin/scanConsole \
 #DB INFO# -----------------------
 #DB INFO# Uploading in the back ground. (log: ~/.yarr/localdb/log/)
 ```
-> [More detail about scanConsole -W](../scanconsole.md)
+> [More detail about scanConsole -W](../tool/scanconsole.md)
 
 You can check summary of the results on the url:'http://127.0.0.1:5000/localdb/scan' or corresponded url on the local browser in Local DB.
 
@@ -135,17 +135,17 @@ $ ./bin/dbAccessor \
 -E dcs_info.json \
 -s data/last_scan/scanLog.json
 ```
-> [More detail about dbAccessor](../accessor.md) -->
-Please refer to [dbAccessor's docs](../accessor.md) for information on how to register DCS data.
+> [More detail about dbAccessor](../tool/accessor.md) -->
+Please refer to [dbAccessor's docs](../tool/accessor.md) for information on how to register DCS data.
 
 
 ## f. Share Data
 
 You can share data with other Local DB using Synchronization Tool.<br>
-Please check [the detail page](../sync.md) to get how to use.
+Please check [the detail page](../tool/sync.md) to get how to use.
 
 ## g. Backup
 
 You can keep the back-up of Local DB using Archive Tool. <br>
-Please check [the detail page](../archive.md) to get how to use.
+Please check [the detail page](../tool/archive.md) to get how to use.
 

@@ -2,7 +2,7 @@
 
 The **Upload Tool** is to upload data into Local DB.
 
-![Overall](images/upload/overall.png)
+![Overall](../images/upload/overall.png)
 
 Contents:
 
@@ -52,7 +52,7 @@ $ ./localdb/bin/localdbtool-upload <option>
 
 #### 0. Install & Setup
 
-Please check [Pre Requirements](installation.md) to install required packages.<br>
+Please check [Pre Requirements](../installation.md) to install required packages.<br>
 And please be sure to setup Local DB setting using `YARR/localdb/setup_db.sh`. <br>
 This script confirms
 
@@ -69,7 +69,7 @@ $ cd YARR
 $ ./localdb/setup_db.sh
 < Setting up with some texts >
 ```
-> [More detail about setup_db.sh](script/setup-db.md)
+> [More detail about setup_db.sh](../script/setup-db.md)
 
 #### 1. Confirmation
 
@@ -86,7 +86,7 @@ $ ./localdb/bin/localdbtool-upload init
 
 **Additional options**
 
-- **--database ``<database cfg>``**<br> : Set [database config file](config/database.md) (default: `HOME/.yarr/localdb/HOSTNAME_database.json`)
+- **--database ``<database cfg>``**<br> : Set [database config file](../config/database.md) (default: `HOME/.yarr/localdb/HOSTNAME_database.json`)
 
 ## 3. Usage
 
@@ -100,7 +100,7 @@ Upload Tool performs following functions:
 ### a. Upload test data
 
 You can upload the test data associated with the relational data.<br>
-Please look at [Structure](structure.md) to get more detail about the structure of Local DB. <br>
+Please look at [Structure](../structure.md) to get more detail about the structure of Local DB. <br>
 There are two ways to upload test data into Local DB:
 
 * `scanConsole -W` to upload test data after scanConsole immediately
@@ -122,9 +122,9 @@ e.g.) $ ./localdb/bin/localdbtool-upload scan ./data/last_scan --database HOME/.
 
 **Additional options**
 
-- **--database ``<database cfg>``**<br> : Set [database config file](config/database.md) (default: `HOME/.yarr/localdb/HOSTNAME_database.json`)
-- **--user ``<user cfg>``**<br> : Set [user config file](config/user.md)
-- **--site ``<site cfg>``**<br> : Set [site config file](config/site.md)
+- **--database ``<database cfg>``**<br> : Set [database config file](../config/database.md) (default: `HOME/.yarr/localdb/HOSTNAME_database.json`)
+- **--user ``<user cfg>``**<br> : Set [user config file](../config/user.md)
+- **--site ``<site cfg>``**<br> : Set [site config file](../config/site.md)
 - **--log**<br> : Set logging mode 'True' (default 'False'). The output log is written in `HOME/.yarr/localdb/log/day.log`
 - **--username ``<username>``**<br> : Set username of the Local DB Server if the user authentication is required
 - **--password ``<password>``**<br> : Set password of the Local DB Server if the user authentication is required

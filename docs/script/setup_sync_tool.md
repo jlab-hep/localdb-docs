@@ -1,7 +1,7 @@
 # setup_sync_tool.sh
 
-This is a script for setting the configuration of the [synchronization tool](../sync.md).<br>
-This script creates the [synchronization tool config file](../config/sync.md), and you can run the [synchronization tool](../sync.md) with it.
+This is a script for setting the configuration of the [synchronization tool](../tool/sync.md).<br>
+This script creates the [synchronization tool config file](../config/sync.md), and you can run the [synchronization tool](../tool/sync.md) with it.
 
 - Location: `localdb-tools/sync-tool/setup_sync_tool.sh`
 - Syntax:

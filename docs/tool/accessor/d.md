@@ -42,12 +42,12 @@ Specifies the component name to link the DCS data.
 Specifies the path to directory to output retrieved data.<br>
 If -p is not specified, dbAccessor sets `./db-data` as directory to output.
 - **``-c <path>``**<br>
-Specifies the path to [component connectivity config file](../config/connectivity.md).<br>
+Specifies the path to [component connectivity config file](../../config/connectivity.md).<br>
 You can create chip config files with filling chip names and chip IDs <br>
 according the specified connectivity config even if the chips are not registered in Local DB.
 - **``-d <path>``**<br>
-Specifies the path to [database config file](../config/database.md).<br>
-If -d is not specified, dbAccessor sets `HOME/.yarr/localdb/HOSTNAME_database.json` as [database config file](../config/database.md).
+Specifies the path to [database config file](../../config/database.md).<br>
+If -d is not specified, dbAccessor sets `HOME/.yarr/localdb/HOSTNAME_database.json` as [database config file](../../config/database.md).
 
 ## 4. Examples
 

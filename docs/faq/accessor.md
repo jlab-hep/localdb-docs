@@ -31,7 +31,7 @@ $./bin/dbAccessor -N -d database.json
 
 **problem**
 
-The [dbAccessor](../accessor.md) requires to load the [database config file](../config/database.md) to access Local DB, but cannot find the existence of the file in the specified path.
+The [dbAccessor](../tool/accessor.md) requires to load the [database config file](../config/database.md) to access Local DB, but cannot find the existence of the file in the specified path.
 
 **solution**
 
@@ -52,7 +52,7 @@ $./bin/dbAccessor -S ./data/last_scan
 
 **problem**
 
-The [dbAccessor](../accessor.md) requires to load the [scan log file](../config/scan-log.md) to upload scan results into Local DB, but cannot find the existence of the file in the specified path/directory.
+The [dbAccessor](../tool/accessor.md) requires to load the [scan log file](../config/scan-log.md) to upload scan results into Local DB, but cannot find the existence of the file in the specified path/directory.
 
 **solution**
 
@@ -75,7 +75,7 @@ $./bin/dbAccessor -S ./data/last_scan -Q
 
 **problem**
 
-The user account signed-up on the viewer application is required to upload QC scan results into Local DB, but the [dbAccessor](../accessor.md) cannot confirm the provided user data registered in Local DB.
+The user account signed-up on the viewer application is required to upload QC scan results into Local DB, but the [dbAccessor](../tool/accessor.md) cannot confirm the provided user data registered in Local DB.
 
 **solution**
 
@@ -97,7 +97,7 @@ $./bin/dbAccessor -S ./data/last_scan -Q
 
 **problem**
 
-The site information retrieved from ITk PD is required to upload QC scan results into Local DB, but the [dbAccessor](../accessor.md) cannot confirm the provided site data registered in Local DB.
+The site information retrieved from ITk PD is required to upload QC scan results into Local DB, but the [dbAccessor](../tool/accessor.md) cannot confirm the provided site data registered in Local DB.
 
 **solution**
 
@@ -116,7 +116,7 @@ $./bin/dbAccessor -S ./data/last_scan -Q
 
 **problem**
 
-The component data retrieved from ITk PD is required to upload QC scan results into Local DB, but the [dbAccessor](../accessor.md) cannot confirm the provided component data registered in Local DB.
+The component data retrieved from ITk PD is required to upload QC scan results into Local DB, but the [dbAccessor](../tool/accessor.md) cannot confirm the provided component data registered in Local DB.
 
 **solution**
 
@@ -136,7 +136,7 @@ $ ./bin/dbAccessor -E dcs.json -s data//last_scan/scanLog.json
 
 **problem**
 
-The [dbAccessor](../accessor.md) requires to confirm that the scan result specified by the [scan log file](../config/scan-log.md) has been uploaded into Local DB, but cannot confirm such a scan data registered in Local DB.
+The [dbAccessor](../tool/accessor.md) requires to confirm that the scan result specified by the [scan log file](../config/scan-log.md) has been uploaded into Local DB, but cannot confirm such a scan data registered in Local DB.
 
 **solution**
 
@@ -205,7 +205,7 @@ $./bin/dbAccessor -N -d database.json
 
 **problem**
 
-The [dbAccessor](../accessor.md) cannot read the file because of JSON parsing error.
+The [dbAccessor](../tool/accessor.md) cannot read the file because of JSON parsing error.
 
 **solution**
 

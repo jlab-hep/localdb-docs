@@ -46,8 +46,8 @@ Specifies the user name to query.
 Specifies the site name to query.
 
 - **``-d <path>``**<br>
-Specifies the path to [database config file](../config/database.md).<br>
-If -d is not specified, dbAccessor sets `HOME/.yarr/localdb/HOSTNAME_database.json` as [database config file](../config/database.md).
+Specifies the path to [database config file](../../config/database.md).<br>
+If -d is not specified, dbAccessor sets `HOME/.yarr/localdb/HOSTNAME_database.json` as [database config file](../../config/database.md).
 
 ## 4. Examples
 
