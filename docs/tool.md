@@ -37,11 +37,6 @@
 - Page: [About Archive Tool](tool/archive.md)
 - Location: `localdb-tools/archive-tool`
 
-
-in edit.
-
-<!--TODO
-
 ### Uploader
 
 - Description: To upload data (test data, chip data, user data, site data ...) into Local DB.
@@ -59,5 +54,3 @@ in edit.
 - Description: To communicate with ITkPD.
 - Page: [About ITkPD Interface](tool/itkpd-interface.md)
 - Location: `localdb-tools/itkpd-interface`
-
--->

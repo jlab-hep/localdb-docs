@@ -2,20 +2,17 @@
 
 The **Retrieve Tool** is to retrieve data from Local DB.
 
-Contents:
+### Table of Contents
 
 1. [Command](#1-command)
 2. [Getting Start](#2-getting-start)
 3. [Usage](#3-usage)
-    - upload test data
-    - register component data
-    - register DCS data
-    - upload cache data
 4. [FAQ](#4-faq)
 
 # 1. Command
 
-**YARR/localdb/bin/localdb-retrieve**
+- Location: **YARR/localdb/bin/localdb-retrieve**
+- Syntax:
 
 ```bash
 ./localdb/bin/localdbtool-retrieve <option>
@@ -28,84 +25,74 @@ Contents:
                                    [--chip <CHIP>]
                                    [--test <TEST>]
                                    [--directory <DIRECTORY>]
-# positional arguments:
-#   command               option*	funtion
-#                         init	  Function initialization & Connection check
-#                         log	    Display data log
-#                         pull	  Data retrieve
-#                         list	  Display data list
-#                         test	  Testing command
-# optional arguments:
-#   -h, --help            show this help message and exit
-#   --config CONFIG       Set User Config Path of Local DB Server.
-#   --username USERNAME   Set the User Name of Local DB Server.
-#   --password PASSWORD   Set the Password of Local DB Server.
-#   --database DATABASE   Set Database Config Path
-#   --user USER           Set the name of the user.
-#   --site SITE           Set the name of the site.
-#   --chip CHIP           Set the name of the chip.
-#   --test TEST           Set data ID of the test.
-#   --directory DIRECTORY Provide directory name.
+                                   [--config_only]
+                                   [--create_config <CONN>]
+                                   [--QC]
+#positional arguments:
+#  command               option*	funtion
+#                        init	Function initialization & Connection check
+#                        log	Display data log
+#                        pull	Data retrieve
+#                        list	Display data list
+#                        user	Get user&site data
+#
+#optional arguments:
+#  -h, --help            show this help message and exit
+#  --config CONFIG       Set User Config Path of Local DB Server.
+#  --username USERNAME   Set the User Name of Local DB Server.
+#  --password PASSWORD   Set the Password of Local DB Server.
+#  --database DATABASE   Set Database Config Path
+#  --user USER           Set the name of the user.
+#  --site SITE           Set the name of the site.
+#  --chip CHIP           Set the name of the chip.
+#  --test TEST           Set data ID of the test.
+#  --directory DIRECTORY
+#                        Provide directory name.
+#  --config_only         Set mode to pull config files only.
+#  --create_config CREATE_CONFIG
+#                        Set path to connectivity config to create chip config files.
+#  --QC                  Set QC Mode
 ```
 
 ## 2. Getting start
 
 #### 0. Install & Setup
 
-Please check [Pre Requirements](../installation.md) to install required packages.<br>
-And please be sure to setup Local DB setting using `YARR/localdb/setup_db.sh`. <br>
-This script confirms
-
-- if the python packages is satisfied
-- if the default config files are prepared
-    - HOME/.yarr/localdb/HOSTNAME_database.json
-    - HOME/.yarr/localdb/user.json
-    - HOME/.yarr/localdb/HOSTNAME_site.json
-- if the command is enabled
-- if the DB connection is established
+The DB Accessor is included as part of [YARR SW](https://gitlab.cern.ch/YARR/YARR).<br>
+Follow the [installation tutorial](../installation.md) to install required packages and make sure to setup Local DB configuration files using [YARR/localdb/setup_db.sh](../script/setup-db.md) shell:
 
 ```bash
 $ cd YARR
 $ ./localdb/setup_db.sh
-< Setting up with some texts >
 ```
-> [More detail about setup_db.sh](../script/setup-db.md)
 
 #### 1. Confirmation
 
-Please run the command with the option 'init' to check if the command is working and the connection to Local DB is good.
+Run the command with the option 'init' to check if the command is working and the connection to Local DB is good.
 
 ```bash
 $ ./localdb/bin/localdbtool-retrieve init
-#DB INFO# -----------------------
-#DB INFO# Function: Initialize
-#DB INFO# [Connection Test] DB Server: mongodb://127.0.0.1:27017/localdb
-#DB INFO# ---> Connection is GOOD.
-#DB INFO# -----------------------
+[  info  ]: Checking connection to DB Server: mongodb://127.0.0.1:27017/localdb ...
+[  info  ]: ---> Good connection!
+[  info  ]: ------------------------------
 ```
-
-**Additional options**
-
-- **--database ``<database cfg>``**<br> : Set [database config file](../config/database.md) (default: `HOME/.yarr/localdb/HOSTNAME_database.json`)
 
 ## 3. Usage
 
 Retrieve Tool performs following functions:
 
-* a. [Retrieve the uploaded test data log](#a-retrieve-test-log)
-* b. [Retrieve the uploaded data into local directory](#b-retrieve-data-files)
-* c. [Retrieve the uploaded data list](#c-retrieve-data-list)
-* d. [Create the config files for the registered component data](#d-create-config)
+* [Retrieve the uploaded test data log](#retrieve-test-log)
+* [Retrieve the uploaded data into local directory](#retrieve-data-files)
+* [Retrieve the uploaded data list](#retrieve-data-list)
+* [Create the config files for the registered component data](#create-config)
+* [Check the user config and site config for QC](#check-user-site-config)
 
-### a. Retrieve test log
+### Retrieve test log
 
 You can check uploaded test log in command line by `localdbtool-retrieve log`:
 
 ```bash
 $ ./localdb/bin/localdbtool-retrieve log
-#DB INFO# -----------------------
-#DB INFO# [Connection Test] DB Server: mongodb://127.0.0.1:27017
-#DB INFO#    The connection is GOOD.
 test data ID: 5d4c94c1fd212a639247b044
 User      : arisa_kubota at tokyo_institute_of_technology
 Date      : 2019/08/08 14:31:39
@@ -116,22 +103,26 @@ DCS Data  : NULL
 # Ctrl+C can terminate the output
 ```
 
-**Additional options**
+###### Command Line Arguments
 
-- **--database ``<database cfg>``**<br> : Set [database config file](../config/database.md) (default: `HOME/.yarr/localdb/HOSTNAME_database.json`)
-- **--username ``<username>``**<br> : Set username of the Local DB Server if the user authentication is required
-- **--password ``<password>``**<br> : Set password of the Local DB Server if the user authentication is required
-- **--config ``<config file>``**<br> : Set config file which username and password are written in if the user authentication is required
-- **--user ``<user name>``**<br> : Set the user name for refine search
-- **--site ``<site name>``**<br> : Set the site name for refine search
-- **--chip ``<chip name>``**<br> : Set the chip name for refine search
+- **``--database <database cfg>``**<br>
+Set [database config file](../config/database.md) (default: `HOME/.yarr/localdb/HOSTNAME_database.json`)
+- **``--username <username>``**<br>
+Set username of the Local DB Server if the user authentication is required
+- **``--password <password>``**<br>
+Set password of the Local DB Server if the user authentication is required
+- **``--config <config file>``**<br>
+Set config file which username and password are written in if the user authentication is required
+- **``--user <user name>``**<br>
+Set the user name to query
+- **``--site <site name>``**<br>
+Set the site name to query
+- **``--chip <chip name>``**<br>
+Set the chip name to query
 
-### b. Retrieve data files
+### Retrieve data files
 
 You can retrieve the uploaded data into the local directory by `localdbtool-retrieve pull`:
-
-**This function is not available in YARR v1.1.0.**<br>
-**Please change to the devel branch if want to use.**<br>
 
 ```bash
 $ ./localdb/bin/localdbtool-retrieve pull
@@ -159,15 +150,22 @@ $ ./localdb/bin/localdbtool-retrieve pull
 #DB INFO# -----------------------
 ```
 
-**Additional options**
+###### Command Line Arguments
 
-- **--database ``<database cfg>``**<br> : Set [database config file](../config/database.md) (default: `HOME/.yarr/localdb/HOSTNAME_database.json`)
-- **--username ``<username>``**<br> : Set username of the Local DB Server if the user authentication is required
-- **--password ``<password>``**<br> : Set password of the Local DB Server if the user authentication is required
-- **--config ``<config file>``**<br> : Set config file which username and password are written in if the user authentication is required
-- **--chip ``<chip name>``**<br> : Set the chip name for specifying test data
-- **--test ``<test ID>``**<br> : Set the test ID for specifying test data
-- **--directory ``<path>``**<br> : Set the path to directory saving retrieved data
+- **``--database <database cfg>``**<br>
+Set [database config file](../config/database.md) (default: `HOME/.yarr/localdb/HOSTNAME_database.json`)
+- **``--username <username>``**<br>
+Set username of the Local DB Server if the user authentication is required
+- **``--password <password>``**<br>
+Set password of the Local DB Server if the user authentication is required
+- **``--config <config file>``**<br>
+Set config file which username and password are written in if the user authentication is required
+- **``--chip <chip name>``**<br>
+Set the chip name for specifying test data
+- **``--test <test ID>``**<br>
+Set the test ID for specifying test data
+- **``--directory <path>``**<br>
+Set the path to directory saving retrieved data
 
 You can specify test data by setting the chip name with `--chip` or the test ID with `--test`. <br>
 If you set the chip name, you can retrieve the latest test data for the chip.<br>
@@ -184,20 +182,14 @@ If you set the test ID (which is document ID in Local DB you can check by `local
     * user config file
     * site config file
 
-### c. Retrieve data list
+### Retrieve data list
 
-You can retrieve the uploaded data (component, user, site) by `localdbtool-retrieve list <opt>`:
-
-**This function is not available in YARR v1.1.0.**<br>
-**Please change to the devel branch if want to use.**<br>
+You can retrieve the uploaded data (component, user, site) by `localdbtool-retrieve list <opt>`.
 
 #### 1. Component list (default)
 
 ```bash
 $ ./localdb/bin/localdbtool-retrieve list
-#DB INFO# -----------------------
-#DB INFO# [Connection Test] DB Server: mongodb://127.0.0.1:27017
-#DB INFO#    The connection is GOOD.
 
 hybrid: 1012
 User      : arisa_kubota at lawrence_berkeley_national_laboratory
@@ -219,9 +211,6 @@ Chips(3)  :
 
 ```bash
 $ ./localdb/bin/localdbtool-retrieve list user
-#DB INFO# -----------------------
-#DB INFO# [Connection Test] DB Server: mongodb://127.0.0.1:27017
-#DB INFO#    The connection is GOOD.
 
 User Name: kubota
 - lazulite
@@ -238,28 +227,21 @@ User Name: arisa_kubota
 
 ```bash
 $ ./localdb/bin/localdbtool-retrieve list site
-#DB INFO# -----------------------
-#DB INFO# [Connection Test] DB Server: mongodb://127.0.0.1:27017
-#DB INFO#    The connection is GOOD.
 
 - Tokyo Institute of Technology
 - lawrence_berkeley_national_laboratory
 # Ctrl+C can terminate the output
 ```
 
-### d. Create Config
+### Create Config
 
 You can create the connectivity config file and the chip config files after the component registration. <br>
 The component data can be registered by [DB Accessor](accessor.md) or can be downloaded from ITkPD by [ITkPD Interface](itkpd-interface.md). <br>
 You can create the config files by `localdb-retrieve pull --chip <SERIAL NUMBER>`.<br>
 If you have already uploaded the component test data, the config files in the latest scan are retrieved.
 
-**This function is not available in YARR v1.1.0.**<br>
-**Please change to the devel branch if want to use.**<br>
-
 ```bash
-$ cd YARR
-$ ./localdb/bin/localdb-retrieve pull --chip <SERIAL NUMBER>
+$ ./localdb/bin/localdb-retrieve pull --chip <SERIAL NUMBER> --config_only
 #DB INFO# -----------------------
 #DB INFO# [Connection Test] DB Server: mongodb://127.0.0.1:27017/localdb
 #DB INFO# ---> Connection is GOOD.
@@ -274,6 +256,14 @@ $ ./localdb/bin/localdb-retrieve pull --chip <SERIAL NUMBER>
 * List of created config (default output dir: `YARR/db_data`)
     * connectivity config file
     * chip config file (copied from `YARR/configs/defaults/default_FE.json` with replacing `Name` and `ChipId`)
+
+### Check User & Site Config
+
+You can check your user config and site config for QC:
+
+```bash
+$ ./localdb/bin/localdbtool-retrieve user --QC
+```
 
 ## 4. FAQ
 
