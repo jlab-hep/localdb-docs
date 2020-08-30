@@ -25,6 +25,19 @@
 
 ## Advanced Functions
 
+### Synchronization Tool
+
+- Description: To push/pull/share data with the other Local DB or Master Server (Centralize Local DB).
+- Page: [About Synchronization Tool](sync.md)
+- Location: `localdb-tools/sync-tool`
+
+### Archive Tool
+
+- Description: To create archive tar.gz file for Local DB back-up.
+- Page: [About Archive Tool](archive.md)
+- Location: `localdb-tools/archive-tool`
+
+
 in edit.
 
 <!--TODO
@@ -40,18 +53,6 @@ in edit.
 - Description: To retrieve data (data log, data files) from Local DB.
 - Page: [About Retrieve Tool](retrieve.md)
 - Location: `YARR/localdb`
-
-### Synchronization Tool
-
-- Description: To push/pull/share data with the other Local DB or Master Server (Centralize Local DB).
-- Page: [About Synchronization Tool](sync.md)
-- Location: `localdb-tools/sync-tool`
-
-### Archive Tool
-
-- Description: To create archive tar.gz file for Local DB back-up.
-- Page: [About Archive Tool](archive.md)
-- Location: `localdb-tools/archive-tool`
 
 ### ITkPD Interface
 

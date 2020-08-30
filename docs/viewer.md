@@ -31,7 +31,7 @@ Follow the [installtaion tutorial](installation.md) to install required packages
 
 #### 1. Setup
 
-Make sure to setup the configuration files of the viewer application using [localdb-tools/viewer/setup_viewer.sh](script/setup-viewer.md) shell:
+Setup the configuration files of the viewer application using [localdb-tools/viewer/setup_viewer.sh](script/setup-viewer.md) shell:
 
 ```bash
 $ cd localdb-tools/viewer
