@@ -18,7 +18,7 @@ You can upload all cache data into Local DB when the good connection to Local DB
 
 ## 2. Installation
 
-The DB Accessor is included as part of [YARR SW](https://yarr.readthedocs.io/en/latest/).<br>
+The DB Accessor is included as part of [YARR SW](http://yarr.web.cern.ch/yarr/).<br>
 Follow the [dbAccessor Guide](../accessor.md) to setup the command.
 
 ## 3. Syntax
