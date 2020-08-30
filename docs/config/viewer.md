@@ -1,10 +1,12 @@
-## Viewer Config
+# Viewer Config
 
 You can specify the configuration of Local DB server and web server when starting the viewer application using a configuration file.
 
-### Basic File Format
+#### File Format
 
-Viewer configuration file uses the YAML forma:
+##### Basic File Format
+
+Viewer configuration file uses the YAML format:
 
 ```yml
 mongoDB:
@@ -18,7 +20,7 @@ flask:
     port: 5000      # port number running app.py
 ```
 
-### Admin File Format
+##### Admin File Format
 
 ```yml
 mongoDB:
@@ -33,7 +35,9 @@ flask:
     port: 5000      # port number running app.py
 ```
 
-### Local DB Options
+#### Options
+
+##### Local DB Options
 
 ```yml
 mongoDB:
@@ -87,7 +91,7 @@ If Local DB server uses SSL connection, specifies the SSL certificate file to pr
 - `mongoDB.tls.enabled` `mongoDB.tls.CAFile` `mongoDB.tls.PEMKeyFile`<br>
 If Local DB server uses TLS connection, specifies the TLS certificate file to present to Local DB server and the TLS CA file to verify the certificate presented by Local DB server.
 
-### User DB Options
+##### User DB Options
 
 ```yml
 userDB:
@@ -100,7 +104,7 @@ Specifies the configuration of Local User DB server in the userDB option.
 _Default_ : localdbtoolso
 Specifies the name of the database registered as Local User DB in MongoDB to connect to.
 
-### Flask Options
+##### Flask Options
 
 ```yml
 flask:

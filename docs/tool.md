@@ -25,6 +25,10 @@
 
 ## Advanced Functions
 
+in edit.
+
+<!--TODO
+
 ### Uploader
 
 - Description: To upload data (test data, chip data, user data, site data ...) into Local DB.
@@ -54,3 +58,5 @@
 - Description: To communicate with ITkPD.
 - Page: [About ITkPD Interface](itkpd-interface.md)
 - Location: `localdb-tools/itkpd-interface`
+
+-->

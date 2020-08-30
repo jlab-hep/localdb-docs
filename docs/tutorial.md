@@ -56,6 +56,11 @@ If you have not tried the function of uploading test data into Local DB and you 
 
 ## [Advanced Tutorial](tutorial/advanced.md)
 
+in edit.
+
+<!--TODO
+
+
 This is an advanced instruction for using Local DB and Tools.<br>
 
 #### Table of Contents
@@ -69,3 +74,4 @@ This is an advanced instruction for using Local DB and Tools.<br>
 - g. Back-up Local DB (Archive Tool)
 
 ##### [Go to the advanced tutorial page](tutorial/advanced.md)
+-->
