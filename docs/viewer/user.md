@@ -1,33 +1,50 @@
-## User Page
+# User Page
 
 You can sign-in and use vaious functions (create tag, edit comment, download ITk PD module) if you have your account in the Local DB.
 
 !!! Note
     If you do not have such an account, you need to ask Local DB administrator of your institution to create your account.
 
-#### Sign-in
+### Functions
 
-##### 1. Click "sign in" in the navigation bar
+- [Sign in](#sign-in)
+- [Tag Creation](#tag-creation)
+- [Component Download](#component-download)
 
-|![User Before Sign-in Page](../images/viewer/user_before_sign_in.png)|
+---
+
+## Sign-in
+
+##### 1. After sign up accroding to the [received mail from the administrator](admin.md#user-creation), click **sign in** on the top right:
+
+|![Viewer Admin Authenitcation](../images/viewer/user_signin_1.png)|
 |:-:|
 
-##### 2. Fill your username and password
+<br>
 
-|![User In Sign-in Page](../images/viewer/user_in_sign_in.png)|
+##### 2. Enter username and password of your user account and click **Sign in** to sign in with your account:
+
+|![Viewer Admin Authenitcation](../images/viewer/user_signin_2.png)|
 |:-:|
 
-##### 3. Enter the "Sign in" button
+<br>
 
-|![User After Sign-in Page](../images/viewer/user_after_sign_in.png)|
+##### 3. You can sign in if authentication successful:
+
+|![Viewer Admin Authenitcation](../images/viewer/user_signin_3.png)|
 |:-:|
 
-##### 4. Successful sign-in
+<br>
 
-#### Tag Creation
+## Tag Creation
 
 in edit.
 
-#### Component Download
+## Component Download
 
 in edit.
+
+
+
+
+

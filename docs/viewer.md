@@ -87,7 +87,7 @@ You can switch to the test result page by clicking **result page** in the compon
 - [User Page](viewer/user.md)<br>
 You can **sign-in** and use vaious functions (create tag, edit comment, download ITk PD module) if you have your account in the Local DB.
 - [Admin Page](viewer/admin.md)<br>
-a
+You can use vaious functions (create user account, issue password for user account, change component stage) if you have an account with administrator privilege.
 
 ## 5. FAQ
 
