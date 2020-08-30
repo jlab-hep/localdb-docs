@@ -9,6 +9,8 @@ The **Archive Tool** creates a/some archive tar.gz files to back-up Local DB.
 3. [Usage](#3-usage)
 4. [FAQ](#4-faq)
 
+---
+
 ## 1. Command
 
 - Location: **localdb-tools/archive-tool/bin/localdbtool-archive.sh**

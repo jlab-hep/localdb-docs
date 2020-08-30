@@ -10,6 +10,8 @@ The **scanConsole** is the main read-out program in [YARR](http://yarr.web.cern.
 4. [Examples](#4-examples)
 5. [FAQ](#5-faq)
 
+---
+
 ## 1. Command
 
 - Location: **YARR/bin/scanConsole**
