@@ -31,7 +31,7 @@ Follow the [installtaion tutorial](installation.md) to install required packages
 
 #### 1. Setup
 
-Make sure to setup the configuration files of the viewer application using [localdb-tools/viewer/setup_viewer.sh](setup-viewer.md) shell:
+Make sure to setup the configuration files of the viewer application using [localdb-tools/viewer/setup_viewer.sh](script/setup-viewer.md) shell:
 
 ```bash
 $ cd localdb-tools/viewer
@@ -40,7 +40,7 @@ $ ./setup_viewer.sh
 
 #### 2. Confirmation
 
-Once you setup, you can find the configuration file in [localdb-tools/viewer/user_conf.yml](viewer-config.md#basic-file-formad) or [localdb-tools/viewer/admin_conf.yml](viewer-config.md#admin-file-format).
+Once you setup, you can find the configuration file in [localdb-tools/viewer/user_conf.yml](config/viewer.md#basic-file-formad) or [localdb-tools/viewer/admin_conf.yml](config/viewer.md#admin-file-format).
 
 ## 3. Usage
 
@@ -61,34 +61,34 @@ Applying ATLAS style settings...
 ```
 
 If you launch the browser on the host machine where the viewer application is running, you can check the viewer page on: [http://127.0.0.1:5000/localdb/](http://127.0.0.1:5000/localdb)<br>
-If you want to access the viewer from other machine, see [FAQ for viewer](viewer-faq.md) to get more detail.
+If you want to access the viewer from other machine, see [FAQ for viewer](faq/viewer.md) to get more detail.
 
 ###### Command Line Arguments
 
 - **``--config <path>``**<br>
-Specifies the path to [viewer config file](viewer-config.md).<br>
+Specifies the path to [viewer config file](config/viewer.md).<br>
 
-## 4. [Web Page](viewer-page.md)
+## 4. [Web Page](viewer/page.md)
 
 The viewer application displays the following page on the browser:
 
-|![Viewer Top Page](images/viewer_top.png)|
+|![Viewer Top Page](images/viewer/top.png)|
 |:-:|
 
 
 ###### Page List
 
-- [Component List Page](viewer-top.md#component-list-page)<br>
+- [Component List Page](viewer/top.md#component-list-page)<br>
 You can switch to the component list page by clicking **Components Page** in the page list or **COMPONENTS** in the navigation bar.
-- [Scan List Page](viewer-top.md#scan-list-page)<br>
+- [Scan List Page](viewer/top.md#scan-list-page)<br>
 You can switch to the scan list page by clicking **Scan Page** in the page list or **TEST** in the navigation bar.
-- [Component Page](viewer-component.md)<br>
+- [Component Page](viewer/component.md)<br>
 You can switch to the test result page by clicking **result page** in the component/scan list table.
-- [User Page](viewer-user.md)<br>
+- [User Page](viewer/user.md)<br>
 You can **sign-in** and use vaious functions (create tag, edit comment, download ITk PD module) if you have your account in the Local DB.
-- [Admin Page](viewer-admin.md)<br>
+- [Admin Page](viewer/admin.md)<br>
 a
 
 ## 5. FAQ
 
-See [FAQ for Viewer](viewer-faq.md).
+See [FAQ for Viewer](faq/viewer.md).

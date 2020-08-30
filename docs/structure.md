@@ -7,41 +7,41 @@ Database for using in localDB tools e.g.) _synchronization DB_ function
 
 ## Data Structure
 
-![localdb_structure](images/db_structure.png)
+![localdb_structure](images/localdb/structure.png)
 
 ## Collections (= tables in SQL) name list
 
 ### **localdb**
 
-* [**chip**](db-chip.md) <br>
+* [**chip**](structure/chip.md) <br>
 Tested chip information
 
-* [**component**](db-component.md) <br>
+* [**component**](structure/component.md) <br>
 Registered component (chips/modules) information
 
-* [**childParentRelation**](db-childParentRelation.md) <br>
-Relationship between chips and modules 
+* [**childParentRelation**](structure/childParentRelation.md) <br>
+Relationship between chips and modules
 
-* [**testRun**](db-testRun.md) <br>
+* [**testRun**](structure/testRun.md) <br>
 Test information
 
-* [**componentTestRun**](db-componentTestRun.md) <br>
+* [**componentTestRun**](structure/componentTestRun.md) <br>
 Relationship between chip/component and testRun
 
-* [**config**](db-config.md) <br>
+* [**config**](structure/config.md) <br>
 Config information
 
-* [**user**](db-user.md) <br>
+* [**user**](structure/user.md) <br>
 User information
 
-* [**institution**](db-institution.md) <br>
+* [**institution**](structure/institution.md) <br>
 Site information
 
-* [**environment**](db-environment.md) <br>
+* [**environment**](structure/environment.md) <br>
 DCS information
 
-* [**fs.files**](db-GridFS.md) (GridFS) <br>
+* [**fs.files**](structure/GridFS.md) (GridFS) <br>
 Binary (text) File information
 
-* [**fs.chunks**](db-GridFS.md) (GridFS) <br>
+* [**fs.chunks**](structure/GridFS.md) (GridFS) <br>
 Binary (text) File chunks

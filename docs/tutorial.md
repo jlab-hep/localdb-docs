@@ -12,7 +12,7 @@ If you want to check other advanced usage, go to the [advanced tutorial](#advanc
 
 ---
 
-## [Trial Tutorial](trial-tutorial.md)
+## [Trial Tutorial](tutorial/trial.md)
 
 Assuming you do not have root privileges and can not complete the [installation of the requirements](installation.md), this tutorial describes;
 
@@ -20,13 +20,13 @@ Assuming you do not have root privileges and can not complete the [installation 
 - How to download a sample dataset and setup Local DB
 - How to use read-out command and data upload without actually performing read-out test using a toy script
 
-Once you have started Local DB in this trial tutorial, you can go to the [tutorial for the viewer application](viewer-tutorial.md) and try it out.
+Once you have started Local DB in this trial tutorial, you can go to the [tutorial for the viewer application](tutorial/viewer.md) and try it out.
 
-##### [Go to the trial tutorial page](trial-tutorial.md)
+##### [Go to the trial tutorial page](tutorial/trial.md)
 
 ---
 
-## [Basic Tutorial](basic-tutorial.md)
+## [Basic Tutorial](tutorial/basic.md)
 
 This tutorial is intended to demonstrate basic operations:
 
@@ -34,13 +34,13 @@ This tutorial is intended to demonstrate basic operations:
 - How to use read-out command and data upload using emulator
 - How to retrieve data from Local DB on the console
 
-Once you have started Local DB in this trial tutorial, you can go to the [tutorial for the viewer application](viewer-tutorial.md) and try it out.
+Once you have started Local DB in this trial tutorial, you can go to the [tutorial for the viewer application](tutorial/viewer.md) and try it out.
 
-##### [Go to the basic tutorial page](basic-tutorial.md)
+##### [Go to the basic tutorial page](tutorial/basic.md)
 
 ---
 
-## [Viewer Tutorial](viewer-tutorial.md)
+## [Viewer Tutorial](tutorial/viewer.md)
 
 This tutorial is intended to demonstrate the operations related to [viewer application](viewer.md):
 
@@ -48,13 +48,13 @@ This tutorial is intended to demonstrate the operations related to [viewer appli
 - How to check data stored in Local DB on local browser
 - How to use administrator functions on viewer application
 
-If you have not tried the function of uploading test data into Local DB and you do not have data in Local DB, go to the [basic tutorial](basic-tutorial.md) and upload scan data before proceeding this tutorial.
+If you have not tried the function of uploading test data into Local DB and you do not have data in Local DB, go to the [basic tutorial](tutorial/basic.md) and upload scan data before proceeding this tutorial.
 
-##### [Go to the viewer tutorial page](viewer-tutorial.md)
+##### [Go to the viewer tutorial page](tutorial/viewer.md)
 
 ---
 
-## [Advanced Tutorial](advanced-tutorial.md)
+## [Advanced Tutorial](tutorial/advanced.md)
 
 This is an advanced instruction for using Local DB and Tools.<br>
 
@@ -68,4 +68,4 @@ This is an advanced instruction for using Local DB and Tools.<br>
 - f. Share data with the other Local DB (Synchronization Tool)
 - g. Back-up Local DB (Archive Tool)
 
-##### [Go to the advanced tutorial page](advanced-tutorial.md)
+##### [Go to the advanced tutorial page](tutorial/advanced.md)

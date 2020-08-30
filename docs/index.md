@@ -1,6 +1,6 @@
 # Home
 
-![Local DB](images/logo.png)
+![Local DB](images/localdb/logo.png)
 
 **Welcome to the Local DB Manual!**<br>
 This manual introduces the overview of Local DB system, the installation, and provise samples of the usage and the configuration.
@@ -17,7 +17,7 @@ Using the tools for Local DB, you can:
 
 ## Local DB System
 
-![Local DB System Overview](images/overview.png)
+![Local DB System Overview](images/localdb/overview.png)
 
 |Tool Name           |Function              |System        |How to use                                |
 |:------------------:|:--------------------:|:------------:|:----------------------------------------:|
@@ -64,4 +64,4 @@ localdb-tools : Cloned from https://gitlab.cern.ch/YARR/localdb-tools.git
 ```
 ## Data Flow
 
-![Flow Chart in Local DB System](images/db_flow_chart.png)
+![Flow Chart in Local DB System](images/localdb/flow_chart.png)

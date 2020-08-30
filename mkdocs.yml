@@ -10,7 +10,7 @@ nav:
     - Introduction:
         - Home: index.md
         - Installation: installation.md
-        - Requirements: requirements-list.md
+        - Requirements: installation/requirements-list.md
         - Database Structure: structure.md
         - Relase Note: release-note.md
         - Contact: contact.md
@@ -19,12 +19,12 @@ nav:
         - Demonstrations: demonstration.md
     - Functions:
         - Tools: tool.md
-        - Scripts: scripts.md
+        - Scripts: script.md
         - Config samples: config.md
     - FAQ:
-        - Advanced: advanced.md
-        - dbAccessor related: accessor-faq.md
-        - viewer application related: viewer-faq.md
+        - Advanced: faq/advanced.md
+        - dbAccessor related: faq/accessor.md
+        - viewer application related: faq/accessor.md
         - others: faq.md
 extra_css:
     - "css/custom.css"
