@@ -69,4 +69,4 @@ $ ./bin/dbAccessor -N -d database.json
 
 Make sure the [database config file](../../config/database.md) exists in the specified path.<br>
 If the file does not exist or unreadable as a JSON file, dbAccessor returns error.<br>
-If you get an error, follow [FAQ for dbAccessor](../../faq/accessor.md#not-found-xxx) to resolve it.
+If you get an error, follow [how to deal with error in dbAccessor](../../error/accessor.md#not-found-xxx) to resolve it.

@@ -151,4 +151,4 @@ DCS Data  :
 
 !!! Warning
     If the specified scan data has not been uploaded to the Local DB, an error will occur.<br>
-    If you get an error, follow [FAQ for dbAccessor](../../faq/accessor.md#not-found-xxx-data) to resolve it.
+    If you get an error, follow [how to deal with error in dbAccessor](../../error/accessor.md#not-found-xxx-data) to resolve it.

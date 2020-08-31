@@ -21,11 +21,9 @@ nav:
         - Tools: tool.md
         - Scripts: script.md
         - Config samples: config.md
-    - FAQ:
-        - Advanced: faq/advanced.md
-        - dbAccessor related: faq/accessor.md
-        - viewer application related: faq/viewer.md
-        - others: faq.md
+    - Support:
+        - FAQ: faq.md
+        - Error Messages: error.md
 extra_css:
     - "css/custom.css"
     - "css/theme_extra.css"
