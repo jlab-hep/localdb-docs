@@ -93,11 +93,11 @@ The output of "Succeeded uploading" means that data was uploaded into Local DB s
 !!! Note
     Make sure the [log file](../../config/scan-log.md) exists in the specified directory.<br>
     If the file does not exist or unreadable as a JSON file, dbAccessor returns error.<br>
-    If you get an error, follow [FAQ for dbAccessor](../../faq/accessor.md#not-found-xxx) to resolve it.
+    If you get an error, follow [how to deal with error in dbAccessor](../../error/accessor.md#not-found-xxx) to resolve it.
 
 !!! Warning
     If the file is unreadable or unsuitable to upload, dbAccessor returns error.<br>
-    If you get an error, follow [FAQ for dbAccessor](../../faq/accessor.md#could-not-parse-xxx) to resolve it.<br>
+    If you get an error, follow [how to deal with error in dbAccessor](../../error/accessor.md#could-not-parse-xxx) to resolve it.<br>
 
 #### Upload QC Scan Data
 
@@ -133,7 +133,7 @@ but some steps are added to check whether data (component, user, site informatio
 
 !!! Warning
     Data that does not meet the requirements will not be uploaded and an error will occur.<br>
-    If you get an error, follow [FAQ for dbAccessor](../../faq/accessor.md#not-found-xxx-data) to resolve it.
+    If you get an error, follow [how to deal with error in dbAccessor](../../error/accessor.md#not-found-xxx-data) to resolve it.
 
 #### Interactive Mode
 

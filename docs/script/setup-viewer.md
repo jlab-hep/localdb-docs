@@ -45,7 +45,7 @@ Local DB Server port: 27017
 
 This script first checks that you have the required packages.<br>
 The output of **Requirements already satisfied** means that the confirmation is successful.<br>
-If you get an error, follow [FAQ for Viewer](../faq/viewer.md) to resolve it.
+If you get an error, follow [how to deal with error in Viewer](../error/viewer.md) to resolve it.
 
 The script displays the configuration of Local DB server.<br>
 You need to check it and answer **y** to proceed, or **n** to exit.

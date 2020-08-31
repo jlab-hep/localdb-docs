@@ -10,7 +10,6 @@ You can access the web page in the local machine, or from the other machine if y
 2. [Getting Start](#2-getting-start)
 3. [Usage](#3-usage)
 4. [Web Page](#4-web-page)
-5. [FAQ](#5-faq)
 
 ---
 
@@ -90,7 +89,3 @@ You can switch to the test result page by clicking **result page** in the compon
 You can **sign-in** and use vaious functions (create tag, edit comment, download ITk PD module) if you have your account in the Local DB.
 - [Admin Page](viewer/admin.md)<br>
 You can use vaious functions (create user account, issue password for user account, change component stage) if you have an account with administrator privilege.
-
-## 5. FAQ
-
-See [FAQ for Viewer](../faq/viewer.md).

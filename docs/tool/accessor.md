@@ -7,7 +7,6 @@ You can upload local data to Local DB or download data locally from Local DB eas
 
 1. [Command](#1-command)
 2. [Getting Start](#2-getting-start)
-3. [FAQ](#3-faq)
 
 ---
 
@@ -59,7 +58,3 @@ You can run the [DB Accessor](accessor.md) with command-line option **-N** to ch
 ```bash
 $ ./bin/dbAccessor -N
 ```
-
-## 3. FAQ
-
-See [FAQ for dbAccessor](../faq/accessor.md).

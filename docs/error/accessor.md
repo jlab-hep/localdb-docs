@@ -1,4 +1,4 @@
-# Error and Exit Messages
+# dbAccessor Error Messages
 
 ### Table of Contents
 
