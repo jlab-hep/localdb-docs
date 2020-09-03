@@ -10,5 +10,6 @@ This page describes frequently asked questions.
 - SSH Tunnel
 - Access Control
 
-### - [viewer](faq/viewer.md)
+### - [Viewer Applciation Related](faq/viewer.md)
 
+- Apache Configuration

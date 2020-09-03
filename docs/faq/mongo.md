@@ -10,6 +10,8 @@ See the [MongoDB docs](https://docs.mongodb.com/manual/) to get more detail.<br>
 - [SSH Tunnel](#ssh-tunnel)
 - [Access Control](#access-control)
 
+---
+
 ## Installation
 
 See the [MongoDB docs: Installation of MongoDB](https://docs.mongodb.com/manual/installation/) to get more detail.<br>
