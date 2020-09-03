@@ -5,7 +5,7 @@ This tutorial describes the basic operations from scan to data upload after the 
 !!! Warning
     If you do not have [YARR git repository](https://gitlab.cern.ch/YARR/YARR) or [Local DB Tools git retpository](https://gitlab.cern.ch/YARR/localdb-tools), or system packages required for those repositories, see the [installation guide](../installation.md) to install the missing ones.
 
-!!! Recommend
+!!! Note
     If you could not install the requirements according to the [installation guide](../installation.md) or cannot build YARR and cannot use read-out binary command, see the [trial tutorial](trial.md) to try starting Local DB and using the commands.<br>
     Once you have started Local DB in [this trial tutorial](trial.md), you can go to the [tutorial for the viewer application](viewer.md) and use it.
 

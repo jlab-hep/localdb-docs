@@ -6,7 +6,7 @@ Assuming you do not have root privileges and can not complete the [installation 
     This is just a tutorial to check the functions of Local DB, not the official method of setting it up.<br>
     When using the Local DB during productions, start it up according the [installation guide](../installation.md).
 
-!!! Recommend
+!!! Note
     If you have already installed the requirements according to the [installation guide](../installation.md), it is recommended to see the [basic tutorial](basic.md) to get a more hands-on tutorial.<br>
     If you could not install or cannot build YARR and cannot use read-out binary command, proceed [this trial tutorial](trial.md) to try starting Local DB and using the commands.<br>
     Once you have started Local DB in [this trial tutorial](trial.md), you can go to the [tutorial for the viewer application](viewer.md) and use it.

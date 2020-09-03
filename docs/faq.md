@@ -2,5 +2,13 @@
 
 This page describes frequently asked questions.
 
-- [viewer](faq/viewer.md)
-- [advanced](faq/advanced.md)
+### - [MongoDB Related](faq/mongo.md)
+
+- Installation for Local DB Server
+- mongo shell
+- SSL/TLS Connection
+- SSH Tunnel
+- Access Control
+
+### - [viewer](faq/viewer.md)
+

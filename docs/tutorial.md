@@ -1,4 +1,4 @@
-# Quick Tutorial
+# Tutorials
 
 This page introduces tutorials to try out the Local DB and its tools assuming some cases.<br>
 If you want to try a series of operations from scan to data upload, go to the [basic tutorial](#basic-tutorial).<br>

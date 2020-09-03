@@ -2,7 +2,7 @@
 
 This tutorial describes the oprations related to [viewer](../tool/viewer.md) setup and some browser functions.
 
-!!! Recommend
+!!! Note
     If you have not uploaded any data into Local DB yet, it is recommended to see the [basic tutorial](basic.md) and upload scan data before proceeding with this page.
 
 ### Table of Contents
@@ -45,7 +45,7 @@ Set username and password for the administrator account and the script creates t
 !!! Note
     See the [admin functions in the viewer](../tool/viewer.md) to get more about what you can do.
 
-!!! Recommend
+!!! Note
     You can improve the security of data access by locking the Local DB.<br>
     If you want to lock Local DB, set `security.authorization: enabled` in `etc/mongod.conf` and restart mongod instance.<br>
     See the [MongoDB documentation](https://docs.mongodb.com/manual/tutorial/enable-authentication/) to get more detail.
