@@ -65,7 +65,7 @@ For checking the setting of Local DB: /etc/mongod.conf
 !!! Note
     This script just creates the account, not change the setting of MongoDB.<br>
 
-!!! Recommend
+!!! Note
     You can improve the security of data access by locking the Local DB.<br>
     If you want to lock Local DB, set `security.authorization: enabled` in `etc/mongod.conf` and restart mongod instance.<br>
     See the [MongoDB documentation](https://docs.mongodb.com/manual/tutorial/enable-authentication/) to get more detail.

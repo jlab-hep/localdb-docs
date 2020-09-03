@@ -10,7 +10,7 @@ nav:
         - Relase Note: release-note.md
         - Contact: contact.md
     - Tutorial:
-        - Quick tutorial: tutorial.md
+        - Tutorials: tutorial.md
         - Demonstrations: demonstration.md
     - Functions:
         - Tools: tool.md
