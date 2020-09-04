@@ -277,7 +277,7 @@ Successfully added user: {
 
 ###### 3. Create the Local DB administrator
 
-Run [localdb-tools/setting/create_admin.sh](script/create_admin.md) to create the administrator account for Local DB:
+Run [localdb-tools/setting/create_admin.sh](../script/create_admin.md) to create the administrator account for Local DB:
 
 ```bash
 $ cd localdb-tools/setting
@@ -285,7 +285,7 @@ $ ./create_admin.sh -p 27017
 ```
 
 !!! Note
-    This Local DB administrator account is mainly used to enable admin functions in the [viewer application](tool/viewer.md), and it has access authority only to the database related to Local DB.<br>
+    This Local DB administrator account is mainly used to enable admin functions in the [viewer application](../tool/viewer.md), and it has access authority only to the database related to Local DB.<br>
     It is recommended to create this account with a username and password different from the user administrator account created in the previous step to improve the security of DB.
 
 ###### 4. Restart MongoDB with access control

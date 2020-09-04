@@ -1,4 +1,4 @@
-# Basic Tutorial
+# Scan Tutorial
 
 This tutorial describes the basic operations from scan to data upload after the [installation](../installation.md).
 

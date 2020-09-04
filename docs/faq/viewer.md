@@ -8,7 +8,7 @@
 
 ## How to Set Apache
 
-You can run the [viewer application](tool/viewer.md) using apache service.
+You can run the [viewer application](../tool/viewer.md) using apache service.
 
 ###### 1. Install Apache2 and WSGI
 
@@ -51,7 +51,7 @@ $ sudo git clone https://gitlab.cern.ch/yarr/localdb-tools.git
 $ sudo chown -R ${USER} localdb-tools
 ```
 
-Setup the [viewer application](tool/viewer.md):
+Setup the [viewer application](../tool/viewer.md):
 
 ```bash
 $ cd /var/www/localdb-tools/setting

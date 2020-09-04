@@ -1,7 +1,7 @@
 # Tutorials
 
 This page introduces tutorials to try out the Local DB and its tools assuming some cases.<br>
-If you want to try a series of operations from scan to data upload, go to the [basic tutorial](#basic-tutorial).<br>
+If you want to try a series of operations from scan to data upload, go to the [scan tutorial](#scan-tutorial).<br>
 If you want to try the operation related to the [viewer application](tool/viewer.md), go to the [viewer tutorial](#viewer-tutorial).<br>
 If you could not complete the [installation](installation.md) or cannot build YARR and cannot use read-out binary command, go to the [trial tutorial](#trial-tutorial) to try starting Local DB and using the commands.<br>
 If you want to check other advanced usage, go to the [advanced tutorial](#advanced-tutorial).
@@ -12,7 +12,9 @@ If you want to check other advanced usage, go to the [advanced tutorial](#advanc
 
 ---
 
-## [Trial Tutorial](tutorial/trial.md)
+## Basic Tutorials
+
+### [Trial Tutorial](tutorial/trial.md)
 
 Assuming you do not have root privileges and can not complete the [installation of the requirements](installation.md), this tutorial describes;
 
@@ -26,9 +28,9 @@ Once you have started Local DB in this trial tutorial, you can go to the [tutori
 
 ---
 
-## [Basic Tutorial](tutorial/basic.md)
+### [Scan Tutorial](tutorial/scan.md)
 
-This tutorial is intended to demonstrate basic operations:
+This tutorial is intended to demonstrate basic scan operations:
 
 - How to build YARR read-out command
 - How to use read-out command and data upload using emulator
@@ -36,11 +38,11 @@ This tutorial is intended to demonstrate basic operations:
 
 Once you have started Local DB in this trial tutorial, you can go to the [tutorial for the viewer application](tutorial/viewer.md) and try it out.
 
-##### [Go to the basic tutorial page](tutorial/basic.md)
+##### [Go to the scan tutorial page](tutorial/scan.md)
 
 ---
 
-## [Viewer Tutorial](tutorial/viewer.md)
+### [Viewer Tutorial](tutorial/viewer.md)
 
 This tutorial is intended to demonstrate the operations related to [viewer application](tool/viewer.md):
 
@@ -48,15 +50,21 @@ This tutorial is intended to demonstrate the operations related to [viewer appli
 - How to check data stored in Local DB on local browser
 - How to use administrator functions on viewer application
 
-If you have not tried the function of uploading test data into Local DB and you do not have data in Local DB, go to the [basic tutorial](tutorial/basic.md) and upload scan data before proceeding this tutorial.
+If you have not tried the function of uploading test data into Local DB and you do not have data in Local DB, go to the [scan tutorial](tutorial/scan.md) and upload scan data before proceeding this tutorial.
 
 ##### [Go to the viewer tutorial page](tutorial/viewer.md)
 
 ---
 
-## [Advanced Tutorial](tutorial/advanced.md)
+## Advanced Tutorials
 
-in edit.
+### [DCS Tutorial](tutorial/dcs.md)
+
+### [Component Tutorial](tutorial/component.md)
+
+### [Synchronization Tutorial](tutorial/sync.md)
+
+### [Archiving Tutorial](tutorial/archive.md)
 
 <!--TODO
 
