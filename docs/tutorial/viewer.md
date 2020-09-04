@@ -3,7 +3,7 @@
 This tutorial describes the oprations related to [viewer](../tool/viewer.md) setup and some browser functions.
 
 !!! Note
-    If you have not uploaded any data into Local DB yet, it is recommended to see the [basic tutorial](basic.md) and upload scan data before proceeding with this page.
+    If you have not uploaded any data into Local DB yet, it is recommended to see the [scan tutorial](scan.md) and upload scan data before proceeding with this page.
 
 ### Table of Contents
 
