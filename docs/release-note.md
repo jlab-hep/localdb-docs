@@ -2,21 +2,25 @@
 
 ## Docs
 
-|Local DB Tools Version|Hash                                                                    |Local DB Tools                                         |YARR                                                          |
-|:--------------------:|:----------------------------------------------------------------------:|:-----------------------------------------------------:|:------------------------------------------------------------:|
-|-                     |-                                                                       |-                                                      |                                                              |
-|devel                 |[devel](https://localdb-docs.readthedocs.io/en/devel/)                  |[latest](https://localdb-docs.readthedocs.io/en/devel/)|devel                                                         |
-|1.4 (devel)           |-                                                                       |1.4                                                    |devel                                                         |
-|1.3 (master)          |[f998defc](https://gitlab.cern.ch/YARR/localdb-tools/-/tree/ldbtoolv1.3)|[1.3](https://localdb-docs.readthedocs.io/en/1.3/)     |[1.2 (8dcaaef0)](https://gitlab.cern.ch/YARR/YARR/-/tree/v1.2)|
+|Local DB Tools Version|Git                                                                        |Docs                                                  |YARR Version/Branch                                 |
+|:--------------------:|:-------------------------------------------------------------------------:|:----------------------------------------------------:|:--------------------------------------------------:|
+|-                     |-                                                                          |-                                                      |                                                    |
+|devel                 |[devel](https://localdb-docs.readthedocs.io/en/devel/)                     |[devel](https://localdb-docs.readthedocs.io/en/devel/)|[devel](https://gitlab.cern.ch/YARR/YARR/tree/devel)|
+|1.4 (devel)           |[ldbtoolv1.4](https://gitlab.cern.ch/YARR/localdb-tools/-/tree/ldbtoolv1.4)|[1.4](https://localdb-docs.readthedocs.io/en/1.4/)    |devel                                               |
+|1.3 (master)          |[ldbtoolv1.3](https://gitlab.cern.ch/YARR/localdb-tools/-/tree/ldbtoolv1.3)|[1.3](https://localdb-docs.readthedocs.io/en/1.3/)    |[1.2](https://gitlab.cern.ch/YARR/YARR/-/tree/v1.2) |
 
 ## Local DB Tools
 
-|Version                                                                    |Date             |Describe              |Docs                                                |
+|Branch                                                                     |Date             |Describe              |Docs                                                |
 |:-------------------------------------------------------------------------:|:---------------:|:--------------------:|:--------------------------------------------------:|
 |-                                                                          |-                |=                     |=                                                   |
 |[devel](https://gitlab.cern.ch/YARR/localdb-tools/-/tree/devel)            |-                |=                     |=                                                   |
 |[master](https://gitlab.cern.ch/YARR/localdb-tools/-/tree/master)          |-                |=                     |=                                                   |
-|ldbtoolv1.4(coming)                                                        |                 |Latest stable version |1.4.0                                               |
+
+|Version                                                                    |Date             |Describe              |Docs                                                |
+|:-------------------------------------------------------------------------:|:---------------:|:--------------------:|:--------------------------------------------------:|
+|-                                                                          |-                |=                     |=                                                   |
+|[ldbtoolv1.4](https://gitlab.cern.ch/YARR/localdb-tools/-/tree/ldbtoolv1.4)|Coming           |Latest stable version |1.4.0                                               |
 |[ldbtoolv1.3](https://gitlab.cern.ch/YARR/localdb-tools/-/tree/ldbtoolv1.3)|2020-2---        |Third relase          |[1.3](https://localdb-docs.readthedocs.io/en/v.1.3/)|
 |[ldbtoolv1.2](https://gitlab.cern.ch/YARR/localdb-tools/-/tree/ldbtoolv1.2)|2019-12---2020-01|Second relase         |-                                                   |
 |[ldbtoolv1.1](https://gitlab.cern.ch/YARR/localdb-tools/-/tree/ldbtoolv1.1)|2018-10---2019-12|First relase          |-                                                   |
