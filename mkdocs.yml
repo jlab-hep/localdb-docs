@@ -2,23 +2,12 @@ site_name: Local DB Docs
 theme: readthedocs
 #theme: rtd-dropdown
 nav:
-    - Introduction:
-        - Home: index.md
-        - Installation: installation.md
-        - Requirements: installation/requirements-list.md
-        - Database Structure: structure.md
-        - Relase Note: release-note.md
-        - Contact: contact.md
-    - Tutorial:
-        - Tutorials: tutorial.md
-        - Demonstrations: demonstration.md
-    - Functions:
-        - Tools: tool.md
-        - Scripts: script.md
-        - Config samples: config.md
-    - Support:
-        - FAQ: faq.md
-        - Error Messages: error.md
+    - Home: index.md
+    - Installation: installation.md
+    - Requirements: installation/requirements-list.md
+    - Database Structure: structure.md
+    - Relase Note: release-note.md
+    - Contact: contact.md
 extra_css:
     - "css/custom.css"
     - "css/theme_extra.css"
