@@ -2,11 +2,12 @@
 
 ## Docs
 
-|Version                                                   |Local DB Tools                                                                       |YARR                                                          |
-|:--------------------------------------------------------:|:-----------------------------------------------------------------------------------:|:------------------------------------------------------------:|
-|-                                                         |-                                                                                    |                                                              |
-|[latest](https://localdb-docs.readthedocs.io/en/devel/)   |ldbtoolv1.4                                                                          |devel                                                         |
-|[1.3(stable)](https://localdb-docs.readthedocs.io/en/1.3/)|[ldbtoolv1.3(f998defc)](https://gitlab.cern.ch/YARR/localdb-tools/-/tree/ldbtoolv1.3)|[v1.2(8dcaaef0)](https://gitlab.cern.ch/YARR/YARR/-/tree/v1.2)|
+|Version                                                 |Local DB Tools                                                                       |YARR                                                          |
+|:------------------------------------------------------:|:-----------------------------------------------------------------------------------:|:------------------------------------------------------------:|
+|-                                                       |-                                                                                    |                                                              |
+|[latest](https://localdb-docs.readthedocs.io/en/devel/) |ldbtoolv1.4                                                                          |devel                                                         |
+|[stable](https://localdb-docs.readthedocs.io/en/master/)|[ldbtoolv1.3(f998defc)](https://gitlab.cern.ch/YARR/localdb-tools/-/tree/ldbtoolv1.3)|[v1.2(8dcaaef0)](https://gitlab.cern.ch/YARR/YARR/-/tree/v1.2)|
+|[1.3](https://localdb-docs.readthedocs.io/en/1.3/)      |[ldbtoolv1.3(f998defc)](https://gitlab.cern.ch/YARR/localdb-tools/-/tree/ldbtoolv1.3)|[v1.2(8dcaaef0)](https://gitlab.cern.ch/YARR/YARR/-/tree/v1.2)|
 
 ## Local DB Tools
 

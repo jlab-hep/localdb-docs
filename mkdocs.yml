@@ -1,7 +1,7 @@
 site_name: Local DB Docs
 theme: readthedocs
 #theme: rtd-dropdown
-nav:
+pages:
     - Home: index.md
     - Database Structure: structure.md
     - Relase Note: release-note.md
