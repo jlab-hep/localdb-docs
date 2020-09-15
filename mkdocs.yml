@@ -1,5 +1,6 @@
-site_name: Local DB Docs
+site_name: Local DB (Version 1.3) Docs
 pages:
+    - Top: https://localdb-docs.readthedocs.io/en/top/
     - Home: index.md
     - Pre Requirements and Installation: requirements.md
     - Quick tutorial: tutorial.md
