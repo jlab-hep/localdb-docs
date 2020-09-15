@@ -1,10 +1,8 @@
 site_name: Local DB Docs
 theme: readthedocs
-#theme: rtd-dropdown
-pages:
+nav:
     - Home: index.md
-    - Database Structure: structure.md
-    - Relase Note: release-note.md
+    - Manual: manual.md
     - Contact: contact.md
 extra_css:
     - "css/custom.css"

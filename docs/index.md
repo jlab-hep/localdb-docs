@@ -19,18 +19,6 @@ Using the tools for Local DB, you can:
 
 ![Local DB System Overview](images/localdb/overview.png)
 
-|Tool Name           |Function              |System        |How to use                                     |
-|:------------------:|:--------------------:|:------------:|:---------------------------------------------:|
-|Local DB            |Storage System        |MongoDB       |[MongoDB Docs](https://docs.mongodb.com/)      |
-|scanConsole         |Scan                  |YARR          |[scanConsole Page](tool/scanconsole.md)        |
-|DB Accessor         |Handle DB             |YARR          |[DB Accessor Page](tool/accessor.md)           |
-|Viewer Application  |Check Data            |Local DB Tools|[Viewer Application Page](tool/viewer.md)      |
-|Upload Tool         |Store Data            |YARR          |[Upload Tool Page](tool/upload.md)             |
-|Retrieve Tool       |Restore Data          |YARR          |[Retrieve Tool Page](tool/retrieve.md)         |
-|Synchronization Tool|Share Data            |Local DB Tools|[Synchronization Tool Page](tool/sync.md)      |
-|Archive Tool        |Archive DB            |Local DB Tools|[Archive Tool Page](tool/archive.md)           |
-|ITkPD Interface     |Communicate with ITkPD|Local DB Tools|[ITkPD Interface Page](tool/itkpd-interface.md)|
-
 - YARR
     - [Git Repository](https://gitlab.cern.ch/YARR/YARR)
     - Folder Structure
