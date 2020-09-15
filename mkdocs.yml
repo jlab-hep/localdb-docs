@@ -3,8 +3,6 @@ theme: readthedocs
 #theme: rtd-dropdown
 nav:
     - Home: index.md
-    - Installation: installation.md
-    - Requirements: installation/requirements-list.md
     - Database Structure: structure.md
     - Relase Note: release-note.md
     - Contact: contact.md

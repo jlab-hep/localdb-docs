@@ -1,26 +1,30 @@
 # Relase Note
 
-## Working Branch
-|Project       |Branch       |Describe                          |Link                                                        |
-|:------------:|:-----------:|:--------------------------------:|:----------------------------------------------------------:|
-|YARR          |master       |Stable DAQ SW                     |[Git](https://gitlab.cern.ch/YARR/YARR/tree/master)         |
-|YARR          |devel        |Latest DAQ SW                     |[Git](https://gitlab.cern.ch/YARR/YARR/tree/devel)          |
-|YARR          |devel-localdb|Latest DB SW based on devel branch|[Git](https://gitlab.cern.ch/YARR/YARR/tree/devel-localdb)  |
-|Local DB Tools|master       |Stable Local DB Tools SW          |[Git](https://gitlab.cern.ch/YARR/localdb-tools/tree/master)|
-|Local DB Tools|devel        |Latest Local DB Tools SW          |[Git](https://gitlab.cern.ch/YARR/localdb-tools/tree/devel) |
+## Docs
 
-## Production Tags
+|Version                                                   |Local DB Tools                                                                       |YARR                                                          |
+|:--------------------------------------------------------:|:-----------------------------------------------------------------------------------:|:------------------------------------------------------------:|
+|-                                                         |-                                                                                    |                                                              |
+|[latest](https://localdb-docs.readthedocs.io/en/devel/)   |ldbtoolv1.4                                                                          |devel                                                         |
+|[1.3(stable)](https://localdb-docs.readthedocs.io/en/1.3/)|[ldbtoolv1.3(f998defc)](https://gitlab.cern.ch/YARR/localdb-tools/-/tree/ldbtoolv1.3)|[v1.2(8dcaaef0)](https://gitlab.cern.ch/YARR/YARR/-/tree/v1.2)|
 
-|Tag            |Version|Date             |Describe                                                                 |
-|:-------------:|:-----:|:---------------:|:-----------------------------------------------------------------------:|
-|-              |-      |-                |=                                                                        |
-|ldbtoolv1.3    |1.3    |2020-2---        |Third relase (Latest stable version)                                     |
-|ldbtoolv1.2    |1.2    |2019-12---2020-01|Second relase                                                            |
-|ldbtoolv1.1    |1.1    |2018-10---2019-12|First relase                                                             |
-|ldbtoolv1.0    |1.01   |2018-08---2018-10|Merged into YARR/devel                                                   |
-|-              |1.00   |2018-06---2018-08|Updating version (Very Unstable)                                         |
-|db-v0.8        |0.80   |2018-03---2018-06|Unstable database version                                                |
-|old-db-v       |0.15   |-                |Old database version based on latest YARR software                       |
-|old-sw-old-db-v|0.10   |-                |Old database version based on old software version (YARR/master 7c4a0727)|
+## Local DB Tools
 
-**Caution: This documentation have not reflected the latest version. Some functions does not work when following this documentation.**
+|Version                                                                              |Date             |Describe              |Docs                                                |
+|:-----------------------------------------------------------------------------------:|:---------------:|:--------------------:|:--------------------------------------------------:|
+|-                                                                                    |-                |=                     |=                                                   |
+|[devel](https://gitlab.cern.ch/YARR/localdb-tools/-/tree/devel)                      |-                |=                     |=                                                   |
+|[master](https://gitlab.cern.ch/YARR/localdb-tools/-/tree/master)                    |-                |=                     |=                                                   |
+|ldbtoolv1.4(coming)                                                                  |                 |Latest stable version |1.4.0                                               |
+|[ldbtoolv1.3(f998defc)](https://gitlab.cern.ch/YARR/localdb-tools/-/tree/ldbtoolv1.3)|2020-2---        |Third relase          |[1.3](https://localdb-docs.readthedocs.io/en/v.1.3/)|
+|[ldbtoolv1.2(246b6699)](https://gitlab.cern.ch/YARR/localdb-tools/-/tree/ldbtoolv1.2)|2019-12---2020-01|Second relase         |-                                                   |
+|[ldbtoolv1.1(677c0bab)](https://gitlab.cern.ch/YARR/localdb-tools/-/tree/ldbtoolv1.1)|2018-10---2019-12|First relase          |-                                                   |
+|[ldbtoolv1.0(2c8084bc)](https://gitlab.cern.ch/YARR/localdb-tools/-/tree/ldbtoolv1.0)|2018-08---2018-10|Merged into YARR/devel|-                                                   |
+
+## YARR
+
+|Branch       |Describe                          |Link                                                        |
+|:-----------:|:--------------------------------:|:----------------------------------------------------------:|
+|master       |Stable DAQ SW                     |[Git](https://gitlab.cern.ch/YARR/YARR/tree/master)         |
+|devel        |Latest DAQ SW                     |[Git](https://gitlab.cern.ch/YARR/YARR/tree/devel)          |
+|devel-localdb|Latest DB SW based on devel branch|[Git](https://gitlab.cern.ch/YARR/YARR/tree/devel-localdb)  |
