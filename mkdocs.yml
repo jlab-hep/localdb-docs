@@ -1,4 +1,4 @@
-site_name: Local DB (Version Latest) Docs
+site_name: Local DB (Version 1.4) Docs
 theme: readthedocs
 nav:
     - Top: https://localdb-docs.readthedocs.io/en/top/
