@@ -1,8 +1,8 @@
 # Relase Note
 
-##### Local DB Tools : [1.4](https://gitlab.cern.ch/YARR/localdb-tools/-/tree/ldbtoolv1.4)
+##### Local DB Tools : [devel](https://gitlab.cern.ch/YARR/localdb-tools/-/tree/devel)
 
-##### YARR : [680f0adc](https://gitlab.cern.ch/YARR/YARR/-/commit/680f0adc7d91c611e43039835f92eae7c50da830)
+##### YARR : [devel](https://gitlab.cern.ch/YARR/YARR/tree/devel)
 
 !!! Warning
     This documentation have not reflected the latest version. Some functions does not work when following this documentation.**
