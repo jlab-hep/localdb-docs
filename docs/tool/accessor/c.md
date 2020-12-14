@@ -33,18 +33,16 @@ Sets command to download scan data.
 - **``-c <path>``**<br>
 Specifies the path to [component config file](../../config/component.md) to register.<br>
 The [component config](../../config/component.md) is similar as the [connectivity config](../../config/connectivity.md) but need to fill "serialNumber" and "chipId" of the component.
+- **``-u <path>``**<br>
+Specifies the path to [user config file](../../config/user.md).
+- **``-i <path>``**<br>
+Specifies the path to [site config file](../../config/site.md).
 
 **Additional options**
 
 - **``-d <path>``**<br>
 Specifies the path to [database config file](../../config/database.md).<br>
 If -d is not specified, dbAccessor sets `HOME/.yarr/localdb/HOSTNAME_database.json` as [database config file](../../config/database.md).
-- **``-u <path>``**<br>
-Specifies the path to [user config file](../../config/user.md)<br>
-If -u is not specified, dbAccessor sets `HOME/.yarr/localdb/user.json` as [user config file](../../config/user.md).
-- **``-i <path>``**<br>
-Specifies the path to [site config file](../../config/site.md)<br>
-If -i is not specified, dbAccessor sets `HOME/.yarr/localdb/HOSTNAME_site.json` as [site config file](../../config/site.md).
 
 ## 4. Examples
 
