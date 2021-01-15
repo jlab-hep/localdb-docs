@@ -24,7 +24,7 @@ The **Retrieve Tool** is to retrieve data from Local DB.
                                    [--database <DATABASE>]
                                    [--user <USER>]
                                    [--site <SITE>]
-                                   [--chip <CHIP>]
+                                   [--component <COMPONENT>]
                                    [--test <TEST>]
                                    [--directory <DIRECTORY>]
                                    [--config_only]
@@ -46,7 +46,7 @@ The **Retrieve Tool** is to retrieve data from Local DB.
 #  --database DATABASE   Set Database Config Path
 #  --user USER           Set the name of the user.
 #  --site SITE           Set the name of the site.
-#  --chip CHIP           Set the name of the chip.
+#  --component COMPONENT Set the name of the component (chip/module).
 #  --test TEST           Set data ID of the test.
 #  --directory DIRECTORY
 #                        Provide directory name.
@@ -119,8 +119,8 @@ Set config file which username and password are written in if the user authentic
 Set the user name to query
 - **``--site <site name>``**<br>
 Set the site name to query
-- **``--chip <chip name>``**<br>
-Set the chip name to query
+- **``--component <component name>``**<br>
+Set the component name to query
 
 ### Retrieve data files
 
@@ -162,15 +162,15 @@ Set username of the Local DB Server if the user authentication is required
 Set password of the Local DB Server if the user authentication is required
 - **``--config <config file>``**<br>
 Set config file which username and password are written in if the user authentication is required
-- **``--chip <chip name>``**<br>
-Set the chip name for specifying test data
+- **``--component <component name>``**<br>
+Set the component name for specifying test data
 - **``--test <test ID>``**<br>
 Set the test ID for specifying test data
 - **``--directory <path>``**<br>
 Set the path to directory saving retrieved data
 
-You can specify test data by setting the chip name with `--chip` or the test ID with `--test`. <br>
-If you set the chip name, you can retrieve the latest test data for the chip.<br>
+You can specify test data by setting the component name with `--component` or the test ID with `--test`. <br>
+If you set the component name, you can retrieve the latest test data for the component.<br>
 If you set the test ID (which is document ID in Local DB you can check by `localdbtool-retrieve log`), you can retrieve the test data with the ID.<br>
 
 * List of restored data (default output dir: `YARR/db_data`)
@@ -239,11 +239,11 @@ $ ./localdb/bin/localdbtool-retrieve list site
 
 You can create the connectivity config file and the chip config files after the component registration. <br>
 The component data can be registered by [DB Accessor](accessor.md) or can be downloaded from ITkPD by [ITkPD Interface](itkpd-interface.md). <br>
-You can create the config files by `localdb-retrieve pull --chip <SERIAL NUMBER>`.<br>
+You can create the config files by `localdb-retrieve pull --component <SERIAL NUMBER>`.<br>
 If you have already uploaded the component test data, the config files in the latest scan are retrieved.
 
 ```bash
-$ ./localdb/bin/localdb-retrieve pull --chip <SERIAL NUMBER> --config_only
+$ ./localdb/bin/localdb-retrieve pull --component <SERIAL NUMBER> --config_only
 #DB INFO# -----------------------
 #DB INFO# [Connection Test] DB Server: mongodb://127.0.0.1:27017/localdb
 #DB INFO# ---> Connection is GOOD.
