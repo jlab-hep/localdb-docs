@@ -139,7 +139,7 @@ Access [http://127.0.0.1:5000/localdb/](http://127.0.0.1:5000/localdb/) on the l
 
 #### Scan List Page
 
-Click **Scan Page** to switch to the scan list page:
+Click **Browse Scans** to switch to the scan list page:
 
 |![Viewer Test Top Page](../images/viewer/top_test.png)|
 |:-:|

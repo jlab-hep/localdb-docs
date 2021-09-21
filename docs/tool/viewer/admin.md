@@ -26,23 +26,16 @@ You can use administrator functions in the admin page if you have an account wit
 
 <br>
 
-##### 2. Click **Admin Page**:
+##### 2. Sign in as an **admin user**:
 
 |![Viewer Admin Authenitcation](../../images/viewer/admin_authenticate_2.png)|
 |:-:|
 
 <br>
 
-##### 3. Enter username and password of the administrator acciount and click **OK**:
+##### 3. You can get the links to administrate LocalDB:
 
 |![Viewer Admin Authenitcation](../../images/viewer/admin_authenticate_3.png)|
-|:-:|
-
-<br>
-
-##### 4. You can get the admin management page if authentication successful:
-
-|![Viewer Admin Authenitcation](../../images/viewer/admin_authenticate_4.png)|
 |:-:|
 
 <br>
