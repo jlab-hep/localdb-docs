@@ -9,7 +9,10 @@ You can sign-in and use vaious functions (create tag, edit comment, download ITk
 
 - [Sign in](#sign-in)
 - [Tag Creation](#tag-creation)
+- [Register a new Module](#register-a-new-module)
 - [Component Download](#component-download)
+- [Push QC test results to ITkPD](#push-qc-test-results-to-itkpd)
+- [Pull QC test results from ITkPD](#pull-qc-test-results-from-itkpd)
 
 ---
 
@@ -38,13 +41,50 @@ You can sign-in and use vaious functions (create tag, edit comment, download ITk
 
 ## Tag Creation
 
+##### 1. Click **Create a new Tag**
+|![Viewer Admin Authenitcation](../../images/viewer/user_tag_1.png)|
+|:-:|
+
+<br>
+
+##### 2. Input a **new Tag name**
+###### You can use any types of characters except for **'** and **"** .
+|![Viewer Admin Authenitcation](../../images/viewer/user_tag_2.png)|
+|:-:|
+
+<br>
+
+##### 3. Check a tag name and click **create**
+|![Viewer Admin Authenitcation](../../images/viewer/user_tag_3.png)|
+|:-:|
+
+<br>
+
+##### 4. Select a tag name with pull down menu:
+|![Viewer Admin Authenitcation](../../images/viewer/user_tag_4.png)|
+|:-:|
+
+<br>
+
+##### 5. Can see attached tag:
+###### You can detach a tag by selecting the one twice.
+|![Viewer Admin Authenitcation](../../images/viewer/user_tag_5.png)|
+|:-:|
+
+<br>
+
+## Register a new Module
+
 in edit.
 
 ## Component Download
 
 in edit.
 
+## Push QC test results to ITkPD
 
+in edit.
 
+## Pull QC test results from ITkPD
 
-
+in edit.
