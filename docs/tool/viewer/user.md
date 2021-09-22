@@ -94,4 +94,8 @@ You can sign-in and use vaious functions (create tag, edit comment, pull the lis
 
 ## Component Download
 
-in edit.
+##### 1. Click **Pull the list of all Module's IDs from ITkPD**
+|![Viewer Admin Authenitcation](../../images/viewer/user_download_1.png)|
+|:-:|
+
+<br>
