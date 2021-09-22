@@ -99,3 +99,11 @@ You can sign-in and use vaious functions (create tag, edit comment, pull the lis
 |:-:|
 
 <br>
+
+##### 2. Fill **2 access codes for ITkPD**
+###### If you push **Download component info**, you can pull the list of all Module's IDs from ITkPD.
+###### You can re-name downloaded module's ID to match the one of ITkPD if it is changed.
+|![Viewer Admin Authenitcation](../../images/viewer/user_download_2.png)|
+|:-:|
+
+<br>
