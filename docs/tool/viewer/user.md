@@ -1,6 +1,6 @@
 # User Page
 
-You can sign-in and use vaious functions (create tag, edit comment, download ITk PD module) if you have your account in the Local DB.
+You can sign-in and use vaious functions (create tag, edit comment, pull the list of module SN form ITkPD) if you have your account in the Local DB.
 
 !!! Note
     If you do not have such an account, you need to ask Local DB administrator of your institution to create your account.
@@ -11,8 +11,6 @@ You can sign-in and use vaious functions (create tag, edit comment, download ITk
 - [Tag Creation](#tag-creation)
 - [Register a new Module](#register-a-new-module)
 - [Component Download](#component-download)
-- [Push QC test results to ITkPD](#push-qc-test-results-to-itkpd)
-- [Pull QC test results from ITkPD](#pull-qc-test-results-from-itkpd)
 
 ---
 
@@ -75,16 +73,25 @@ You can sign-in and use vaious functions (create tag, edit comment, download ITk
 
 ## Register a new Module
 
-in edit.
+##### 1. Click **Register a new Module to ITkPD**
+|![Viewer Admin Authenitcation](../../images/viewer/user_register_1.png)|
+|:-:|
+
+<br>
+
+##### 2. Fill out the form
+|![Viewer Admin Authenitcation](../../images/viewer/user_register_2.png)|
+|:-:|
+
+<br>
+
+##### 3. Check a new module's serial number and click **Register**
+###### Serial number is automatialy asigned: [how to asign serial number](https://cds.cern.ch/record/2728364/files/ATL-COM-ITK-2020-028.pdf?)
+|![Viewer Admin Authenitcation](../../images/viewer/user_register_3.png)|
+|:-:|
+
+<br>
 
 ## Component Download
-
-in edit.
-
-## Push QC test results to ITkPD
-
-in edit.
-
-## Pull QC test results from ITkPD
 
 in edit.
