@@ -1,5 +1,9 @@
 # Demonstrations
 
+## Module QC flow with LocalDB (version 1.6)
+
+The documentation can be checked here: [QC Flow](qcflow/flow.md)
+
 ## QC Demonstration
 
 We had demonstraion tutorial for production QC in ITk Week on Feburary 2020.<br>
