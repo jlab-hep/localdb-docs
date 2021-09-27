@@ -33,6 +33,5 @@ You can go to the result page for each test by clicking the ids in the table.
 ![demo scan](../images/qc-flow/view_QC_test.png)
 
 
-<br>
 Go to next step.<br>
 [Sign-off each stage](signoff.md)<br>
