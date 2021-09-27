@@ -132,4 +132,4 @@ Link([https://root.cern.ch/downloading-root](https://root.cern.ch/downloading-ro
 source /opt/root/bin/thisroot.sh
 ```
 Go to next step.<br>
-[Setting for MongoDB](database_demonstration_mongodb.md)<br>
+[Setting for MongoDB](mongodb.md)<br>
