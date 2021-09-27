@@ -64,7 +64,9 @@ You can use administrator functions in the admin page if you have an account wit
 <br>
 
 !!! Warning
-    If you cannot confirm the received mail, it is possible that the mail function is not available due to some network issue.
+    If you cannot confirm the received mail, it is possible that the mail function is not available due to some network issue. Please edit `viewer/admin_conf.yml` not to use mail function:
+    ![Viewer Admin Mail Function](../../images/viewer/admin_mail_sending_4.png)
+
 
 
 ## Account Creation
@@ -106,4 +108,12 @@ Each user needs a user account to use functions to comment, tag, upload QC scans
 
 <br>
 
-##### 6. The user can sign-in the viewer application according to the instruction written in the e-mali.
+##### 6-a. For admin not using mail sending function:
+###### The user can sign-in the viewer application according to the instruction written in the e-mali. ######
+<br>
+
+##### 6-b For admin not using mail sending function
+|![Viewer Admin Account Creation](../../images/viewer/admin_account_creation_6.png)|
+|:-:|
+
+###### Admin need to tell the username and password for the user and ask the user to set the password. ######
