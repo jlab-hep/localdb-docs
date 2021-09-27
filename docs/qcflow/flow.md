@@ -37,11 +37,14 @@ In this QC demonstration, we can learn the following things:
 * [Hook-up the module to the devices and Run the DCS controller](run_dcs.md)
 * [Retrieve module info and create config files for the scan](setup_for_scan.md)
 
-### 5. What to do to run the QC
+### 5. Upload results to LocalDB
 * [What to do for QC scan](scanconsole.md)
+* [Upload QC test results](upload_result.md)
 
-### 6. Upload scan results to the Production DB
-* [Select and Upload results to the Production DB](upload_itkpd.md)
+### 6. Sign-off each stage and push results to ITkPD
+* [Sign-off each stage](signoff.md)
+* [Push the list of signed off results](upload_itkpd.md)
+* [Pull the list of QC test results](download_results.md)
 
 ## Reference
 
