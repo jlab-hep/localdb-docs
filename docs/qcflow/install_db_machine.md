@@ -13,7 +13,7 @@ $ ssh parrot@localdbserverXX
 Password:
 Last login: ... 2020 from monkeyisland.dyndns.cern.ch
 ```
-![ssh connection](images/qc-flow/ssh_connection.png)
+![ssh connection](../images/qc-flow/ssh_connection.png)
 
 ### yum packages
 - g++ version 7.0 or higher<br>
