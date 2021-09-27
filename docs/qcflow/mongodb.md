@@ -33,5 +33,5 @@ Reload the config file and restart the mongoDB service with the bellow command.
 ```bash
 sudo systemctl restart mongod.service
 ```
-Now the mongoDB setup is done! Go to next step.
+Now the mongoDB setup is done!! Go to next step.
 [Setting for LocalDB viewer](viewer.md)<br>
