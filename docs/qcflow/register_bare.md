@@ -4,8 +4,18 @@
 
 # Register a new bare module to ITkPD
 
+User can register a bare-module and assemble FE chips and seonsor tiles to the registered bare-module. The way to register is following:
 
-TBD
+1. Choose the option to `Register Bare Module`
+![choose option](../images/qc-flow/register_bare_1.png)
+
+2. Input bare module information
+![input bare info](../images/qc-flow/register_bare_2.png)
+
+3. Assemble `chip` and `sensor tile` to the `bare module`
+![assemble chip and sensor](../images/qc-flow/register_bare_3.png)
+
+After registering a bare module to ITkPD, we can register a new module to ITkPD.
 
 Go to next step.<br>
 [Register a New Module to ITkPD](register_module.md)<br>
