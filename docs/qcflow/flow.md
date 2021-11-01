@@ -1,61 +1,71 @@
 # QC Demonstration with LocalDB (version 1.6)
 
 ## Structure of SW and DB
-![SW_Structure](../images/qc-flow/SW_Structure.png)
+![SW_Structure](../images/qc-flow/Demo_sw.png)
 
 * `Production DB`: A central DB for ITk,setup in Czech.
-* `MongoDB`: A local DB to store module info, scan results and so on.
-* `InfluxDB`: A DB dedicated for time series data to store DCS data.
-* `LocalDB viewer`: A web application to see the contents of mongoDB.
-* `Grafana`: A web application to see the contents of influxDB.
+* `LocalDB viewer`: A web application to manage module QC.
+* `QC-helper`: A GUI to upload non-electrical test.
 
-In this tutorial, we suppose we have two machines, a DAQ machine and a DB machine.
-The DAQ machine is the local machine you use in the room where you run YARR scans and run DCS controller. You get scan results and DCS time series data in this machine, and transfer them to the DB machine.
+In this tutorial, we suppose we have three SWs: localdb-tools, QC-helper and YARR.
+The DAQ machine is the local machine and you take scan data with YARR emulator.
 
-The DB machine is a virtual remote machine which store the scan and DCS data where MongoDB, InfluxDB and other relevant services are provided.
+The DB machine is a local or virtual remote machine which store the scan and DCS data where MongoDB and other relevant services are provided.
 
-First, we create the environment for this tutorial by installing the DB and softwares for both machines. Then we demonstrate the QC procedure following the tutorial bellow.
+First, we confirm SW versions we installed:
+
+|Software  |Version      |Link       |
+|:-------:|:------------:|:---------:|
+|LocalDB tools|ldbtoolv1.6   |[Git](https://gitlab.cern.ch/YARR/localdb-tools/-/tree/ldbtoolv1.6.0)   |
+|QC-helper|v2.4.3  |[Git](https://gitlab.cern.ch/YARR/localdb-tools/-/tree/ldbtoolv1.6.0)    |
+|YARR   |v1.3   |[Git](https://gitlab.cern.ch/YARR/YARR/tree/master)    |
+
+Then we demonstrate the QC procedure following the tutorial bellow.
 
 ## Tutorial
 In this QC demonstration, we can learn the following things:
 
-**Setups before running scans**
-### 1. Installation for the DB machine
-* [Installation for the DB machine](install_db_machine.md)
+### 1. Set up LocalDB
 * [Setting for MongoDB](mongodb.md)
-* [Setting for LocalDB viewer](viewer.md)
+* [Setting for LocalDB](viewer.md)
 
-### 2. Installation for the DAQ machine
-* [Installation for the DAQ machine](install_daq_machine.md)
-* [Create ssh tunnels from the DAQ machine to the DB machine](create_ssh_tunnel.md)
+### 2. Register a New Module to DB
+* [Register Children(PCB, sensor, chip, carrier) to ITkPD](register_children.md)
+* [Register a New Bare Module to ITkPD](register_bare.md)
+* [Register a new Module to DB](register_module.md)
 
-### 3. Download module ID info from the Production DB
-* [Download Module ID info](download_itkpd.md)
+### 3. Upload QC-test results for Bare to PCB
+* [Upload QC-test results for Bare to PCB](nonelectricalbare.md)
 
-**The processes per module per stage.**
-### 4. Setup for the QC scan
-* [Hook-up the module to the devices and Run the DCS controller](run_dcs.md)
-* [Retrieve module info and create config files for the scan](setup_for_scan.md)
+### 4. Sign-off and Upload test results to ITkPD
+* [Sign-off each stage](signoffbare.md)
+* [Push the list of signed off results](upload_itkpdbare.md)
 
-### 5. Upload results to LocalDB
-* [What to do for QC scan](scanconsole.md)
-* [Upload QC test results](upload_result.md)
+### 5. Upload QC-test results for Wirebonding
+* [Upload QC-test results for Wirebonding](nonelectricalwire.md)
+* [Upload Scan results to LocalDB](scanconsole.md)
+* [Select Scans test results](upload_resultwire.md)
 
 ### 6. Sign-off each stage and push results to ITkPD
-* [Sign-off each stage](signoff.md)
-* [Push the list of signed off results](upload_itkpd.md)
+* [Sign-off each stage](signoffwire.md)
+* [Push the list of signed off results](upload_itkpdwire.md)
 * [Pull the list of QC test results](download_results.md)
+
+### 6. Change a stage after Wirebonding
+* [Change a stage after Wirebonding](change_stage.md)
+
+
+<hr>
 
 ## Reference
 
 1. Document of "Traveling module"[(https://moduledaqdb.readthedocs.io/en/latest/)](https://moduledaqdb.readthedocs.io/en/latest/)
 2. Yarr docs[(https://yarr.readthedocs.io/en/latest/)](https://yarr.readthedocs.io/en/latest/)
 3. LocalDB docs[(https://localdb-docs.readthedocs.io/en/master/)](https://localdb-docs.readthedocs.io/en/master/)
-4. Tutorial page for ITk production DB[(https://gitlab.cern.ch/jpearkes/itkpd_tutorial/blob/master/README.md)](https://gitlab.cern.ch/jpearkes/itkpd_tutorial/blob/master/README.md)
-5. Module QC documentation[(https://cds.cern.ch/record/2702738/files/ATL-COM-ITK-2019-045.pdf?)](https://cds.cern.ch/record/2702738/files/ATL-COM-ITK-2019-045.pdf?)
-6. MongoDB web[(https://www.mongodb.com)](https://www.mongodb.com)
-7. InfluxDB web[(https://www.influxdata.com)](https://www.influxdata.com)
-8. Gragfana web[(https://grafana.com)](https://grafana.com)
+4. QC-helper docs[(https://grafana.com)](https://grafana.com)
+5. Tutorial page for ITk production DB[(https://gitlab.cern.ch/jpearkes/itkpd_tutorial/blob/master/README.md)](https://gitlab.cern.ch/jpearkes/itkpd_tutorial/blob/master/README.md)
+6. Module QC documentation[(https://cds.cern.ch/record/2702738/files/ATL-COM-ITK-2019-045.pdf?)](https://cds.cern.ch/record/2702738/files/ATL-COM-ITK-2019-045.pdf?)
+7. MongoDB web[(https://www.mongodb.com)](https://www.mongodb.com)
 
 ## Contact
 

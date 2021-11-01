@@ -1,70 +1,50 @@
+Previous step.<br>
+[Upload QC test results into LocalDB](nonelectricalwire.md)<br>
+
 # QC scan
 
-## scanConsole and upload the DCS data
+## Retrieve scan config files
+Before taking scan result, we need to retrieve module info from LocalDB and create scan config file(e.g. connectivity.json).
+
+
+
+## scanConsole and upload scan results
 
 Run the scan using the following command.(e.g. digitalscan)<br>
 The scan result is automatically stored when you put "-W" option.
 ```bash
-./bin/scanConsole -r configs/controller/specCfg.json -c db-data/connectivity.json -s configs/scans/rd53a/std_digitalscan.json -W
-```
-Next, run the dbAccessor to upload the DCS data from influxDB to LocalDB:<br>
-For monkeyisland
-```bash
-./bin/dbAccessor -F localdb/configs/influxdb_connectivity.json -n 20UPGRA0000026 -s data/last_scan/scanLog.json
-```
-For yarrpixdaq
-```bash
-./bin/dbAccessor -F localdb/configs/influxdb_connectivity.json -n 20UPGRA0000027 -s data/last_scan/scanLog.json
+$ ./bin/scanConsole -r configs/controller/specCfg.json -c db-data/connectivity.json -s configs/scans/rd53a/std_digitalscan.json -W
 ```
 
-![influx upload](../images/qc-flow/influxdb_upload_structure.png)
-Check the test result and DCS plot from following link [http://127.0.0.1:5000/localdb/scan](http://127.0.0.1:5000/localdb/scan).<br>
+Scan items required for Full Electrical Test(Pixel Failure Test) are bellow:<br>
+- std_analogscan<br>
+- std_digitalscan<br>
+- std_thresholdscan<br>
+- std_totscan<br>
+- std_noisescan<br>
+- std_crosstalkscan<br>
 
-![demo scan](../images/qc-flow/demo_scan.png)
+On the `real module` QC, we need to do a tuning routine: [Electrical testing doc.](https://cds.cern.ch/record/2723333/files/ATL-COM-ITK-2020-020.pdf)
 
-Test items for tuning are bellow:<br>
-- diff_analogscan<br>
-- diff_thresholdscan<br>
-- diff_totscan<br>
-- diff_tune_globalthreshold<br>
-- diff_tune_pixelthreshold<br>
-- diff_tune_globalpreamp<br>
-- diff_retune_pixelthreshold<br>
-- diff_tune_finepixelthreshold<br>
-- diff_thresholdscan<br>
-- diff_totscan<br>
+For this tutorial, we will skip a tuning routine to take scans results quickly.  We take scan results with following commands:
 
-Do this tuning step for the chip using the following commands as a module QC-minick.<br>
-If you want to integrate the DCS data for each scan, put the following command between scans.<br>
-"./bin/dbAccessor -F localdb/configs/influxdb_connectivity.json -n 20UPGRA0000026 -s data/last_scan/scanLog.json"<br>
-or<br>
-"./bin/dbAccessor -F localdb/configs/influxdb_connectivity.json -n 20UPGRA0000027 -s data/last_scan/scanLog.json"<br>
 
 ```bash
-./bin/scanConsole -r configs/controller/specCfg.json -c db-data/connectivity.json -s configs/scans/rd53a/diff_analogscan.json -W
-./bin/scanConsole -r configs/controller/specCfg.json -c db-data/connectivity.json -s configs/scans/rd53a/diff_thresholdscan.json -W
-./bin/scanConsole -r configs/controller/specCfg.json -c db-data/connectivity.json -s configs/scans/rd53a/diff_totscan.json -t 10000 -W
-./bin/scanConsole -r configs/controller/specCfg.json -c db-data/connectivity.json -s configs/scans/rd53a/diff_tune_globalthreshold.json -t 1500 -W
-./bin/scanConsole -r configs/controller/specCfg.json -c db-data/connectivity.json -s configs/scans/rd53a/diff_tune_pixelthreshold.json -t 1500 -W
-./bin/scanConsole -r configs/controller/specCfg.json -c db-data/connectivity.json -s configs/scans/rd53a/diff_tune_globalpreamp.json -t 10000 -W
-./bin/scanConsole -r configs/controller/specCfg.json -c db-data/connectivity.json -s configs/scans/rd53a/diff_retune_pixelthreshold.json -t 1500 -W
-./bin/scanConsole -r configs/controller/specCfg.json -c db-data/connectivity.json -s configs/scans/rd53a/diff_tune_finepixelthreshold.json -t 1500 -W
-./bin/scanConsole -r configs/controller/specCfg.json -c db-data/connectivity.json -s configs/scans/rd53a/diff_thresholdscan.json -W
-./bin/scanConsole -r configs/controller/specCfg.json -c db-data/connectivity.json -s configs/scans/rd53a/diff_totscan.json -t 10000 -W
+$ ./bin/scanConsole -r configs/controller/emuCfg_rd53a.json -c db-data/connectivity.json -s configs/scans/rd53a/std_digitalscan.json -W
+$ ./bin/scanConsole -r configs/controller/emuCfg_rd53a.json -c db-data/connectivity.json -s configs/scans/rd53a/std_analogscan.json -W
+$ ./bin/scanConsole -r configs/controller/emuCfg_rd53a.json -c db-data/connectivity.json -s configs/scans/rd53a/std_thresholdscan.json -W
+$ ./bin/scanConsole -r configs/controller/emuCfg_rd53a.json -c db-data/connectivity.json -s configs/scans/rd53a/std_totscan.json -t 10000 -W
+$ ./bin/scanConsole -r configs/controller/emuCfg_rd53a.json -c db-data/connectivity.json -s configs/scans/rd53a/std_noisescan.json -W
+$ ./bin/scanConsole -r configs/controller/emuCfg_rd53a.json -c db-data/connectivity.json -s configs/scans/rd53a/std_crostalkscan.json -W
 ```
-We can also upload the result after the scan.<br>
-Add the result path to a cache file(***~/.yarr/localdb/run.dat***). Then, run the following command.
-```bash
-./localdb/bin/localdbtool-upload cache --database ~/.yarr/localdb/monkeyisland_database.json
-```
-
 
 Check the test results [http://127.0.0.1:5000/localdb/scan](http://127.0.0.1:5000/localdb/scan).<br>
-Please use some viewer functions.(download, search, comment, tag...)
 
 
 We are also developing the script to run these scan at once.<br>
 Scan Operator repo ([https://gitlab.cern.ch/YARR/utilities/scan-operator](https://gitlab.cern.ch/YARR/utilities/scan-operator))
 
+After uploading scans results for Full Electrical Test, select scans and register as a QC-test result.
+
 Go to next step.<br>
-[Upload QC test results into LocalDB](upload_result.md)<br>
+[Select Scans test results](upload_resultwire.md)<br>

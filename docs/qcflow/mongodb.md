@@ -1,3 +1,6 @@
+[Tutorial Top page](flow.md)<br>
+<hr>
+
 # MongoDB
 
 ## Create accounts in mongoDB
@@ -23,15 +26,12 @@ For checking the setting of Local DB: /etc/mongod.conf
 ```
 ![mongo account](../images/qc-flow/database_mongo_account.png)
 
-## Lock mongoDB
-Lock the mongoDB so that only those who know the account name and password can read and write to it.<br>
-Run the following command.:
-```bash
-sudo bash -c 'echo "security.authorization: enabled" >> /etc/mongod.conf'
-```
 Reload the config file and restart the mongoDB service with the bellow command.
 ```bash
 sudo systemctl restart mongod.service
 ```
-Now the mongoDB setup is done!! Go to next step.
+Now the mongoDB setup is done!!<br>
+
+
+Go to next step.<br>
 [Setting for LocalDB viewer](viewer.md)<br>

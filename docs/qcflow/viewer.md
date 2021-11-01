@@ -1,3 +1,7 @@
+[Tutorial's Top page](flow.md)<br>
+[Previous step](mongodb.md)<br>
+<hr>
+
 # Viewer Application
 
 ### 1. Setup the Viewer Application by the script 'setup_viewer.sh'
@@ -30,7 +34,7 @@ Cloning into '/root/work/localdb-tools/viewer/plotting-tool'...
 
 ### 2. Start LocalDB viewer with the command 'app.py'
 Start LocalDB viewer using the following command.<br>
-<span style="color: red; ">**Don't kill this process throughout the course of this tutorial. Use another shell from the next step.**</span><br>
+<span style="color: red; ">**Don't kill this process when you see web page. Use another shell from the next step.**</span><br>
 We recomend to run this function on background process.
 
 ```bash
@@ -48,4 +52,4 @@ Authentication succeeded.
 ```
 
 Go to next step.<br>
-[Installation for DAQ machine](install_daq_machine.md)<br>
+[Register Children(PCB, chip, sensor, carrier) to ITkPD](register_children.md)<br>
