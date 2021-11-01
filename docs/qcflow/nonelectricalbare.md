@@ -4,21 +4,28 @@
 
 # Upload QC-test results for Bare to PCB
 
+## Test Items for Bare to PCB
 
-TBD
+![demo scan](../images/qc-flow/stage_bare.png)
+
+- Bare to PCB
+  - Visual Inspection
+  - Metrology (<span style="color: red; ">Old format</span>)
+  - Mass
+  - Glue Flex Attach infomation
 
 
 
 ## QC-helper
-QCHelper is GUI tool to upload QC results to localDB.
+QCHelper is GUI to upload QC results to localDB.
 
 ![demo scan](../images/qc-flow/QCHepler_structure.png)
 
 ### 1. Start GUI
 
-```
-cd Workdir/qc-helper
-python3 main.py
+```bash
+$ cd Workdir/qc-helper
+$ python3 main.py
 ```
 <br>
 
@@ -40,6 +47,8 @@ You can see the uploaded results in the table of "QC Test" in the page as below.
 You can go to the result page for each test by clicking the ids in the table.
 
 ![demo scan](../images/qc-flow/view_QC_test.png)
+
+After uploading all required test results to LocalDB, we can proceed a stage.
 
 Go to next step.<br>
 [Sign-off each stage](signoffbare.md)<br>

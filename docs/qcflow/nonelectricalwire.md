@@ -2,10 +2,22 @@
 [Previous step](upload_itkpdbare.md)<br>
 <hr>
 
-# Upload QC-test results for Bare to PCB
+# Upload QC-test results for Wirebonding
 
 
-TBD
+![demo scan](../images/qc-flow/stage_wire.png)
+
+- Wirebonding
+  - Visual Inspection
+  - Wirebond info
+  - Wirebond pull test
+  - Sensor IV
+  - SLDO VI
+  - Pixel Failure Test (Full Electrical Test)
+- Module Properties
+  - RD53A pull-up register
+  - IrefTrim for each FE
+  - PCB-Bare Orientation
 
 
 ## QC-helper
