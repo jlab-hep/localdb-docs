@@ -12,12 +12,16 @@ Please go to the top page in LocalDB and follow the instruction below.
 
 
 <br>
-You can check the registered module list in the page of the production DB below. You can go to the page by the following link:<br>
+You can check the registered module list in the page of the production DB below. You can go to the page by the following link:
 
 [https://itkpd-test.unicorncollege.cz/myComponents](https://itkpd-test.unicorncollege.cz/myComponents)<br>
 
 You can find the registered module list in the page of the LocalDB.
+
 [http://localhost:5000/localdb/components](http://localhost:5000/localdb/components)<br>
+or
+
+http://IPADRESS:5000/localdb/components
 
 
 You can start QC tests for the registered module.<br>

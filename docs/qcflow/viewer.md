@@ -51,5 +51,8 @@ Authentication succeeded.
 2020-01-31 23:25:24 localdbserver.cern.ch werkzeug[18847] INFO  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 ```
 
+You can open browser and access the LocalDB viewer.
+The url is [http://127.0.0.1:5000/localdb](http://127.0.0.1:5000/localdb) or https://IPADRESS:5000/localdb.
+
 Go to next step.<br>
 [Register Children(PCB, chip, sensor, carrier) to ITkPD](register_children.md)<br>
