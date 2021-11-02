@@ -9,6 +9,9 @@ Create config file to setup viewer.<br>
 Input localdb admin's username and password in the middle of the command.<br>
 (e.g.: USERNAME=hokuyama, PASSWORD=itkweek)
 
+!!! Warning
+    If you did not download submodules (pltting tools, analysis tools and itkpd-interface), you can not collectry setup LocalDB. Please confirm they are downloaded.
+
 ```bash
 $ cd ~/work/localdb-tools/viewer
 $ ./setup_viewer.sh
