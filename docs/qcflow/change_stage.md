@@ -4,6 +4,8 @@
 
 # Change a stage after Wirebonding
 
+![stage after](../images/qc-flow/stage_other.png)
+
 Cuurent LocalDB does not support stages after Wirebonding.
 
 For practice, LocalDB can change the stage without sign-off so that we can upload scans results and QC results for each stage.
