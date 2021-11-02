@@ -30,4 +30,4 @@ You can start QC tests for the registered module.<br>
 <br>
 Go to next step.<br>
 
-[Register Children(PCB, chip, sensor, carrier) to ITkPD](nonelectricalbare.md)<br>
+[Upload QC-test results for Bare to PCB](nonelectricalbare.md)<br>

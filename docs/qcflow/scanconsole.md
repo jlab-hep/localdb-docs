@@ -4,9 +4,21 @@ Previous step.<br>
 # QC scan
 
 ## Retrieve scan config files
-Before taking scan result, we need to retrieve module info from LocalDB and create scan config file(e.g. connectivity.json).
+Before taking scan result, we need to retrieve module info from LocalDB and create scan config file(e.g. connectivity.json). We will use `dbAccesser` to pull config files for this tutorial.
+```bash
+$ cd
+$ ./bin/dbAccessor -D -n <Module SN>
 
+$
+```
 
+Then, you can pull scan config files in `/Yarr/db-data`:
+
+```json
+e.g.: connectivity.json
+{
+}
+```
 
 ## scanConsole and upload scan results
 
@@ -38,7 +50,7 @@ $ ./bin/scanConsole -r configs/controller/emuCfg_rd53a.json -c db-data/connectiv
 $ ./bin/scanConsole -r configs/controller/emuCfg_rd53a.json -c db-data/connectivity.json -s configs/scans/rd53a/std_crostalkscan.json -W
 ```
 
-Check the test results [http://127.0.0.1:5000/localdb/scan](http://127.0.0.1:5000/localdb/scan).<br>
+Check the test results [http://127.0.0.1:5000/localdb/scan](http://127.0.0.1:5000/localdb/scan) or http://IPADRESS:5000/localdb/scan.<br>
 
 
 We are also developing the script to run these scan at once.<br>
