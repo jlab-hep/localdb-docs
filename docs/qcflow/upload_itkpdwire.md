@@ -30,4 +30,4 @@ We developed a tool to download `BestCfg_<temp>_degree_<stage_name>.zip` from IT
 Next, I show how to download QC-test results from ITkPD.
 
 Go to next step.<br>
-[Pull the list of QC test results from ITkPD](download_itkpd.md)<br>
+[Pull the list of QC test results from ITkPD](download_results.md)<br>
