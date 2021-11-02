@@ -46,7 +46,7 @@ The url is [http://127.0.0.1:5000/localdb](http://127.0.0.1:5000/localdb) or htt
 You can see the uploaded results in the table of "QC Test" in the page as below.
 You can go to the result page for each test by clicking the ids in the table.
 
-![demo scan](../images/qc-flow/view_QC_test.png)
+![demo scan](../images/qc-flow/check_results_localdb.png)
 
 After uploading all required test results to LocalDB, we can proceed a stage.
 
