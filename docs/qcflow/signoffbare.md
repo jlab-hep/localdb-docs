@@ -2,7 +2,7 @@
 [Previous step](noelectricalbare.md)<br>
 <hr>
 
-# Sign-off each stage
+# Sign-off Bare to PCB
 
 We will sign off the QC results to select test results for each QC test items in the viewer.
 The production stage is automatically changed to the next after the sign-off.

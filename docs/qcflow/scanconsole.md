@@ -101,7 +101,10 @@ $ ./bin/scanConsole -r configs/controller/emuCfg_rd53a.json -c db-data/connectiv
 $ ./bin/scanConsole -r configs/controller/emuCfg_rd53a.json -c db-data/connectivity.json -s configs/scans/rd53a/std_crostalkscan.json -W
 ```
 
-Check the test results [http://127.0.0.1:5000/localdb/scan](http://127.0.0.1:5000/localdb/scan) or http://IPADRESS:5000/localdb/scan.<br>
+We can see the test results:<br>
+[http://127.0.0.1:5000/localdb/scan](http://127.0.0.1:5000/localdb/scan)<br>
+ or <br>
+http://IPADRESS:5000/localdb/scan.<br>
 
 
 We are also developing scan operator to run these scan at once.<br>
