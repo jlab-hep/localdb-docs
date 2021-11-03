@@ -12,6 +12,7 @@ We can register a module from LocalDB and a bare module from QC-helper. Before r
 
 ![Register_Module](../images/qc-flow/register_comp_itkpd.png)<br>
 
+<br>
 
 ## Required Parameters
 
@@ -37,6 +38,8 @@ We can register a module from LocalDB and a bare module from QC-helper. Before r
   - Manufactuer serial number: Check [Spreadsheet](https://docs.google.com/spreadsheets/d/1OqOUhGu_tBYJXXhzD7B5GtiS1nLSQiVCOWlQe9BCIIM/edit?usp=sharing)
   - Version of component: prototype
 
+!!! Warning
+    If you can not find component type, you need to add component type as one of the components handled by your institute. Please go to your institute page and fix.
 
 <br>
 After registering children, we can register a new bare module and module to DB!
