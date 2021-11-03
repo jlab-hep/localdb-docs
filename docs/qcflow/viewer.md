@@ -4,13 +4,11 @@
 
 # Viewer Application
 
-### 1. Setup the Viewer Application by the script 'setup_viewer.sh'
-Create config file to setup viewer.<br>
-Input localdb admin's username and password in the middle of the command.<br>
-(e.g.: USERNAME=hokuyama, PASSWORD=itkweek)
+## 1. Setup the Viewer Application by the script 'setup_viewer.sh'
+We will create config file to setup viewer.<br>
+We will use `setup_viewer.sh` to create admin account for LocalDB. We will input localdb admin's username and password in the middle of the command.<br>
+(e.g.: USERNAME=skinoshi, PASSWORD=tutorial)
 
-!!! Warning
-    If you did not install submodules (pltting tools, analysis tools and itkpd-interface), you can not collectry setup LocalDB. Please confirm they are downloaded.
 
 ```bash
 $ cd ~/work/localdb-tools/viewer
@@ -35,7 +33,10 @@ Cloning into '/root/work/localdb-tools/viewer/plotting-tool'...
 [LDB] More information: https://localdb-docs.readthedocs.io/en/master/
 ```
 
-### 2. Start LocalDB viewer with the command 'app.py'
+!!! Warning
+    If you see an error when you use `setup_viewer.sh`, version for analysis tool might not be correct. Please confirm the version.
+
+## 2. Start LocalDB viewer with the command 'app.py'
 Start LocalDB viewer using the following command.<br>
 <span style="color: red; ">**Don't kill this process when you see web page. Use another shell from the next step.**</span><br>
 We recomend to run this function on background process.
@@ -58,7 +59,7 @@ You can open browser and access the LocalDB viewer.
 The url is [http://127.0.0.1:5000/localdb](http://127.0.0.1:5000/localdb) or https://IPADRESS:5000/localdb.
 
 
-### 3. Download institutions and module types from ITkPD
+## 3. Download institutions and module types from ITkPD
 
 We need to download institution list and module types list from ITkPD. We will download these infomaiton using LocalDB viewer:
 
