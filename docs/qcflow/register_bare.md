@@ -6,7 +6,7 @@
 
 We can register a bare-module and assemble FE chips and a seonsor tile to the registered bare-module. The way to register is following:
 
-1. Start GUI
+## 1. Start GUI
 
 ```bash
 $ cd Workdir/qc-helper
@@ -14,7 +14,7 @@ $ python3 main.py
 ```
 <br>
 
-2. Choose the option to `Register Bare Module`
+## 2. Choose the option to `Register Bare Module`
 
 ![choose option](../images/qc-flow/register_bare_1.png)
 
@@ -23,11 +23,11 @@ If you don't have an account for the production DB. Please sign up following the
 [Tutorial page for ITkPD ](https://gitlab.cern.ch/jpearkes/itkpd_tutorial/blob/master/README.md)<br>
 
 
-3. Input bare module information
+## 3. Input bare module information
 
 ![input bare info](../images/qc-flow/register_bare_2.png)
 
-4. Assemble `chip` and `sensor tile` to the `bare module`
+## 4. Assemble `chip` and `sensor tile` to the `bare module`
 
 ![assemble chip and sensor](../images/qc-flow/register_bare_3.png)
 
