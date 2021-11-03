@@ -15,30 +15,27 @@ We can register a module from LocalDB and a bare module from QC-helper. Before r
 
 ## Required Parameters
 
-- Module PCB
+### Module PCB
   - FE chip version: `RD53A`
   - Thickness: `Thin`
   - ATLAS SN: Check [Spreadsheet](https://docs.google.com/spreadsheets/d/1OqOUhGu_tBYJXXhzD7B5GtiS1nLSQiVCOWlQe9BCIIM/edit?usp=sharing)
 
-<br>
 
-- Module carrier
-  - Module Carrier Type:
-  - Usage countdown:
+### Module carrier
+  - Module Carrier Type: 0
+  - Usage countdown: 1
   - ATLAS SN: Check [Spreadsheet](https://docs.google.com/spreadsheets/d/1OqOUhGu_tBYJXXhzD7B5GtiS1nLSQiVCOWlQe9BCIIM/edit?usp=sharing)
 
-<br>
 
-- Front-end Chip
+### Front-end Chip
   - ATLAS SN: Check [Spreadsheet](https://docs.google.com/spreadsheets/d/1OqOUhGu_tBYJXXhzD7B5GtiS1nLSQiVCOWlQe9BCIIM/edit?usp=sharing)
 
-<br>
 
-- Sensor Tile
-  - Main vendor:
-  - Sensor Type or Test Structure:
-  - Manufactuer serial number:
-  - Version of component:
+### Sensor Tile
+  - Main vendor: 0
+  - Sensor Type or Test Structure: 0
+  - Manufactuer serial number: Check [Spreadsheet](https://docs.google.com/spreadsheets/d/1OqOUhGu_tBYJXXhzD7B5GtiS1nLSQiVCOWlQe9BCIIM/edit?usp=sharing)
+  - Version of component: prototype
 
 
 <br>
