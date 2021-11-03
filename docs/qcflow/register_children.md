@@ -6,13 +6,42 @@
 
 For this tutorial, we use `tutorial components`. These components does not collide with the real modules.
 
-We can register a module from LocalDB and a bare module from QC-helper. Before registering these, we need to register children for these. We will do using web page for [ITkPD](https://itkpd-test.unicorncollege.cz/myComponents). We can register a new component from `My Components`:
+We can register a module from LocalDB and a bare module from QC-helper. Before registering these components, we need to register children for these. We will register components using web page for [ITkPD](https://itkpd-test.unicorncollege.cz/myComponents). We can register a new component from `My Components`:
 
 [https://itkpd-test.unicorncollege.cz/myComponents](https://itkpd-test.unicorncollege.cz/myComponents)
 
 ![Register_Module](../images/qc-flow/register_comp_itkpd.png)<br>
 
 
+## Required Parameters
+
+- Module PCB
+  - FE chip version: `RD53A`
+  - Thickness: `Thin`
+  - ATLAS SN: Check [Spreadsheet](https://docs.google.com/spreadsheets/d/1OqOUhGu_tBYJXXhzD7B5GtiS1nLSQiVCOWlQe9BCIIM/edit?usp=sharing)
+
+<br>
+
+- Module carrier
+  - Module Carrier Type:
+  - Usage countdown:
+  - ATLAS SN: Check [Spreadsheet](https://docs.google.com/spreadsheets/d/1OqOUhGu_tBYJXXhzD7B5GtiS1nLSQiVCOWlQe9BCIIM/edit?usp=sharing)
+
+<br>
+
+- Front-end Chip
+  - ATLAS SN: Check [Spreadsheet](https://docs.google.com/spreadsheets/d/1OqOUhGu_tBYJXXhzD7B5GtiS1nLSQiVCOWlQe9BCIIM/edit?usp=sharing)
+
+<br>
+
+- Sensor Tile
+  - Main vendor:
+  - Sensor Type or Test Structure:
+  - Manufactuer serial number:
+  - Version of component:
+
+
+<br>
 After registering children, we can register a new bare module and module to DB!
 
 Go to next step.<br>

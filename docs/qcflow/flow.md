@@ -12,6 +12,13 @@ The DAQ machine is the local machine and you take scan data with YARR emulator.
 
 The DB machine is a local or virtual remote machine which store the scan and DCS data where MongoDB and other relevant services are provided.
 
+
+We will use `tutorial components` for this tutorial. Before starting this tutorial, we will assign the ATLAS SNs for some components.
+
+Please input your name in this spreadsheet:
+[https://docs.google.com/spreadsheets/d/1OqOUhGu_tBYJXXhzD7B5GtiS1nLSQiVCOWlQe9BCIIM/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1OqOUhGu_tBYJXXhzD7B5GtiS1nLSQiVCOWlQe9BCIIM/edit?usp=sharing)
+
+
 First, we confirm SW versions we installed:
 
 |Software  |Version      |Link       |
