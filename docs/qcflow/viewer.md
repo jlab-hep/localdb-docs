@@ -10,7 +10,7 @@ Input localdb admin's username and password in the middle of the command.<br>
 (e.g.: USERNAME=hokuyama, PASSWORD=itkweek)
 
 !!! Warning
-    If you did not download submodules (pltting tools, analysis tools and itkpd-interface), you can not collectry setup LocalDB. Please confirm they are downloaded.
+    If you did not install submodules (pltting tools, analysis tools and itkpd-interface), you can not collectry setup LocalDB. Please confirm they are downloaded.
 
 ```bash
 $ cd ~/work/localdb-tools/viewer
@@ -56,6 +56,16 @@ Authentication succeeded.
 
 You can open browser and access the LocalDB viewer.
 The url is [http://127.0.0.1:5000/localdb](http://127.0.0.1:5000/localdb) or https://IPADRESS:5000/localdb.
+
+
+### 3. Download institutions and module types from ITkPD
+
+We need to download institution list and module types list from ITkPD. We will download these infomaiton using LocalDB viewer:
+
+![download pdinfo](../images/qc-flow/download_pdinfo.png)
+
+<br>
+After setup LocalDB, we will register components to ITkPD.
 
 Go to next step.<br>
 [Register Children(PCB, chip, sensor, carrier) to ITkPD](register_children.md)<br>

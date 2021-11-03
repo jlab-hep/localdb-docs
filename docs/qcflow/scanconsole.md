@@ -104,9 +104,13 @@ $ ./bin/scanConsole -r configs/controller/emuCfg_rd53a.json -c db-data/connectiv
 Check the test results [http://127.0.0.1:5000/localdb/scan](http://127.0.0.1:5000/localdb/scan) or http://IPADRESS:5000/localdb/scan.<br>
 
 
-We are also developing a SW to run these scan at once.<br>
+We are also developing scan operator to run these scan at once.<br>
+Scan operator acts as an interface between the user and all the LocalDB scripts/confg files to make scans easier.
+
 Scan Operator repo ([https://gitlab.cern.ch/YARR/utilities/scan-operator](https://gitlab.cern.ch/YARR/utilities/scan-operator))
 
+
+<br>
 After uploading scans results for Full Electrical Test, select scans and register as a QC-test result.
 
 Go to next step.<br>

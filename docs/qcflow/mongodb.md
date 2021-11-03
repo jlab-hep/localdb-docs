@@ -5,7 +5,7 @@
 
 ## Create accounts in mongoDB
 Create an account in mongoDB using the following commands.<br>
-Input "username" and "password" as you like.(e.g.: USERNAME=hokuyama, PASSWORD=itkweek)<br>
+Input "username" and "password" as you like.(e.g.: USERNAME=skinoshi, PASSWORD=tutorial)<br>
 <span style="color: red; ">**These are used as LocalDB admin's username and password.**</span>
 
 ```bash
@@ -26,10 +26,6 @@ For checking the setting of Local DB: /etc/mongod.conf
 ```
 ![mongo account](../images/qc-flow/database_mongo_account.png)
 
-Reload the config file and restart the mongoDB service with the bellow command.
-```bash
-sudo systemctl restart mongod.service
-```
 Now the mongoDB setup is done!!<br>
 
 
