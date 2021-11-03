@@ -42,6 +42,8 @@ $ ./bin/createConfig -t RD53A -n 20UPGXF0000000 -o ./db-data/20UPGXF0000000.json
 [18:52:30:116][  info  ][  cfgCreator   ]: Writing default config to file ...
 [18:52:30:219][  info  ][  cfgCreator   ]: ... done! Success, bye!
 ```
+!!! Warning
+    `ChipId` written in chip config file become `0`. Please fix line 178 of chip file to `"ChipId": 1` <br>
 
 You can see scan config files in `/Yarr/db-data`:
 
@@ -74,7 +76,7 @@ We can start to upload scan results to LocalDB!
 Run the scan using the following command.(e.g. digitalscan)<br>
 The scan result is automatically stored when you put "-W" option.
 ```bash
-$ ./bin/scanConsole -r configs/controller/specCfg.json -c db-data/connectivity.json -s configs/scans/rd53a/std_digitalscan.json -W
+$ ./bin/scanConsole -r configs/controller/emuCfg_rd53a.json -c db-data/connectivity.json -s configs/scans/rd53a/std_digitalscan.json -W
 ```
 
 Scan items required for Full Electrical Test(Pixel Failure Test) are bellow:<br>
@@ -102,7 +104,7 @@ $ ./bin/scanConsole -r configs/controller/emuCfg_rd53a.json -c db-data/connectiv
 Check the test results [http://127.0.0.1:5000/localdb/scan](http://127.0.0.1:5000/localdb/scan) or http://IPADRESS:5000/localdb/scan.<br>
 
 
-We are also developing the script to run these scan at once.<br>
+We are also developing a SW to run these scan at once.<br>
 Scan Operator repo ([https://gitlab.cern.ch/YARR/utilities/scan-operator](https://gitlab.cern.ch/YARR/utilities/scan-operator))
 
 After uploading scans results for Full Electrical Test, select scans and register as a QC-test result.
