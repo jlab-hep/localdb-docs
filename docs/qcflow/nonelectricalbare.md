@@ -17,7 +17,8 @@ If you check the detail for QC-helper, please check it: [Instruction for QC-help
 - Mass
 - Glue Flex Attach infomation
 
-!!! Stages and test items are not current version. We are improving the SW to match newest version of QC flow.
+!!! Warning
+    Stages and test items are not current version. We are improving the SW to match newest version of QC flow.<br>
 
 
 ## QC-helper
