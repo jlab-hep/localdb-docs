@@ -19,6 +19,10 @@
 ## QC-helper
 QCHelper is GUI to upload QC results to localDB.
 
+!!! Warning
+    Before stating to upload QC results, you need to pull the reference module's picture in `WorkDir/qc-helper/each_test/qc-vi`. Please confirm before stating GUI for QC-helper.<br>
+
+
 ![demo scan](../images/qc-flow/QCHepler_structure.png)
 
 ### 1. Start GUI
