@@ -4,16 +4,20 @@
 
 # Upload QC-test results for Bare to PCB
 
+We will upload QC-test results using GUI for QC-helper. QC-helper cafully support operations.<br>
+If you check the detail for QC-helper, please check it: [Instruction for QC-helper](https://gitlab.cern.ch/atlas-itk/sw/db/pixels/qc-viz-tools-dev/qc-helper/-/tree/master/doc/Instruction)
+
 ## Test Items for Bare to PCB
 
 ![demo scan](../images/qc-flow/stage_bare.png)
 
-- Bare to PCB
-  - Visual Inspection
-  - Metrology (<span style="color: red; ">Old format</span>)
-  - Mass
-  - Glue Flex Attach infomation
+### Bare to PCB
+- Visual Inspection
+- Metrology (<span style="color: red; ">Old format</span>)
+- Mass
+- Glue Flex Attach infomation
 
+!!! Stages and test items are not current version. We are improving the SW to match newest version of QC flow.
 
 
 ## QC-helper
@@ -22,8 +26,6 @@ QCHelper is GUI to upload QC results to localDB.
 !!! Warning
     Before stating to upload QC results, you need to pull the reference module's picture in `WorkDir/qc-helper/each_test/qc-vi`. Please confirm before stating GUI for QC-helper.<br>
 
-
-![demo scan](../images/qc-flow/QCHepler_structure.png)
 
 ### 1. Start GUI
 
@@ -35,14 +37,25 @@ $ python3 main.py
 
 ### 2. Operating procedure
 
-Please follow "instruction.pdf" in the latest version of the [QCHelper](https://gitlab.cern.ch/atlas-itk/sw/db/pixels/qc-viz-tools-dev/qc-helper/-/tree/master/doc/Instruction)
+![demo scan](../images/qc-flow/qchelper_bare.png)
 
 <br>
 
+When we are asked to input some file, please use the files we downloaded from [indico](https://indico.cern.ch/event/1093086/).
+
+Most of the results are easy to input, but visual inspection is a little complicated. If you are confusing for visual inspection, please check below:
+
+
+#### Optical Inspection (Visual Inspection)
+![demo optical](../images/qc-flow/qchelper_visual.png)
+
+
 ### 3. Check the uploaded results in LocalDB viewer
 
-Open your browser and access the LocalDB viewer.
-The url is [http://127.0.0.1:5000/localdb](http://127.0.0.1:5000/localdb) or https://IPADRESS:5000/localdb.
+We can see the uploaded results in LocalDB viewer:<br>
+[http://127.0.0.1:5000/localdb](http://127.0.0.1:5000/localdb)<br>
+or <br>
+https://IPADRESS:5000/localdb.
 
 #### Go to the module's toppage following the instruction below.
 ![demo scan](../images/qc-flow/goto_module_toppage.png)
