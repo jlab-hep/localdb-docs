@@ -143,7 +143,8 @@ The scan result is automatically stored when you put "-W" option.
 $ ./bin/scanConsole -r configs/controller/emuCfg_rd53a.json -c db-data/connectivity.json -s configs/scans/rd53a/std_digitalscan.json -W
 ```
 
-Scan items required for Full Electrical Test(Pixel Failure Test) are bellow:<br>
+Scan items required for Full Electrical Test(Pixel Failure Test) are bellow:
+
 - std_analogscan
 - std_digitalscan
 - std_thresholdscan
