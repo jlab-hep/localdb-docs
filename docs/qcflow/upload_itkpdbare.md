@@ -7,7 +7,7 @@
 You can upload selected QC test results to ITkPD.<br>
 Please follow the instruction below after sign-in on your viewer to click "Sign-in" at the top right.<br>
 
-![Upload_Results_To_ITkPD](../images/qc-flow/upload_results_itkpd.png)<br>
+![Upload_Results_To_ITkPD](../images/qc-flow/upload_results_itkpdbare.png)<br>
 
 You can check the resutls at web page for ITkPD:<br>
 [https://itkpd-test.unicorncollege.cz/myTests](https://itkpd-test.unicorncollege.cz/myTests)

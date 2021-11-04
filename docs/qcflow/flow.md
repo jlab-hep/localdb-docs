@@ -27,7 +27,7 @@ First, we confirm SW versions we installed:
 |QC-helper|tutorial  |[Git](https://gitlab.cern.ch/atlas-itk/sw/db/pixels/qc-viz-tools-dev/qc-helper/)    |
 |YARR   |v1.3   |[Git](https://gitlab.cern.ch/YARR/YARR/tree/master)    |
 
-We change branches for localdb-tools and QC-helper for this tutorial:
+We change branches for localdb-tools and QC-helper for this tutorial:<br>
 - localdb-tools
 ```bash
 $ cd ~/localdb-tools
@@ -62,6 +62,7 @@ In this QC demonstration, we can learn the following things:
 ### 4. Sign-off and Upload test results to ITkPD
 * [Sign-off each stage](signoffbare.md)
 * [Push the list of signed off results](upload_itkpdbare.md)
+* [Pull the list of QC test results](download_results.md)
 
 ### 5. Upload QC-test results for Wirebonding
 * [Upload QC-test results for Wirebonding](nonelectricalwire.md)
@@ -71,7 +72,6 @@ In this QC demonstration, we can learn the following things:
 ### 6. Sign-off each stage and push results to ITkPD
 * [Sign-off each stage](signoffwire.md)
 * [Push the list of signed off results](upload_itkpdwire.md)
-* [Pull the list of QC test results](download_results.md)
 
 ### 6. Change a stage after Wirebonding
 * [Change a stage after Wirebonding](change_stage.md)
