@@ -2,7 +2,7 @@
 [Previous step](scanconsole.md)<br>
 <hr>
 
-# Sign-off each stage
+# Sign-off Wirebonding
 
 ##  Select Scan Results and register as a QC result
 We need to select scans and register those as QC results for an electrical test of this stage.
@@ -22,7 +22,7 @@ Please follow the instruction below after sign-in on your viewer to click "Sign-
 ![demo scan](../images/qc-flow/select_scans.png)
 
 !!! Warning
-    We can not take all required data for Pixel Failure Test when we use the YARR emulator scanConsole(we can not store the results for `NoiseOccupanc` of `std_noisescan`). It can not show the bad pixel summary, but we can sign-off and upload this result to ITkPD.<br>
+    We can not take all required data for Pixel Failure Test when we use the YARR emulator scanConsole(we can not see the results for `NoiseOccupany` for `std_noisescan`). LocalDB can not show the bad pixel summary, but we can sign-off and upload this result to ITkPD. For the real scans, we can see the summary. I would like you to try after this tutorial!<br>
 
 
 ### 2. View the selected results in LocalDB viewer

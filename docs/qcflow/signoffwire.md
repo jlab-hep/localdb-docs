@@ -23,4 +23,4 @@ After the sign-off Wirebonding, we need to select next stage of Wirebonding:
 After the sign-off, we will upload the selected results to ITkPD.
 
 Go to next step.<br>
-[Push signed off QC test results into ITkPD](upload_itkpdwire.md)<br>
+[Push signed off QC test results to ITkPD](upload_itkpdwire.md)<br>
