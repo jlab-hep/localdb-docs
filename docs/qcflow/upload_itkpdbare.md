@@ -17,4 +17,4 @@ After uploading the results, we will start QC test for Wirebonding.
 
 <br>
 Go to next step.<br>
-[Upload QC-test results for Wirebonding](nonelectricalwire.md)<br>
+[Download QC-test results from ITkPD](download_results.md)<br>

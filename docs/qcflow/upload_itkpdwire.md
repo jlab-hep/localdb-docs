@@ -26,4 +26,4 @@ Using config files, we can upload scan results for a module at the reception sit
 Next, I show how to download QC-test results from ITkPD.
 
 Go to next step.<br>
-[Pull the list of QC test results from ITkPD](download_results.md)<br>
+[Change stage after Wirebonding](change_stage.md)<br>
