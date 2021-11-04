@@ -1,5 +1,5 @@
-Previous step.<br>
-[Upload QC test results into LocalDB](nonelectricalwire.md)<br>
+[Tutorial's Top page](flow.md)<br>
+[Previous step](nonelectricalwire.md)<br>
 
 # QC scan
 
