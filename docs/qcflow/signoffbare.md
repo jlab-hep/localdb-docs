@@ -4,7 +4,7 @@
 
 # Sign-off Bare to PCB
 
-We will sign off the QC results to select test results for each QC test items in the viewer.
+We will sign off the QC results using LocalDB viewer.
 The production stage is automatically changed to the next after the sign-off.
 Please follow the instruction below after sign-in on your viewer to click "Sign-in" at the top right.
 

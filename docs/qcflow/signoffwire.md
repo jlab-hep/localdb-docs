@@ -2,11 +2,9 @@
 [Previous step](upload_resultwire.md)<br>
 <hr>
 
-# Sign-off each stage
+# Sign-Off Wirebonding
 
-## Sign-Off Wirebonding
-
-We will sign off the QC results to select test results for each QC test items in the viewer.
+We will sign off the QC results using LocalDB viewer.
 The next stage of Wirebonding depends on production site. So we will select the next stage of Wirebonding.
 Please follow the instruction below after sign-in on your viewer to click "Sign-in" at the top left conner.
 

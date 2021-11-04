@@ -25,7 +25,7 @@ If you check the detail for QC-helper, please check it: [Instruction for QC-help
 QCHelper is GUI to upload QC results to localDB.
 
 !!! Warning
-    Before stating to upload QC results, you need to pull the reference module's picture in `WorkDir/qc-helper/each_test/qc-vi`. Please confirm before stating GUI for QC-helper.<br>
+    Before stating to upload QC results, you need to pull the reference module's picture in `WorkDir/qc-helper/each_test/qc-vi`. If you can not find `golden_module` in `qc-vi`, please download it from [indico](https://indico.cern.ch/event/1093086/).<br>
 
 
 ### 1. Start GUI

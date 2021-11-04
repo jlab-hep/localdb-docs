@@ -34,7 +34,7 @@ Cloning into '/root/work/localdb-tools/viewer/plotting-tool'...
 ```
 
 !!! Warning
-    If you see an error when you use `setup_viewer.sh`, version for analysis tool might not be correct. Please input following commands:
+    If you see an error when you use `setup_viewer.sh` or fail to pull submodules, we need to clone other ways and compile them. Please input following commands:
 
 ```bash
 $ cd ~/localdb-tools/viewer
