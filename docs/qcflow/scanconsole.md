@@ -137,7 +137,7 @@ We can start to upload scan results to LocalDB!
 
 ## scanConsole and upload scan results
 
-Run the scan using the following command.(e.g. digitalscan)<br>
+We will run the scan using the following command.(e.g. digitalscan)<br>
 The scan result is automatically stored when you put "-W" option.
 ```bash
 $ ./bin/scanConsole -r configs/controller/emuCfg_rd53a.json -c db-data/connectivity.json -s configs/scans/rd53a/std_digitalscan.json -W

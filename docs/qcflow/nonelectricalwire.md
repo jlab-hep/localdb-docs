@@ -28,9 +28,9 @@ In addition to upload QC-test results, we will update module properties on Wireb
 
 ### 1. Start GUI
 
-```
-cd Workdir/qc-helper
-python3 main.py
+```bash
+$ cd Workdir/qc-helper
+$ python3 main.py
 ```
 <br>
 

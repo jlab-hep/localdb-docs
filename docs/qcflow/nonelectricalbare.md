@@ -69,4 +69,4 @@ You can go to the result page for each test by clicking the ids in the table.
 After uploading all required test results to LocalDB, we can proceed a stage.
 
 Go to next step.<br>
-[Sign-off Bare to PBC](signoffbare.md)<br>
+[Sign-off Bare to PCB](signoffbare.md)<br>
