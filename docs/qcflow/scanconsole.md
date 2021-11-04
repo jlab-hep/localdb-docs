@@ -6,7 +6,71 @@ Previous step.<br>
 ## Retrieve scan config files
 Before taking scan result, we need to retrieve module info from LocalDB and create scan config file(e.g. connectivity.json). We will use `dbAccesser` to pull config files for this tutorial.
 
-First, we will create a connectivity file:
+### 1. Create config files for DB and user.
+
+```bash
+$ cd /PATH/TO/YARR
+$ ./localdb/setup_db.sh
+[LDB] Set editor command ... (e.g. nano, vim, emacs)
+[LDB] > vim
+[LDB]
+[LDB] Checking Python Packages ...
+[LDB]     ... OK!
+[LDB]
+[LDB] Checking Database Config: /home/kinoshita/.yarr/localdb/gemini_database.json ...
+[LDB WARNING] FOUND DATABASE CONFIG FILE: /home/kinoshita/.yarr/localdb/gemini_database.json
+[LDB]
+[LDB] -----------------------
+[LDB] --  Mongo DB Server  --
+[LDB] -----------------------
+[LDB] IP address       : 127.0.0.1 (current: 127.0.0.1)
+[LDB] port             : 27017 (current: 27017)
+[LDB] database name    : localdb (current: localdb)
+[LDB] -----------------------
+[LDB]
+[LDB] Are you sure that is correct? (Move to edit mode when answer 'n') [y/n/exit]
+[LDB] > y
+[LDB] Created Database Config: /home/kinoshita/.yarr/localdb/gemini_database.json.
+[LDB]
+[LDB] Checking User Config: /home/kinoshita/.yarr/localdb/user.json ...
+[LDB WARNING] FOUND USER CONFIG FILE: /home/kinoshita/.yarr/localdb/user.json
+[LDB]
+[LDB] -----------------------
+[LDB] --  User Information --
+[LDB] -----------------------
+[LDB] User Name        : kinoshita (current: kinoshita)
+[LDB] User Institution : gemini (current: gemini)
+[LDB] -----------------------
+[LDB]
+[LDB] Are you sure that is correct? (Move to edit mode when answer 'n') [y/n/exit]
+[LDB] > y
+[LDB] Created User Config: /home/kinoshita/.yarr/localdb/user.json
+[LDB]
+[LDB] Checking Site Config: /home/kinoshita/.yarr/localdb/gemini_site.json ...
+[LDB WARNING] FOUND SITE CONFIG FILE: /home/kinoshita/.yarr/localdb/gemini_site.json
+[LDB]
+[LDB] -----------------------
+[LDB] --  Site Information --
+[LDB] -----------------------
+[LDB] site name        : gemini (current: gemini)
+[LDB] -----------------------
+[LDB]
+[LDB] Are you sure that is correct? (Move to edit mode when answer 'n') [y/n/exit]
+[LDB] > y
+[LDB] Created Site Config: /home/kinoshita/.yarr/localdb/gemini_site.json.
+[LDB]
+[LDB] Checking the connection...
+[13:53:10:798][  info  ][   Local DB    ]: ------------------------------
+[13:53:10:798][  info  ][   Local DB    ]: Function: Initialize upload function and check connection to Local DB
+[13:53:10:808][  info  ][   Local DB    ]: -> Setting database config: /home/kinoshita/.yarr/localdb/gemini_database.json (default)
+[13:53:10:809][  info  ][   Local DB    ]: Checking connection to DB Server: mongodb://127.0.0.1:27017/localdb ...
+[13:53:10:823][  info  ][   Local DB    ]: ---> Good connection!
+[13:53:10:833][  info  ][   Local DB    ]: ------------------------------
+[LDB] Done.
+```
+
+
+### 2. Create a connectivity file
 ```bash
 $ cd /PATH/TO/YARR
 $ ./bin/dbAccessor -D -n <Module SN>
