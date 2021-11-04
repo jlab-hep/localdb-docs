@@ -23,9 +23,24 @@ First, we confirm SW versions we installed:
 
 |Software  |Version      |Link       |
 |:-------:|:------------:|:---------:|
-|LocalDB tools|ldbtoolv1.6   |[Git](https://gitlab.cern.ch/YARR/localdb-tools/-/tree/ldbtoolv1.6.0)   |
-|QC-helper|v2.4.3  |[Git](https://gitlab.cern.ch/YARR/localdb-tools/-/tree/ldbtoolv1.6.0)    |
+|LocalDB tools|tutorial   |[Git](https://gitlab.cern.ch/YARR/localdb-tools/)   |
+|QC-helper|tutorial  |[Git](https://gitlab.cern.ch/atlas-itk/sw/db/pixels/qc-viz-tools-dev/qc-helper/)    |
 |YARR   |v1.3   |[Git](https://gitlab.cern.ch/YARR/YARR/tree/master)    |
+
+We change branches for localdb-tools and QC-helper for this tutorial:
+- localdb-tools
+```bash
+$ cd ~/localdb-tools
+$ git fetch
+$ git checkout tutorial
+```
+- QC-helper
+```bash
+$ cd ~/qc-helper
+$ git fetch
+$ git checkout tutorial
+$ git submodule update
+```
 
 Then we demonstrate the QC procedure following the tutorial bellow.
 
