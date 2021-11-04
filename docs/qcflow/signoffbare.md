@@ -1,5 +1,5 @@
 [Tutorial's Top page](flow.md)<br>
-[Previous step](noelectricalbare.md)<br>
+[Previous step](nonelectricalbare.md)<br>
 <hr>
 
 # Sign-off Bare to PCB
