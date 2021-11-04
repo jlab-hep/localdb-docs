@@ -28,6 +28,7 @@ First, we confirm SW versions we installed:
 |YARR   |v1.3   |[Git](https://gitlab.cern.ch/YARR/YARR/tree/master)    |
 
 We change branches for localdb-tools and QC-helper for this tutorial:<br>
+
 - localdb-tools
 ```bash
 $ cd ~/localdb-tools

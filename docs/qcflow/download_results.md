@@ -33,7 +33,7 @@ Please follow the instruction below after sign-in on your viewer to click "Sign-
 ![Download_Results_From_ITkPD](../images/qc-flow/download_results_itkpd.png)<br>
 
 
-After downloading resutls, you can see QC-test results on the LocalDB viewer!
+After downloading results, you can see QC-test results on the LocalDB viewer!
 
 Go to next step.<br>
 [Upload QC-test results for Wirebonding](nonelectricalwire.md)<br>

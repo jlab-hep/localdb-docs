@@ -36,6 +36,7 @@ Cloning into '/root/work/localdb-tools/viewer/plotting-tool'...
 !!! Warning
     If you see an error when you use `setup_viewer.sh` or fail to pull submodules, we need to clone other ways and compile them. Please input following commands:
 
+- analysis-tool
 ```bash
 $ cd ~/localdb-tools/viewer
 $ git clone https://gitlab.cern.ch/YARR/utilities/localdb-qcanalysis-tools.git analysis-tool
@@ -43,6 +44,7 @@ $ cd analysis-tool
 $ make
 ```
 
+- plotting-tool
 ```bash
 $ cd ~/localdb-tools/viewer
 $ git clone https://gitlab.cern.ch/YARR/utilities/plotting-tools.git plotting-tool
@@ -50,6 +52,7 @@ $ cd plotting-tool
 $ make
 ```
 
+- localdb-interface
 ```bash
 $ cd ~/localdb-tools/viewer/itkpd-interface
 $ git clone https://gitlab.cern.ch/YARR/utilities/localdb-interface.git localdb-interface

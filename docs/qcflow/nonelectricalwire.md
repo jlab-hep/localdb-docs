@@ -5,7 +5,7 @@
 # Upload QC-test results for Wirebonding
 
 We will upload non-electrical test results using GUI for QC-helper and upload scans results using YARR.<br>
-In addition to upload QC-test results, we will update module properties on Wirebonding. We can update using QC-helper.
+In addition to upload QC-test results, we will update module properties on Wirebonding. We can update module properties using QC-helper.
 
 ## Test Items for Wirebonding
 
