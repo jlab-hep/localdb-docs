@@ -12,5 +12,5 @@ For practice, LocalDB can change the stage without sign-off so that we can uploa
 
 ![Sign-off after WB](../images/qc-flow/signoff_after.png)
 
-Finish this tutorial!<br>
+Finish this tutorial! Thank you for participating!<br>
 [Tutorial's Top page](flow.md)<br>

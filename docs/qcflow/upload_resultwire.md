@@ -2,9 +2,7 @@
 [Previous step](scanconsole.md)<br>
 <hr>
 
-# Sign-off Wirebonding
-
-##  Select Scan Results and register as a QC result
+#  Select Scan Results and register as a QC result
 We need to select scans and register those as QC results for an electrical test of this stage.
 We are currently supporting the follwing test types and need to select the scans for each item:
 ### PIXEL_FAILURE_TEST
