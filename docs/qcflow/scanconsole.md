@@ -144,12 +144,12 @@ $ ./bin/scanConsole -r configs/controller/emuCfg_rd53a.json -c db-data/connectiv
 ```
 
 Scan items required for Full Electrical Test(Pixel Failure Test) are bellow:<br>
-- std_analogscan<br>
-- std_digitalscan<br>
-- std_thresholdscan<br>
-- std_totscan<br>
-- std_noisescan<br>
-- std_crosstalkscan<br>
+- std_analogscan
+- std_digitalscan
+- std_thresholdscan
+- std_totscan
+- std_noisescan
+- std_crosstalkscan
 
 On the `real module` QC, we need to do a tuning routine: [Electrical testing doc.](https://cds.cern.ch/record/2723333/files/ATL-COM-ITK-2020-020.pdf)
 
