@@ -34,7 +34,26 @@ Cloning into '/root/work/localdb-tools/viewer/plotting-tool'...
 ```
 
 !!! Warning
-    If you see an error when you use `setup_viewer.sh`, version for analysis tool might not be correct. Please confirm the version.
+    If you see an error when you use `setup_viewer.sh`, version for analysis tool might not be correct. Please input following commands:
+
+```bash
+$ cd ~/localdb-tools/viewer
+$ git clone https://gitlab.cern.ch/YARR/utilities/localdb-qcanalysis-tools.git analysis-tool
+$ cd analysis-tool
+$ make
+```
+
+```bash
+$ cd ~/localdb-tools/viewer
+$ git clone https://gitlab.cern.ch/YARR/utilities/plotting-tools.git plotting-tool
+$ cd plotting-tool
+$ make
+```
+
+```bash
+$ cd ~/localdb-tools/viewer/itkpd-interface
+$ git clone https://gitlab.cern.ch/YARR/utilities/localdb-interface.git localdb-interface
+```
 
 ## 2. Start LocalDB viewer with the command 'app.py'
 Start LocalDB viewer using the following command.<br>
