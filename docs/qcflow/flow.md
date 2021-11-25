@@ -23,7 +23,7 @@ First, we confirm SW versions we installed:
 
 |Software  |Version      |Link       |
 |:-------:|:------------:|:---------:|
-|LocalDB tools|tutorial   |[Git](https://gitlab.cern.ch/YARR/localdb-tools/)   |
+|LocalDB tools|ldbtoolv1.6.2  |[Git](https://gitlab.cern.ch/YARR/localdb-tools/)   |
 |QC-helper|tutorial  |[Git](https://gitlab.cern.ch/atlas-itk/sw/db/pixels/qc-viz-tools-dev/qc-helper/)    |
 |YARR   |v1.3   |[Git](https://gitlab.cern.ch/YARR/YARR/tree/master)    |
 
@@ -32,8 +32,8 @@ We change branches for localdb-tools and QC-helper for this tutorial:<br>
 - localdb-tools
 ```bash
 $ cd ~/localdb-tools
-$ git fetch
-$ git checkout tutorial
+$ git fetch origin
+$ git checkout ldbtoolv1.6.2 
 ```
 - QC-helper
 ```bash
